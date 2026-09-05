@@ -37,7 +37,7 @@ export function Sidebar({ collapsed }: { collapsed: boolean }) {
       className={clsx('nav-item', collapsed && 'justify-center px-0')}
       data-active={kind !== null && active === kind}
       title={collapsed ? t(key) : undefined}
-      onClick={onClick ?? (() => openKind(kind, key))}
+      onClick={onClick ?? (() => kind !== null && openKind(kind, key))}
     >
       <Icon className="h-[17px] w-[17px] shrink-0" />
       {!collapsed && <span className="truncate">{t(key)}</span>}

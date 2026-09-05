@@ -31,7 +31,7 @@ export function registerCoreCommands(hooks: { openPalette: () => void; lock: () 
     { id: 'nav.tools', titleKey: 'nav.tools', section: 'navigation', run: () => tabs().open({ kind: 'tools', title: 't:nav.tools', params: {} }) },
 
     { id: 'pdf.open', titleKey: 'commands.openPdf', section: 'actions', shortcut: 'Ctrl+O', run: () => pickAndOpenPdf() },
-    { id: 'pdf.new', titleKey: 'dashboard.actions.newPdf', section: 'actions', run: () => tabs().open({ kind: 'pdf-new', title: 't:dashboard.actions.newPdf', params: {} }) },
+    { id: 'pdf.new', titleKey: 'dashboard.actions.newPdf', section: 'actions', run: () => tabs().open({ kind: 'documents', title: 't:nav.documents', params: { new: true } }) },
     { id: 'invoice.new', titleKey: 'commands.newInvoice', section: 'actions', shortcut: 'Ctrl+N', run: () => tabs().open({ kind: 'invoice', title: 't:commands.newInvoice', params: { id: null } }) },
     { id: 'spreadsheet.new', titleKey: 'commands.newSpreadsheet', section: 'actions', run: () => tabs().open({ kind: 'spreadsheet', title: 't:commands.newSpreadsheet', params: { path: null } }) },
     { id: 'spreadsheet.open', titleKey: 'dashboard.actions.spreadsheets', section: 'actions', run: () => pickAndOpenSpreadsheet() },

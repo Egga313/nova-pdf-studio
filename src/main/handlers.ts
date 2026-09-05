@@ -7,6 +7,8 @@ import { listAudit } from '@modules/database/main/audit'
 import { clearDemoData, demoStatus, loadDemoData } from '@modules/database/main/demo-data'
 import { getDatabase } from '@modules/database/main'
 import { createBackup, listBackups, restoreBackup } from '@modules/backup/main'
+import { listDocuments, markOcrDone, registerDocument, removeDocument, savePageText } from '@modules/pdf/main/documents'
+import { exportHtmlToPdf, listPrinters, printHtml } from '@modules/printing/main'
 import { getDashboardStats } from '@modules/settings/main/dashboard'
 import { addRecent, clearRecent, listRecent, pinRecent, removeRecent } from '@modules/settings/main/recent-files'
 import { getSettings, updateSettings } from '@modules/settings/main/repository'
@@ -133,6 +135,18 @@ export function registerCoreHandlers(): void {
   handle('security:set-pin', ({ pin, currentPin }) => setPin(pin, currentPin))
   handle('security:remove-pin', ({ currentPin }) => removePin(currentPin))
   handle('security:verify-pin', ({ pin }) => ({ ok: verifyPin(pin) }))
+
+  // ---- المستندات ----
+  handle('documents:list', (req) => listDocuments(req?.limit ?? 200, req?.query))
+  handle('documents:register', (req) => registerDocument(req))
+  handle('documents:remove', ({ id }) => removeDocument(id))
+  handle('documents:save-page-text', ({ documentId, pageIndex, text, confidence }) => savePageText(documentId, pageIndex, text, confidence))
+  handle('documents:mark-ocr', ({ documentId }) => markOcrDone(documentId))
+
+  // ---- الطباعة والتصدير ----
+  handle('printers:list', () => listPrinters(focused()))
+  handle('print:html', (job) => printHtml(job))
+  handle('print:html-to-pdf', (job) => exportHtmlToPdf(job))
 
   // ---- النسخ الاحتياطي ----
   handle('backup:create', (req) => createBackup(paths.backupDir, req?.folder))

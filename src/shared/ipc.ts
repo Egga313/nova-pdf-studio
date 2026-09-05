@@ -5,6 +5,7 @@
  */
 import type { AppSettings } from './settings'
 import type { AppInfo, AuditLog, Currency, DashboardStats, FileFilter, RecentFile, RecentFileKind, Tax } from './entities'
+import type { DocumentRecord, PdfExportRequest, PrintJobRequest } from './documents'
 
 export interface IpcContract {
   // ---- التطبيق ----
@@ -57,6 +58,18 @@ export interface IpcContract {
   'security:verify-pin': { req: { pin: string }; res: { ok: boolean } }
   'security:status': { req: void; res: { enabled: boolean } }
 
+  // ---- المستندات (PDF) ----
+  'documents:list': { req: { limit?: number; query?: string } | void; res: DocumentRecord[] }
+  'documents:register': { req: { path: string | null; title?: string; kind?: DocumentRecord['kind']; sizeBytes?: number | null; pageCount: number; isScanned?: boolean }; res: DocumentRecord }
+  'documents:remove': { req: { id: number }; res: void }
+  'documents:save-page-text': { req: { documentId: number; pageIndex: number; text: string; confidence?: number }; res: void }
+  'documents:mark-ocr': { req: { documentId: number }; res: void }
+
+  // ---- الطباعة والتصدير (محرك Chromium) ----
+  'printers:list': { req: void; res: { name: string; displayName: string; isDefault: boolean; status: number }[] }
+  'print:html': { req: PrintJobRequest; res: { success: boolean; reason?: string } }
+  'print:html-to-pdf': { req: PdfExportRequest; res: { path: string; sizeBytes: number } }
+
   // ---- النسخ الاحتياطي ----
   'backup:create': { req: { folder?: string } | void; res: { path: string; sizeBytes: number } }
   'backup:restore': { req: { path: string }; res: void }
@@ -77,6 +90,8 @@ export const IPC_CHANNELS: readonly IpcChannel[] = [
   'dashboard:stats',
   'audit:list', 'demo:load', 'demo:clear', 'demo:status',
   'security:set-pin', 'security:remove-pin', 'security:verify-pin', 'security:status',
+  'documents:list', 'documents:register', 'documents:remove', 'documents:save-page-text', 'documents:mark-ocr',
+  'printers:list', 'print:html', 'print:html-to-pdf',
   'backup:create', 'backup:restore', 'backup:list', 'backup:export-db'
 ]
 
