@@ -1,0 +1,171 @@
+{
+  "app": { "name": "NOVA PDF Studio", "tagline": "PDF Editor • Smart Invoice • Spreadsheet • Documents" },
+  "nav": {
+    "home": "Home", "pdf": "PDF", "invoices": "Invoices", "customers": "Customers", "products": "Products & Services",
+    "spreadsheets": "Spreadsheets", "templates": "Templates", "documents": "Documents", "tools": "Tools", "settings": "Settings",
+    "storage": "Storage", "backup": "Backup", "language": "Language", "theme": "Theme"
+  },
+  "common": {
+    "save": "Save", "cancel": "Cancel", "close": "Close", "delete": "Delete", "edit": "Edit", "add": "Add", "search": "Search",
+    "open": "Open", "create": "Create", "back": "Back", "next": "Next", "finish": "Finish", "yes": "Yes", "no": "No", "ok": "OK",
+    "loading": "Loading…", "none": "None", "actions": "Actions", "name": "Name", "optional": "Optional", "required": "Required",
+    "clear": "Clear", "confirm": "Confirm", "retry": "Retry", "copy": "Copy", "remove": "Remove", "all": "All", "today": "Today",
+    "unknown": "Unknown", "version": "Version", "comingSoon": "Coming in a later phase", "enabled": "Enabled", "disabled": "Disabled",
+    "default": "Default", "active": "Active", "inactive": "Inactive", "preview": "Preview", "apply": "Apply", "reset": "Reset"
+  },
+  "tabs": { "close": "Close tab", "closeOthers": "Close other tabs", "reopenClosed": "Reopen closed tab", "unsaved": "Unsaved changes" },
+  "theme": { "light": "Light", "dark": "Dark", "system": "System" },
+  "topbar": { "search": "Search everything… (Ctrl+K)", "notifications": "Notifications", "commandPalette": "Command palette" },
+  "dashboard": {
+    "title": "Home",
+    "welcome": "Welcome to NOVA",
+    "welcomeCompany": "Welcome, {{name}}",
+    "subtitle": "Everything you need to manage documents and invoices, in one place.",
+    "quickActions": "Quick actions",
+    "recentDocuments": "Recent documents",
+    "noRecent": "No recently opened documents",
+    "noRecentHint": "Open a PDF or a spreadsheet and it will show up here.",
+    "tools": "Tools",
+    "overview": "Overview",
+    "stats": {
+      "totalInvoices": "Total invoices", "paid": "Paid", "unpaid": "Unpaid", "overdue": "Overdue",
+      "revenue": "Total revenue", "remaining": "Remaining payments", "customers": "Customers", "products": "Products"
+    },
+    "chart": { "title": "Invoiced vs paid, last 12 months", "invoiced": "Invoiced", "paid": "Paid", "empty": "No data yet" },
+    "outstanding": {
+      "title": "Outstanding payments", "customer": "Customer", "invoice": "Invoice", "dueDate": "Due date",
+      "remaining": "Remaining", "daysOverdue": "Days overdue", "empty": "Nothing outstanding", "onTime": "On time"
+    },
+    "actions": {
+      "openPdf": "Open PDF", "newPdf": "New PDF", "newInvoice": "New invoice", "invoices": "Invoices", "customers": "Customers",
+      "products": "Products & Services", "spreadsheets": "Spreadsheets", "recent": "Recent documents", "templates": "Templates",
+      "scanOcr": "Scan / OCR", "mergePdf": "Merge PDF", "splitPdf": "Split PDF", "convert": "Convert files", "settings": "Settings",
+      "newSpreadsheet": "New spreadsheet", "scanDocument": "Scan document", "mergePdfs": "Merge PDFs"
+    }
+  },
+  "palette": {
+    "placeholder": "Type a command or search…", "noResults": "No results", "commands": "Commands", "recentFiles": "Recent files",
+    "navigation": "Navigation", "hint": "↑↓ navigate • Enter run • Esc close"
+  },
+  "notifications": { "title": "Notifications", "empty": "No notifications", "markAllRead": "Mark all as read", "clear": "Clear all" },
+  "commands": {
+    "newInvoice": "New invoice", "openPdf": "Open PDF file", "newSpreadsheet": "New spreadsheet", "mergePdf": "Merge PDF",
+    "goHome": "Go to Home", "openSettings": "Open settings", "toggleTheme": "Toggle theme", "closeTab": "Close tab",
+    "reopenTab": "Reopen closed tab", "nextTab": "Next tab", "prevTab": "Previous tab", "lockApp": "Lock app",
+    "createBackup": "Create backup", "openCustomers": "Open customers", "openInvoices": "Open invoices", "openProducts": "Open products",
+    "language": "Switch language to {{lang}}", "showShortcuts": "Keyboard shortcuts"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": {
+      "general": "General", "company": "Company profile", "invoice": "Invoice settings", "tax": "Taxes", "currencies": "Currencies",
+      "numbering": "Numbering", "language": "Language", "appearance": "Appearance", "printing": "Printing", "ocr": "OCR",
+      "storage": "Storage", "backup": "Backup", "security": "Security", "about": "About"
+    },
+    "general": {
+      "dateFormat": "Date format", "numberingSystem": "Digits", "latn": "Latin digits (1 2 3)", "arab": "Arabic-Indic digits (١ ٢ ٣)",
+      "confirmDelete": "Ask before deleting", "openLastTabs": "Reopen tabs on start"
+    },
+    "company": {
+      "hint": "Inserted automatically in every invoice. You can show or hide any field on the invoice header.",
+      "name": "Company name", "firstName": "First name", "lastName": "Last name", "address": "Address", "city": "City", "country": "Country",
+      "phone": "Phone", "email": "Email", "website": "Website", "rc": "Trade register (RC)", "nif": "NIF",
+      "nis": "NIS", "ai": "Article d'imposition (AI)", "taxId": "Tax ID", "bankAccount": "Bank account", "iban": "IBAN", "swift": "SWIFT",
+      "logo": "Logo", "pickLogo": "Choose logo", "removeLogo": "Remove logo", "visibleFields": "Fields shown on invoices",
+      "ownerName": "Owner name"
+    },
+    "invoice": {
+      "pattern": "Invoice number pattern", "patternHint": "Tokens: {YYYY} year, {YY}, {MM} month, {DD} day, {SEQ:5} counter with 5 digits",
+      "preview": "Preview", "defaultCurrency": "Default currency", "currencyPosition": "Currency symbol position", "before": "Before amount (€1,000.00)",
+      "after": "After amount (1,000.00 DZD)", "defaultTax": "Default tax", "dueDays": "Due in (days)", "amountInWords": "Show amount in words",
+      "defaultNotes": "Default notes", "paymentTerms": "Default payment terms", "showLogo": "Show logo", "invalidPattern": "Invalid pattern: {SEQ} is required",
+      "quotePattern": "Quote pattern", "proformaPattern": "Proforma pattern", "receiptPattern": "Receipt pattern"
+    },
+    "taxes": {
+      "title": "Tax profiles", "hint": "Create the tax rates your business uses (VAT 0%, 9%, 19% or any custom rate).",
+      "add": "Add tax", "name": "Name", "rate": "Rate %", "default": "Default", "deleteConfirm": "Delete this tax?",
+      "used": "Used by products; it will be deactivated instead of deleted"
+    },
+    "currencies": {
+      "title": "Currencies", "hint": "Add any currency by ISO code, with its symbol, position and decimals.",
+      "add": "Add currency", "code": "Code (ISO)", "name": "Name", "symbol": "Display symbol", "decimals": "Decimals", "position": "Position",
+      "deleteConfirm": "Delete this currency?"
+    },
+    "appearance": { "theme": "Theme", "language": "Interface language", "hint": "Language and direction change instantly, no restart needed." },
+    "printing": {
+      "paperSize": "Paper size", "orientation": "Orientation", "portrait": "Portrait", "landscape": "Landscape", "margins": "Margins (mm)",
+      "scale": "Scale %", "copies": "Copies"
+    },
+    "ocr": { "languages": "OCR languages", "autoPrompt": "Suggest OCR automatically when a scanned PDF opens", "ara": "Arabic", "fra": "French", "eng": "English" },
+    "storage": {
+      "dataDir": "Data folder", "dbPath": "Database file", "logs": "Log file", "openFolder": "Open folder",
+      "demoData": "Demo data", "demoHint": "Clearly flagged sample data, removable in one click without touching your own data.",
+      "loadDemo": "Load demo data", "clearDemo": "Clear demo data", "demoLoaded": "Demo data is loaded", "demoNotLoaded": "No demo data"
+    },
+    "backup": {
+      "title": "Backup", "hint": "A backup contains customers, invoices, products, templates, settings and payments.",
+      "create": "Create backup", "restore": "Restore from file…", "export": "Export database", "auto": "Daily automatic backup",
+      "folder": "Backup folder", "defaultFolder": "Default folder", "chooseFolder": "Choose folder", "keep": "Backups to keep",
+      "last": "Last backup", "never": "No backup yet", "list": "Available backups", "confirmRestore": "Everything will be replaced by the selected backup. A safety copy of the current state is saved first. Continue?",
+      "restoreThis": "Restore this backup"
+    },
+    "security": {
+      "appLock": "App lock with PIN", "hint": "Asked on start and after a period of inactivity. Stored as a salted hash only.",
+      "setPin": "Set PIN", "changePin": "Change PIN", "removePin": "Remove lock", "currentPin": "Current PIN", "newPin": "New PIN (4-12 digits)",
+      "confirmPin": "Confirm PIN", "autoLock": "Auto-lock after", "minutes": "minutes", "pinMismatch": "PINs do not match", "pinSet": "PIN set",
+      "pinRemoved": "Lock removed", "status": "Status"
+    },
+    "about": {
+      "description": "An integrated office platform: read and edit PDFs, smart invoices with exact math, Excel-like spreadsheets and OCR. Runs fully offline.",
+      "localFirst": "Privacy first: your documents never leave your computer.", "logs": "Developer log", "platform": "Platform", "dataDir": "Data folder"
+    },
+    "saved": "Settings saved"
+  },
+  "wizard": {
+    "welcome": "Welcome to NOVA PDF Studio",
+    "subtitle": "A few quick steps to set up your business, then you are ready to work.",
+    "steps": { "language": "Language", "company": "Company", "currency": "Currency", "tax": "Tax", "numbering": "Numbering" },
+    "languageHint": "Choose the interface language. You can change it anytime.",
+    "companyHint": "Shown on your invoice header. You can skip this and complete it later in Settings.",
+    "currencyHint": "Default currency for new invoices and where its symbol goes.",
+    "taxHint": "Default tax applied to new line items. You can add more rates later.",
+    "numberingHint": "Invoice number pattern. Example: INV-{YYYY}-{SEQ:5}",
+    "start": "Start using NOVA",
+    "skip": "Skip for now"
+  },
+  "lock": { "title": "App locked", "subtitle": "Enter your PIN to continue", "unlock": "Unlock", "wrongPin": "Wrong PIN", "placeholder": "PIN" },
+  "errors": {
+    "UNKNOWN": "An unexpected error occurred.", "VALIDATION": "Invalid data.", "NOT_FOUND": "Item not found.", "CONFLICT": "Conflicts with existing data.",
+    "DB_ERROR": "Database error. Details were written to the log.", "DB_CLOSED": "Database is closed.", "DISK_FULL": "Disk is full; free some space and retry.",
+    "FILE_NOT_FOUND": "File not found.", "FILE_ACCESS": "Cannot access the file (it may be open in another program).",
+    "PDF_CORRUPTED": "The PDF file is corrupted or invalid.", "PDF_PASSWORD": "The PDF is password protected.", "PDF_UNSUPPORTED": "Unsupported PDF feature.",
+    "EXCEL_UNSUPPORTED": "Unsupported spreadsheet format.", "OCR_FAILED": "Text recognition failed.", "PRINTER_OFFLINE": "Printer is offline.",
+    "LOCKED": "Operation refused.", "CANCELLED": "Operation cancelled.", "NO_BRIDGE": "The interface is not connected to the app.",
+    "validation": {
+      "name_required": "Name is required.", "rate_invalid": "Invalid tax rate.", "currency_code": "Currency code must be 3 to 5 latin letters.",
+      "decimals": "Decimals must be between 0 and 4.", "pin_format": "PIN must be 4 to 12 digits."
+    },
+    "security": { "wrong_pin": "Current PIN is incorrect." },
+    "backup": { "invalid_file": "The file is not a valid backup." }
+  },
+  "toast": {
+    "saved": "Saved", "settingsSaved": "Settings saved", "backupCreated": "Backup created", "backupRestored": "Backup restored",
+    "demoLoaded": "Demo data loaded", "demoCleared": "Demo data cleared", "copied": "Copied", "error": "Error",
+    "dbExported": "Database exported", "fileMissing": "The file was not found at its original location"
+  },
+  "empty": {
+    "generic": { "title": "Nothing here yet", "body": "Start by creating a new item." },
+    "invoices": { "title": "No invoices yet", "body": "Create your first invoice with instant, exact calculations.", "action": "Create your first invoice" },
+    "customers": { "title": "No customers", "body": "Add customers to see their invoices and payments here.", "action": "Add customer" },
+    "products": { "title": "No products", "body": "Add products and services to use them in invoices with autocomplete.", "action": "Add product" },
+    "phase": { "title": "This module is under construction", "body": "Delivered in phase {{phase}} of the roadmap." }
+  },
+  "time": { "justNow": "just now", "minutesAgo": "{{count}} min ago", "hoursAgo": "{{count}} h ago", "daysAgo": "{{count}} d ago" },
+  "status": { "draft": "Draft", "sent": "Sent", "paid": "Paid", "partially_paid": "Partially paid", "overdue": "Overdue", "cancelled": "Cancelled" },
+  "recent": { "open": "Open", "remove": "Remove from list", "pin": "Pin", "unpin": "Unpin", "clear": "Clear list", "showInFolder": "Show in folder", "openedAt": "Last opened" },
+  "shortcuts": {
+    "title": "Keyboard shortcuts",
+    "open": "Open", "save": "Save", "saveAs": "Save as", "print": "Print", "find": "Find", "undo": "Undo", "redo": "Redo",
+    "palette": "Command palette", "settings": "Settings", "closeTab": "Close tab", "reopenTab": "Reopen tab", "nextTab": "Next tab"
+  }
+}

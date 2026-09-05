@@ -1,0 +1,171 @@
+{
+  "app": { "name": "NOVA PDF Studio", "tagline": "Éditeur PDF • Facture intelligente • Tableur • Documents" },
+  "nav": {
+    "home": "Accueil", "pdf": "PDF", "invoices": "Factures", "customers": "Clients", "products": "Produits & Services",
+    "spreadsheets": "Tableurs", "templates": "Modèles", "documents": "Documents", "tools": "Outils", "settings": "Paramètres",
+    "storage": "Stockage", "backup": "Sauvegarde", "language": "Langue", "theme": "Thème"
+  },
+  "common": {
+    "save": "Enregistrer", "cancel": "Annuler", "close": "Fermer", "delete": "Supprimer", "edit": "Modifier", "add": "Ajouter", "search": "Rechercher",
+    "open": "Ouvrir", "create": "Créer", "back": "Retour", "next": "Suivant", "finish": "Terminer", "yes": "Oui", "no": "Non", "ok": "OK",
+    "loading": "Chargement…", "none": "Aucun", "actions": "Actions", "name": "Nom", "optional": "Facultatif", "required": "Obligatoire",
+    "clear": "Effacer", "confirm": "Confirmer", "retry": "Réessayer", "copy": "Copier", "remove": "Retirer", "all": "Tout", "today": "Aujourd'hui",
+    "unknown": "Inconnu", "version": "Version", "comingSoon": "Disponible dans une phase ultérieure", "enabled": "Activé", "disabled": "Désactivé",
+    "default": "Par défaut", "active": "Actif", "inactive": "Inactif", "preview": "Aperçu", "apply": "Appliquer", "reset": "Réinitialiser"
+  },
+  "tabs": { "close": "Fermer l'onglet", "closeOthers": "Fermer les autres onglets", "reopenClosed": "Rouvrir l'onglet fermé", "unsaved": "Modifications non enregistrées" },
+  "theme": { "light": "Clair", "dark": "Sombre", "system": "Système" },
+  "topbar": { "search": "Rechercher partout… (Ctrl+K)", "notifications": "Notifications", "commandPalette": "Palette de commandes" },
+  "dashboard": {
+    "title": "Accueil",
+    "welcome": "Bienvenue dans NOVA",
+    "welcomeCompany": "Bienvenue, {{name}}",
+    "subtitle": "Tout ce qu'il faut pour gérer vos documents et vos factures, au même endroit.",
+    "quickActions": "Actions rapides",
+    "recentDocuments": "Documents récents",
+    "noRecent": "Aucun document ouvert récemment",
+    "noRecentHint": "Ouvrez un PDF ou un tableur et il apparaîtra ici.",
+    "tools": "Outils",
+    "overview": "Vue d'ensemble",
+    "stats": {
+      "totalInvoices": "Total factures", "paid": "Payées", "unpaid": "Impayées", "overdue": "En retard",
+      "revenue": "Chiffre d'affaires", "remaining": "Restant à payer", "customers": "Clients", "products": "Produits"
+    },
+    "chart": { "title": "Facturé et encaissé, 12 derniers mois", "invoiced": "Facturé", "paid": "Encaissé", "empty": "Pas encore de données" },
+    "outstanding": {
+      "title": "Paiements en attente", "customer": "Client", "invoice": "Facture", "dueDate": "Échéance",
+      "remaining": "Restant", "daysOverdue": "Jours de retard", "empty": "Aucun impayé", "onTime": "Dans les délais"
+    },
+    "actions": {
+      "openPdf": "Ouvrir un PDF", "newPdf": "Nouveau PDF", "newInvoice": "Nouvelle facture", "invoices": "Factures", "customers": "Clients",
+      "products": "Produits & Services", "spreadsheets": "Tableurs", "recent": "Documents récents", "templates": "Modèles",
+      "scanOcr": "Scan / OCR", "mergePdf": "Fusionner PDF", "splitPdf": "Diviser PDF", "convert": "Convertir des fichiers", "settings": "Paramètres",
+      "newSpreadsheet": "Nouveau tableur", "scanDocument": "Scanner un document", "mergePdfs": "Fusionner des PDF"
+    }
+  },
+  "palette": {
+    "placeholder": "Tapez une commande ou recherchez…", "noResults": "Aucun résultat", "commands": "Commandes", "recentFiles": "Fichiers récents",
+    "navigation": "Navigation", "hint": "↑↓ naviguer • Entrée exécuter • Échap fermer"
+  },
+  "notifications": { "title": "Notifications", "empty": "Aucune notification", "markAllRead": "Tout marquer comme lu", "clear": "Tout effacer" },
+  "commands": {
+    "newInvoice": "Nouvelle facture", "openPdf": "Ouvrir un fichier PDF", "newSpreadsheet": "Nouveau tableur", "mergePdf": "Fusionner PDF",
+    "goHome": "Aller à l'accueil", "openSettings": "Ouvrir les paramètres", "toggleTheme": "Changer de thème", "closeTab": "Fermer l'onglet",
+    "reopenTab": "Rouvrir l'onglet fermé", "nextTab": "Onglet suivant", "prevTab": "Onglet précédent", "lockApp": "Verrouiller l'application",
+    "createBackup": "Créer une sauvegarde", "openCustomers": "Ouvrir les clients", "openInvoices": "Ouvrir les factures", "openProducts": "Ouvrir les produits",
+    "language": "Passer la langue en {{lang}}", "showShortcuts": "Raccourcis clavier"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "sections": {
+      "general": "Général", "company": "Profil de l'entreprise", "invoice": "Paramètres de facturation", "tax": "Taxes", "currencies": "Devises",
+      "numbering": "Numérotation", "language": "Langue", "appearance": "Apparence", "printing": "Impression", "ocr": "OCR",
+      "storage": "Stockage", "backup": "Sauvegarde", "security": "Sécurité", "about": "À propos"
+    },
+    "general": {
+      "dateFormat": "Format de date", "numberingSystem": "Chiffres", "latn": "Chiffres latins (1 2 3)", "arab": "Chiffres arabo-indiens (١ ٢ ٣)",
+      "confirmDelete": "Demander confirmation avant suppression", "openLastTabs": "Rouvrir les onglets au démarrage"
+    },
+    "company": {
+      "hint": "Insérées automatiquement dans chaque facture. Vous pouvez afficher ou masquer chaque champ de l'en-tête.",
+      "name": "Raison sociale", "firstName": "Prénom", "lastName": "Nom", "address": "Adresse", "city": "Ville", "country": "Pays",
+      "phone": "Téléphone", "email": "E-mail", "website": "Site web", "rc": "Registre de commerce (RC)", "nif": "NIF",
+      "nis": "NIS", "ai": "Article d'imposition (AI)", "taxId": "Identifiant fiscal", "bankAccount": "Compte bancaire", "iban": "IBAN", "swift": "SWIFT",
+      "logo": "Logo", "pickLogo": "Choisir un logo", "removeLogo": "Retirer le logo", "visibleFields": "Champs affichés sur les factures",
+      "ownerName": "Nom du gérant"
+    },
+    "invoice": {
+      "pattern": "Modèle de numéro de facture", "patternHint": "Jetons : {YYYY} année, {YY}, {MM} mois, {DD} jour, {SEQ:5} compteur à 5 chiffres",
+      "preview": "Aperçu", "defaultCurrency": "Devise par défaut", "currencyPosition": "Position du symbole", "before": "Avant le montant (€1,000.00)",
+      "after": "Après le montant (1,000.00 DZD)", "defaultTax": "Taxe par défaut", "dueDays": "Échéance (jours)", "amountInWords": "Afficher le montant en lettres",
+      "defaultNotes": "Notes par défaut", "paymentTerms": "Conditions de paiement par défaut", "showLogo": "Afficher le logo", "invalidPattern": "Modèle invalide : {SEQ} est requis",
+      "quotePattern": "Modèle de devis", "proformaPattern": "Modèle de proforma", "receiptPattern": "Modèle de reçu"
+    },
+    "taxes": {
+      "title": "Profils de taxe", "hint": "Créez les taux que votre entreprise utilise (TVA 0 %, 9 %, 19 % ou tout taux personnalisé).",
+      "add": "Ajouter une taxe", "name": "Nom", "rate": "Taux %", "default": "Par défaut", "deleteConfirm": "Supprimer cette taxe ?",
+      "used": "Utilisée par des produits ; elle sera désactivée au lieu d'être supprimée"
+    },
+    "currencies": {
+      "title": "Devises", "hint": "Ajoutez toute devise par code ISO, avec son symbole, sa position et ses décimales.",
+      "add": "Ajouter une devise", "code": "Code (ISO)", "name": "Nom", "symbol": "Symbole affiché", "decimals": "Décimales", "position": "Position",
+      "deleteConfirm": "Supprimer cette devise ?"
+    },
+    "appearance": { "theme": "Thème", "language": "Langue de l'interface", "hint": "La langue et le sens de lecture changent immédiatement, sans redémarrage." },
+    "printing": {
+      "paperSize": "Format de papier", "orientation": "Orientation", "portrait": "Portrait", "landscape": "Paysage", "margins": "Marges (mm)",
+      "scale": "Échelle %", "copies": "Copies"
+    },
+    "ocr": { "languages": "Langues OCR", "autoPrompt": "Proposer l'OCR automatiquement pour les PDF scannés", "ara": "Arabe", "fra": "Français", "eng": "Anglais" },
+    "storage": {
+      "dataDir": "Dossier de données", "dbPath": "Fichier de base de données", "logs": "Fichier journal", "openFolder": "Ouvrir le dossier",
+      "demoData": "Données de démonstration", "demoHint": "Données d'exemple clairement marquées, supprimables en un clic sans toucher à vos données.",
+      "loadDemo": "Charger les données de démo", "clearDemo": "Supprimer les données de démo", "demoLoaded": "Données de démo chargées", "demoNotLoaded": "Aucune donnée de démo"
+    },
+    "backup": {
+      "title": "Sauvegarde", "hint": "Une sauvegarde contient clients, factures, produits, modèles, paramètres et paiements.",
+      "create": "Créer une sauvegarde", "restore": "Restaurer depuis un fichier…", "export": "Exporter la base de données", "auto": "Sauvegarde automatique quotidienne",
+      "folder": "Dossier de sauvegarde", "defaultFolder": "Dossier par défaut", "chooseFolder": "Choisir un dossier", "keep": "Sauvegardes à conserver",
+      "last": "Dernière sauvegarde", "never": "Aucune sauvegarde", "list": "Sauvegardes disponibles", "confirmRestore": "Tout sera remplacé par la sauvegarde choisie. Une copie de sécurité de l'état actuel est faite d'abord. Continuer ?",
+      "restoreThis": "Restaurer cette sauvegarde"
+    },
+    "security": {
+      "appLock": "Verrouillage par code PIN", "hint": "Demandé au démarrage et après une période d'inactivité. Stocké uniquement sous forme de hachage salé.",
+      "setPin": "Définir un PIN", "changePin": "Changer le PIN", "removePin": "Retirer le verrouillage", "currentPin": "PIN actuel", "newPin": "Nouveau PIN (4 à 12 chiffres)",
+      "confirmPin": "Confirmer le PIN", "autoLock": "Verrouiller après", "minutes": "minutes", "pinMismatch": "Les codes ne correspondent pas", "pinSet": "PIN défini",
+      "pinRemoved": "Verrouillage retiré", "status": "État"
+    },
+    "about": {
+      "description": "Une plateforme bureautique intégrée : lecture et édition de PDF, factures intelligentes aux calculs exacts, tableur façon Excel et OCR. Fonctionne entièrement hors ligne.",
+      "localFirst": "Confidentialité d'abord : vos documents ne quittent jamais votre ordinateur.", "logs": "Journal développeur", "platform": "Plateforme", "dataDir": "Dossier de données"
+    },
+    "saved": "Paramètres enregistrés"
+  },
+  "wizard": {
+    "welcome": "Bienvenue dans NOVA PDF Studio",
+    "subtitle": "Quelques étapes rapides pour configurer votre entreprise, puis vous êtes prêt.",
+    "steps": { "language": "Langue", "company": "Entreprise", "currency": "Devise", "tax": "Taxe", "numbering": "Numérotation" },
+    "languageHint": "Choisissez la langue de l'interface. Modifiable à tout moment.",
+    "companyHint": "Affiché dans l'en-tête de vos factures. Vous pouvez passer et compléter plus tard dans les paramètres.",
+    "currencyHint": "Devise par défaut des nouvelles factures et position de son symbole.",
+    "taxHint": "Taxe par défaut appliquée aux nouvelles lignes. Vous pourrez en ajouter d'autres.",
+    "numberingHint": "Modèle des numéros de facture. Exemple : INV-{YYYY}-{SEQ:5}",
+    "start": "Commencer avec NOVA",
+    "skip": "Passer pour l'instant"
+  },
+  "lock": { "title": "Application verrouillée", "subtitle": "Saisissez votre PIN pour continuer", "unlock": "Déverrouiller", "wrongPin": "PIN incorrect", "placeholder": "PIN" },
+  "errors": {
+    "UNKNOWN": "Une erreur inattendue s'est produite.", "VALIDATION": "Données invalides.", "NOT_FOUND": "Élément introuvable.", "CONFLICT": "Conflit avec des données existantes.",
+    "DB_ERROR": "Erreur de base de données. Les détails sont dans le journal.", "DB_CLOSED": "La base de données est fermée.", "DISK_FULL": "Disque plein ; libérez de l'espace puis réessayez.",
+    "FILE_NOT_FOUND": "Fichier introuvable.", "FILE_ACCESS": "Impossible d'accéder au fichier (peut-être ouvert ailleurs).",
+    "PDF_CORRUPTED": "Le fichier PDF est corrompu ou invalide.", "PDF_PASSWORD": "Le PDF est protégé par mot de passe.", "PDF_UNSUPPORTED": "Fonction PDF non prise en charge.",
+    "EXCEL_UNSUPPORTED": "Format de tableur non pris en charge.", "OCR_FAILED": "La reconnaissance de texte a échoué.", "PRINTER_OFFLINE": "Imprimante hors ligne.",
+    "LOCKED": "Opération refusée.", "CANCELLED": "Opération annulée.", "NO_BRIDGE": "L'interface n'est pas connectée à l'application.",
+    "validation": {
+      "name_required": "Le nom est obligatoire.", "rate_invalid": "Taux de taxe invalide.", "currency_code": "Le code devise doit comporter 3 à 5 lettres latines.",
+      "decimals": "Les décimales doivent être entre 0 et 4.", "pin_format": "Le PIN doit comporter 4 à 12 chiffres."
+    },
+    "security": { "wrong_pin": "Le PIN actuel est incorrect." },
+    "backup": { "invalid_file": "Le fichier n'est pas une sauvegarde valide." }
+  },
+  "toast": {
+    "saved": "Enregistré", "settingsSaved": "Paramètres enregistrés", "backupCreated": "Sauvegarde créée", "backupRestored": "Sauvegarde restaurée",
+    "demoLoaded": "Données de démo chargées", "demoCleared": "Données de démo supprimées", "copied": "Copié", "error": "Erreur",
+    "dbExported": "Base de données exportée", "fileMissing": "Le fichier n'a pas été trouvé à son emplacement d'origine"
+  },
+  "empty": {
+    "generic": { "title": "Rien ici pour le moment", "body": "Commencez par créer un nouvel élément." },
+    "invoices": { "title": "Aucune facture", "body": "Créez votre première facture avec des calculs instantanés et exacts.", "action": "Créer votre première facture" },
+    "customers": { "title": "Aucun client", "body": "Ajoutez des clients pour voir leurs factures et paiements ici.", "action": "Ajouter un client" },
+    "products": { "title": "Aucun produit", "body": "Ajoutez produits et services pour les utiliser dans les factures avec saisie automatique.", "action": "Ajouter un produit" },
+    "phase": { "title": "Ce module est en construction", "body": "Livré en phase {{phase}} de la feuille de route." }
+  },
+  "time": { "justNow": "à l'instant", "minutesAgo": "il y a {{count}} min", "hoursAgo": "il y a {{count}} h", "daysAgo": "il y a {{count}} j" },
+  "status": { "draft": "Brouillon", "sent": "Envoyée", "paid": "Payée", "partially_paid": "Partiellement payée", "overdue": "En retard", "cancelled": "Annulée" },
+  "recent": { "open": "Ouvrir", "remove": "Retirer de la liste", "pin": "Épingler", "unpin": "Désépingler", "clear": "Vider la liste", "showInFolder": "Afficher dans le dossier", "openedAt": "Dernière ouverture" },
+  "shortcuts": {
+    "title": "Raccourcis clavier",
+    "open": "Ouvrir", "save": "Enregistrer", "saveAs": "Enregistrer sous", "print": "Imprimer", "find": "Rechercher", "undo": "Annuler", "redo": "Rétablir",
+    "palette": "Palette de commandes", "settings": "Paramètres", "closeTab": "Fermer l'onglet", "reopenTab": "Rouvrir l'onglet", "nextTab": "Onglet suivant"
+  }
+}

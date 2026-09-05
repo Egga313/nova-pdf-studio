@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------
+   رموز التصميم: لوحة محايدة راقية بلون تمييز واحد (نيلي مائل للبنفسجي)
+   ------------------------------------------------------------------ */
+:root {
+  --bg: 220 20% 97%;
+  --surface: 0 0% 100%;
+  --surface-2: 220 18% 94%;
+  --border: 220 14% 88%;
+  --fg: 222 30% 12%;
+  --muted: 220 10% 46%;
+  --accent: 243 62% 58%;
+  --accent-fg: 0 0% 100%;
+  --success: 152 60% 38%;
+  --warning: 36 90% 48%;
+  --danger: 0 72% 52%;
+  --info: 210 80% 52%;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: 222 22% 9%;
+  --surface: 222 20% 12%;
+  --surface-2: 222 18% 16%;
+  --border: 222 14% 22%;
+  --fg: 220 20% 93%;
+  --muted: 220 10% 62%;
+  --accent: 243 70% 68%;
+  --accent-fg: 240 30% 10%;
+  --success: 152 55% 48%;
+  --warning: 36 90% 58%;
+  --danger: 0 72% 62%;
+  --info: 210 85% 62%;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  @apply bg-bg text-fg font-sans antialiased;
+  font-size: 13.5px;
+  line-height: 1.5;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* الأرقام تبقى لاتينية وواضحة في كل اللغات */
+body {
+  font-variant-numeric: tabular-nums;
+}
+
+/* التحديد والتركيز */
+::selection {
+  background: hsl(var(--accent) / 0.25);
+}
+:focus-visible {
+  outline: 2px solid hsl(var(--accent));
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* أشرطة التمرير الرفيعة */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border)) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted) / 0.6);
+  background-clip: content-box;
+  border: 2px solid transparent;
+}
+
+/* منطقة سحب النافذة */
+.drag-region {
+  -webkit-app-region: drag;
+}
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* مكوّنات مساعدة */
+@layer components {
+  .card {
+    @apply rounded-lg border border-border bg-surface shadow-soft;
+  }
+  .input {
+    @apply h-9 w-full rounded-md border border-border bg-surface px-3 text-[13px] text-fg placeholder:text-muted/70
+      focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/25 disabled:opacity-60;
+  }
+  .label {
+    @apply mb-1 block text-xs font-medium text-muted;
+  }
+  .kbd {
+    @apply inline-flex h-5 min-w-5 items-center justify-center rounded border border-border bg-surface-2 px-1.5 font-mono text-[10.5px] text-muted;
+  }
+  .nav-item {
+    @apply flex h-9 w-full items-center gap-2.5 rounded-md px-2.5 text-[13px] text-muted transition-colors
+      hover:bg-surface-2 hover:text-fg;
+  }
+  .nav-item[data-active='true'] {
+    @apply bg-accent/10 text-accent font-medium;
+  }
+  .stat-value {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+}
+
+/* الاتجاه: تعديلات دقيقة للعربية */
+[dir='rtl'] .ltr-only {
+  display: none;
+}
+[dir='ltr'] .rtl-only {
+  display: none;
+}
+[dir='rtl'] input[type='number'],
+[dir='rtl'] .numeric {
+  direction: ltr;
+  text-align: right;
+}
+.ltr-text {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
