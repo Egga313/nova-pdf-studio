@@ -5,7 +5,7 @@
 import { clsx } from 'clsx'
 import {
   Bookmark, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Copy, Download, FileText, ImageDown, Info, LayoutList, Lock, Maximize2,
-  Minimize2, Minus, MoveHorizontal, PanelLeftClose, Plus, Printer, Receipt, RotateCcw, RotateCw, ScanText, Search, Square, X
+  Minimize2, Minus, MoveHorizontal, PanelLeftClose, PenLine, Plus, Printer, Receipt, RotateCcw, RotateCw, ScanText, Search, Square, X
 } from 'lucide-react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -18,9 +18,14 @@ import { invoke } from '@renderer/lib/ipc'
 import { notify } from '@renderer/stores/notifications'
 import { useSettings } from '@renderer/stores/settings'
 import { useTabs } from '@renderer/stores/tabs'
+import { applyEdits } from '../shared/applyEdits'
+import { EditToolbar } from './EditToolbar'
 import type { OutlineItem } from './pdfEngine'
 import { PdfPage } from './PdfPage'
 import { exportFlattenedPdf, exportPagesAsImages, exportText, printDocument, renderPageToDataUrl } from './printPdf'
+import { PropertiesPanel } from './PropertiesPanel'
+import { rasterizeText } from './rasterizeText'
+import { createEditorStore, type EditorState, useEditor } from './useEditor'
 import { createViewerStore, CSS_PER_PT, PAGE_GAP, useViewer, type ViewerState } from './usePdfViewer'
 
 const ZOOM_PRESETS = [0.5, 0.75, 1, 1.25, 1.5, 2, 3, 4]
@@ -94,6 +99,72 @@ function Viewer({ store, tabId }: { store: StoreApi<ViewerState>; tabId: string 
   const [busy, setBusy] = useState<string | null>(null)
   const programmaticScroll = useRef(false)
   const openTab = useTabs((st) => st.open)
+  const setTabDirty = useTabs((st) => st.setDirty)
+
+  // ---- وضع التعديل ----
+  const editorRef = useRef<StoreApi<EditorState> | null>(null)
+  if (!editorRef.current) editorRef.current = createEditorStore()
+  const editor = editorRef.current
+  const editing = useEditor(editor, (e) => e.enabled)
+  const editDirty = useEditor(editor, (e) => e.history.past.length > 0)
+  useEffect(() => setTabDirty(tabId, editing && editDirty), [editing, editDirty, tabId, setTabDirty])
+
+  const bakeEdits = async (): Promise<Uint8Array | null> => {
+    if (!s.bytes) return null
+    return applyEdits(s.bytes, editor.getState().layer(), { rasterizeText })
+  }
+
+  /** حفظ في الملف نفسه (أو نسخة جديدة) ثم إعادة تحميل العارض بالنتيجة. */
+  const saveEdits = async (asCopy: boolean) => {
+    if (!s.bytes) return
+    if (editor.getState().layer().objects.length === 0) {
+      notify.info('edit.noChanges')
+      return
+    }
+    let target = s.path
+    if (asCopy || !target) {
+      target = await invoke('dialog:save-file', { defaultPath: s.fileName.replace(/\.pdf$/i, '') + (asCopy ? '-edited.pdf' : '.pdf'), filters: [{ name: 'PDF', extensions: ['pdf'] }] })
+      if (!target) return
+    }
+    setBusy('save')
+    try {
+      const out = await bakeEdits()
+      if (!out) return
+      await invoke('file:write', { path: target, data: out })
+      await invoke('recent:add', { path: target, kind: 'pdf' })
+      editor.getState().reset()
+      editor.getState().setEnabled(false)
+      await store.getState().loadBytes(out, baseName(target), target)
+      notify.success(asCopy ? 'edit.savedAs' : 'edit.saved', { name: baseName(target) })
+    } catch (e) {
+      notify.error(e)
+    } finally {
+      setBusy(null)
+    }
+  }
+
+  const exitEditing = () => {
+    const st = editor.getState()
+    if (st.layer().objects.length > 0 && !window.confirm(t('edit.confirmExit'))) return
+    st.reset()
+    st.setEnabled(false)
+  }
+
+  // Ctrl+Z / Ctrl+Y / Ctrl+S في وضع التعديل
+  useEffect(() => {
+    if (!editing) return
+    const onKey = (e: KeyboardEvent) => {
+      if (useTabs.getState().activeId !== tabId) return
+      const target = e.target as HTMLElement
+      if (target?.tagName === 'TEXTAREA' || target?.tagName === 'INPUT') return
+      if (e.ctrlKey && !e.shiftKey && e.key.toLowerCase() === 'z') { e.preventDefault(); editor.getState().undo() }
+      else if (e.ctrlKey && (e.key.toLowerCase() === 'y' || (e.shiftKey && e.key.toLowerCase() === 'z'))) { e.preventDefault(); editor.getState().redo() }
+      else if (e.ctrlKey && !e.shiftKey && e.key.toLowerCase() === 's') { e.preventDefault(); void saveEdits(false) }
+    }
+    window.addEventListener('keydown', onKey, true)
+    return () => window.removeEventListener('keydown', onKey, true)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [editing, tabId, s.bytes, s.path])
 
   // ملاءمة أولية بعد معرفة حجم الحاوية، وإعادة الملاءمة عند تغيير الحجم
   useEffect(() => {
@@ -104,9 +175,17 @@ function Viewer({ store, tabId }: { store: StoreApi<ViewerState>; tabId: string 
       if (state.zoomMode !== 'custom') state.setZoomMode(state.zoomMode, el.clientWidth, el.clientHeight)
     }
     apply()
-    const ro = new ResizeObserver(apply)
+    // نؤجّل إلى الإطار التالي حتى لا يُعاد التخطيط داخل رد نداء ResizeObserver نفسه
+    let frame = 0
+    const ro = new ResizeObserver(() => {
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(apply)
+    })
     ro.observe(el)
-    return () => ro.disconnect()
+    return () => {
+      cancelAnimationFrame(frame)
+      ro.disconnect()
+    }
   }, [store, s.sidebar, s.rotation])
 
   useEffect(() => setPageInput(String(s.currentPage + 1)), [s.currentPage])
@@ -282,6 +361,9 @@ function Viewer({ store, tabId }: { store: StoreApi<ViewerState>; tabId: string 
         <IconBtn title={t('pdf.info')} onClick={() => setInfoOpen(true)}><Info className="h-4 w-4" /></IconBtn>
 
         <div className="ms-auto flex items-center gap-1">
+          {!editing && (
+            <Button size="sm" variant="primary" icon={<PenLine className="h-3.5 w-3.5" />} onClick={() => { s.resetRotation(); editor.getState().setEnabled(true) }}>{t('edit.enter')}</Button>
+          )}
           <Button size="sm" variant="ghost" icon={<Receipt className="h-3.5 w-3.5" />} onClick={() => openTab({ kind: 'invoice', title: 't:pdf.convertToInvoice', params: { fromPdf: s.path, bytes: s.bytes } })}>{t('pdf.convertToInvoice')}</Button>
           <Button size="sm" variant="ghost" icon={<Printer className="h-3.5 w-3.5" />} loading={busy === 'print'} onClick={() => void doPrint()}>{t('pdf.print')}</Button>
           <Menu label={t('pdf.export')} icon={<Download className="h-3.5 w-3.5" />} busy={busy === 'export' || busy === 'images'} items={[
@@ -303,6 +385,8 @@ function Viewer({ store, tabId }: { store: StoreApi<ViewerState>; tabId: string 
           <Button size="sm" variant="ghost" onClick={() => s.dismissScannedNotice()}>{t('pdf.later')}</Button>
         </div>
       )}
+
+      {editing && <EditToolbar store={editor} saving={busy === 'save'} onSave={() => void saveEdits(false)} onSaveAs={() => void saveEdits(true)} onExit={exitEditing} />}
 
       <div className="flex min-h-0 flex-1">
         {/* الشريط الجانبي */}
@@ -327,10 +411,13 @@ function Viewer({ store, tabId }: { store: StoreApi<ViewerState>; tabId: string 
         <div ref={scrollerRef} className="min-w-0 flex-1 overflow-auto" style={{ direction: 'ltr' }}>
           <div className="flex flex-col items-center" style={{ gap: PAGE_GAP, padding: PAGE_GAP }}>
             {s.engine && s.pages.map((page) => (
-              <PdfPage key={page.index} engine={s.engine!} page={page} scale={s.scale} rotation={s.rotation} hits={s.search.hits} activeHit={activeHit} onVisible={onVisible} />
+              <PdfPage key={page.index} engine={s.engine!} page={page} scale={s.scale} rotation={s.rotation} hits={s.search.hits} activeHit={activeHit} onVisible={onVisible} editor={editor} editing={editing} />
             ))}
           </div>
         </div>
+
+        {/* لوحة الخصائص في وضع التعديل */}
+        {editing && <PropertiesPanel store={editor} />}
       </div>
 
       {/* شريط الحالة */}

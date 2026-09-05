@@ -4,7 +4,10 @@
  */
 import { clsx } from 'clsx'
 import { memo, useEffect, useRef, useState } from 'react'
+import type { StoreApi } from 'zustand'
+import { EditOverlay } from './EditOverlay'
 import type { PageInfo, PdfEngine, SearchHit, TextSpan } from './pdfEngine'
+import type { EditorState } from './useEditor'
 
 interface Props {
   engine: PdfEngine
@@ -15,9 +18,11 @@ interface Props {
   activeHit: SearchHit | null
   onVisible: (index: number, ratio: number) => void
   textLayer?: boolean
+  editor?: StoreApi<EditorState>
+  editing?: boolean
 }
 
-export const PdfPage = memo(function PdfPage({ engine, page, scale, rotation, hits, activeHit, onVisible, textLayer = true }: Props) {
+export const PdfPage = memo(function PdfPage({ engine, page, scale, rotation, hits, activeHit, onVisible, textLayer = true, editor, editing = false }: Props) {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [near, setNear] = useState(false)
@@ -76,9 +81,12 @@ export const PdfPage = memo(function PdfPage({ engine, page, scale, rotation, hi
       {near ? <canvas ref={canvasRef} className="block" /> : <div className="h-full w-full bg-white" />}
       {failed && <div className="absolute inset-0 flex items-center justify-center text-xs text-muted">!</div>}
 
+      {/* طبقة التعديل (فوق طبقة النص) في وضع التعديل فقط، وبلا دوران إضافي حتى تبقى الإحداثيات دقيقة */}
+      {editing && editor && rotation === 0 && <EditOverlay store={editor} page={page} scale={scale} spans={spans} />}
+
       {/* طبقة النص: شفافة لكنها قابلة للتحديد والنسخ. تعمل فقط بلا دوران إضافي حتى تبقى المحاذاة دقيقة */}
       {textLayer && spans && rotation === 0 && (
-        <div className="absolute inset-0 select-text overflow-hidden" style={{ direction: 'ltr' }} aria-hidden={false}>
+        <div className={clsx('absolute inset-0 overflow-hidden', editing ? 'pointer-events-none select-none' : 'select-text')} style={{ direction: 'ltr' }} aria-hidden={false}>
           {spans.map((span, i) => {
             const spanHits = pageHits.filter((h) => h.spanIndex === i)
             return (

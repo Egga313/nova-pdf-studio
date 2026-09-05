@@ -176,6 +176,15 @@
     "printSent": "أُرسل المستند إلى الطابعة", "printing": "جارٍ تجهيز الطباعة…", "exportImages": "تصدير الصفحات كصور", "exportText": "تصدير النص",
     "properties": { "title": "العنوان", "author": "المؤلف", "subject": "الموضوع", "creator": "المنشئ", "producer": "المنتج", "created": "تاريخ الإنشاء", "modified": "آخر تعديل", "pages": "الصفحات", "size": "الحجم", "path": "المسار" }
   },
+  "edit": {
+    "mode": "وضع التعديل", "enter": "تعديل PDF", "exit": "إنهاء التعديل", "hint": "انقر نصًا لتعديله، أو اسحب لإنشاء عنصر. حذف بـ",
+    "placeHint": "انقر أو اسحب على الصفحة لوضع الصورة", "toolDefaults": "إعدادات الأداة", "selectHint": "اختر عنصرًا على الصفحة لتعديل خصائصه.",
+    "saved": "تم حفظ التعديلات", "savedAs": "تم حفظ النسخة المعدّلة: {{name}}", "confirmExit": "توجد تعديلات غير محفوظة. هل تريد تجاهلها؟",
+    "unsavedTitle": "تعديلات غير محفوظة", "discard": "تجاهل", "keepEditing": "متابعة التعديل", "noChanges": "لا توجد تعديلات لحفظها",
+    "tools": { "select": "تحديد", "text": "نص", "highlight": "إبراز", "whiteout": "تغطية / حذف نص", "rect": "مستطيل", "ellipse": "دائرة", "line": "خط", "check": "علامة صح", "image": "صورة", "signature": "توقيع", "stamp": "ختم" },
+    "kinds": { "text": "نص", "image": "صورة", "rect": "مستطيل", "ellipse": "دائرة", "line": "خط", "check": "علامة صح", "highlight": "إبراز", "redact": "تغطية" },
+    "props": { "fontSize": "حجم الخط", "font": "الخط", "textColor": "لون النص", "background": "الخلفية", "stroke": "لون الحد", "strokeWidth": "سمك الحد", "fill": "التعبئة", "opacity": "الشفافية", "color": "اللون", "highlight": "لون الإبراز", "width": "العرض", "height": "الارتفاع", "rotation": "الدوران", "direction": "الاتجاه", "auto": "تلقائي", "toFront": "إلى الأمام" }
+  },
   "tools": {
     "title": "أدوات PDF", "subtitle": "عمليات على الملفات تعمل محليًا بالكامل.",
     "pickFiles": "اختيار ملفات PDF", "pickFile": "اختيار ملف PDF", "addFiles": "إضافة ملفات", "clear": "مسح", "run": "تنفيذ", "runAndSave": "تنفيذ وحفظ",
@@ -190,12 +199,12 @@
     "reorder": { "title": "إعادة ترتيب", "desc": "أدخل الترتيب الجديد للصفحات (مثال: 3,1,2,4)." },
     "blank": { "title": "إدراج صفحة فارغة", "desc": "أضف صفحة فارغة بعد صفحة معيّنة.", "after": "بعد الصفحة" },
     "insertPdf": { "title": "إدراج PDF", "desc": "أدرج صفحات ملف آخر في موضع محدد.", "second": "الملف المُدرَج", "at": "بعد الصفحة" },
-    "images": { "title": "صور ← PDF", "desc": "حوّل صور JPG/PNG إلى ملف PDF.", "pickImages": "اختيار صور", "fitPaper": "ملاءمة على مقاس ورقة", "keepSize": "بمقاس الصورة" },
+    "images": { "title": "صور إلى PDF", "desc": "حوّل صور JPG/PNG إلى ملف PDF.", "pickImages": "اختيار صور", "fitPaper": "ملاءمة على مقاس ورقة", "keepSize": "بمقاس الصورة" },
     "watermark": { "title": "علامة مائية", "desc": "أضف نصًا شفافًا على كل الصفحات." },
     "numbers": { "title": "أرقام الصفحات", "desc": "أضف أرقام الصفحات في الموضع الذي تختاره.", "bottomCenter": "أسفل وسط", "bottomRight": "أسفل يمين", "bottomLeft": "أسفل يسار", "topCenter": "أعلى وسط" },
     "compress": { "title": "ضغط PDF", "desc": "إعادة حفظ محسّنة للبنية (لا تعيد ترميز الصور).", "result": "من {{before}} إلى {{after}}" },
-    "pdfToImages": { "title": "PDF ← صور", "desc": "صدّر كل صفحة كصورة PNG.", "scale": "الدقة" },
-    "pdfToText": { "title": "PDF ← نص", "desc": "استخرج النص الكامل إلى ملف نصي." },
+    "pdfToImages": { "title": "PDF إلى صور", "desc": "صدّر كل صفحة كصورة PNG.", "scale": "الدقة" },
+    "pdfToText": { "title": "PDF إلى نص", "desc": "استخرج النص الكامل إلى ملف نصي." },
     "protect": { "title": "حماية بكلمة سر", "desc": "التشفير غير متاح في هذا الإصدار من المحرّك؛ سيُضاف مع تحديث المكتبة.", "unavailable": "غير متاح حاليًا" },
     "ocr": { "title": "مسح / OCR", "desc": "التعرف الضوئي يُنفَّذ في المرحلة 7 من خطة التطوير." }
   },

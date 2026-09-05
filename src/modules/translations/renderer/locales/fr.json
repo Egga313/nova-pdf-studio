@@ -175,6 +175,15 @@
     "printSent": "Document envoyé à l'imprimante", "printing": "Préparation de l'impression…", "exportImages": "Exporter les pages en images", "exportText": "Exporter le texte",
     "properties": { "title": "Titre", "author": "Auteur", "subject": "Sujet", "creator": "Créateur", "producer": "Producteur", "created": "Créé le", "modified": "Modifié le", "pages": "Pages", "size": "Taille", "path": "Chemin" }
   },
+  "edit": {
+    "mode": "Mode édition", "enter": "Modifier le PDF", "exit": "Terminer", "hint": "Cliquez un texte pour le modifier, ou glissez pour créer un élément. Supprimer avec",
+    "placeHint": "Cliquez ou glissez sur la page pour placer l'image", "toolDefaults": "Réglages de l'outil", "selectHint": "Sélectionnez un élément sur la page pour modifier ses propriétés.",
+    "saved": "Modifications enregistrées", "savedAs": "Copie modifiée enregistrée : {{name}}", "confirmExit": "Des modifications ne sont pas enregistrées. Les abandonner ?",
+    "unsavedTitle": "Modifications non enregistrées", "discard": "Abandonner", "keepEditing": "Continuer", "noChanges": "Aucune modification à enregistrer",
+    "tools": { "select": "Sélection", "text": "Texte", "highlight": "Surligner", "whiteout": "Masquer / supprimer du texte", "rect": "Rectangle", "ellipse": "Ellipse", "line": "Ligne", "check": "Coche", "image": "Image", "signature": "Signature", "stamp": "Tampon" },
+    "kinds": { "text": "Texte", "image": "Image", "rect": "Rectangle", "ellipse": "Ellipse", "line": "Ligne", "check": "Coche", "highlight": "Surlignage", "redact": "Masque" },
+    "props": { "fontSize": "Taille de police", "font": "Police", "textColor": "Couleur du texte", "background": "Fond", "stroke": "Couleur du trait", "strokeWidth": "Épaisseur", "fill": "Remplissage", "opacity": "Opacité", "color": "Couleur", "highlight": "Couleur de surlignage", "width": "Largeur", "height": "Hauteur", "rotation": "Rotation", "direction": "Sens", "auto": "Auto", "toFront": "Mettre devant" }
+  },
   "tools": {
     "title": "Outils PDF", "subtitle": "Des opérations sur fichiers exécutées entièrement sur votre ordinateur.",
     "pickFiles": "Choisir des fichiers PDF", "pickFile": "Choisir un fichier PDF", "addFiles": "Ajouter des fichiers", "clear": "Effacer", "run": "Exécuter", "runAndSave": "Exécuter et enregistrer",

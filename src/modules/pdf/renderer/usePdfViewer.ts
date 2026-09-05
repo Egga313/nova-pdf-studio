@@ -40,6 +40,7 @@ export interface ViewerState {
   setScale: (scale: number) => void
   zoomBy: (factor: number, containerWidth?: number, containerHeight?: number) => void
   rotate: (delta: 90 | -90) => void
+  resetRotation: () => void
   setSidebar: (mode: SidebarMode) => void
   runSearch: (query: string) => Promise<void>
   stepSearch: (delta: 1 | -1) => void
@@ -145,6 +146,8 @@ export function createViewerStore(path: string | null, fileName: string): StoreA
       const next = (((get().rotation + delta) % 360) + 360) % 360 as 0 | 90 | 180 | 270
       set({ rotation: next })
     },
+
+    resetRotation: () => set({ rotation: 0 }),
 
     setSidebar: (mode) => set({ sidebar: mode }),
 

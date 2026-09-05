@@ -175,6 +175,15 @@
     "printSent": "Document sent to printer", "printing": "Preparing print…", "exportImages": "Export pages as images", "exportText": "Export text",
     "properties": { "title": "Title", "author": "Author", "subject": "Subject", "creator": "Creator", "producer": "Producer", "created": "Created", "modified": "Modified", "pages": "Pages", "size": "Size", "path": "Path" }
   },
+  "edit": {
+    "mode": "Edit mode", "enter": "Edit PDF", "exit": "Finish editing", "hint": "Click text to edit it, or drag to create an element. Delete with",
+    "placeHint": "Click or drag on the page to place the image", "toolDefaults": "Tool settings", "selectHint": "Select an element on the page to edit its properties.",
+    "saved": "Changes saved", "savedAs": "Edited copy saved: {{name}}", "confirmExit": "There are unsaved changes. Discard them?",
+    "unsavedTitle": "Unsaved changes", "discard": "Discard", "keepEditing": "Keep editing", "noChanges": "No changes to save",
+    "tools": { "select": "Select", "text": "Text", "highlight": "Highlight", "whiteout": "White-out / delete text", "rect": "Rectangle", "ellipse": "Ellipse", "line": "Line", "check": "Checkmark", "image": "Image", "signature": "Signature", "stamp": "Stamp" },
+    "kinds": { "text": "Text", "image": "Image", "rect": "Rectangle", "ellipse": "Ellipse", "line": "Line", "check": "Checkmark", "highlight": "Highlight", "redact": "White-out" },
+    "props": { "fontSize": "Font size", "font": "Font", "textColor": "Text color", "background": "Background", "stroke": "Stroke color", "strokeWidth": "Stroke width", "fill": "Fill", "opacity": "Opacity", "color": "Color", "highlight": "Highlight color", "width": "Width", "height": "Height", "rotation": "Rotation", "direction": "Direction", "auto": "Auto", "toFront": "Bring to front" }
+  },
   "tools": {
     "title": "PDF tools", "subtitle": "File operations that run entirely on your computer.",
     "pickFiles": "Choose PDF files", "pickFile": "Choose a PDF file", "addFiles": "Add files", "clear": "Clear", "run": "Run", "runAndSave": "Run and save",
