@@ -334,13 +334,28 @@ function TextBody({ o, scale, editing, store }: { o: TextObject; scale: number; 
     padding: 0,
     margin: 0
   }
+  // يكبّر الصندوق عموديًا ليُظهر كل الأسطر عند الكتابة (وإلا اختفى النص الملتف تحت الحافة السفلية)
+  const growToFit = () => {
+    const el = ref.current
+    if (!el) return
+    const needed = el.scrollHeight / scale
+    const current = store.getState().layer().objects.find((x) => x.id === o.id)
+    if (current && needed > current.height + 0.5) store.getState().update(o.id, { height: Math.ceil(needed) }, false)
+  }
+  useEffect(() => {
+    if (editing) growToFit()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [editing, o.text, o.fontSize, o.width])
   if (editing) {
     return (
       <textarea
         ref={ref}
         data-edit-ui
         value={o.text}
-        onChange={(e) => store.getState().update(o.id, { text: e.target.value }, false)}
+        onChange={(e) => {
+          store.getState().update(o.id, { text: e.target.value }, false)
+          requestAnimationFrame(growToFit)
+        }}
         onBlur={() => {
           store.getState().commitTransient()
           store.getState().setEditingText(null)
