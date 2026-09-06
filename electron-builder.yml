@@ -25,6 +25,12 @@ extraResources:
     to: resources
 # يكتب اسم/وصف/أيقونة الملف التنفيذي عبر rcedit (بديل عن signAndEditExecutable)
 afterPack: build/afterPack.cjs
+# التحديث التلقائي يقرأ latest.yml من GitHub Releases لهذا المستودع
+publish:
+  provider: github
+  owner: ohaigoune-debug
+  repo: nova-pdf-studio
+  releaseType: release
 win:
   target:
     - nsis

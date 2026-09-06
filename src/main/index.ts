@@ -1,6 +1,7 @@
 /** نقطة دخول العملية الرئيسية: السجل، قاعدة البيانات، المعالجات، النافذة، النسخ التلقائي، الإغلاق الآمن. */
 import { app, BrowserWindow, dialog } from 'electron'
 import { autoBackupIfDue } from '@modules/backup/main'
+import { installAutoUpdater } from '@modules/updates/main'
 import { closeDatabase, openDatabase } from '@modules/database/main'
 import { seedBuiltinTemplates } from '@modules/templates/main/repository'
 import { registerCoreHandlers } from './handlers'
@@ -65,6 +66,7 @@ async function bootstrap(): Promise<void> {
   })
 
   void autoBackupIfDue(paths.backupDir)
+  installAutoUpdater()
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) mainWindow = createMainWindow()

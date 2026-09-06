@@ -1,6 +1,14 @@
 # NOVA PDF Studio
 
-**PDF Editor • Smart Invoice • Spreadsheet • Documents**
+**PDF Editor • Smart Invoice • Spreadsheet • Documents** — free, local-first, 14 languages.
+
+[**⬇ Download for Windows 10/11**](https://github.com/ohaigoune-debug/nova-pdf-studio/releases/latest) · [Release notes](RELEASE_NOTES.md) · [Architecture](ARCHITECTURE.md) · MIT License
+
+Nova PDF is a desktop app that edits PDFs, runs offline OCR (Arabic/French/English), builds smart invoices with integer-safe money math and premium templates, converts old PDF invoices into structured ones, and includes an Excel-like spreadsheet studio. Everything runs on your machine: no account, no internet, no data leaves your computer. The interface is available in Arabic and Persian (full RTL), French, English, Spanish, German, Italian, Portuguese, Turkish, Russian, Chinese, Japanese, Hindi and Indonesian.
+
+> The installer is not code-signed yet. If Windows SmartScreen shows "Unknown publisher", click **More info → Run anyway**.
+
+---
 
 منصة مكتبية متكاملة تعمل محليًا بالكامل (Local-first): قراءة وتعديل PDF، فواتير ذكية بحسابات دقيقة
 بوحدات مالية صحيحة، جداول شبيهة بـ Excel، تعرّف ضوئي على النصوص (عربية/فرنسية/إنجليزية)، وطباعة وتصدير.
