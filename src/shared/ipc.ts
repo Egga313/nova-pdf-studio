@@ -6,6 +6,10 @@
 import type { AppSettings } from './settings'
 import type { AppInfo, AuditLog, Currency, DashboardStats, FileFilter, RecentFile, RecentFileKind, Tax } from './entities'
 import type { DocumentRecord, PdfExportRequest, PrintJobRequest } from './documents'
+import type {
+  Customer, CustomerInput, CustomerSummary, DocType, Invoice, InvoiceFilters, InvoiceInput, InvoiceListRow, InvoiceStatus, OutstandingItem,
+  PaymentInput, Product, ProductInput
+} from './invoicing'
 
 export interface IpcContract {
   // ---- التطبيق ----
@@ -65,6 +69,41 @@ export interface IpcContract {
   'documents:save-page-text': { req: { documentId: number; pageIndex: number; text: string; confidence?: number }; res: void }
   'documents:mark-ocr': { req: { documentId: number }; res: void }
 
+  // ---- العملاء ----
+  'customers:list': { req: { query?: string; sort?: 'name' | 'recent' | 'invoiced_desc' | 'remaining_desc'; includeDeleted?: boolean; limit?: number; offset?: number } | void; res: CustomerSummary[] }
+  'customers:get': { req: { id: number }; res: CustomerSummary | null }
+  'customers:save': { req: CustomerInput; res: Customer }
+  'customers:delete': { req: { id: number }; res: void }
+  'customers:restore': { req: { id: number }; res: void }
+  'customers:purge': { req: { id: number }; res: void }
+  'customers:search': { req: { query: string; limit?: number }; res: Customer[] }
+  'customers:next-number': { req: void; res: string }
+
+  // ---- المنتجات ----
+  'products:list': { req: { query?: string; category?: string; includeInactive?: boolean; includeDeleted?: boolean; limit?: number; offset?: number; sort?: 'name' | 'recent' | 'price_desc' | 'price_asc' } | void; res: Product[] }
+  'products:get': { req: { id: number }; res: Product | null }
+  'products:save': { req: ProductInput; res: Product }
+  'products:delete': { req: { id: number }; res: void }
+  'products:restore': { req: { id: number }; res: void }
+  'products:search': { req: { query: string; limit?: number }; res: Product[] }
+  'products:categories': { req: void; res: string[] }
+
+  // ---- الفواتير والمدفوعات ----
+  'invoices:list': { req: InvoiceFilters | void; res: { rows: InvoiceListRow[]; total: number } }
+  'invoices:get': { req: { id: number }; res: Invoice | null }
+  'invoices:save': { req: InvoiceInput; res: Invoice }
+  'invoices:set-status': { req: { id: number; status: InvoiceStatus }; res: Invoice }
+  'invoices:trash': { req: { id: number }; res: void }
+  'invoices:restore': { req: { id: number }; res: void }
+  'invoices:purge': { req: { id: number }; res: void }
+  'invoices:duplicate': { req: { id: number }; res: Invoice }
+  'invoices:next-number': { req: { docType: DocType; issueDate?: string }; res: string }
+  'invoices:outstanding': { req: { limit?: number } | void; res: OutstandingItem[] }
+  'invoices:set-pdf-path': { req: { id: number; pdfPath: string }; res: void }
+  'payments:add': { req: PaymentInput; res: Invoice }
+  'payments:delete': { req: { id: number }; res: Invoice }
+  'search:global': { req: { query: string; limit?: number }; res: { customers: { id: number; label: string; sub: string }[]; invoices: { id: number; label: string; sub: string }[]; products: { id: number; label: string; sub: string }[] } }
+
   // ---- الطباعة والتصدير (محرك Chromium) ----
   'printers:list': { req: void; res: { name: string; displayName: string; isDefault: boolean; status: number }[] }
   'print:html': { req: PrintJobRequest; res: { success: boolean; reason?: string } }
@@ -91,6 +130,10 @@ export const IPC_CHANNELS: readonly IpcChannel[] = [
   'audit:list', 'demo:load', 'demo:clear', 'demo:status',
   'security:set-pin', 'security:remove-pin', 'security:verify-pin', 'security:status',
   'documents:list', 'documents:register', 'documents:remove', 'documents:save-page-text', 'documents:mark-ocr',
+  'customers:list', 'customers:get', 'customers:save', 'customers:delete', 'customers:restore', 'customers:purge', 'customers:search', 'customers:next-number',
+  'products:list', 'products:get', 'products:save', 'products:delete', 'products:restore', 'products:search', 'products:categories',
+  'invoices:list', 'invoices:get', 'invoices:save', 'invoices:set-status', 'invoices:trash', 'invoices:restore', 'invoices:purge', 'invoices:duplicate',
+  'invoices:next-number', 'invoices:outstanding', 'invoices:set-pdf-path', 'payments:add', 'payments:delete', 'search:global',
   'printers:list', 'print:html', 'print:html-to-pdf',
   'backup:create', 'backup:restore', 'backup:list', 'backup:export-db'
 ]

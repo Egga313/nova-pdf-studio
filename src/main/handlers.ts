@@ -8,6 +8,12 @@ import { clearDemoData, demoStatus, loadDemoData } from '@modules/database/main/
 import { getDatabase } from '@modules/database/main'
 import { createBackup, listBackups, restoreBackup } from '@modules/backup/main'
 import { listDocuments, markOcrDone, registerDocument, removeDocument, savePageText } from '@modules/pdf/main/documents'
+import { deleteCustomer, getCustomer, listCustomers, nextCustomerNumber, purgeCustomer, restoreCustomer, saveCustomer, searchCustomers } from '@modules/customers/main/repository'
+import { deleteProduct, getProduct, listCategories, listProducts, restoreProduct, saveProduct, searchProducts } from '@modules/products/main/repository'
+import {
+  addPayment, deletePayment, duplicateInvoice, getInvoice, globalSearch, listInvoices, listOutstanding, previewNextNumber, purgeInvoice, refreshOverdue,
+  restoreInvoice, saveInvoice, setInvoicePdfPath, setInvoiceStatus, trashInvoice
+} from '@modules/invoices/main/repository'
 import { exportHtmlToPdf, listPrinters, printHtml } from '@modules/printing/main'
 import { getDashboardStats } from '@modules/settings/main/dashboard'
 import { addRecent, clearRecent, listRecent, pinRecent, removeRecent } from '@modules/settings/main/recent-files'
@@ -142,6 +148,47 @@ export function registerCoreHandlers(): void {
   handle('documents:remove', ({ id }) => removeDocument(id))
   handle('documents:save-page-text', ({ documentId, pageIndex, text, confidence }) => savePageText(documentId, pageIndex, text, confidence))
   handle('documents:mark-ocr', ({ documentId }) => markOcrDone(documentId))
+
+  // ---- العملاء ----
+  handle('customers:list', (req) => listCustomers(req ?? {}))
+  handle('customers:get', ({ id }) => getCustomer(id))
+  handle('customers:save', (req) => saveCustomer(req))
+  handle('customers:delete', ({ id }) => deleteCustomer(id))
+  handle('customers:restore', ({ id }) => restoreCustomer(id))
+  handle('customers:purge', ({ id }) => purgeCustomer(id))
+  handle('customers:search', ({ query, limit }) => searchCustomers(query, limit))
+  handle('customers:next-number', () => nextCustomerNumber())
+
+  // ---- المنتجات ----
+  handle('products:list', (req) => listProducts(req ?? {}))
+  handle('products:get', ({ id }) => getProduct(id))
+  handle('products:save', (req) => saveProduct(req))
+  handle('products:delete', ({ id }) => deleteProduct(id))
+  handle('products:restore', ({ id }) => restoreProduct(id))
+  handle('products:search', ({ query, limit }) => searchProducts(query, limit))
+  handle('products:categories', () => listCategories())
+
+  // ---- الفواتير والمدفوعات ----
+  handle('invoices:list', (req) => {
+    refreshOverdue()
+    return listInvoices(req ?? {})
+  })
+  handle('invoices:get', ({ id }) => getInvoice(id))
+  handle('invoices:save', (req) => saveInvoice(req))
+  handle('invoices:set-status', ({ id, status }) => setInvoiceStatus(id, status))
+  handle('invoices:trash', ({ id }) => trashInvoice(id))
+  handle('invoices:restore', ({ id }) => restoreInvoice(id))
+  handle('invoices:purge', ({ id }) => purgeInvoice(id))
+  handle('invoices:duplicate', ({ id }) => duplicateInvoice(id))
+  handle('invoices:next-number', ({ docType, issueDate }) => previewNextNumber(docType, issueDate))
+  handle('invoices:outstanding', (req) => {
+    refreshOverdue()
+    return listOutstanding(req?.limit ?? 100)
+  })
+  handle('invoices:set-pdf-path', ({ id, pdfPath }) => setInvoicePdfPath(id, pdfPath))
+  handle('payments:add', (req) => addPayment(req))
+  handle('payments:delete', ({ id }) => deletePayment(id))
+  handle('search:global', ({ query, limit }) => globalSearch(query, limit))
 
   // ---- الطباعة والتصدير ----
   handle('printers:list', () => listPrinters(focused()))

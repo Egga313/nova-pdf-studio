@@ -143,8 +143,15 @@
     "LOCKED": "Opération refusée.", "CANCELLED": "Opération annulée.", "NO_BRIDGE": "L'interface n'est pas connectée à l'application.",
     "validation": {
       "name_required": "Le nom est obligatoire.", "rate_invalid": "Taux de taxe invalide.", "currency_code": "Le code devise doit comporter 3 à 5 lettres latines.",
-      "decimals": "Les décimales doivent être entre 0 et 4.", "pin_format": "Le PIN doit comporter 4 à 12 chiffres."
+      "decimals": "Les décimales doivent être entre 0 et 4.", "pin_format": "Le PIN doit comporter 4 à 12 chiffres.",
+      "customer_name": "Saisissez un nom de client ou de société.", "email": "Adresse e-mail invalide.", "price_invalid": "Prix invalide.",
+      "sku_duplicate": "Le SKU {{sku}} est déjà utilisé par un autre produit.", "date": "Date invalide.", "currency_required": "Choisissez une devise.",
+      "item_numbers": "Valeurs invalides à la ligne {{line}}.", "discount_range": "La remise de la ligne {{line}} doit être entre 0 % et 100 %.", "amount_positive": "Le montant doit être supérieur à zéro."
     },
+    "invoice": { "number_exists": "Le numéro de facture {{number}} existe déjà.", "cancelled": "Impossible d'enregistrer un paiement sur une facture annulée." },
+    "customer": { "has_invoices": "Suppression définitive impossible : {{count}} factures référencent ce client." },
+    "pdf": { "wrong_password": "Mot de passe incorrect.", "bad_range": "Plage de pages invalide : {{range}}", "no_files": "Choisissez au moins un fichier.", "no_pages": "Aucune page sélectionnée.", "cannot_delete_all": "Impossible de supprimer toutes les pages.", "bad_order": "Ordre de pages invalide.", "text_raster_unavailable": "Impossible de dessiner le texte non latin." },
+    "print": { "timeout": "Délai de préparation de l'impression dépassé.", "load_failed": "Impossible de charger le contenu à imprimer." },
     "security": { "wrong_pin": "Le PIN actuel est incorrect." },
     "backup": { "invalid_file": "Le fichier n'est pas une sauvegarde valide." }
   },
@@ -174,6 +181,50 @@
     "prevPage": "Page précédente", "nextPage": "Page suivante", "renderError": "Impossible d'afficher cette page", "exported": "Exporté : {{name}}",
     "printSent": "Document envoyé à l'imprimante", "printing": "Préparation de l'impression…", "exportImages": "Exporter les pages en images", "exportText": "Exporter le texte",
     "properties": { "title": "Titre", "author": "Auteur", "subject": "Sujet", "creator": "Créateur", "producer": "Producteur", "created": "Créé le", "modified": "Modifié le", "pages": "Pages", "size": "Taille", "path": "Chemin" }
+  },
+  "inv": {
+    "title": "Factures", "subtitle": "Toutes vos factures et devis avec leur état et leurs paiements.", "new": "Nouvelle facture", "newQuote": "Nouveau devis", "newProforma": "Nouvelle proforma",
+    "search": "Rechercher par numéro, client, téléphone ou montant…", "trash": "Corbeille", "backToList": "Retour à la liste",
+    "filters": { "all": "Toutes", "unpaid": "Impayées", "status": "État", "type": "Type", "from": "Du", "to": "Au", "sort": "Tri" },
+    "sort": { "date_desc": "Plus récentes", "date_asc": "Plus anciennes", "number": "Numéro", "amount_desc": "Montant", "customer": "Client" },
+    "types": { "invoice": "Facture", "quote": "Devis", "proforma": "Proforma", "receipt": "Reçu", "credit_note": "Avoir", "purchase_order": "Bon de commande", "delivery_note": "Bon de livraison" },
+    "cols": { "number": "Numéro", "customer": "Client", "date": "Date", "due": "Échéance", "total": "Total", "paid": "Payé", "remaining": "Restant", "status": "État" },
+    "count": "{{count}} factures", "total": "{{total}} résultats",
+    "actions": { "open": "Ouvrir", "duplicate": "Dupliquer", "trash": "Mettre à la corbeille", "restore": "Restaurer", "purge": "Supprimer définitivement", "markSent": "Marquer envoyée", "markPaid": "Marquer payée", "cancel": "Annuler la facture", "addPayment": "Enregistrer un paiement", "viewPdf": "Voir le PDF" },
+    "confirmTrash": "Mettre la facture {{number}} à la corbeille ?", "confirmPurge": "Supprimer définitivement la facture {{number}} ? Irréversible.",
+    "trashed": "Mise à la corbeille", "restored": "Restaurée", "purged": "Supprimée définitivement", "saved": "Facture {{number}} enregistrée", "duplicated": "Copie créée",
+    "editor": {
+      "company": "Entreprise", "billTo": "Facturer à", "info": "Informations de la facture", "items": "Lignes", "totals": "Totaux", "notes": "Notes", "payment": "Informations de paiement", "signature": "Signature",
+      "selectCustomer": "Choisir un client existant", "newCustomer": "Nouveau client", "noCustomer": "Aucun client sélectionné", "customerSearch": "Rechercher par nom ou téléphone…", "clearCustomer": "Retirer le client",
+      "number": "Numéro de facture", "autoNumber": "Automatique à l'enregistrement", "issueDate": "Date d'émission", "dueDate": "Date d'échéance", "reference": "Référence", "purchaseOrder": "Bon de commande",
+      "currency": "Devise", "paymentMethod": "Mode de paiement", "status": "État", "type": "Type de document",
+      "addRow": "Ajouter une ligne", "removeRow": "Supprimer la ligne", "duplicateRow": "Dupliquer la ligne", "productSearch": "Saisissez un produit…", "pasteHint": "Vous pouvez coller des lignes depuis Excel (Ctrl+V)",
+      "pasted": "{{count}} lignes ajoutées depuis le presse-papiers",
+      "grid": { "item": "Article", "description": "Description", "qty": "Quantité", "unit": "Unité", "price": "Prix unitaire", "discount": "Remise %", "tax": "Taxe %", "taxAmount": "Montant taxe", "subtotal": "Sous-total", "total": "Total" },
+      "subtotal": "Sous-total", "discountTotal": "Remise totale", "taxable": "Montant imposable", "taxTotal": "Total taxes", "shipping": "Livraison", "fees": "Frais supplémentaires",
+      "beforeTax": "Montant hors taxes", "grandTotal": "Total général", "amountPaid": "Montant payé", "remaining": "Solde restant", "amountInWords": "Montant en lettres",
+      "notesPlaceholder": "Notes affichées en bas de la facture…", "terms": "Conditions de paiement", "termsPlaceholder": "ex. Paiement sous 30 jours",
+      "payments": "Historique des paiements", "noPayments": "Aucun paiement", "payDate": "Date", "payAmount": "Montant", "payMethod": "Mode", "payRef": "Référence", "payNotes": "Notes",
+      "addPayment": "Enregistrer un paiement", "payFull": "Solde restant complet", "deletePayment": "Supprimer le paiement", "saveFirst": "Enregistrez la facture avant de saisir des paiements",
+      "unsaved": "Modifications non enregistrées", "saveAndClose": "Enregistrer et fermer", "preview": "Aperçu", "print": "Imprimer", "exportPdf": "Exporter en PDF", "template": "Modèle", "more": "Plus",
+      "validation": { "noItems": "Ajoutez au moins une ligne", "noCustomer": "Choisissez un client ou saisissez un nom" },
+      "methods": { "cash": "Espèces", "bank_transfer": "Virement", "card": "Carte", "cheque": "Chèque", "other": "Autre" }
+    }
+  },
+  "cust": {
+    "title": "Clients", "subtitle": "Votre base clients avec factures, paiements et soldes.", "new": "Nouveau client", "edit": "Modifier le client",
+    "search": "Rechercher par nom, téléphone ou e-mail…", "sort": { "name": "Nom", "recent": "Récents", "invoiced_desc": "Plus facturés", "remaining_desc": "Solde le plus élevé" },
+    "cols": { "name": "Nom", "phone": "Téléphone", "email": "E-mail", "city": "Ville", "invoices": "Factures", "invoiced": "Total facturé", "paid": "Payé", "remaining": "Restant" },
+    "fields": { "firstName": "Prénom", "lastName": "Nom", "companyName": "Société", "address": "Adresse", "city": "Ville", "country": "Pays", "phone": "Téléphone", "email": "E-mail", "taxId": "Identifiant fiscal", "customerNumber": "Numéro client", "notes": "Notes" },
+    "profile": { "title": "Fiche client", "info": "Coordonnées", "invoices": "Factures", "payments": "Paiements", "remaining": "Impayés", "lastActivity": "Dernière activité", "notes": "Notes", "newInvoice": "Nouvelle facture pour ce client", "noInvoices": "Aucune facture pour ce client" },
+    "saved": "Client enregistré", "deleted": "Client mis à la corbeille", "confirmDelete": "Supprimer le client {{name}} ? Ses factures sont conservées.", "count": "{{count}} clients"
+  },
+  "prod": {
+    "title": "Produits & Services", "subtitle": "Votre catalogue pour la saisie automatique dans les factures.", "new": "Nouveau produit", "edit": "Modifier le produit",
+    "search": "Rechercher par nom ou SKU…", "allCategories": "Toutes les catégories",
+    "cols": { "name": "Nom", "sku": "SKU", "price": "Prix", "tax": "Taxe", "unit": "Unité", "category": "Catégorie", "status": "État" },
+    "fields": { "name": "Nom", "sku": "SKU", "description": "Description", "price": "Prix", "currency": "Devise", "tax": "Taxe", "unit": "Unité", "category": "Catégorie", "notes": "Notes", "active": "Actif" },
+    "saved": "Produit enregistré", "deleted": "Produit mis à la corbeille", "confirmDelete": "Supprimer le produit {{name}} ?", "count": "{{count}} produits"
   },
   "edit": {
     "mode": "Mode édition", "enter": "Modifier le PDF", "exit": "Terminer", "hint": "Cliquez un texte pour le modifier, ou glissez pour créer un élément. Supprimer avec",

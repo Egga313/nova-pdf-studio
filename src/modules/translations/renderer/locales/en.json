@@ -143,8 +143,15 @@
     "LOCKED": "Operation refused.", "CANCELLED": "Operation cancelled.", "NO_BRIDGE": "The interface is not connected to the app.",
     "validation": {
       "name_required": "Name is required.", "rate_invalid": "Invalid tax rate.", "currency_code": "Currency code must be 3 to 5 latin letters.",
-      "decimals": "Decimals must be between 0 and 4.", "pin_format": "PIN must be 4 to 12 digits."
+      "decimals": "Decimals must be between 0 and 4.", "pin_format": "PIN must be 4 to 12 digits.",
+      "customer_name": "Enter a customer or company name.", "email": "Invalid email address.", "price_invalid": "Invalid price.",
+      "sku_duplicate": "SKU {{sku}} is already used by another product.", "date": "Invalid date.", "currency_required": "Choose a currency.",
+      "item_numbers": "Invalid values on line {{line}}.", "discount_range": "Discount on line {{line}} must be between 0% and 100%.", "amount_positive": "Amount must be greater than zero."
     },
+    "invoice": { "number_exists": "Invoice number {{number}} already exists.", "cancelled": "Cannot record a payment on a cancelled invoice." },
+    "customer": { "has_invoices": "Cannot permanently delete this customer: {{count}} invoices reference them." },
+    "pdf": { "wrong_password": "Wrong password.", "bad_range": "Invalid page range: {{range}}", "no_files": "Choose at least one file.", "no_pages": "No pages selected.", "cannot_delete_all": "Cannot delete all pages.", "bad_order": "Invalid page order.", "text_raster_unavailable": "Could not render non-latin text." },
+    "print": { "timeout": "Print preparation timed out.", "load_failed": "Could not load print content." },
     "security": { "wrong_pin": "Current PIN is incorrect." },
     "backup": { "invalid_file": "The file is not a valid backup." }
   },
@@ -174,6 +181,50 @@
     "prevPage": "Previous page", "nextPage": "Next page", "renderError": "This page could not be rendered", "exported": "Exported: {{name}}",
     "printSent": "Document sent to printer", "printing": "Preparing print…", "exportImages": "Export pages as images", "exportText": "Export text",
     "properties": { "title": "Title", "author": "Author", "subject": "Subject", "creator": "Creator", "producer": "Producer", "created": "Created", "modified": "Modified", "pages": "Pages", "size": "Size", "path": "Path" }
+  },
+  "inv": {
+    "title": "Invoices", "subtitle": "All your invoices and quotes with their status and payments.", "new": "New invoice", "newQuote": "New quote", "newProforma": "New proforma",
+    "search": "Search by number, customer, phone or amount…", "trash": "Trash", "backToList": "Back to list",
+    "filters": { "all": "All", "unpaid": "Unpaid", "status": "Status", "type": "Type", "from": "From", "to": "To", "sort": "Sort" },
+    "sort": { "date_desc": "Newest first", "date_asc": "Oldest first", "number": "Number", "amount_desc": "Amount", "customer": "Customer" },
+    "types": { "invoice": "Invoice", "quote": "Quote", "proforma": "Proforma", "receipt": "Receipt", "credit_note": "Credit note", "purchase_order": "Purchase order", "delivery_note": "Delivery note" },
+    "cols": { "number": "Number", "customer": "Customer", "date": "Date", "due": "Due", "total": "Total", "paid": "Paid", "remaining": "Remaining", "status": "Status" },
+    "count": "{{count}} invoices", "total": "{{total}} results",
+    "actions": { "open": "Open", "duplicate": "Duplicate", "trash": "Move to trash", "restore": "Restore", "purge": "Delete permanently", "markSent": "Mark as sent", "markPaid": "Mark as paid", "cancel": "Cancel invoice", "addPayment": "Record payment", "viewPdf": "View PDF" },
+    "confirmTrash": "Move invoice {{number}} to trash?", "confirmPurge": "Permanently delete invoice {{number}}? This cannot be undone.",
+    "trashed": "Moved to trash", "restored": "Restored", "purged": "Deleted permanently", "saved": "Invoice {{number}} saved", "duplicated": "Copy created",
+    "editor": {
+      "company": "Company", "billTo": "Bill to", "info": "Invoice information", "items": "Items", "totals": "Totals", "notes": "Notes", "payment": "Payment information", "signature": "Signature",
+      "selectCustomer": "Select existing customer", "newCustomer": "New customer", "noCustomer": "No customer selected", "customerSearch": "Search by name or phone…", "clearCustomer": "Remove customer",
+      "number": "Invoice number", "autoNumber": "Automatic on save", "issueDate": "Issue date", "dueDate": "Due date", "reference": "Reference", "purchaseOrder": "Purchase order",
+      "currency": "Currency", "paymentMethod": "Payment method", "status": "Status", "type": "Document type",
+      "addRow": "Add row", "removeRow": "Remove row", "duplicateRow": "Duplicate row", "productSearch": "Type a product name…", "pasteHint": "You can paste rows directly from Excel (Ctrl+V)",
+      "pasted": "{{count}} rows added from clipboard",
+      "grid": { "item": "Item", "description": "Description", "qty": "Quantity", "unit": "Unit", "price": "Unit price", "discount": "Discount %", "tax": "Tax %", "taxAmount": "Tax amount", "subtotal": "Subtotal", "total": "Total" },
+      "subtotal": "Subtotal", "discountTotal": "Total discount", "taxable": "Taxable amount", "taxTotal": "Tax total", "shipping": "Shipping", "fees": "Additional fees",
+      "beforeTax": "Amount before tax", "grandTotal": "Grand total", "amountPaid": "Amount paid", "remaining": "Remaining balance", "amountInWords": "Amount in words",
+      "notesPlaceholder": "Notes shown at the bottom of the invoice…", "terms": "Payment terms", "termsPlaceholder": "e.g. Payment within 30 days",
+      "payments": "Payment history", "noPayments": "No payments yet", "payDate": "Date", "payAmount": "Amount", "payMethod": "Method", "payRef": "Reference", "payNotes": "Notes",
+      "addPayment": "Record payment", "payFull": "Full remaining amount", "deletePayment": "Delete payment", "saveFirst": "Save the invoice first to record payments",
+      "unsaved": "Unsaved changes", "saveAndClose": "Save and close", "preview": "Preview", "print": "Print", "exportPdf": "Export PDF", "template": "Template", "more": "More",
+      "validation": { "noItems": "Add at least one item", "noCustomer": "Select a customer or enter a name" },
+      "methods": { "cash": "Cash", "bank_transfer": "Bank transfer", "card": "Card", "cheque": "Cheque", "other": "Other" }
+    }
+  },
+  "cust": {
+    "title": "Customers", "subtitle": "Your customer base with invoices, payments and balances.", "new": "New customer", "edit": "Edit customer",
+    "search": "Search by name, phone or email…", "sort": { "name": "Name", "recent": "Recent", "invoiced_desc": "Most invoiced", "remaining_desc": "Highest balance" },
+    "cols": { "name": "Name", "phone": "Phone", "email": "Email", "city": "City", "invoices": "Invoices", "invoiced": "Total invoiced", "paid": "Paid", "remaining": "Remaining" },
+    "fields": { "firstName": "First name", "lastName": "Last name", "companyName": "Company name", "address": "Address", "city": "City", "country": "Country", "phone": "Phone", "email": "Email", "taxId": "Tax ID", "customerNumber": "Customer number", "notes": "Notes" },
+    "profile": { "title": "Customer profile", "info": "Customer details", "invoices": "Invoices", "payments": "Payments", "remaining": "Outstanding", "lastActivity": "Last activity", "notes": "Notes", "newInvoice": "New invoice for this customer", "noInvoices": "No invoices for this customer yet" },
+    "saved": "Customer saved", "deleted": "Customer moved to trash", "confirmDelete": "Delete customer {{name}}? Their invoices are kept.", "count": "{{count}} customers"
+  },
+  "prod": {
+    "title": "Products & Services", "subtitle": "Your catalog for autocomplete in invoices.", "new": "New product", "edit": "Edit product",
+    "search": "Search by name or SKU…", "allCategories": "All categories",
+    "cols": { "name": "Name", "sku": "SKU", "price": "Price", "tax": "Tax", "unit": "Unit", "category": "Category", "status": "Status" },
+    "fields": { "name": "Name", "sku": "SKU", "description": "Description", "price": "Price", "currency": "Currency", "tax": "Tax", "unit": "Unit", "category": "Category", "notes": "Notes", "active": "Active" },
+    "saved": "Product saved", "deleted": "Product moved to trash", "confirmDelete": "Delete product {{name}}?", "count": "{{count}} products"
   },
   "edit": {
     "mode": "Edit mode", "enter": "Edit PDF", "exit": "Finish editing", "hint": "Click text to edit it, or drag to create an element. Delete with",

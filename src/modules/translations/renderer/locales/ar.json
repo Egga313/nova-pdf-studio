@@ -144,8 +144,15 @@
     "LOCKED": "العملية مرفوضة.", "CANCELLED": "أُلغيت العملية.", "NO_BRIDGE": "الواجهة غير متصلة بالتطبيق.",
     "validation": {
       "name_required": "الاسم مطلوب.", "rate_invalid": "نسبة الضريبة غير صالحة.", "currency_code": "رمز العملة يجب أن يكون 3 إلى 5 أحرف لاتينية.",
-      "decimals": "الخانات العشرية بين 0 و4.", "pin_format": "الرمز يجب أن يكون من 4 إلى 12 رقمًا."
+      "decimals": "الخانات العشرية بين 0 و4.", "pin_format": "الرمز يجب أن يكون من 4 إلى 12 رقمًا.",
+      "customer_name": "أدخل اسم العميل أو اسم الشركة.", "email": "البريد الإلكتروني غير صالح.", "price_invalid": "السعر غير صالح.",
+      "sku_duplicate": "الرمز {{sku}} مستخدم لمنتج آخر.", "date": "التاريخ غير صالح.", "currency_required": "اختر العملة.",
+      "item_numbers": "قيم غير صالحة في السطر {{line}}.", "discount_range": "الخصم في السطر {{line}} يجب أن يكون بين 0% و100%.", "amount_positive": "المبلغ يجب أن يكون أكبر من الصفر."
     },
+    "invoice": { "number_exists": "رقم الفاتورة {{number}} مستخدم من قبل.", "cancelled": "لا يمكن تسجيل دفعة على فاتورة ملغاة." },
+    "customer": { "has_invoices": "لا يمكن حذف العميل نهائيًا لأن له {{count}} فاتورة." },
+    "pdf": { "wrong_password": "كلمة السر غير صحيحة.", "bad_range": "نطاق الصفحات غير صالح: {{range}}", "no_files": "اختر ملفًا واحدًا على الأقل.", "no_pages": "لم تُحدَّد صفحات.", "cannot_delete_all": "لا يمكن حذف كل الصفحات.", "bad_order": "ترتيب الصفحات غير صالح.", "text_raster_unavailable": "تعذّر رسم النص غير اللاتيني." },
+    "print": { "timeout": "انتهت مهلة تجهيز الطباعة.", "load_failed": "تعذّر تحميل محتوى الطباعة." },
     "security": { "wrong_pin": "الرمز الحالي غير صحيح." },
     "backup": { "invalid_file": "الملف ليس نسخة احتياطية صالحة." }
   },
@@ -175,6 +182,50 @@
     "prevPage": "الصفحة السابقة", "nextPage": "الصفحة التالية", "renderError": "تعذّر عرض هذه الصفحة", "exported": "تم التصدير: {{name}}",
     "printSent": "أُرسل المستند إلى الطابعة", "printing": "جارٍ تجهيز الطباعة…", "exportImages": "تصدير الصفحات كصور", "exportText": "تصدير النص",
     "properties": { "title": "العنوان", "author": "المؤلف", "subject": "الموضوع", "creator": "المنشئ", "producer": "المنتج", "created": "تاريخ الإنشاء", "modified": "آخر تعديل", "pages": "الصفحات", "size": "الحجم", "path": "المسار" }
+  },
+  "inv": {
+    "title": "الفواتير", "subtitle": "كل فواتيرك وعروض الأسعار مع حالاتها ومدفوعاتها.", "new": "فاتورة جديدة", "newQuote": "عرض سعر جديد", "newProforma": "فاتورة أولية جديدة",
+    "search": "بحث برقم الفاتورة أو العميل أو الهاتف أو المبلغ…", "trash": "سلة المحذوفات", "backToList": "العودة إلى القائمة",
+    "filters": { "all": "الكل", "unpaid": "غير مدفوعة", "status": "الحالة", "type": "النوع", "from": "من", "to": "إلى", "sort": "الترتيب" },
+    "sort": { "date_desc": "الأحدث أولًا", "date_asc": "الأقدم أولًا", "number": "الرقم", "amount_desc": "المبلغ", "customer": "العميل" },
+    "types": { "invoice": "فاتورة", "quote": "عرض سعر", "proforma": "فاتورة أولية", "receipt": "وصل", "credit_note": "إشعار دائن", "purchase_order": "أمر شراء", "delivery_note": "وصل تسليم" },
+    "cols": { "number": "الرقم", "customer": "العميل", "date": "التاريخ", "due": "الاستحقاق", "total": "المجموع", "paid": "المدفوع", "remaining": "المتبقي", "status": "الحالة" },
+    "count": "{{count}} فاتورة", "total": "{{total}} نتيجة",
+    "actions": { "open": "فتح", "duplicate": "تكرار", "trash": "نقل إلى المحذوفات", "restore": "استرجاع", "purge": "حذف نهائي", "markSent": "تعليم كمرسلة", "markPaid": "تعليم كمدفوعة", "cancel": "إلغاء الفاتورة", "addPayment": "تسجيل دفعة", "viewPdf": "عرض PDF" },
+    "confirmTrash": "نقل الفاتورة {{number}} إلى المحذوفات؟", "confirmPurge": "حذف الفاتورة {{number}} نهائيًا؟ لا يمكن التراجع.",
+    "trashed": "نُقلت إلى المحذوفات", "restored": "تم الاسترجاع", "purged": "حُذفت نهائيًا", "saved": "تم حفظ الفاتورة {{number}}", "duplicated": "تم إنشاء نسخة",
+    "editor": {
+      "company": "المؤسسة", "billTo": "الفاتورة إلى", "info": "بيانات الفاتورة", "items": "البنود", "totals": "المجاميع", "notes": "ملاحظات", "payment": "معلومات الدفع", "signature": "التوقيع",
+      "selectCustomer": "اختيار عميل موجود", "newCustomer": "عميل جديد", "noCustomer": "لم يُختر عميل", "customerSearch": "ابحث بالاسم أو الهاتف…", "clearCustomer": "إزالة العميل",
+      "number": "رقم الفاتورة", "autoNumber": "تلقائي عند الحفظ", "issueDate": "تاريخ الإصدار", "dueDate": "تاريخ الاستحقاق", "reference": "المرجع", "purchaseOrder": "أمر الشراء",
+      "currency": "العملة", "paymentMethod": "طريقة الدفع", "status": "الحالة", "type": "نوع المستند",
+      "addRow": "إضافة سطر", "removeRow": "حذف السطر", "duplicateRow": "تكرار السطر", "productSearch": "اكتب اسم المنتج…", "pasteHint": "يمكنك لصق صفوف من Excel مباشرة (Ctrl+V)",
+      "pasted": "أُضيف {{count}} سطرًا من الحافظة",
+      "grid": { "item": "البند", "description": "الوصف", "qty": "الكمية", "unit": "الوحدة", "price": "سعر الوحدة", "discount": "خصم %", "tax": "ضريبة %", "taxAmount": "قيمة الضريبة", "subtotal": "الصافي", "total": "المجموع" },
+      "subtotal": "المجموع الفرعي", "discountTotal": "إجمالي الخصم", "taxable": "المبلغ الخاضع", "taxTotal": "إجمالي الضريبة", "shipping": "الشحن", "fees": "رسوم إضافية",
+      "beforeTax": "المبلغ قبل الضريبة", "grandTotal": "المجموع الإجمالي", "amountPaid": "المدفوع", "remaining": "الرصيد المتبقي", "amountInWords": "المبلغ بالحروف",
+      "notesPlaceholder": "ملاحظات تظهر في أسفل الفاتورة…", "terms": "شروط الدفع", "termsPlaceholder": "مثال: الدفع خلال 30 يومًا",
+      "payments": "سجل المدفوعات", "noPayments": "لا توجد مدفوعات بعد", "payDate": "التاريخ", "payAmount": "المبلغ", "payMethod": "الطريقة", "payRef": "المرجع", "payNotes": "ملاحظات",
+      "addPayment": "تسجيل دفعة", "payFull": "المبلغ المتبقي كاملًا", "deletePayment": "حذف الدفعة", "saveFirst": "احفظ الفاتورة أولًا لتسجيل المدفوعات",
+      "unsaved": "تعديلات غير محفوظة", "saveAndClose": "حفظ وإغلاق", "preview": "معاينة", "print": "طباعة", "exportPdf": "تصدير PDF", "template": "القالب", "more": "المزيد",
+      "validation": { "noItems": "أضف بندًا واحدًا على الأقل", "noCustomer": "اختر عميلًا أو أدخل اسمه" },
+      "methods": { "cash": "نقدًا", "bank_transfer": "تحويل بنكي", "card": "بطاقة", "cheque": "شيك", "other": "أخرى" }
+    }
+  },
+  "cust": {
+    "title": "العملاء", "subtitle": "قاعدة عملائك مع الفواتير والمدفوعات والمبالغ المتبقية.", "new": "عميل جديد", "edit": "تعديل العميل",
+    "search": "بحث بالاسم أو الهاتف أو البريد…", "sort": { "name": "الاسم", "recent": "الأحدث", "invoiced_desc": "الأكثر فوترة", "remaining_desc": "الأكثر مديونية" },
+    "cols": { "name": "الاسم", "phone": "الهاتف", "email": "البريد", "city": "المدينة", "invoices": "الفواتير", "invoiced": "إجمالي الفواتير", "paid": "المدفوع", "remaining": "المتبقي" },
+    "fields": { "firstName": "الاسم", "lastName": "اللقب", "companyName": "اسم الشركة", "address": "العنوان", "city": "المدينة", "country": "الدولة", "phone": "الهاتف", "email": "البريد الإلكتروني", "taxId": "الرقم الضريبي", "customerNumber": "رقم العميل", "notes": "ملاحظات" },
+    "profile": { "title": "ملف العميل", "info": "بيانات العميل", "invoices": "الفواتير", "payments": "المدفوعات", "remaining": "المبالغ المتبقية", "lastActivity": "آخر تعامل", "notes": "ملاحظات", "newInvoice": "فاتورة جديدة لهذا العميل", "noInvoices": "لا توجد فواتير لهذا العميل بعد" },
+    "saved": "تم حفظ العميل", "deleted": "نُقل العميل إلى المحذوفات", "confirmDelete": "حذف العميل {{name}}؟ تبقى فواتيره محفوظة.", "count": "{{count}} عميل"
+  },
+  "prod": {
+    "title": "المنتجات والخدمات", "subtitle": "كتالوجك للإكمال التلقائي في الفواتير.", "new": "منتج جديد", "edit": "تعديل المنتج",
+    "search": "بحث بالاسم أو الرمز…", "allCategories": "كل التصنيفات",
+    "cols": { "name": "الاسم", "sku": "الرمز (SKU)", "price": "السعر", "tax": "الضريبة", "unit": "الوحدة", "category": "التصنيف", "status": "الحالة" },
+    "fields": { "name": "الاسم", "sku": "الرمز (SKU)", "description": "الوصف", "price": "السعر", "currency": "العملة", "tax": "الضريبة", "unit": "الوحدة", "category": "التصنيف", "notes": "ملاحظات", "active": "نشط" },
+    "saved": "تم حفظ المنتج", "deleted": "نُقل المنتج إلى المحذوفات", "confirmDelete": "حذف المنتج {{name}}؟", "count": "{{count}} منتج"
   },
   "edit": {
     "mode": "وضع التعديل", "enter": "تعديل PDF", "exit": "إنهاء التعديل", "hint": "انقر نصًا لتعديله، أو اسحب لإنشاء عنصر. حذف بـ",
