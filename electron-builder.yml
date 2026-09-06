@@ -62,9 +62,8 @@ nsis:
     - ru_RU
     - zh_CN
     - ja_JP
-    - hi_IN
+    # hi_IN و fa_IR غير مدرجتين: Hindi.nsh معطوب وPersian.nlf غير موجود في NSIS 3.0.4 — واجهة التطبيق نفسها تدعم الهندية والفارسية
     - id_ID
-    - fa_IR
 mac:
   target: dmg
   category: public.app-category.productivity
