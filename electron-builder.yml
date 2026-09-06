@@ -54,6 +54,17 @@ nsis:
     - ar_SA
     - fr_FR
     - en_US
+    - es_ES
+    - de_DE
+    - it_IT
+    - pt_BR
+    - tr_TR
+    - ru_RU
+    - zh_CN
+    - ja_JP
+    - hi_IN
+    - id_ID
+    - fa_IR
 mac:
   target: dmg
   category: public.app-category.productivity

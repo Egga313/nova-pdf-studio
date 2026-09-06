@@ -1,0 +1,300 @@
+{
+  "app": { "name": "NOVA PDF Studio", "tagline": "ویرایشگر PDF • فاکتور هوشمند • صفحه‌گسترده • اسناد" },
+  "nav": { "audit": "گزارش رویدادها",
+    "home": "خانه", "pdf": "PDF", "invoices": "فاکتورها", "customers": "مشتریان", "products": "محصولات و خدمات",
+    "spreadsheets": "صفحه‌گسترده‌ها", "templates": "قالب‌ها", "documents": "اسناد", "tools": "ابزارها", "settings": "تنظیمات",
+    "storage": "فضای ذخیره‌سازی", "backup": "پشتیبان‌گیری", "language": "زبان", "theme": "پوسته"
+  },
+  "common": { "total": "جمع کل", "demo": "نمایشی",
+    "save": "ذخیره", "cancel": "انصراف", "close": "بستن", "delete": "حذف", "edit": "ویرایش", "add": "افزودن", "search": "جستجو",
+    "open": "باز کردن", "create": "ایجاد", "back": "بازگشت", "next": "بعدی", "finish": "پایان", "yes": "بله", "no": "خیر", "ok": "تأیید",
+    "loading": "در حال بارگذاری…", "none": "هیچ‌کدام", "actions": "عملیات", "name": "نام", "optional": "اختیاری", "required": "الزامی",
+    "clear": "پاک کردن", "confirm": "تأیید", "retry": "تلاش مجدد", "copy": "کپی", "remove": "حذف", "all": "همه", "today": "امروز",
+    "unknown": "نامشخص", "version": "نسخه", "comingSoon": "در مرحله‌ای بعدی ارائه می‌شود", "enabled": "فعال", "disabled": "غیرفعال",
+    "default": "پیش‌فرض", "active": "فعال", "inactive": "غیرفعال", "preview": "پیش‌نمایش", "apply": "اعمال", "reset": "بازنشانی"
+  },
+  "tabs": { "close": "بستن برگه", "closeOthers": "بستن سایر برگه‌ها", "reopenClosed": "بازکردن دوباره برگه بسته‌شده", "unsaved": "تغییرات ذخیره‌نشده" },
+  "theme": { "light": "روشن", "dark": "تیره", "system": "سیستم" },
+  "topbar": { "search": "جستجو در همه‌چیز… (Ctrl+K)", "notifications": "اعلان‌ها", "commandPalette": "پالت دستورات" },
+  "dashboard": {
+    "title": "خانه",
+    "welcome": "به NOVA خوش آمدید",
+    "welcomeCompany": "خوش آمدید، {{name}}",
+    "subtitle": "هر آنچه برای مدیریت اسناد و فاکتورها نیاز دارید، در یک‌جا.",
+    "quickActions": "دسترسی سریع",
+    "recentDocuments": "اسناد اخیر",
+    "noRecent": "سند بازشده‌ی اخیری وجود ندارد",
+    "noRecentHint": "یک PDF یا صفحه‌گسترده باز کنید تا اینجا نمایش داده شود.",
+    "tools": "ابزارها",
+    "overview": "نمای کلی",
+    "stats": {
+      "totalInvoices": "تعداد کل فاکتورها", "paid": "پرداخت‌شده", "unpaid": "پرداخت‌نشده", "overdue": "معوق",
+      "revenue": "درآمد کل", "remaining": "پرداخت‌های باقی‌مانده", "customers": "مشتریان", "products": "محصولات"
+    },
+    "chart": { "title": "فاکتورشده در برابر پرداخت‌شده، ۱۲ ماه اخیر", "invoiced": "فاکتورشده", "paid": "پرداخت‌شده", "empty": "هنوز داده‌ای موجود نیست" },
+    "outstanding": {
+      "title": "پرداخت‌های معوق", "customer": "مشتری", "invoice": "فاکتور", "dueDate": "سررسید",
+      "remaining": "باقی‌مانده", "daysOverdue": "روزهای تأخیر", "empty": "موردی معوق نیست", "onTime": "به‌موقع"
+    },
+    "actions": {
+      "openPdf": "باز کردن PDF", "newPdf": "PDF جدید", "newInvoice": "فاکتور جدید", "invoices": "فاکتورها", "customers": "مشتریان",
+      "products": "محصولات و خدمات", "spreadsheets": "صفحه‌گسترده‌ها", "recent": "اسناد اخیر", "templates": "قالب‌ها",
+      "scanOcr": "اسکن / OCR", "mergePdf": "ادغام PDF", "splitPdf": "تفکیک PDF", "convert": "تبدیل فایل‌ها", "settings": "تنظیمات",
+      "newSpreadsheet": "صفحه‌گسترده جدید", "scanDocument": "اسکن سند", "mergePdfs": "ادغام فایل‌های PDF"
+    }
+  },
+  "palette": { "customers": "مشتریان", "invoices": "فاکتورها", "products": "محصولات", "searching": "در حال جستجو…",
+    "placeholder": "یک دستور یا عبارت جستجو تایپ کنید…", "noResults": "نتیجه‌ای یافت نشد", "commands": "دستورات", "recentFiles": "فایل‌های اخیر",
+    "navigation": "پیمایش", "hint": "↑↓ پیمایش • Enter اجرا • Esc بستن"
+  },
+  "notifications": { "title": "اعلان‌ها", "empty": "اعلانی وجود ندارد", "markAllRead": "علامت‌گذاری همه به‌عنوان خوانده‌شده", "clear": "پاک کردن همه" },
+  "commands": { "openAudit": "گزارش رویدادها",
+    "newInvoice": "فاکتور جدید", "openPdf": "باز کردن فایل PDF", "newSpreadsheet": "صفحه‌گسترده جدید", "mergePdf": "ادغام PDF",
+    "goHome": "رفتن به خانه", "openSettings": "باز کردن تنظیمات", "toggleTheme": "تغییر پوسته", "closeTab": "بستن برگه",
+    "reopenTab": "بازکردن دوباره برگه بسته‌شده", "nextTab": "برگه بعدی", "prevTab": "برگه قبلی", "lockApp": "قفل برنامه",
+    "createBackup": "ایجاد پشتیبان", "openCustomers": "باز کردن مشتریان", "openInvoices": "باز کردن فاکتورها", "openProducts": "باز کردن محصولات",
+    "language": "تغییر زبان به {{lang}}", "showShortcuts": "میان‌برهای صفحه‌کلید"
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "sections": { "fields": "فیلدهای سفارشی",
+      "general": "عمومی", "company": "پروفایل شرکت", "invoice": "تنظیمات فاکتور", "tax": "مالیات‌ها", "currencies": "ارزها",
+      "numbering": "شماره‌گذاری", "language": "زبان", "appearance": "ظاهر", "printing": "چاپ", "ocr": "OCR",
+      "storage": "فضای ذخیره‌سازی", "backup": "پشتیبان‌گیری", "security": "امنیت", "about": "درباره"
+    },
+    "general": {
+      "dateFormat": "قالب تاریخ", "numberingSystem": "ارقام", "latn": "ارقام لاتین (۱ ۲ ۳)", "arab": "ارقام هندی-عربی (١ ٢ ٣)",
+      "confirmDelete": "پیش از حذف، تأیید بگیر", "openLastTabs": "بازکردن دوباره برگه‌ها هنگام شروع"
+    },
+    "company": {
+      "hint": "به‌طور خودکار در هر فاکتور درج می‌شود. می‌توانید هر فیلد را در سربرگ فاکتور نمایش دهید یا پنهان کنید.",
+      "name": "نام شرکت", "firstName": "نام", "lastName": "نام خانوادگی", "address": "آدرس", "city": "شهر", "country": "کشور",
+      "phone": "تلفن", "email": "ایمیل", "website": "وب‌سایت", "rc": "ثبت تجاری (RC)", "nif": "شناسه مالیاتی (NIF)",
+      "nis": "شناسه آماری (NIS)", "ai": "ماده مالیاتی (AI)", "taxId": "شناسه مالیاتی", "bankAccount": "حساب بانکی", "iban": "شماره شبا (IBAN)", "swift": "کد SWIFT",
+      "logo": "لوگو", "pickLogo": "انتخاب لوگو", "removeLogo": "حذف لوگو", "visibleFields": "فیلدهای نمایش‌داده‌شده در فاکتورها",
+      "ownerName": "نام مالک"
+    },
+    "invoice": {
+      "pattern": "الگوی شماره فاکتور", "patternHint": "توکن‌ها: {YYYY} سال، {YY}، {MM} ماه، {DD} روز، {SEQ:5} شمارنده با ۵ رقم",
+      "preview": "پیش‌نمایش", "defaultCurrency": "ارز پیش‌فرض", "currencyPosition": "موقعیت نماد ارز", "before": "پیش از مبلغ (€۱٬۰۰۰٫۰۰)",
+      "after": "پس از مبلغ (۱٬۰۰۰٫۰۰ DZD)", "defaultTax": "مالیات پیش‌فرض", "dueDays": "سررسید (روز)", "amountInWords": "نمایش مبلغ به حروف",
+      "defaultNotes": "یادداشت‌های پیش‌فرض", "paymentTerms": "شرایط پرداخت پیش‌فرض", "showLogo": "نمایش لوگو", "invalidPattern": "الگوی نامعتبر: {SEQ} الزامی است",
+      "quotePattern": "الگوی پیش‌فاکتور قیمت", "proformaPattern": "الگوی پیش‌فاکتور", "receiptPattern": "الگوی رسید"
+    },
+    "taxes": {
+      "title": "پروفایل‌های مالیاتی", "hint": "نرخ‌های مالیاتی مورد استفاده کسب‌وکار خود را بسازید (مالیات بر ارزش‌افزوده ۰٪، ۹٪، ۱۹٪ یا هر نرخ دلخواه).",
+      "add": "افزودن مالیات", "name": "نام", "rate": "نرخ ٪", "default": "پیش‌فرض", "deleteConfirm": "این مالیات حذف شود؟",
+      "used": "توسط محصولاتی استفاده می‌شود؛ به‌جای حذف، غیرفعال خواهد شد"
+    },
+    "currencies": {
+      "title": "ارزها", "hint": "هر ارزی را با کد ISO آن، به‌همراه نماد، موقعیت و اعشار اضافه کنید.",
+      "add": "افزودن ارز", "code": "کد (ISO)", "name": "نام", "symbol": "نماد نمایشی", "decimals": "ارقام اعشار", "position": "موقعیت",
+      "deleteConfirm": "این ارز حذف شود؟"
+    },
+    "appearance": { "theme": "پوسته", "language": "زبان رابط کاربری", "hint": "زبان و جهت متن بلافاصله تغییر می‌کند، بدون نیاز به راه‌اندازی مجدد." },
+    "printing": {
+      "paperSize": "اندازه کاغذ", "orientation": "جهت صفحه", "portrait": "عمودی", "landscape": "افقی", "margins": "حاشیه‌ها (میلی‌متر)",
+      "scale": "مقیاس ٪", "copies": "تعداد نسخه"
+    },
+    "ocr": { "languages": "زبان‌های OCR", "autoPrompt": "پیشنهاد خودکار OCR هنگام باز شدن PDF اسکن‌شده", "ara": "عربی", "fra": "فرانسوی", "eng": "انگلیسی" },
+    "storage": {
+      "dataDir": "پوشه داده", "dbPath": "فایل پایگاه داده", "logs": "فایل گزارش", "openFolder": "باز کردن پوشه",
+      "demoData": "داده‌های نمایشی", "demoHint": "داده‌های نمونه با نشان مشخص که با یک کلیک و بدون تأثیر بر داده‌های شما قابل حذف است.",
+      "loadDemo": "بارگذاری داده‌های نمایشی", "clearDemo": "پاک کردن داده‌های نمایشی", "demoLoaded": "داده‌های نمایشی بارگذاری شده است", "demoNotLoaded": "داده نمایشی موجود نیست"
+    },
+    "backup": {
+      "title": "پشتیبان‌گیری", "hint": "یک پشتیبان شامل مشتریان، فاکتورها، محصولات، قالب‌ها، تنظیمات و پرداخت‌ها است.",
+      "create": "ایجاد پشتیبان", "restore": "بازیابی از فایل…", "export": "خروجی گرفتن از پایگاه داده", "auto": "پشتیبان‌گیری خودکار روزانه",
+      "folder": "پوشه پشتیبان", "defaultFolder": "پوشه پیش‌فرض", "chooseFolder": "انتخاب پوشه", "keep": "تعداد پشتیبان‌های نگه‌داری‌شده",
+      "last": "آخرین پشتیبان", "never": "هنوز پشتیبانی گرفته نشده", "list": "پشتیبان‌های موجود", "confirmRestore": "همه‌چیز با پشتیبان انتخاب‌شده جایگزین خواهد شد. ابتدا یک نسخه ایمن از وضعیت فعلی ذخیره می‌شود. ادامه می‌دهید؟",
+      "restoreThis": "بازیابی این پشتیبان"
+    },
+    "security": {
+      "appLock": "قفل برنامه با کد PIN", "hint": "هنگام شروع و پس از یک دوره عدم فعالیت پرسیده می‌شود. تنها به‌صورت هش نمکی ذخیره می‌شود.",
+      "setPin": "تنظیم PIN", "changePin": "تغییر PIN", "removePin": "حذف قفل", "currentPin": "PIN فعلی", "newPin": "PIN جدید (۴ تا ۱۲ رقم)",
+      "confirmPin": "تأیید PIN", "autoLock": "قفل خودکار پس از", "minutes": "دقیقه", "pinMismatch": "PIN‌ها مطابقت ندارند", "pinSet": "PIN تنظیم شد",
+      "pinRemoved": "قفل حذف شد", "status": "وضعیت"
+    },
+    "about": {
+      "description": "یک پلتفرم اداری یکپارچه: خواندن و ویرایش PDF، فاکتورهای هوشمند با محاسبات دقیق، صفحه‌گسترده‌های شبیه اکسل و OCR. کاملاً به‌صورت آفلاین اجرا می‌شود.",
+      "localFirst": "حریم خصوصی در اولویت: اسناد شما هرگز از رایانه‌تان خارج نمی‌شود.", "logs": "گزارش توسعه‌دهنده", "platform": "پلتفرم", "dataDir": "پوشه داده"
+    },
+    "saved": "تنظیمات ذخیره شد"
+  },
+  "wizard": {
+    "welcome": "به NOVA PDF Studio خوش آمدید",
+    "subtitle": "چند مرحله سریع برای راه‌اندازی کسب‌وکار شما، سپس آماده کار خواهید بود.",
+    "steps": { "language": "زبان", "company": "شرکت", "currency": "ارز", "tax": "مالیات", "numbering": "شماره‌گذاری" },
+    "languageHint": "زبان رابط کاربری را انتخاب کنید. هر زمان می‌توانید آن را تغییر دهید.",
+    "companyHint": "در سربرگ فاکتور شما نمایش داده می‌شود. می‌توانید این مرحله را رد کنید و بعداً در تنظیمات تکمیل کنید.",
+    "currencyHint": "ارز پیش‌فرض برای فاکتورهای جدید و محل قرارگیری نماد آن.",
+    "taxHint": "مالیات پیش‌فرض اعمال‌شده بر ردیف‌های جدید. بعداً می‌توانید نرخ‌های بیشتری اضافه کنید.",
+    "numberingHint": "الگوی شماره فاکتور. مثال: INV-{YYYY}-{SEQ:5}",
+    "start": "شروع استفاده از NOVA",
+    "skip": "فعلاً رد شود"
+  },
+  "lock": { "title": "برنامه قفل شده", "subtitle": "برای ادامه، PIN خود را وارد کنید", "unlock": "باز کردن قفل", "wrongPin": "PIN اشتباه است", "placeholder": "PIN" },
+  "errors": {
+    "UNKNOWN": "خطای غیرمنتظره‌ای رخ داد.", "VALIDATION": "داده نامعتبر است.", "NOT_FOUND": "مورد یافت نشد.", "CONFLICT": "با داده‌های موجود تعارض دارد.",
+    "DB_ERROR": "خطای پایگاه داده. جزئیات در گزارش ثبت شد.", "DB_CLOSED": "پایگاه داده بسته است.", "DISK_FULL": "دیسک پر است؛ فضا آزاد کنید و دوباره تلاش کنید.",
+    "FILE_NOT_FOUND": "فایل یافت نشد.", "FILE_ACCESS": "دسترسی به فایل ممکن نیست (شاید در برنامه دیگری باز باشد).",
+    "PDF_CORRUPTED": "فایل PDF خراب یا نامعتبر است.", "PDF_PASSWORD": "PDF با رمز عبور محافظت شده است.", "PDF_UNSUPPORTED": "ویژگی پشتیبانی‌نشده در PDF.",
+    "EXCEL_UNSUPPORTED": "قالب صفحه‌گسترده پشتیبانی نمی‌شود.", "OCR_FAILED": "تشخیص متن ناموفق بود.", "PRINTER_OFFLINE": "چاپگر آفلاین است.",
+    "LOCKED": "عملیات رد شد.", "CANCELLED": "عملیات لغو شد.", "NO_BRIDGE": "رابط کاربری به برنامه متصل نیست.",
+    "validation": {
+      "name_required": "نام الزامی است.", "rate_invalid": "نرخ مالیات نامعتبر است.", "currency_code": "کد ارز باید ۳ تا ۵ حرف لاتین باشد.",
+      "decimals": "ارقام اعشار باید بین ۰ تا ۴ باشد.", "pin_format": "PIN باید ۴ تا ۱۲ رقم باشد.",
+      "customer_name": "نام مشتری یا شرکت را وارد کنید.", "email": "آدرس ایمیل نامعتبر است.", "price_invalid": "قیمت نامعتبر است.",
+      "sku_duplicate": "SKU با مقدار {{sku}} قبلاً برای محصول دیگری استفاده شده است.", "date": "تاریخ نامعتبر است.", "currency_required": "یک ارز انتخاب کنید.",
+      "item_numbers": "مقادیر نامعتبر در ردیف {{line}}.", "discount_range": "تخفیف در ردیف {{line}} باید بین ۰٪ تا ۱۰۰٪ باشد.", "amount_positive": "مبلغ باید بزرگ‌تر از صفر باشد."
+    },
+    "invoice": { "number_exists": "شماره فاکتور {{number}} قبلاً وجود دارد.", "cancelled": "امکان ثبت پرداخت روی فاکتور لغوشده وجود ندارد." },
+    "customer": { "has_invoices": "امکان حذف دائمی این مشتری وجود ندارد: {{count}} فاکتور به او ارجاع می‌دهد." },
+    "pdf": { "wrong_password": "رمز عبور اشتباه است.", "bad_range": "بازه صفحات نامعتبر: {{range}}", "no_files": "دست‌کم یک فایل انتخاب کنید.", "no_pages": "صفحه‌ای انتخاب نشده است.", "cannot_delete_all": "امکان حذف همه صفحات وجود ندارد.", "bad_order": "ترتیب صفحات نامعتبر است.", "text_raster_unavailable": "امکان رندر متن غیرلاتین وجود نداشت." },
+    "print": { "timeout": "زمان آماده‌سازی چاپ به پایان رسید.", "load_failed": "بارگذاری محتوای چاپ ممکن نشد." },
+    "security": { "wrong_pin": "PIN فعلی نادرست است." },
+    "backup": { "invalid_file": "این فایل یک پشتیبان معتبر نیست." }
+  },
+  "toast": {
+    "saved": "ذخیره شد", "settingsSaved": "تنظیمات ذخیره شد", "backupCreated": "پشتیبان ایجاد شد", "backupRestored": "پشتیبان بازیابی شد",
+    "demoLoaded": "داده‌های نمایشی بارگذاری شد", "demoCleared": "داده‌های نمایشی پاک شد", "copied": "کپی شد", "error": "خطا",
+    "dbExported": "خروجی پایگاه داده گرفته شد", "fileMissing": "فایل در مکان اصلی خود یافت نشد"
+  },
+  "empty": {
+    "generic": { "title": "هنوز چیزی اینجا نیست", "body": "با ایجاد یک مورد جدید شروع کنید." },
+    "invoices": { "title": "هنوز فاکتوری وجود ندارد", "body": "اولین فاکتور خود را با محاسبات آنی و دقیق ایجاد کنید.", "action": "ایجاد اولین فاکتور" },
+    "customers": { "title": "مشتری وجود ندارد", "body": "مشتریان را اضافه کنید تا فاکتورها و پرداخت‌های آن‌ها را اینجا ببینید.", "action": "افزودن مشتری" },
+    "products": { "title": "محصولی وجود ندارد", "body": "محصولات و خدمات را اضافه کنید تا با تکمیل خودکار در فاکتورها استفاده شوند.", "action": "افزودن محصول" },
+    "phase": { "title": "این ماژول در حال ساخت است", "body": "در مرحله {{phase}} از نقشه راه ارائه می‌شود." }
+  },
+  "pdf": {
+    "loading": "در حال بارگذاری سند…", "page": "صفحه", "of": "از", "zoomIn": "بزرگ‌نمایی", "zoomOut": "کوچک‌نمایی", "fitWidth": "متناسب با عرض",
+    "fitPage": "متناسب با صفحه", "actualSize": "اندازه واقعی", "rotateLeft": "چرخش به چپ", "rotateRight": "چرخش به راست",
+    "fullscreen": "تمام‌صفحه", "exitFullscreen": "خروج از تمام‌صفحه", "search": "جستجو در سند", "searchPlaceholder": "جستجوی متن…",
+    "results": "{{count}} نتیجه", "noResults": "نتیجه‌ای یافت نشد", "nextResult": "نتیجه بعدی", "prevResult": "نتیجه قبلی",
+    "thumbnails": "تصاویر بندانگشتی", "bookmarks": "نشانک‌ها", "noBookmarks": "این فایل نشانکی ندارد",
+    "copy": "کپی متن", "copied": "متن کپی شد", "selectAllText": "کپی متن صفحه", "print": "چاپ", "export": "خروجی گرفتن", "saveAs": "ذخیره با نام…",
+    "download": "ذخیره یک نسخه", "edit": "ویرایش PDF", "convertToInvoice": "تبدیل به فاکتور هوشمند", "info": "اطلاعات سند",
+    "password": "رمز عبور سند", "passwordHint": "این فایل محافظت‌شده است. برای باز کردن آن، رمز عبور را وارد کنید.", "open": "باز کردن",
+    "scannedNotice": "این PDF شامل صفحات اسکن‌شده است. OCR اجرا شود؟", "runOcr": "اجرای OCR", "later": "بعداً",
+    "pages": "{{count}} صفحه", "goToPage": "رفتن به صفحه", "firstPage": "صفحه اول", "lastPage": "صفحه آخر",
+    "prevPage": "صفحه قبلی", "nextPage": "صفحه بعدی", "renderError": "این صفحه قابل رندر نبود", "exported": "خروجی گرفته شد: {{name}}",
+    "printSent": "سند به چاپگر ارسال شد", "printing": "در حال آماده‌سازی چاپ…", "exportImages": "خروجی گرفتن صفحات به‌صورت تصویر", "exportText": "خروجی گرفتن متن",
+    "properties": { "title": "عنوان", "author": "نویسنده", "subject": "موضوع", "creator": "ایجادکننده", "producer": "تولیدکننده", "created": "تاریخ ایجاد", "modified": "تاریخ ویرایش", "pages": "تعداد صفحات", "size": "حجم", "path": "مسیر" }
+  },
+  "inv": {
+    "title": "فاکتورها", "subtitle": "همه فاکتورها و پیش‌فاکتورهای قیمت شما به‌همراه وضعیت و پرداخت‌های آن‌ها.", "new": "فاکتور جدید", "newQuote": "پیش‌فاکتور قیمت جدید", "newProforma": "پیش‌فاکتور جدید",
+    "search": "جستجو بر اساس شماره، مشتری، تلفن یا مبلغ…", "trash": "سطل زباله", "backToList": "بازگشت به فهرست",
+    "filters": { "all": "همه", "unpaid": "پرداخت‌نشده", "status": "وضعیت", "type": "نوع", "from": "از", "to": "تا", "sort": "مرتب‌سازی" },
+    "sort": { "date_desc": "جدیدترین ابتدا", "date_asc": "قدیمی‌ترین ابتدا", "number": "شماره", "amount_desc": "مبلغ", "customer": "مشتری" },
+    "types": { "invoice": "فاکتور", "quote": "پیش‌فاکتور قیمت", "proforma": "پیش‌فاکتور", "receipt": "رسید", "credit_note": "اعلامیه بستانکار", "purchase_order": "سفارش خرید", "delivery_note": "برگه تحویل" },
+    "cols": { "number": "شماره", "customer": "مشتری", "date": "تاریخ", "due": "سررسید", "total": "جمع کل", "paid": "پرداخت‌شده", "remaining": "باقی‌مانده", "status": "وضعیت" },
+    "count": "{{count}} فاکتور", "total": "{{total}} نتیجه",
+    "actions": { "open": "باز کردن", "duplicate": "تکثیر", "trash": "انتقال به سطل زباله", "restore": "بازیابی", "purge": "حذف دائمی", "markSent": "علامت‌گذاری به‌عنوان ارسال‌شده", "markPaid": "علامت‌گذاری به‌عنوان پرداخت‌شده", "cancel": "لغو فاکتور", "addPayment": "ثبت پرداخت", "viewPdf": "مشاهده PDF" },
+    "confirmTrash": "فاکتور {{number}} به سطل زباله منتقل شود؟", "confirmPurge": "فاکتور {{number}} برای همیشه حذف شود؟ این عمل قابل بازگشت نیست.",
+    "trashed": "به سطل زباله منتقل شد", "restored": "بازیابی شد", "purged": "برای همیشه حذف شد", "saved": "فاکتور {{number}} ذخیره شد", "duplicated": "کپی ایجاد شد",
+    "editor": {
+      "company": "شرکت", "billTo": "صورت‌حساب برای", "info": "اطلاعات فاکتور", "items": "اقلام", "totals": "جمع‌ها", "notes": "یادداشت‌ها", "payment": "اطلاعات پرداخت", "signature": "امضا",
+      "selectCustomer": "انتخاب مشتری موجود", "newCustomer": "مشتری جدید", "noCustomer": "مشتری‌ای انتخاب نشده", "customerSearch": "جستجو بر اساس نام یا تلفن…", "clearCustomer": "حذف مشتری",
+      "number": "شماره فاکتور", "autoNumber": "خودکار هنگام ذخیره", "issueDate": "تاریخ صدور", "dueDate": "تاریخ سررسید", "reference": "شماره مرجع", "purchaseOrder": "سفارش خرید",
+      "currency": "ارز", "paymentMethod": "روش پرداخت", "status": "وضعیت", "type": "نوع سند",
+      "addRow": "افزودن ردیف", "removeRow": "حذف ردیف", "duplicateRow": "تکثیر ردیف", "productSearch": "نام محصول را تایپ کنید…", "pasteHint": "می‌توانید ردیف‌ها را مستقیماً از اکسل جای‌گذاری کنید (Ctrl+V)",
+      "pasted": "{{count}} ردیف از کلیپ‌بورد اضافه شد",
+      "grid": { "item": "قلم", "description": "شرح", "qty": "تعداد", "unit": "واحد", "price": "قیمت واحد", "discount": "تخفیف ٪", "tax": "مالیات ٪", "taxAmount": "مبلغ مالیات", "subtotal": "جمع جزء", "total": "جمع کل" },
+      "subtotal": "جمع جزء", "discountTotal": "جمع تخفیف", "taxable": "مبلغ مشمول مالیات", "taxTotal": "جمع مالیات", "shipping": "هزینه ارسال", "fees": "هزینه‌های اضافی",
+      "beforeTax": "مبلغ پیش از مالیات", "grandTotal": "جمع نهایی", "amountPaid": "مبلغ پرداخت‌شده", "remaining": "مانده حساب", "amountInWords": "مبلغ به حروف",
+      "notesPlaceholder": "یادداشت‌هایی که در پایین فاکتور نمایش داده می‌شود…", "terms": "شرایط پرداخت", "termsPlaceholder": "مثلاً پرداخت ظرف ۳۰ روز",
+      "payments": "تاریخچه پرداخت", "noPayments": "هنوز پرداختی ثبت نشده", "payDate": "تاریخ", "payAmount": "مبلغ", "payMethod": "روش", "payRef": "شماره مرجع", "payNotes": "یادداشت‌ها",
+      "addPayment": "ثبت پرداخت", "payFull": "کل مبلغ باقی‌مانده", "deletePayment": "حذف پرداخت", "saveFirst": "برای ثبت پرداخت، ابتدا فاکتور را ذخیره کنید",
+      "unsaved": "تغییرات ذخیره‌نشده", "saveAndClose": "ذخیره و بستن", "preview": "پیش‌نمایش", "print": "چاپ", "exportPdf": "خروجی PDF", "template": "قالب", "more": "بیشتر",
+      "validation": { "noItems": "دست‌کم یک قلم اضافه کنید", "noCustomer": "یک مشتری انتخاب کنید یا نامی وارد کنید" },
+      "methods": { "cash": "نقدی", "bank_transfer": "حواله بانکی", "card": "کارت", "cheque": "چک", "other": "سایر" }
+    }
+  },
+  "cust": {
+    "title": "مشتریان", "subtitle": "پایگاه مشتریان شما به‌همراه فاکتورها، پرداخت‌ها و مانده حساب‌ها.", "new": "مشتری جدید", "edit": "ویرایش مشتری",
+    "search": "جستجو بر اساس نام، تلفن یا ایمیل…", "sort": { "name": "نام", "recent": "اخیر", "invoiced_desc": "بیشترین فاکتورشده", "remaining_desc": "بیشترین مانده حساب" },
+    "cols": { "name": "نام", "phone": "تلفن", "email": "ایمیل", "city": "شهر", "invoices": "فاکتورها", "invoiced": "جمع فاکتورشده", "paid": "پرداخت‌شده", "remaining": "باقی‌مانده" },
+    "fields": { "firstName": "نام", "lastName": "نام خانوادگی", "companyName": "نام شرکت", "address": "آدرس", "city": "شهر", "country": "کشور", "phone": "تلفن", "email": "ایمیل", "taxId": "شناسه مالیاتی", "customerNumber": "شماره مشتری", "notes": "یادداشت‌ها" },
+    "profile": { "title": "پروفایل مشتری", "info": "جزئیات مشتری", "invoices": "فاکتورها", "payments": "پرداخت‌ها", "remaining": "مانده حساب", "lastActivity": "آخرین فعالیت", "notes": "یادداشت‌ها", "newInvoice": "فاکتور جدید برای این مشتری", "noInvoices": "هنوز فاکتوری برای این مشتری ثبت نشده" },
+    "saved": "مشتری ذخیره شد", "deleted": "مشتری به سطل زباله منتقل شد", "confirmDelete": "مشتری {{name}} حذف شود؟ فاکتورهای او نگه‌داشته می‌شود.", "count": "{{count}} مشتری"
+  },
+  "prod": {
+    "title": "محصولات و خدمات", "subtitle": "کاتالوگ شما برای تکمیل خودکار در فاکتورها.", "new": "محصول جدید", "edit": "ویرایش محصول",
+    "search": "جستجو بر اساس نام یا SKU…", "allCategories": "همه دسته‌ها",
+    "cols": { "name": "نام", "sku": "SKU", "price": "قیمت", "tax": "مالیات", "unit": "واحد", "category": "دسته‌بندی", "status": "وضعیت" },
+    "fields": { "name": "نام", "sku": "SKU", "description": "شرح", "price": "قیمت", "currency": "ارز", "tax": "مالیات", "unit": "واحد", "category": "دسته‌بندی", "notes": "یادداشت‌ها", "active": "فعال" },
+    "saved": "محصول ذخیره شد", "deleted": "محصول به سطل زباله منتقل شد", "confirmDelete": "محصول {{name}} حذف شود؟", "count": "{{count}} محصول"
+  },
+  "tpl": {
+    "title": "قالب‌ها", "subtitle": "طرح‌های داخلی و سفارشی فاکتور.", "builtin": "داخلی", "default": "پیش‌فرض", "custom": "سفارشی",
+    "new": "قالب جدید", "duplicate": "تکثیر", "edit": "ویرایش طرح", "delete": "حذف", "setDefault": "تنظیم به‌عنوان پیش‌فرض", "resetBuiltin": "بازنشانی قالب‌های داخلی",
+    "confirmDelete": "قالب {{name}} حذف شود؟ فاکتورهای استفاده‌کننده از آن به قالب پیش‌فرض بازمی‌گردند.", "saved": "قالب ذخیره شد", "deleted": "قالب حذف شد", "duplicated": "قالب کپی شد",
+    "preview": { "title": "پیش‌نمایش فاکتور", "template": "قالب", "print": "چاپ", "exportPdf": "خروجی PDF", "openFolder": "باز کردن پوشه", "copyFile": "کپی فایل", "share": "اشتراک‌گذاری / ارسال", "exported": "PDF خروجی گرفته شد: {{name}}", "printed": "به چاپگر ارسال شد", "regenerate": "به‌روزرسانی", "zoom": "بزرگ‌نمایی", "saveAndPreview": "برای پیش‌نمایش، ابتدا فاکتور را ذخیره کنید", "language": "زبان سند", "auto": "خودکار", "email": "ایمیل (به‌زودی)", "whatsapp": "واتس‌اپ (به‌زودی)", "cloud": "فضای ذخیره‌سازی ابری (به‌زودی)" },
+    "designer": {
+      "title": "طراح قالب", "name": "نام قالب", "blocks": "بلوک‌ها", "properties": "ویژگی‌ها", "page": "صفحه", "theme": "رنگ‌ها و فونت", "columns": "ستون‌های جدول",
+      "visible": "نمایان", "hidden": "پنهان", "font": "فونت", "fontSize": "اندازه فونت", "color": "رنگ", "background": "پس‌زمینه", "border": "کادر", "radius": "شعاع گوشه", "align": "چیدمان", "padding": "فاصله داخلی",
+      "margin": "حاشیه‌های صفحه (میلی‌متر)", "size": "اندازه", "orientation": "جهت صفحه", "direction": "جهت متن", "accent": "رنگ تأکیدی", "tableHeader": "پس‌زمینه سربرگ جدول", "tableHeaderText": "متن سربرگ جدول", "stripe": "راه‌راه ردیف‌ها",
+      "baseFont": "اندازه پایه فونت", "showLogo": "نمایش لوگو", "showWords": "مبلغ به حروف", "showQr": "کد QR", "qrContent": "محتوای QR", "qrNumber": "شماره فاکتور", "qrSummary": "خلاصه (شماره + مبلغ + شرکت)", "qrCustom": "متن سفارشی",
+      "x": "X (میلی‌متر)", "y": "Y (میلی‌متر)", "width": "عرض (میلی‌متر)", "height": "ارتفاع (میلی‌متر)", "text": "متن", "reset": "بازنشانی چیدمان پیش‌فرض", "dragHint": "بلوک‌ها را روی صفحه بکشید تا جابه‌جا شوند؛ گوشه را بکشید تا اندازه تغییر کند.",
+      "sampleData": "پیش‌نمایش با داده نمونه", "unsaved": "تغییرات ذخیره‌نشده",
+      "kinds": { "logo": "لوگو", "company": "اطلاعات شرکت", "customer": "اطلاعات مشتری", "invoiceNumber": "شماره فاکتور", "dates": "تاریخ‌ها", "meta": "شماره مرجع و سفارش خرید", "title": "عنوان", "table": "جدول اقلام", "totals": "جمع‌ها", "amountWords": "مبلغ به حروف", "notes": "یادداشت‌ها", "terms": "شرایط پرداخت", "payment": "اطلاعات پرداخت", "signature": "امضا", "stamp": "مهر", "footer": "پاورقی", "qr": "کد QR", "text": "متن آزاد" }
+    },
+    "brand": { "title": "امضا و مهر", "hint": "در مواردی که قالب آن‌ها را جای می‌دهد، در فاکتورها نمایش داده می‌شود.", "signature": "امضا", "stamp": "مهر", "pick": "انتخاب تصویر", "remove": "حذف" }
+  },
+  "edit": {
+    "mode": "حالت ویرایش", "enter": "ویرایش PDF", "exit": "پایان ویرایش", "hint": "برای ویرایش متن روی آن کلیک کنید، یا برای ایجاد عنصر بکشید. حذف با",
+    "placeHint": "برای قرار دادن تصویر، روی صفحه کلیک کنید یا بکشید", "toolDefaults": "تنظیمات ابزار", "selectHint": "برای ویرایش ویژگی‌ها، عنصری را روی صفحه انتخاب کنید.",
+    "saved": "تغییرات ذخیره شد", "savedAs": "کپی ویرایش‌شده ذخیره شد: {{name}}", "confirmExit": "تغییرات ذخیره‌نشده‌ای وجود دارد. نادیده گرفته شود؟",
+    "unsavedTitle": "تغییرات ذخیره‌نشده", "discard": "نادیده گرفتن", "keepEditing": "ادامه ویرایش", "noChanges": "تغییری برای ذخیره وجود ندارد",
+    "tools": { "select": "انتخاب", "text": "متن", "highlight": "هایلایت", "whiteout": "سفیدکردن / حذف متن", "rect": "مستطیل", "ellipse": "بیضی", "line": "خط", "check": "علامت تیک", "image": "تصویر", "signature": "امضا", "stamp": "مهر" },
+    "kinds": { "text": "متن", "image": "تصویر", "rect": "مستطیل", "ellipse": "بیضی", "line": "خط", "check": "علامت تیک", "highlight": "هایلایت", "redact": "سفیدکردن" },
+    "props": { "fontSize": "اندازه فونت", "font": "فونت", "textColor": "رنگ متن", "background": "پس‌زمینه", "stroke": "رنگ خط دور", "strokeWidth": "ضخامت خط دور", "fill": "پرشدگی", "opacity": "شفافیت", "color": "رنگ", "highlight": "رنگ هایلایت", "width": "عرض", "height": "ارتفاع", "rotation": "چرخش", "direction": "جهت", "auto": "خودکار", "toFront": "آوردن به جلو" }
+  },
+  "tools": {
+    "title": "ابزارهای PDF", "subtitle": "عملیات روی فایل که کاملاً روی رایانه شما اجرا می‌شود.",
+    "pickFiles": "انتخاب فایل‌های PDF", "pickFile": "انتخاب یک فایل PDF", "addFiles": "افزودن فایل", "clear": "پاک کردن", "run": "اجرا", "runAndSave": "اجرا و ذخیره",
+    "output": "فایل خروجی", "outputFolder": "پوشه خروجی", "done": "انجام شد", "saved": "ذخیره شد: {{name}}", "savedMany": "{{count}} فایل ذخیره شد",
+    "pagesRange": "صفحات (مثلاً 1-3، 5)", "every": "هر n صفحه", "angle": "زاویه چرخش", "position": "موقعیت", "text": "متن", "opacity": "شفافیت",
+    "fontSize": "اندازه فونت", "format": "قالب", "paper": "اندازه کاغذ", "orientation": "جهت صفحه", "openResult": "باز کردن نتیجه",
+    "merge": { "title": "ادغام PDF", "desc": "چند فایل را به ترتیب دلخواه در یک فایل ترکیب کنید.", "moveUp": "بالا", "moveDown": "پایین", "remove": "حذف" },
+    "split": { "title": "تفکیک PDF", "desc": "تفکیک به فایل‌های کوچک‌تر: هر صفحه، هر n صفحه، یا بازه‌های مشخص.", "byEvery": "هر n صفحه", "byRanges": "بازه‌ها", "rangesHint": "بازه‌ها را با نقطه‌ویرگول جدا کنید: 1-3; 4-6; 7-" },
+    "extract": { "title": "استخراج صفحات", "desc": "صفحات انتخاب‌شده را در یک فایل جدید استخراج کنید." },
+    "delete": { "title": "حذف صفحات", "desc": "صفحاتی را از فایل حذف کنید." },
+    "rotate": { "title": "چرخش صفحات", "desc": "همه صفحات یا صفحات انتخاب‌شده را بچرخانید.", "allPages": "همه صفحات" },
+    "reorder": { "title": "تغییر ترتیب صفحات", "desc": "ترتیب جدید صفحات را وارد کنید (مثلاً 3,1,2,4)." },
+    "blank": { "title": "درج صفحه خالی", "desc": "پس از یک صفحه مشخص، صفحه خالی اضافه کنید.", "after": "پس از صفحه" },
+    "insertPdf": { "title": "درج PDF", "desc": "صفحات یک فایل دیگر را در موقعیتی مشخص درج کنید.", "second": "فایل برای درج", "at": "پس از صفحه" },
+    "images": { "title": "تصاویر ← PDF", "desc": "تصاویر JPG/PNG را به PDF تبدیل کنید.", "pickImages": "انتخاب تصاویر", "fitPaper": "متناسب با اندازه کاغذ", "keepSize": "حفظ اندازه تصویر" },
+    "watermark": { "title": "واترمارک", "desc": "متن نیمه‌شفاف را به هر صفحه اضافه کنید." },
+    "numbers": { "title": "شماره صفحه", "desc": "شماره صفحه را در جای دلخواه اضافه کنید.", "bottomCenter": "پایین وسط", "bottomRight": "پایین راست", "bottomLeft": "پایین چپ", "topCenter": "بالا وسط" },
+    "compress": { "title": "فشرده‌سازی PDF", "desc": "ذخیره بهینه‌شده مجدد ساختار (تصاویر دوباره رمزگذاری نمی‌شوند).", "result": "از {{before}} به {{after}}" },
+    "pdfToImages": { "title": "PDF ← تصاویر", "desc": "هر صفحه را به‌صورت تصویر PNG خروجی بگیرید.", "scale": "وضوح تصویر" },
+    "pdfToText": { "title": "PDF ← متن", "desc": "متن کامل را در یک فایل متنی استخراج کنید." },
+    "protect": { "title": "محافظت با رمز عبور", "desc": "رمزگذاری در این نسخه از موتور در دسترس نیست؛ با به‌روزرسانی کتابخانه ارائه خواهد شد.", "unavailable": "هنوز در دسترس نیست" },
+    "ocr": { "title": "اسکن / OCR", "desc": "تشخیص متن در مرحله ۷ نقشه راه ارائه می‌شود." }
+  },
+  "documents": {
+    "title": "اسناد", "subtitle": "هر PDFی که باز یا ایجاد کرده‌اید.", "openFile": "باز کردن فایل PDF", "newPdf": "سند PDF جدید",
+    "search": "جستجوی اسناد…", "empty": { "title": "هنوز سندی وجود ندارد", "body": "یک PDF باز کنید یا سند جدیدی بسازید تا اینجا نمایش داده شود.", "action": "باز کردن فایل PDF" },
+    "columns": { "title": "عنوان", "pages": "صفحات", "size": "حجم", "opened": "تاریخ ویرایش", "status": "وضعیت" },
+    "scanned": "اسکن‌شده", "ocrDone": "OCR انجام شد", "text": "متن", "missing": "فایل یافت نشد", "remove": "حذف از فهرست",
+    "new": { "title": "سند جدید", "paper": "اندازه کاغذ", "orientation": "جهت صفحه", "pages": "صفحات", "create": "ایجاد", "saveWhere": "محل ذخیره سند جدید را انتخاب کنید" }
+  },
+  "sheet": {"title":"صفحه‌گسترده‌ها","studio":"استودیو صفحه‌گسترده","new":"صفحه‌گسترده جدید","open":"باز کردن فایل اکسل/CSV","import":"وارد کردن","export":"خروجی گرفتن","exportXlsx":"خروجی اکسل (xlsx)","exportCsv":"خروجی CSV","exportPdf":"خروجی PDF","print":"چاپ","save":"ذخیره","saveAs":"ذخیره با نام","untitled":"صفحه‌گسترده بدون عنوان","rename":"تغییر نام","titleLabel":"عنوان صفحه‌گسترده","formula":"فرمول","cell":"سلول","sheet":"برگه","addSheet":"افزودن برگه","renameSheet":"تغییر نام برگه","deleteSheet":"حذف برگه","lastSheet":"تنها برگه موجود قابل حذف نیست","insertRowAbove":"درج ردیف در بالا","insertRowBelow":"درج ردیف در پایین","insertColStart":"درج ستون قبل","insertColEnd":"درج ستون بعد","deleteRow":"حذف ردیف","deleteCol":"حذف ستون","merge":"ادغام سلول‌ها","unmerge":"لغو ادغام","bold":"ضخیم","italic":"مورب","underline":"زیرخط‌دار","alignStart":"چیدمان ابتدا","alignCenter":"وسط","alignEnd":"چیدمان انتها","format":"قالب","fmtGeneral":"عمومی","fmtNumber":"عدد","fmtCurrency":"ارز","fmtPercent":"درصد","fmtDate":"تاریخ","fmtText":"متن","decimalsMore":"ارقام اعشار بیشتر","decimalsLess":"ارقام اعشار کمتر","fill":"رنگ پرشدگی","textColor":"رنگ متن","cut":"برش","copy":"کپی","paste":"جای‌گذاری","clear":"پاک کردن محتوا","undo":"واگرد","redo":"ازنو","sum":"جمع","avg":"میانگین","count":"شمارش","selected":"{{count}} سلول انتخاب شد","toInvoice":"ایجاد فاکتور از برگه","fromInvoice":"خروجی گرفتن اقلام فاکتور به برگه","mappingTitle":"نگاشت ستون‌ها به اقلام فاکتور","mappingHint":"مشخص کنید کدام ستون به هر فیلد اختصاص دارد. ردیف‌های خالی نادیده گرفته می‌شوند و اعداد بدون خطای اعشاری تجزیه می‌شوند.","headerRow":"ردیف اول سربرگ است","colDescription":"شرح","colQty":"تعداد","colPrice":"قیمت واحد","colDiscount":"تخفیف ٪","colTax":"مالیات ٪","colRef":"شماره مرجع","colNone":"— هیچ‌کدام —","rowsFound":"{{count}} قلم منتقل خواهد شد","createInvoice":"ایجاد فاکتور","needDescription":"دست‌کم ستون‌های شرح و قیمت را انتخاب کنید","listCols":{"title":"عنوان","sheets":"برگه‌ها","updated":"تاریخ ویرایش"},"deleted":"حذف شد","restore":"بازیابی","trash":"حذف","purge":"حذف دائمی","confirmDelete":"«{{title}}» حذف شود؟ بعداً قابل بازیابی است.","emptyTitle":"هنوز صفحه‌گسترده‌ای وجود ندارد","emptyDesc":"یک صفحه‌گسترده جدید ایجاد کنید یا یک فایل اکسل/CSV را باز کنید تا در برنامه روی آن کار کنید.","saved":"صفحه‌گسترده ذخیره شد","imported":"{{name}} وارد شد","exported":"خروجی به {{name}} گرفته شد","importFailed":"فایل قابل خواندن نبود","unsaved":"تغییرات ذخیره‌نشده","closeConfirm":"این صفحه‌گسترده تغییرات ذخیره‌نشده دارد. بدون ذخیره بسته شود؟","functions":"توابع موجود","formulaHint":"برای نوشتن فرمول با = شروع کنید، مثلاً =SUM(B2:B10)","errorCell":"خطای فرمول","invoiceItemsTitle":"اقلام فاکتور {{number}}","zoom":"بزرگ‌نمایی","freeze":"ثابت‌سازی ردیف اول","search":"جستجو در برگه","noMatch":"مطابقتی یافت نشد","gridInfo":"{{rows}} ردیف × {{cols}} ستون","trashTitle":"سطل زباله صفحه‌گسترده","showTrash":"نمایش حذف‌شده‌ها","hideTrash":"پنهان کردن حذف‌شده‌ها"},
+  "ocr": {"title":"تشخیص نوری کاراکتر (OCR)","run":"اجرای OCR","scope":"محدوده","scopePage":"صفحه فعلی","scopeAll":"کل سند","languages":"زبان‌های تشخیص","start":"شروع تشخیص","stop":"توقف","progress":"صفحه {{page}} از {{total}}","status":{"loading":"در حال بارگذاری موتور زبان…","recognizing":"در حال تشخیص متن…","done":"انجام شد","idle":"آماده"},"done":"{{pages}} صفحه تشخیص داده شد · دقت {{confidence}}٪","copy":"کپی متن","saveText":"ذخیره به‌صورت فایل متنی","makeSearchable":"قابل جستجو کردن سند","exportSearchable":"خروجی PDF قابل جستجو","noLanguages":"فایل‌های زبان از resources/tessdata یافت نشد","missingLanguage":"زبان OCR در دسترس نیست: {{lang}}","failed":"OCR ناموفق بود","searchableDone":"متن اکنون در نمایشگر قابل جستجو و انتخاب است و در پایگاه داده ذخیره شده","exportedSearchable":"{{name}} با لایه متن پنهان خروجی گرفته شد","resultText":"متن استخراج‌شده","page":"صفحه {{page}}","confidence":"دقت","empty":"متنی تشخیص داده نشد","lowConfidence":"دقت پایین است؛ زبان دیگری یا اسکن واضح‌تری را امتحان کنید","scanned":"این سند اسکن‌شده است؛ برای استخراج متن آن از OCR استفاده خواهد شد","hint":"تشخیص به‌صورت محلی و بدون اینترنت اجرا می‌شود. اسناد عربی نیاز به فعال‌بودن زبان «عربی» دارند.","textSaved":"متن ذخیره شد","selectLanguage":"دست‌کم یک زبان انتخاب کنید"},
+  "imp": {"title":"PDF ← فاکتور هوشمند","subtitle":"داده‌ها و اقلام فاکتور را از یک PDF استخراج کرده و به فاکتوری قابل ویرایش تبدیل کنید","source":"منبع","open":"انتخاب فایل PDF","template":"قالب استخراج","auto":"تشخیص خودکار (بدون قالب)","matched":"قالب «{{name}}» به‌طور خودکار شناسایی شد","applyTemplate":"اعمال","saveTemplate":"ذخیره به‌عنوان قالب استخراج","updateTemplate":"به‌روزرسانی قالب","templateName":"نام قالب (معمولاً نام تأمین‌کننده)","deleteTemplate":"حذف قالب","templateSaved":"قالب استخراج «{{name}}» ذخیره شد","noZones":"پیش از ذخیره، دست‌کم یک ناحیه اضافه کنید","zones":"نواحی استخراج","drawHint":"روی صفحه بکشید تا یک ناحیه رسم شود، سپس فیلد مربوط به آن را انتخاب کنید. ناحیه «اقلام» به ستون‌ها تقسیم می‌شود.","zoneField":"فیلد","removeZone":"حذف ناحیه","clearZones":"پاک کردن نواحی","columns":"ستون‌های اقلام","addColumn":"افزودن ستون","headerRow":"ردیف اول سربرگ است","fields":"داده‌های فاکتور","items":"اقلام","addItem":"افزودن قلم","removeItem":"حذف","noItems":"قلمی تشخیص داده نشد؛ یک ناحیه «اقلام» رسم کرده و ستون‌های آن را تعریف کنید، یا اقلام را به‌صورت دستی اضافه کنید","checks":"بررسی‌های محاسباتی","checkOk":"جمع‌ها با سند مطابقت دارد","createInvoice":"ایجاد فاکتور","batch":"وارد کردن دسته‌ای","batchTitle":"وارد کردن دسته‌ای PDF","batchHint":"فایل‌ها یکی‌یکی با قالب انتخاب‌شده (یا تشخیص خودکار) پردازش شده و به‌صورت پیش‌نویس فاکتور ذخیره می‌شوند.","pickFiles":"انتخاب فایل‌های PDF","processing":"در حال پردازش {{done}} از {{total}}","created":"{{count}} فاکتور به‌صورت پیش‌نویس ایجاد شد","failed":"ناموفق","ready":"آماده","skipped":"رد شد","startBatch":"شروع وارد کردن","results":"نتایج","reextract":"استخراج مجدد","runOcr":"اجرای OCR روی این صفحه","ocrNeeded":"این صفحه متن قابل‌خواندنی ندارد؛ برای استخراج داده OCR را اجرا کنید","ocrRunning":"در حال اجرای OCR…","customerMatch":"تطبیق مشتری در پایگاه داده: {{name}}","customerNew":"نام مشتری همان‌طور که در سند نوشته شده ذخیره خواهد شد (بعداً قابل پیوند است)","totalExtracted":"جمع کل در سند","totalComputed":"جمع کل محاسبه‌شده از اقلام","page":"صفحه","of":"از","confidence":"دقت","rawValue":"متن اصلی","zoom":"بزرگ‌نمایی","field":{"number":"شماره فاکتور","issueDate":"تاریخ صدور","dueDate":"تاریخ سررسید","reference":"شماره مرجع","customerName":"نام مشتری","customerPhone":"تلفن مشتری","customerAddress":"آدرس مشتری","customerTaxId":"شناسه مالیاتی","subtotal":"جمع جزء","discount":"تخفیف","tax":"مالیات","total":"جمع کل","notes":"یادداشت‌ها","items":"اقلام (جدول)"},"col":{"ref":"شماره مرجع","description":"شرح","qty":"تعداد","unitPrice":"قیمت واحد","discount":"تخفیف ٪","tax":"مالیات ٪","total":"جمع کل"},"warn":{"items_total_mismatch":"جمع محاسبه‌شده اقلام ({{computed}}) با جمع استخراج‌شده ({{extracted}}) مطابقت ندارد","total_mismatch":"جمع کل برابر با جمع جزء + مالیات − تخفیف نیست","missing_total":"جمع کلی در سند تشخیص داده نشد","missing_number":"شماره فاکتوری تشخیص داده نشد","missing_customer":"نام مشتری تشخیص داده نشد","no_items":"قلمی تشخیص داده نشد","date_unparsed":"تاریخ «{{raw}}» قابل خواندن نبود"}},
+  "audit": {"title":"گزارش رویدادها","subtitle":"هر عملیات تأثیرگذار به‌همراه زمان آن: فاکتورها، پرداخت‌ها، مشتریان، تنظیمات، پشتیبان‌ها، امنیت","search":"جستجو در گزارش","allGroups":"همه انواع","count":"{{count}} مورد","export":"خروجی CSV","exported":"گزارش خروجی گرفته شد","emptyTitle":"هنوز موردی وجود ندارد","emptyBody":"عملیات به‌محض وقوع اینجا نمایش داده می‌شود.","cols":{"time":"زمان","action":"عملیات","object":"مورد","summary":"جزئیات"},"groups":{"invoice":"فاکتورها","payment":"پرداخت‌ها","customer":"مشتریان","product":"محصولات","template":"قالب‌ها","settings":"تنظیمات","backup":"پشتیبان‌ها","demo":"داده‌های نمایشی","security":"امنیت","spreadsheet":"صفحه‌گسترده‌ها","note":"یادداشت‌ها","attachment":"پیوست‌ها"},"objects":{"invoice":"فاکتور","customer":"مشتری","product":"محصول","spreadsheet":"صفحه‌گسترده","extraction_template":"قالب استخراج","custom_field":"فیلد سفارشی","template":"قالب"},"actions":{"invoice.created":"فاکتور ایجاد شد","invoice.updated":"فاکتور ویرایش شد","invoice.deleted":"فاکتور حذف شد","invoice.restored":"فاکتور بازیابی شد","invoice.purged":"فاکتور برای همیشه حذف شد","payment.added":"پرداخت ثبت شد","payment.deleted":"پرداخت حذف شد","customer.created":"مشتری ایجاد شد","customer.updated":"مشتری ویرایش شد","customer.deleted":"مشتری حذف شد","product.created":"محصول ایجاد شد","product.updated":"محصول ویرایش شد","product.deleted":"محصول حذف شد","template.changed":"قالب تغییر کرد","settings.changed":"تنظیمات تغییر کرد","backup.created":"پشتیبان ایجاد شد","backup.restored":"پشتیبان بازیابی شد","demo.loaded":"داده‌های نمایشی بارگذاری شد","demo.cleared":"داده‌های نمایشی پاک شد","security.pin_set":"PIN تنظیم شد","security.pin_removed":"PIN حذف شد","spreadsheet.created":"صفحه‌گسترده ایجاد شد","spreadsheet.updated":"صفحه‌گسترده ویرایش شد","spreadsheet.deleted":"صفحه‌گسترده حذف شد","spreadsheet.restored":"صفحه‌گسترده بازیابی شد","spreadsheet.purged":"صفحه‌گسترده برای همیشه حذف شد","spreadsheet.imported":"صفحه‌گسترده وارد شد","spreadsheet.exported":"صفحه‌گسترده خروجی گرفته شد","note.added":"یادداشت اضافه شد","note.deleted":"یادداشت حذف شد","attachment.added":"پیوست اضافه شد","attachment.removed":"پیوست حذف شد"}},
+  "notes": {"title":"یادداشت‌های داخلی","placeholder":"یادداشتی بنویسید که هرگز در فاکتور نمایش داده نمی‌شود…","add":"افزودن","empty":"یادداشتی وجود ندارد","delete":"حذف یادداشت","saved":"یادداشت اضافه شد","saveFirst":"برای افزودن یادداشت و پیوست، ابتدا رکورد را ذخیره کنید"},
+  "att": {"title":"پیوست‌ها","add":"افزودن فایل","empty":"پیوستی وجود ندارد","open":"باز کردن","remove":"حذف","removed":"پیوست حذف شد","added":"{{count}} پیوست اضافه شد","confirmRemove":"پیوست «{{name}}» حذف شود؟","dropHint":"فایل‌ها در پوشه داده برنامه کپی می‌شوند"},
+  "cf": {"title":"فیلدهای سفارشی","subtitle":"فیلدهای مخصوص کسب‌وکار خود (شماره قرارداد، نماینده فروش، منطقه…) را برای فاکتورها، مشتریان و محصولات اضافه کنید","entity":"موجودیت","label":"برچسب فیلد","type":"نوع","showOnInvoice":"نمایش در فاکتور","add":"افزودن فیلد","delete":"حذف فیلد","confirmDelete":"فیلد «{{label}}» و همه مقادیر آن حذف شود؟","saved":"فیلد ذخیره شد","empty":"فیلد سفارشی برای این موجودیت وجود ندارد","values":"فیلدهای سفارشی","valuesSaved":"مقادیر ذخیره شد","entities":{"invoice":"فاکتورها","customer":"مشتریان","product":"محصولات","company":"شرکت"},"types":{"text":"متن","number":"عدد","date":"تاریخ","bool":"بله/خیر"}},
+  "drafts": {"banner":"{{count}} پیش‌نویس ذخیره‌نشده از یک نشست قبلی","restore":"بازیابی","discard":"نادیده گرفتن","discardAll":"نادیده گرفتن همه","restored":"پیش‌نویس بازیابی شد","autosaved":"پیش‌نویس به‌طور خودکار ذخیره شد","title":"پیش‌نویس‌های بازیابی"},
+  "time": { "justNow": "همین الان", "minutesAgo": "{{count}} دقیقه پیش", "hoursAgo": "{{count}} ساعت پیش", "daysAgo": "{{count}} روز پیش" },
+  "status": { "draft": "پیش‌نویس", "sent": "ارسال‌شده", "paid": "پرداخت‌شده", "partially_paid": "پرداخت جزئی", "overdue": "معوق", "cancelled": "لغوشده" },
+  "recent": { "open": "باز کردن", "remove": "حذف از فهرست", "pin": "سنجاق کردن", "unpin": "لغو سنجاق", "clear": "پاک کردن فهرست", "showInFolder": "نمایش در پوشه", "openedAt": "آخرین بازکردن" },
+  "shortcuts": {
+    "title": "میان‌برهای صفحه‌کلید",
+    "open": "باز کردن", "save": "ذخیره", "saveAs": "ذخیره با نام", "print": "چاپ", "find": "یافتن", "undo": "واگرد", "redo": "ازنو",
+    "palette": "پالت دستورات", "settings": "تنظیمات", "closeTab": "بستن برگه", "reopenTab": "بازکردن دوباره برگه", "nextTab": "برگه بعدی"
+  }
+}

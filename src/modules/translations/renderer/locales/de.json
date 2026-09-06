@@ -1,0 +1,300 @@
+{
+  "app": { "name": "NOVA PDF Studio", "tagline": "PDF-Editor • Intelligente Rechnung • Tabellenkalkulation • Dokumente" },
+  "nav": { "audit": "Protokoll",
+    "home": "Start", "pdf": "PDF", "invoices": "Rechnungen", "customers": "Kunden", "products": "Produkte & Dienstleistungen",
+    "spreadsheets": "Tabellen", "templates": "Vorlagen", "documents": "Dokumente", "tools": "Werkzeuge", "settings": "Einstellungen",
+    "storage": "Speicher", "backup": "Sicherung", "language": "Sprache", "theme": "Design"
+  },
+  "common": { "total": "Gesamt", "demo": "Demo",
+    "save": "Speichern", "cancel": "Abbrechen", "close": "Schließen", "delete": "Löschen", "edit": "Bearbeiten", "add": "Hinzufügen", "search": "Suchen",
+    "open": "Öffnen", "create": "Erstellen", "back": "Zurück", "next": "Weiter", "finish": "Fertigstellen", "yes": "Ja", "no": "Nein", "ok": "OK",
+    "loading": "Wird geladen…", "none": "Keine", "actions": "Aktionen", "name": "Name", "optional": "Optional", "required": "Erforderlich",
+    "clear": "Leeren", "confirm": "Bestätigen", "retry": "Erneut versuchen", "copy": "Kopieren", "remove": "Entfernen", "all": "Alle", "today": "Heute",
+    "unknown": "Unbekannt", "version": "Version", "comingSoon": "Folgt in einer späteren Phase", "enabled": "Aktiviert", "disabled": "Deaktiviert",
+    "default": "Standard", "active": "Aktiv", "inactive": "Inaktiv", "preview": "Vorschau", "apply": "Übernehmen", "reset": "Zurücksetzen"
+  },
+  "tabs": { "close": "Tab schließen", "closeOthers": "Andere Tabs schließen", "reopenClosed": "Geschlossenen Tab wieder öffnen", "unsaved": "Nicht gespeicherte Änderungen" },
+  "theme": { "light": "Hell", "dark": "Dunkel", "system": "System" },
+  "topbar": { "search": "Alles durchsuchen… (Strg+K)", "notifications": "Benachrichtigungen", "commandPalette": "Befehlspalette" },
+  "dashboard": {
+    "title": "Start",
+    "welcome": "Willkommen bei NOVA",
+    "welcomeCompany": "Willkommen, {{name}}",
+    "subtitle": "Alles, was Sie zur Verwaltung von Dokumenten und Rechnungen benötigen, an einem Ort.",
+    "quickActions": "Schnellzugriff",
+    "recentDocuments": "Zuletzt verwendete Dokumente",
+    "noRecent": "Keine zuletzt geöffneten Dokumente",
+    "noRecentHint": "Öffnen Sie eine PDF- oder Tabellendatei, und sie erscheint hier.",
+    "tools": "Werkzeuge",
+    "overview": "Übersicht",
+    "stats": {
+      "totalInvoices": "Rechnungen gesamt", "paid": "Bezahlt", "unpaid": "Unbezahlt", "overdue": "Überfällig",
+      "revenue": "Gesamtumsatz", "remaining": "Ausstehende Zahlungen", "customers": "Kunden", "products": "Produkte"
+    },
+    "chart": { "title": "Rechnungen vs. bezahlt, letzte 12 Monate", "invoiced": "In Rechnung gestellt", "paid": "Bezahlt", "empty": "Noch keine Daten" },
+    "outstanding": {
+      "title": "Offene Zahlungen", "customer": "Kunde", "invoice": "Rechnung", "dueDate": "Fälligkeitsdatum",
+      "remaining": "Ausstehend", "daysOverdue": "Tage überfällig", "empty": "Keine offenen Posten", "onTime": "Pünktlich"
+    },
+    "actions": {
+      "openPdf": "PDF öffnen", "newPdf": "Neue PDF", "newInvoice": "Neue Rechnung", "invoices": "Rechnungen", "customers": "Kunden",
+      "products": "Produkte & Dienstleistungen", "spreadsheets": "Tabellen", "recent": "Zuletzt verwendete Dokumente", "templates": "Vorlagen",
+      "scanOcr": "Scannen / OCR", "mergePdf": "PDF zusammenführen", "splitPdf": "PDF teilen", "convert": "Dateien konvertieren", "settings": "Einstellungen",
+      "newSpreadsheet": "Neue Tabelle", "scanDocument": "Dokument scannen", "mergePdfs": "PDFs zusammenführen"
+    }
+  },
+  "palette": { "customers": "Kunden", "invoices": "Rechnungen", "products": "Produkte", "searching": "Suche läuft…",
+    "placeholder": "Befehl eingeben oder suchen…", "noResults": "Keine Ergebnisse", "commands": "Befehle", "recentFiles": "Zuletzt verwendete Dateien",
+    "navigation": "Navigation", "hint": "↑↓ navigieren • Enter ausführen • Esc schließen"
+  },
+  "notifications": { "title": "Benachrichtigungen", "empty": "Keine Benachrichtigungen", "markAllRead": "Alle als gelesen markieren", "clear": "Alle löschen" },
+  "commands": { "openAudit": "Protokoll",
+    "newInvoice": "Neue Rechnung", "openPdf": "PDF-Datei öffnen", "newSpreadsheet": "Neue Tabelle", "mergePdf": "PDF zusammenführen",
+    "goHome": "Zur Startseite", "openSettings": "Einstellungen öffnen", "toggleTheme": "Design umschalten", "closeTab": "Tab schließen",
+    "reopenTab": "Geschlossenen Tab wieder öffnen", "nextTab": "Nächster Tab", "prevTab": "Vorheriger Tab", "lockApp": "App sperren",
+    "createBackup": "Sicherung erstellen", "openCustomers": "Kunden öffnen", "openInvoices": "Rechnungen öffnen", "openProducts": "Produkte öffnen",
+    "language": "Sprache wechseln zu {{lang}}", "showShortcuts": "Tastenkombinationen"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "sections": { "fields": "Benutzerdefinierte Felder",
+      "general": "Allgemein", "company": "Firmenprofil", "invoice": "Rechnungseinstellungen", "tax": "Steuern", "currencies": "Währungen",
+      "numbering": "Nummerierung", "language": "Sprache", "appearance": "Erscheinungsbild", "printing": "Drucken", "ocr": "OCR",
+      "storage": "Speicher", "backup": "Sicherung", "security": "Sicherheit", "about": "Über"
+    },
+    "general": {
+      "dateFormat": "Datumsformat", "numberingSystem": "Ziffern", "latn": "Lateinische Ziffern (1 2 3)", "arab": "Arabisch-indische Ziffern (١ ٢ ٣)",
+      "confirmDelete": "Vor dem Löschen nachfragen", "openLastTabs": "Tabs beim Start wieder öffnen"
+    },
+    "company": {
+      "hint": "Wird automatisch in jede Rechnung eingefügt. Sie können jedes Feld im Rechnungskopf ein- oder ausblenden.",
+      "name": "Firmenname", "firstName": "Vorname", "lastName": "Nachname", "address": "Adresse", "city": "Stadt", "country": "Land",
+      "phone": "Telefon", "email": "E-Mail", "website": "Website", "rc": "Handelsregister (RC)", "nif": "NIF",
+      "nis": "NIS", "ai": "Article d'imposition (AI)", "taxId": "Steuernummer", "bankAccount": "Bankkonto", "iban": "IBAN", "swift": "SWIFT",
+      "logo": "Logo", "pickLogo": "Logo auswählen", "removeLogo": "Logo entfernen", "visibleFields": "Auf Rechnungen angezeigte Felder",
+      "ownerName": "Name des Inhabers"
+    },
+    "invoice": {
+      "pattern": "Rechnungsnummernformat", "patternHint": "Platzhalter: {YYYY} Jahr, {YY}, {MM} Monat, {DD} Tag, {SEQ:5} Zähler mit 5 Stellen",
+      "preview": "Vorschau", "defaultCurrency": "Standardwährung", "currencyPosition": "Position des Währungssymbols", "before": "Vor dem Betrag (€1.000,00)",
+      "after": "Nach dem Betrag (1.000,00 DZD)", "defaultTax": "Standardsteuer", "dueDays": "Fällig in (Tagen)", "amountInWords": "Betrag in Worten anzeigen",
+      "defaultNotes": "Standardhinweise", "paymentTerms": "Standardzahlungsbedingungen", "showLogo": "Logo anzeigen", "invalidPattern": "Ungültiges Format: {SEQ} ist erforderlich",
+      "quotePattern": "Angebotsformat", "proformaPattern": "Proformarechnungsformat", "receiptPattern": "Quittungsformat"
+    },
+    "taxes": {
+      "title": "Steuerprofile", "hint": "Erstellen Sie die von Ihrem Unternehmen verwendeten Steuersätze (MwSt. 0 %, 9 %, 19 % oder einen beliebigen Satz).",
+      "add": "Steuer hinzufügen", "name": "Name", "rate": "Satz %", "default": "Standard", "deleteConfirm": "Diese Steuer löschen?",
+      "used": "Wird von Produkten verwendet; wird statt gelöscht deaktiviert"
+    },
+    "currencies": {
+      "title": "Währungen", "hint": "Fügen Sie eine beliebige Währung anhand ihres ISO-Codes mit Symbol, Position und Dezimalstellen hinzu.",
+      "add": "Währung hinzufügen", "code": "Code (ISO)", "name": "Name", "symbol": "Anzeigesymbol", "decimals": "Dezimalstellen", "position": "Position",
+      "deleteConfirm": "Diese Währung löschen?"
+    },
+    "appearance": { "theme": "Design", "language": "Oberflächensprache", "hint": "Sprache und Textrichtung ändern sich sofort, ohne Neustart." },
+    "printing": {
+      "paperSize": "Papierformat", "orientation": "Ausrichtung", "portrait": "Hochformat", "landscape": "Querformat", "margins": "Ränder (mm)",
+      "scale": "Skalierung %", "copies": "Kopien"
+    },
+    "ocr": { "languages": "OCR-Sprachen", "autoPrompt": "OCR automatisch vorschlagen, wenn eine gescannte PDF geöffnet wird", "ara": "Arabisch", "fra": "Französisch", "eng": "Englisch" },
+    "storage": {
+      "dataDir": "Datenordner", "dbPath": "Datenbankdatei", "logs": "Protokolldatei", "openFolder": "Ordner öffnen",
+      "demoData": "Demodaten", "demoHint": "Klar gekennzeichnete Beispieldaten, mit einem Klick entfernbar, ohne Ihre eigenen Daten zu berühren.",
+      "loadDemo": "Demodaten laden", "clearDemo": "Demodaten löschen", "demoLoaded": "Demodaten sind geladen", "demoNotLoaded": "Keine Demodaten"
+    },
+    "backup": {
+      "title": "Sicherung", "hint": "Eine Sicherung enthält Kunden, Rechnungen, Produkte, Vorlagen, Einstellungen und Zahlungen.",
+      "create": "Sicherung erstellen", "restore": "Aus Datei wiederherstellen…", "export": "Datenbank exportieren", "auto": "Tägliche automatische Sicherung",
+      "folder": "Sicherungsordner", "defaultFolder": "Standardordner", "chooseFolder": "Ordner auswählen", "keep": "Aufzubewahrende Sicherungen",
+      "last": "Letzte Sicherung", "never": "Noch keine Sicherung", "list": "Verfügbare Sicherungen", "confirmRestore": "Alle Daten werden durch die ausgewählte Sicherung ersetzt. Zuvor wird eine Sicherheitskopie des aktuellen Zustands gespeichert. Fortfahren?",
+      "restoreThis": "Diese Sicherung wiederherstellen"
+    },
+    "security": {
+      "appLock": "App-Sperre mit PIN", "hint": "Wird beim Start und nach einer Phase der Inaktivität abgefragt. Wird nur als gesalzener Hash gespeichert.",
+      "setPin": "PIN festlegen", "changePin": "PIN ändern", "removePin": "Sperre entfernen", "currentPin": "Aktuelle PIN", "newPin": "Neue PIN (4-12 Ziffern)",
+      "confirmPin": "PIN bestätigen", "autoLock": "Automatische Sperre nach", "minutes": "Minuten", "pinMismatch": "PINs stimmen nicht überein", "pinSet": "PIN festgelegt",
+      "pinRemoved": "Sperre entfernt", "status": "Status"
+    },
+    "about": {
+      "description": "Eine integrierte Büroplattform: PDFs lesen und bearbeiten, intelligente Rechnungen mit exakter Berechnung, Excel-ähnliche Tabellen und OCR. Läuft vollständig offline.",
+      "localFirst": "Datenschutz zuerst: Ihre Dokumente verlassen niemals Ihren Computer.", "logs": "Entwicklerprotokoll", "platform": "Plattform", "dataDir": "Datenordner"
+    },
+    "saved": "Einstellungen gespeichert"
+  },
+  "wizard": {
+    "welcome": "Willkommen bei NOVA PDF Studio",
+    "subtitle": "Ein paar kurze Schritte, um Ihr Unternehmen einzurichten, dann können Sie loslegen.",
+    "steps": { "language": "Sprache", "company": "Unternehmen", "currency": "Währung", "tax": "Steuer", "numbering": "Nummerierung" },
+    "languageHint": "Wählen Sie die Oberflächensprache. Sie können sie jederzeit ändern.",
+    "companyHint": "Wird im Rechnungskopf angezeigt. Sie können dies überspringen und später in den Einstellungen vervollständigen.",
+    "currencyHint": "Standardwährung für neue Rechnungen und Position ihres Symbols.",
+    "taxHint": "Standardsteuer für neue Positionen. Sie können später weitere Sätze hinzufügen.",
+    "numberingHint": "Rechnungsnummernformat. Beispiel: INV-{YYYY}-{SEQ:5}",
+    "start": "NOVA jetzt verwenden",
+    "skip": "Vorerst überspringen"
+  },
+  "lock": { "title": "App gesperrt", "subtitle": "Geben Sie Ihre PIN ein, um fortzufahren", "unlock": "Entsperren", "wrongPin": "Falsche PIN", "placeholder": "PIN" },
+  "errors": {
+    "UNKNOWN": "Ein unerwarteter Fehler ist aufgetreten.", "VALIDATION": "Ungültige Daten.", "NOT_FOUND": "Element nicht gefunden.", "CONFLICT": "Konflikt mit vorhandenen Daten.",
+    "DB_ERROR": "Datenbankfehler. Details wurden im Protokoll gespeichert.", "DB_CLOSED": "Datenbank ist geschlossen.", "DISK_FULL": "Der Speicherplatz ist voll; geben Sie Platz frei und versuchen Sie es erneut.",
+    "FILE_NOT_FOUND": "Datei nicht gefunden.", "FILE_ACCESS": "Zugriff auf die Datei nicht möglich (sie ist möglicherweise in einem anderen Programm geöffnet).",
+    "PDF_CORRUPTED": "Die PDF-Datei ist beschädigt oder ungültig.", "PDF_PASSWORD": "Die PDF ist kennwortgeschützt.", "PDF_UNSUPPORTED": "Nicht unterstützte PDF-Funktion.",
+    "EXCEL_UNSUPPORTED": "Nicht unterstütztes Tabellenformat.", "OCR_FAILED": "Texterkennung fehlgeschlagen.", "PRINTER_OFFLINE": "Drucker ist offline.",
+    "LOCKED": "Vorgang verweigert.", "CANCELLED": "Vorgang abgebrochen.", "NO_BRIDGE": "Die Oberfläche ist nicht mit der App verbunden.",
+    "validation": {
+      "name_required": "Name ist erforderlich.", "rate_invalid": "Ungültiger Steuersatz.", "currency_code": "Der Währungscode muss aus 3 bis 5 lateinischen Buchstaben bestehen.",
+      "decimals": "Dezimalstellen müssen zwischen 0 und 4 liegen.", "pin_format": "Die PIN muss 4 bis 12 Ziffern haben.",
+      "customer_name": "Geben Sie einen Kunden- oder Firmennamen ein.", "email": "Ungültige E-Mail-Adresse.", "price_invalid": "Ungültiger Preis.",
+      "sku_duplicate": "SKU {{sku}} wird bereits von einem anderen Produkt verwendet.", "date": "Ungültiges Datum.", "currency_required": "Wählen Sie eine Währung.",
+      "item_numbers": "Ungültige Werte in Zeile {{line}}.", "discount_range": "Der Rabatt in Zeile {{line}} muss zwischen 0 % und 100 % liegen.", "amount_positive": "Der Betrag muss größer als null sein."
+    },
+    "invoice": { "number_exists": "Die Rechnungsnummer {{number}} existiert bereits.", "cancelled": "Für eine stornierte Rechnung kann keine Zahlung erfasst werden." },
+    "customer": { "has_invoices": "Dieser Kunde kann nicht endgültig gelöscht werden: {{count}} Rechnungen verweisen auf ihn." },
+    "pdf": { "wrong_password": "Falsches Kennwort.", "bad_range": "Ungültiger Seitenbereich: {{range}}", "no_files": "Wählen Sie mindestens eine Datei.", "no_pages": "Keine Seiten ausgewählt.", "cannot_delete_all": "Es können nicht alle Seiten gelöscht werden.", "bad_order": "Ungültige Seitenreihenfolge.", "text_raster_unavailable": "Nicht-lateinischer Text konnte nicht gerendert werden." },
+    "print": { "timeout": "Zeitüberschreitung bei der Druckvorbereitung.", "load_failed": "Druckinhalt konnte nicht geladen werden." },
+    "security": { "wrong_pin": "Die aktuelle PIN ist falsch." },
+    "backup": { "invalid_file": "Die Datei ist keine gültige Sicherung." }
+  },
+  "toast": {
+    "saved": "Gespeichert", "settingsSaved": "Einstellungen gespeichert", "backupCreated": "Sicherung erstellt", "backupRestored": "Sicherung wiederhergestellt",
+    "demoLoaded": "Demodaten geladen", "demoCleared": "Demodaten gelöscht", "copied": "Kopiert", "error": "Fehler",
+    "dbExported": "Datenbank exportiert", "fileMissing": "Die Datei wurde am ursprünglichen Speicherort nicht gefunden"
+  },
+  "empty": {
+    "generic": { "title": "Hier ist noch nichts", "body": "Beginnen Sie mit der Erstellung eines neuen Eintrags." },
+    "invoices": { "title": "Noch keine Rechnungen", "body": "Erstellen Sie Ihre erste Rechnung mit sofortigen, exakten Berechnungen.", "action": "Erste Rechnung erstellen" },
+    "customers": { "title": "Keine Kunden", "body": "Fügen Sie Kunden hinzu, um deren Rechnungen und Zahlungen hier zu sehen.", "action": "Kunde hinzufügen" },
+    "products": { "title": "Keine Produkte", "body": "Fügen Sie Produkte und Dienstleistungen hinzu, um sie mit Autovervollständigung in Rechnungen zu verwenden.", "action": "Produkt hinzufügen" },
+    "phase": { "title": "Dieses Modul befindet sich im Aufbau", "body": "Wird in Phase {{phase}} der Roadmap bereitgestellt." }
+  },
+  "pdf": {
+    "loading": "Dokument wird geladen…", "page": "Seite", "of": "von", "zoomIn": "Vergrößern", "zoomOut": "Verkleinern", "fitWidth": "An Breite anpassen",
+    "fitPage": "An Seite anpassen", "actualSize": "Originalgröße", "rotateLeft": "Nach links drehen", "rotateRight": "Nach rechts drehen",
+    "fullscreen": "Vollbild", "exitFullscreen": "Vollbild beenden", "search": "Im Dokument suchen", "searchPlaceholder": "Text suchen…",
+    "results": "{{count}} Ergebnisse", "noResults": "Keine Ergebnisse", "nextResult": "Nächstes Ergebnis", "prevResult": "Vorheriges Ergebnis",
+    "thumbnails": "Miniaturansichten", "bookmarks": "Lesezeichen", "noBookmarks": "Diese Datei hat keine Lesezeichen",
+    "copy": "Text kopieren", "copied": "Text kopiert", "selectAllText": "Seitentext kopieren", "print": "Drucken", "export": "Exportieren", "saveAs": "Speichern unter…",
+    "download": "Kopie speichern", "edit": "PDF bearbeiten", "convertToInvoice": "In intelligente Rechnung umwandeln", "info": "Dokumentinformationen",
+    "password": "Dokumentkennwort", "passwordHint": "Diese Datei ist geschützt. Geben Sie das Kennwort ein, um sie zu öffnen.", "open": "Öffnen",
+    "scannedNotice": "Diese PDF enthält gescannte Seiten. OCR ausführen?", "runOcr": "OCR ausführen", "later": "Später",
+    "pages": "{{count}} Seiten", "goToPage": "Zu Seite springen", "firstPage": "Erste Seite", "lastPage": "Letzte Seite",
+    "prevPage": "Vorherige Seite", "nextPage": "Nächste Seite", "renderError": "Diese Seite konnte nicht gerendert werden", "exported": "Exportiert: {{name}}",
+    "printSent": "Dokument an den Drucker gesendet", "printing": "Druck wird vorbereitet…", "exportImages": "Seiten als Bilder exportieren", "exportText": "Text exportieren",
+    "properties": { "title": "Titel", "author": "Autor", "subject": "Betreff", "creator": "Ersteller", "producer": "Hersteller", "created": "Erstellt", "modified": "Geändert", "pages": "Seiten", "size": "Größe", "path": "Pfad" }
+  },
+  "inv": {
+    "title": "Rechnungen", "subtitle": "Alle Ihre Rechnungen und Angebote mit Status und Zahlungen.", "new": "Neue Rechnung", "newQuote": "Neues Angebot", "newProforma": "Neue Proformarechnung",
+    "search": "Nach Nummer, Kunde, Telefon oder Betrag suchen…", "trash": "Papierkorb", "backToList": "Zurück zur Liste",
+    "filters": { "all": "Alle", "unpaid": "Unbezahlt", "status": "Status", "type": "Typ", "from": "Von", "to": "Bis", "sort": "Sortierung" },
+    "sort": { "date_desc": "Neueste zuerst", "date_asc": "Älteste zuerst", "number": "Nummer", "amount_desc": "Betrag", "customer": "Kunde" },
+    "types": { "invoice": "Rechnung", "quote": "Angebot", "proforma": "Proformarechnung", "receipt": "Quittung", "credit_note": "Gutschrift", "purchase_order": "Bestellung", "delivery_note": "Lieferschein" },
+    "cols": { "number": "Nummer", "customer": "Kunde", "date": "Datum", "due": "Fällig", "total": "Gesamt", "paid": "Bezahlt", "remaining": "Ausstehend", "status": "Status" },
+    "count": "{{count}} Rechnungen", "total": "{{total}} Ergebnisse",
+    "actions": { "open": "Öffnen", "duplicate": "Duplizieren", "trash": "In den Papierkorb verschieben", "restore": "Wiederherstellen", "purge": "Endgültig löschen", "markSent": "Als gesendet markieren", "markPaid": "Als bezahlt markieren", "cancel": "Rechnung stornieren", "addPayment": "Zahlung erfassen", "viewPdf": "PDF anzeigen" },
+    "confirmTrash": "Rechnung {{number}} in den Papierkorb verschieben?", "confirmPurge": "Rechnung {{number}} endgültig löschen? Dies kann nicht rückgängig gemacht werden.",
+    "trashed": "In den Papierkorb verschoben", "restored": "Wiederhergestellt", "purged": "Endgültig gelöscht", "saved": "Rechnung {{number}} gespeichert", "duplicated": "Kopie erstellt",
+    "editor": {
+      "company": "Unternehmen", "billTo": "Rechnungsempfänger", "info": "Rechnungsinformationen", "items": "Positionen", "totals": "Summen", "notes": "Hinweise", "payment": "Zahlungsinformationen", "signature": "Unterschrift",
+      "selectCustomer": "Vorhandenen Kunden auswählen", "newCustomer": "Neuer Kunde", "noCustomer": "Kein Kunde ausgewählt", "customerSearch": "Nach Name oder Telefon suchen…", "clearCustomer": "Kunde entfernen",
+      "number": "Rechnungsnummer", "autoNumber": "Automatisch beim Speichern", "issueDate": "Rechnungsdatum", "dueDate": "Fälligkeitsdatum", "reference": "Referenz", "purchaseOrder": "Bestellung",
+      "currency": "Währung", "paymentMethod": "Zahlungsart", "status": "Status", "type": "Dokumenttyp",
+      "addRow": "Zeile hinzufügen", "removeRow": "Zeile entfernen", "duplicateRow": "Zeile duplizieren", "productSearch": "Produktnamen eingeben…", "pasteHint": "Sie können Zeilen direkt aus Excel einfügen (Strg+V)",
+      "pasted": "{{count}} Zeilen aus der Zwischenablage hinzugefügt",
+      "grid": { "item": "Position", "description": "Beschreibung", "qty": "Menge", "unit": "Einheit", "price": "Einzelpreis", "discount": "Rabatt %", "tax": "Steuer %", "taxAmount": "Steuerbetrag", "subtotal": "Zwischensumme", "total": "Gesamt" },
+      "subtotal": "Zwischensumme", "discountTotal": "Rabatt gesamt", "taxable": "Steuerpflichtiger Betrag", "taxTotal": "Steuer gesamt", "shipping": "Versand", "fees": "Zusätzliche Gebühren",
+      "beforeTax": "Betrag vor Steuern", "grandTotal": "Gesamtsumme", "amountPaid": "Bezahlter Betrag", "remaining": "Restbetrag", "amountInWords": "Betrag in Worten",
+      "notesPlaceholder": "Am unteren Rand der Rechnung angezeigte Hinweise…", "terms": "Zahlungsbedingungen", "termsPlaceholder": "z. B. Zahlung innerhalb von 30 Tagen",
+      "payments": "Zahlungsverlauf", "noPayments": "Noch keine Zahlungen", "payDate": "Datum", "payAmount": "Betrag", "payMethod": "Methode", "payRef": "Referenz", "payNotes": "Hinweise",
+      "addPayment": "Zahlung erfassen", "payFull": "Vollständiger Restbetrag", "deletePayment": "Zahlung löschen", "saveFirst": "Speichern Sie die Rechnung zuerst, um Zahlungen zu erfassen",
+      "unsaved": "Nicht gespeicherte Änderungen", "saveAndClose": "Speichern und schließen", "preview": "Vorschau", "print": "Drucken", "exportPdf": "PDF exportieren", "template": "Vorlage", "more": "Mehr",
+      "validation": { "noItems": "Fügen Sie mindestens eine Position hinzu", "noCustomer": "Wählen Sie einen Kunden aus oder geben Sie einen Namen ein" },
+      "methods": { "cash": "Bar", "bank_transfer": "Banküberweisung", "card": "Karte", "cheque": "Scheck", "other": "Sonstiges" }
+    }
+  },
+  "cust": {
+    "title": "Kunden", "subtitle": "Ihr Kundenstamm mit Rechnungen, Zahlungen und Salden.", "new": "Neuer Kunde", "edit": "Kunde bearbeiten",
+    "search": "Nach Name, Telefon oder E-Mail suchen…", "sort": { "name": "Name", "recent": "Zuletzt verwendet", "invoiced_desc": "Höchster Rechnungsbetrag", "remaining_desc": "Höchster Saldo" },
+    "cols": { "name": "Name", "phone": "Telefon", "email": "E-Mail", "city": "Stadt", "invoices": "Rechnungen", "invoiced": "In Rechnung gestellt", "paid": "Bezahlt", "remaining": "Ausstehend" },
+    "fields": { "firstName": "Vorname", "lastName": "Nachname", "companyName": "Firmenname", "address": "Adresse", "city": "Stadt", "country": "Land", "phone": "Telefon", "email": "E-Mail", "taxId": "Steuernummer", "customerNumber": "Kundennummer", "notes": "Hinweise" },
+    "profile": { "title": "Kundenprofil", "info": "Kundendaten", "invoices": "Rechnungen", "payments": "Zahlungen", "remaining": "Ausstehend", "lastActivity": "Letzte Aktivität", "notes": "Hinweise", "newInvoice": "Neue Rechnung für diesen Kunden", "noInvoices": "Für diesen Kunden liegen noch keine Rechnungen vor" },
+    "saved": "Kunde gespeichert", "deleted": "Kunde in den Papierkorb verschoben", "confirmDelete": "Kunde {{name}} löschen? Seine Rechnungen bleiben erhalten.", "count": "{{count}} Kunden"
+  },
+  "prod": {
+    "title": "Produkte & Dienstleistungen", "subtitle": "Ihr Katalog für die Autovervollständigung in Rechnungen.", "new": "Neues Produkt", "edit": "Produkt bearbeiten",
+    "search": "Nach Name oder SKU suchen…", "allCategories": "Alle Kategorien",
+    "cols": { "name": "Name", "sku": "SKU", "price": "Preis", "tax": "Steuer", "unit": "Einheit", "category": "Kategorie", "status": "Status" },
+    "fields": { "name": "Name", "sku": "SKU", "description": "Beschreibung", "price": "Preis", "currency": "Währung", "tax": "Steuer", "unit": "Einheit", "category": "Kategorie", "notes": "Hinweise", "active": "Aktiv" },
+    "saved": "Produkt gespeichert", "deleted": "Produkt in den Papierkorb verschoben", "confirmDelete": "Produkt {{name}} löschen?", "count": "{{count}} Produkte"
+  },
+  "tpl": {
+    "title": "Vorlagen", "subtitle": "Integrierte und benutzerdefinierte Rechnungsdesigns.", "builtin": "Integriert", "default": "Standard", "custom": "Benutzerdefiniert",
+    "new": "Neue Vorlage", "duplicate": "Duplizieren", "edit": "Design bearbeiten", "delete": "Löschen", "setDefault": "Als Standard festlegen", "resetBuiltin": "Integrierte Vorlagen zurücksetzen",
+    "confirmDelete": "Vorlage {{name}} löschen? Rechnungen, die sie verwenden, greifen auf die Standardvorlage zurück.", "saved": "Vorlage gespeichert", "deleted": "Vorlage gelöscht", "duplicated": "Vorlage kopiert",
+    "preview": { "title": "Rechnungsvorschau", "template": "Vorlage", "print": "Drucken", "exportPdf": "PDF exportieren", "openFolder": "Ordner öffnen", "copyFile": "Datei kopieren", "share": "Teilen / Senden", "exported": "PDF exportiert: {{name}}", "printed": "An den Drucker gesendet", "regenerate": "Aktualisieren", "zoom": "Zoom", "saveAndPreview": "Speichern Sie die Rechnung zuerst, um eine Vorschau anzuzeigen", "language": "Dokumentsprache", "auto": "Automatisch", "email": "E-Mail (demnächst)", "whatsapp": "WhatsApp (demnächst)", "cloud": "Cloud-Speicher (demnächst)" },
+    "designer": {
+      "title": "Vorlagendesigner", "name": "Vorlagenname", "blocks": "Blöcke", "properties": "Eigenschaften", "page": "Seite", "theme": "Farben & Schrift", "columns": "Tabellenspalten",
+      "visible": "Sichtbar", "hidden": "Ausgeblendet", "font": "Schriftart", "fontSize": "Schriftgröße", "color": "Farbe", "background": "Hintergrund", "border": "Rahmen", "radius": "Eckenradius", "align": "Ausrichtung", "padding": "Innenabstand",
+      "margin": "Seitenränder (mm)", "size": "Größe", "orientation": "Ausrichtung", "direction": "Textrichtung", "accent": "Akzentfarbe", "tableHeader": "Hintergrund der Tabellenkopfzeile", "tableHeaderText": "Text der Tabellenkopfzeile", "stripe": "Zeilenschattierung",
+      "baseFont": "Basisschriftgröße", "showLogo": "Logo anzeigen", "showWords": "Betrag in Worten", "showQr": "QR-Code", "qrContent": "QR-Inhalt", "qrNumber": "Rechnungsnummer", "qrSummary": "Zusammenfassung (Nummer + Betrag + Firma)", "qrCustom": "Benutzerdefinierter Text",
+      "x": "X (mm)", "y": "Y (mm)", "width": "Breite (mm)", "height": "Höhe (mm)", "text": "Text", "reset": "Standardlayout zurücksetzen", "dragHint": "Ziehen Sie Blöcke auf der Seite, um sie zu verschieben; ziehen Sie an der Ecke, um die Größe zu ändern.",
+      "sampleData": "Vorschau mit Beispieldaten", "unsaved": "Nicht gespeicherte Änderungen",
+      "kinds": { "logo": "Logo", "company": "Unternehmensinformationen", "customer": "Kundeninformationen", "invoiceNumber": "Rechnungsnummer", "dates": "Daten", "meta": "Referenz & Bestellung", "title": "Titel", "table": "Positionstabelle", "totals": "Summen", "amountWords": "Betrag in Worten", "notes": "Hinweise", "terms": "Zahlungsbedingungen", "payment": "Zahlungsinformationen", "signature": "Unterschrift", "stamp": "Stempel", "footer": "Fußzeile", "qr": "QR-Code", "text": "Freitext" }
+    },
+    "brand": { "title": "Unterschrift & Stempel", "hint": "Wird auf Rechnungen angezeigt, sofern die Vorlage sie platziert.", "signature": "Unterschrift", "stamp": "Stempel", "pick": "Bild auswählen", "remove": "Entfernen" }
+  },
+  "edit": {
+    "mode": "Bearbeitungsmodus", "enter": "PDF bearbeiten", "exit": "Bearbeitung beenden", "hint": "Klicken Sie auf Text, um ihn zu bearbeiten, oder ziehen Sie, um ein Element zu erstellen. Löschen mit",
+    "placeHint": "Klicken oder ziehen Sie auf der Seite, um das Bild zu platzieren", "toolDefaults": "Werkzeugeinstellungen", "selectHint": "Wählen Sie ein Element auf der Seite aus, um dessen Eigenschaften zu bearbeiten.",
+    "saved": "Änderungen gespeichert", "savedAs": "Bearbeitete Kopie gespeichert: {{name}}", "confirmExit": "Es gibt nicht gespeicherte Änderungen. Verwerfen?",
+    "unsavedTitle": "Nicht gespeicherte Änderungen", "discard": "Verwerfen", "keepEditing": "Weiter bearbeiten", "noChanges": "Keine Änderungen zum Speichern",
+    "tools": { "select": "Auswählen", "text": "Text", "highlight": "Hervorheben", "whiteout": "Überdecken / Text löschen", "rect": "Rechteck", "ellipse": "Ellipse", "line": "Linie", "check": "Häkchen", "image": "Bild", "signature": "Unterschrift", "stamp": "Stempel" },
+    "kinds": { "text": "Text", "image": "Bild", "rect": "Rechteck", "ellipse": "Ellipse", "line": "Linie", "check": "Häkchen", "highlight": "Hervorhebung", "redact": "Überdeckung" },
+    "props": { "fontSize": "Schriftgröße", "font": "Schriftart", "textColor": "Textfarbe", "background": "Hintergrund", "stroke": "Konturfarbe", "strokeWidth": "Konturbreite", "fill": "Füllung", "opacity": "Deckkraft", "color": "Farbe", "highlight": "Hervorhebungsfarbe", "width": "Breite", "height": "Höhe", "rotation": "Drehung", "direction": "Richtung", "auto": "Automatisch", "toFront": "In den Vordergrund bringen" }
+  },
+  "tools": {
+    "title": "PDF-Werkzeuge", "subtitle": "Dateivorgänge, die vollständig auf Ihrem Computer ausgeführt werden.",
+    "pickFiles": "PDF-Dateien auswählen", "pickFile": "Eine PDF-Datei auswählen", "addFiles": "Dateien hinzufügen", "clear": "Leeren", "run": "Ausführen", "runAndSave": "Ausführen und speichern",
+    "output": "Ausgabedatei", "outputFolder": "Ausgabeordner", "done": "Fertig", "saved": "Gespeichert: {{name}}", "savedMany": "{{count}} Dateien gespeichert",
+    "pagesRange": "Seiten (z. B. 1-3, 5)", "every": "Jede n. Seite", "angle": "Drehwinkel", "position": "Position", "text": "Text", "opacity": "Deckkraft",
+    "fontSize": "Schriftgröße", "format": "Format", "paper": "Papierformat", "orientation": "Ausrichtung", "openResult": "Ergebnis öffnen",
+    "merge": { "title": "PDF zusammenführen", "desc": "Mehrere Dateien in der von Ihnen gewählten Reihenfolge zu einer zusammenführen.", "moveUp": "Nach oben", "moveDown": "Nach unten", "remove": "Entfernen" },
+    "split": { "title": "PDF teilen", "desc": "In kleinere Dateien teilen: jede Seite, jede n. Seite oder festgelegte Bereiche.", "byEvery": "Jede n. Seite", "byRanges": "Bereiche", "rangesHint": "Bereiche durch Semikolons trennen: 1-3; 4-6; 7-" },
+    "extract": { "title": "Seiten extrahieren", "desc": "Die ausgewählten Seiten in eine neue Datei extrahieren." },
+    "delete": { "title": "Seiten löschen", "desc": "Seiten aus der Datei entfernen." },
+    "rotate": { "title": "Seiten drehen", "desc": "Alle oder ausgewählte Seiten drehen.", "allPages": "Alle Seiten" },
+    "reorder": { "title": "Seitenreihenfolge ändern", "desc": "Geben Sie die neue Seitenreihenfolge ein (z. B. 3,1,2,4)." },
+    "blank": { "title": "Leere Seite einfügen", "desc": "Eine leere Seite nach einer bestimmten Seite hinzufügen.", "after": "Nach Seite" },
+    "insertPdf": { "title": "PDF einfügen", "desc": "Seiten einer anderen Datei an einer Position einfügen.", "second": "Einzufügende Datei", "at": "Nach Seite" },
+    "images": { "title": "Bilder → PDF", "desc": "JPG/PNG-Bilder in eine PDF umwandeln.", "pickImages": "Bilder auswählen", "fitPaper": "An Papierformat anpassen", "keepSize": "Bildgröße beibehalten" },
+    "watermark": { "title": "Wasserzeichen", "desc": "Durchscheinenden Text auf jeder Seite hinzufügen." },
+    "numbers": { "title": "Seitenzahlen", "desc": "Seitenzahlen dort hinzufügen, wo Sie sie möchten.", "bottomCenter": "Unten mittig", "bottomRight": "Unten rechts", "bottomLeft": "Unten links", "topCenter": "Oben mittig" },
+    "compress": { "title": "PDF komprimieren", "desc": "Optimiertes erneutes Speichern der Struktur (Bilder werden nicht neu kodiert).", "result": "Von {{before}} auf {{after}}" },
+    "pdfToImages": { "title": "PDF → Bilder", "desc": "Jede Seite als PNG-Bild exportieren.", "scale": "Auflösung" },
+    "pdfToText": { "title": "PDF → Text", "desc": "Den vollständigen Text in eine Textdatei extrahieren." },
+    "protect": { "title": "Kennwortschutz", "desc": "Verschlüsselung ist in dieser Engine-Version nicht verfügbar; sie kommt mit einem Bibliotheks-Update.", "unavailable": "Noch nicht verfügbar" },
+    "ocr": { "title": "Scannen / OCR", "desc": "Die Texterkennung wird in Phase 7 der Roadmap bereitgestellt." }
+  },
+  "documents": {
+    "title": "Dokumente", "subtitle": "Jede von Ihnen geöffnete oder erstellte PDF-Datei.", "openFile": "PDF-Datei öffnen", "newPdf": "Neues PDF-Dokument",
+    "search": "Dokumente durchsuchen…", "empty": { "title": "Noch keine Dokumente", "body": "Öffnen Sie eine PDF-Datei oder erstellen Sie ein neues Dokument, und es erscheint hier.", "action": "PDF-Datei öffnen" },
+    "columns": { "title": "Titel", "pages": "Seiten", "size": "Größe", "opened": "Geändert", "status": "Status" },
+    "scanned": "Gescannt", "ocrDone": "OCR abgeschlossen", "text": "Text", "missing": "Datei fehlt", "remove": "Aus Liste entfernen",
+    "new": { "title": "Neues Dokument", "paper": "Papierformat", "orientation": "Ausrichtung", "pages": "Seiten", "create": "Erstellen", "saveWhere": "Wählen Sie, wo das neue Dokument gespeichert werden soll" }
+  },
+  "sheet": {"title":"Tabellen","studio":"Tabellen-Studio","new":"Neue Tabelle","open":"Excel-/CSV-Datei öffnen","import":"Importieren","export":"Exportieren","exportXlsx":"Excel exportieren (xlsx)","exportCsv":"CSV exportieren","exportPdf":"PDF exportieren","print":"Drucken","save":"Speichern","saveAs":"Speichern unter","untitled":"Unbenannte Tabelle","rename":"Umbenennen","titleLabel":"Tabellentitel","formula":"Formel","cell":"Zelle","sheet":"Blatt","addSheet":"Blatt hinzufügen","renameSheet":"Blatt umbenennen","deleteSheet":"Blatt löschen","lastSheet":"Das einzige Blatt kann nicht gelöscht werden","insertRowAbove":"Zeile oberhalb einfügen","insertRowBelow":"Zeile unterhalb einfügen","insertColStart":"Spalte davor einfügen","insertColEnd":"Spalte danach einfügen","deleteRow":"Zeile löschen","deleteCol":"Spalte löschen","merge":"Zellen verbinden","unmerge":"Verbindung aufheben","bold":"Fett","italic":"Kursiv","underline":"Unterstrichen","alignStart":"Am Anfang ausrichten","alignCenter":"Zentrieren","alignEnd":"Am Ende ausrichten","format":"Format","fmtGeneral":"Allgemein","fmtNumber":"Zahl","fmtCurrency":"Währung","fmtPercent":"Prozent","fmtDate":"Datum","fmtText":"Text","decimalsMore":"Mehr Dezimalstellen","decimalsLess":"Weniger Dezimalstellen","fill":"Füllfarbe","textColor":"Textfarbe","cut":"Ausschneiden","copy":"Kopieren","paste":"Einfügen","clear":"Inhalt löschen","undo":"Rückgängig","redo":"Wiederholen","sum":"Summe","avg":"Durchschnitt","count":"Anzahl","selected":"{{count}} Zellen ausgewählt","toInvoice":"Rechnung aus Tabelle erstellen","fromInvoice":"Rechnungspositionen in Tabelle exportieren","mappingTitle":"Spalten Rechnungspositionen zuordnen","mappingHint":"Wählen Sie, welche Spalte welches Feld füllt. Leere Zeilen werden übersprungen, Zahlen werden sicher ohne Gleitkommafehler verarbeitet.","headerRow":"Erste Zeile ist eine Kopfzeile","colDescription":"Beschreibung","colQty":"Menge","colPrice":"Einzelpreis","colDiscount":"Rabatt %","colTax":"Steuer %","colRef":"Referenz","colNone":"— keine —","rowsFound":"{{count}} Positionen werden übertragen","createInvoice":"Rechnung erstellen","needDescription":"Wählen Sie mindestens die Spalten Beschreibung und Preis","listCols":{"title":"Titel","sheets":"Blätter","updated":"Geändert"},"deleted":"Gelöscht","restore":"Wiederherstellen","trash":"Löschen","purge":"Endgültig löschen","confirmDelete":"„{{title}}“ löschen? Kann später wiederhergestellt werden.","emptyTitle":"Noch keine Tabellen","emptyDesc":"Erstellen Sie eine neue Tabelle oder öffnen Sie eine Excel-/CSV-Datei, um in der App daran zu arbeiten.","saved":"Tabelle gespeichert","imported":"{{name}} importiert","exported":"Nach {{name}} exportiert","importFailed":"Die Datei konnte nicht gelesen werden","unsaved":"Nicht gespeicherte Änderungen","closeConfirm":"Diese Tabelle enthält nicht gespeicherte Änderungen. Ohne Speichern schließen?","functions":"Verfügbare Funktionen","formulaHint":"Beginnen Sie mit = für eine Formel, z. B. =SUM(B2:B10)","errorCell":"Formelfehler","invoiceItemsTitle":"Positionen der Rechnung {{number}}","zoom":"Zoom","freeze":"Erste Zeile fixieren","search":"In Tabelle suchen","noMatch":"Keine Treffer","gridInfo":"{{rows}} Zeilen × {{cols}} Spalten","trashTitle":"Tabellen-Papierkorb","showTrash":"Gelöschte anzeigen","hideTrash":"Gelöschte ausblenden"},
+  "ocr": {"title":"Optische Zeichenerkennung (OCR)","run":"OCR ausführen","scope":"Bereich","scopePage":"Aktuelle Seite","scopeAll":"Gesamtes Dokument","languages":"Erkennungssprachen","start":"Erkennung starten","stop":"Stopp","progress":"Seite {{page}} von {{total}}","status":{"loading":"Spracherkennungs-Engine wird geladen…","recognizing":"Text wird erkannt…","done":"Fertig","idle":"Bereit"},"done":"{{pages}} Seite(n) erkannt · Genauigkeit {{confidence}} %","copy":"Text kopieren","saveText":"Als Textdatei speichern","makeSearchable":"Dokument durchsuchbar machen","exportSearchable":"Durchsuchbare PDF exportieren","noLanguages":"Sprachdateien fehlen in resources/tessdata","missingLanguage":"OCR-Sprache nicht verfügbar: {{lang}}","failed":"OCR fehlgeschlagen","searchableDone":"Text ist nun im Betrachter durchsuchbar und markierbar und in der Datenbank gespeichert","exportedSearchable":"{{name}} mit versteckter Textebene exportiert","resultText":"Extrahierter Text","page":"Seite {{page}}","confidence":"Genauigkeit","empty":"Kein Text erkannt","lowConfidence":"Geringe Genauigkeit; versuchen Sie eine andere Sprache oder einen klareren Scan","scanned":"Dieses Dokument ist gescannt; OCR wird zur Textextraktion verwendet","hint":"Die Erkennung erfolgt lokal ohne Internetverbindung. Für arabische Dokumente muss die Sprache „Arabisch“ aktiviert sein.","textSaved":"Text gespeichert","selectLanguage":"Wählen Sie mindestens eine Sprache aus"},
+  "imp": {"title":"PDF → Intelligente Rechnung","subtitle":"Rechnungsdaten und Positionen aus einer PDF extrahieren und in eine bearbeitbare Rechnung umwandeln","source":"Quelle","open":"PDF-Datei auswählen","template":"Extraktionsvorlage","auto":"Automatische Erkennung (keine Vorlage)","matched":"Vorlage „{{name}}“ automatisch erkannt","applyTemplate":"Anwenden","saveTemplate":"Als Extraktionsvorlage speichern","updateTemplate":"Vorlage aktualisieren","templateName":"Vorlagenname (üblicherweise der Lieferant)","deleteTemplate":"Vorlage löschen","templateSaved":"Extraktionsvorlage „{{name}}“ gespeichert","noZones":"Fügen Sie mindestens eine Zone hinzu, bevor Sie speichern","zones":"Extraktionszonen","drawHint":"Ziehen Sie auf der Seite, um eine Zone zu zeichnen, und wählen Sie dann das Feld, das sie darstellt. Die Zone „Positionen“ wird in Spalten unterteilt.","zoneField":"Feld","removeZone":"Zone entfernen","clearZones":"Zonen leeren","columns":"Positionsspalten","addColumn":"Spalte hinzufügen","headerRow":"Erste Zeile ist eine Kopfzeile","fields":"Rechnungsdaten","items":"Positionen","addItem":"Position hinzufügen","removeItem":"Entfernen","noItems":"Keine Positionen erkannt; zeichnen Sie eine „Positionen“-Zone und definieren Sie deren Spalten, oder fügen Sie Positionen manuell hinzu","checks":"Berechnungsprüfungen","checkOk":"Die Summen stimmen mit dem Dokument überein","createInvoice":"Rechnung erstellen","batch":"Stapelimport","batchTitle":"PDF-Stapelimport","batchHint":"Die Dateien werden nacheinander mit der ausgewählten Vorlage (oder automatischer Erkennung) verarbeitet und als Rechnungsentwürfe gespeichert.","pickFiles":"PDF-Dateien auswählen","processing":"{{done}} von {{total}} wird verarbeitet","created":"{{count}} Rechnung(en) als Entwurf erstellt","failed":"Fehlgeschlagen","ready":"Bereit","skipped":"Übersprungen","startBatch":"Import starten","results":"Ergebnisse","reextract":"Erneut extrahieren","runOcr":"OCR für diese Seite ausführen","ocrNeeded":"Diese Seite enthält keinen lesbaren Text; führen Sie OCR aus, um Daten zu extrahieren","ocrRunning":"OCR wird ausgeführt…","customerMatch":"Kunde in der Datenbank wird abgeglichen: {{name}}","customerNew":"Der Kundenname wird so gespeichert, wie er im Dokument steht (kann später verknüpft werden)","totalExtracted":"Gesamtbetrag im Dokument","totalComputed":"Aus Positionen berechneter Gesamtbetrag","page":"Seite","of":"von","confidence":"Konfidenz","rawValue":"Originaltext","zoom":"Zoom","field":{"number":"Rechnungsnummer","issueDate":"Rechnungsdatum","dueDate":"Fälligkeitsdatum","reference":"Referenz","customerName":"Kundenname","customerPhone":"Telefon des Kunden","customerAddress":"Adresse des Kunden","customerTaxId":"Steuernummer","subtotal":"Zwischensumme","discount":"Rabatt","tax":"Steuer","total":"Gesamt","notes":"Hinweise","items":"Positionen (Tabelle)"},"col":{"ref":"Referenz","description":"Beschreibung","qty":"Menge","unitPrice":"Einzelpreis","discount":"Rabatt %","tax":"Steuer %","total":"Gesamt"},"warn":{"items_total_mismatch":"Die berechnete Positionssumme ({{computed}}) stimmt nicht mit dem extrahierten Gesamtbetrag ({{extracted}}) überein","total_mismatch":"Der Gesamtbetrag entspricht nicht Zwischensumme + Steuer − Rabatt","missing_total":"Im Dokument wurde kein Gesamtbetrag erkannt","missing_number":"Es wurde keine Rechnungsnummer erkannt","missing_customer":"Es wurde kein Kundenname erkannt","no_items":"Keine Positionen erkannt","date_unparsed":"Das Datum „{{raw}}“ konnte nicht gelesen werden"}},
+  "audit": {"title":"Protokoll","subtitle":"Jeder relevante Vorgang mit Zeitstempel: Rechnungen, Zahlungen, Kunden, Einstellungen, Sicherungen, Sicherheit","search":"Protokoll durchsuchen","allGroups":"Alle Typen","count":"{{count}} Einträge","export":"CSV exportieren","exported":"Protokoll exportiert","emptyTitle":"Noch keine Einträge","emptyBody":"Vorgänge erscheinen hier, sobald sie stattfinden.","cols":{"time":"Zeit","action":"Aktion","object":"Objekt","summary":"Details"},"groups":{"invoice":"Rechnungen","payment":"Zahlungen","customer":"Kunden","product":"Produkte","template":"Vorlagen","settings":"Einstellungen","backup":"Sicherungen","demo":"Demodaten","security":"Sicherheit","spreadsheet":"Tabellen","note":"Notizen","attachment":"Anhänge"},"objects":{"invoice":"Rechnung","customer":"Kunde","product":"Produkt","spreadsheet":"Tabelle","extraction_template":"Extraktionsvorlage","custom_field":"Benutzerdefiniertes Feld","template":"Vorlage"},"actions":{"invoice.created":"Rechnung erstellt","invoice.updated":"Rechnung aktualisiert","invoice.deleted":"Rechnung gelöscht","invoice.restored":"Rechnung wiederhergestellt","invoice.purged":"Rechnung endgültig gelöscht","payment.added":"Zahlung hinzugefügt","payment.deleted":"Zahlung gelöscht","customer.created":"Kunde erstellt","customer.updated":"Kunde aktualisiert","customer.deleted":"Kunde gelöscht","product.created":"Produkt erstellt","product.updated":"Produkt aktualisiert","product.deleted":"Produkt gelöscht","template.changed":"Vorlage geändert","settings.changed":"Einstellungen geändert","backup.created":"Sicherung erstellt","backup.restored":"Sicherung wiederhergestellt","demo.loaded":"Demodaten geladen","demo.cleared":"Demodaten gelöscht","security.pin_set":"PIN festgelegt","security.pin_removed":"PIN entfernt","spreadsheet.created":"Tabelle erstellt","spreadsheet.updated":"Tabelle aktualisiert","spreadsheet.deleted":"Tabelle gelöscht","spreadsheet.restored":"Tabelle wiederhergestellt","spreadsheet.purged":"Tabelle endgültig gelöscht","spreadsheet.imported":"Tabelle importiert","spreadsheet.exported":"Tabelle exportiert","note.added":"Notiz hinzugefügt","note.deleted":"Notiz gelöscht","attachment.added":"Anhang hinzugefügt","attachment.removed":"Anhang entfernt"}},
+  "notes": {"title":"Interne Notizen","placeholder":"Schreiben Sie eine Notiz, die niemals auf der Rechnung erscheint…","add":"Hinzufügen","empty":"Keine Notizen","delete":"Notiz löschen","saved":"Notiz hinzugefügt","saveFirst":"Speichern Sie den Datensatz zuerst, um Notizen und Anhänge hinzuzufügen"},
+  "att": {"title":"Anhänge","add":"Datei hinzufügen","empty":"Keine Anhänge","open":"Öffnen","remove":"Entfernen","removed":"Anhang entfernt","added":"{{count}} Anhang/Anhänge hinzugefügt","confirmRemove":"Anhang „{{name}}“ entfernen?","dropHint":"Dateien werden in den App-Datenordner kopiert"},
+  "cf": {"title":"Benutzerdefinierte Felder","subtitle":"Fügen Sie unternehmensspezifische Felder hinzu (Vertragsnummer, Vertriebsmitarbeiter, Region …) für Rechnungen, Kunden und Produkte","entity":"Entität","label":"Feldbezeichnung","type":"Typ","showOnInvoice":"Auf Rechnung anzeigen","add":"Feld hinzufügen","delete":"Feld löschen","confirmDelete":"Feld „{{label}}“ und alle seine Werte löschen?","saved":"Feld gespeichert","empty":"Keine benutzerdefinierten Felder für diese Entität","values":"Benutzerdefinierte Felder","valuesSaved":"Werte gespeichert","entities":{"invoice":"Rechnungen","customer":"Kunden","product":"Produkte","company":"Unternehmen"},"types":{"text":"Text","number":"Zahl","date":"Datum","bool":"Ja/Nein"}},
+  "drafts": {"banner":"{{count}} nicht gespeicherte(r) Entwurf/Entwürfe aus einer vorherigen Sitzung","restore":"Wiederherstellen","discard":"Verwerfen","discardAll":"Alle verwerfen","restored":"Entwurf wiederhergestellt","autosaved":"Entwurf automatisch gespeichert","title":"Wiederherstellungsentwürfe"},
+  "time": { "justNow": "gerade eben", "minutesAgo": "vor {{count}} Min.", "hoursAgo": "vor {{count}} Std.", "daysAgo": "vor {{count}} Tag(en)" },
+  "status": { "draft": "Entwurf", "sent": "Gesendet", "paid": "Bezahlt", "partially_paid": "Teilweise bezahlt", "overdue": "Überfällig", "cancelled": "Storniert" },
+  "recent": { "open": "Öffnen", "remove": "Aus Liste entfernen", "pin": "Anheften", "unpin": "Lösen", "clear": "Liste leeren", "showInFolder": "Im Ordner anzeigen", "openedAt": "Zuletzt geöffnet" },
+  "shortcuts": {
+    "title": "Tastenkombinationen",
+    "open": "Öffnen", "save": "Speichern", "saveAs": "Speichern unter", "print": "Drucken", "find": "Suchen", "undo": "Rückgängig", "redo": "Wiederholen",
+    "palette": "Befehlspalette", "settings": "Einstellungen", "closeTab": "Tab schließen", "reopenTab": "Tab wieder öffnen", "nextTab": "Nächster Tab"
+  }
+}

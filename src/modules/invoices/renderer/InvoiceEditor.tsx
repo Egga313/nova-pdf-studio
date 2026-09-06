@@ -18,6 +18,7 @@ import { notify } from '@renderer/stores/notifications'
 import { currentCurrency, useSettings } from '@renderer/stores/settings'
 import { useTabs } from '@renderer/stores/tabs'
 import { CustomerDialog } from '@modules/customers/renderer/CustomerDialog'
+import type { Language } from '@shared/settings'
 import { amountInWords } from '../shared/amountInWords'
 import { ItemsGrid, emptyLike } from './ItemsGrid'
 import { ExtrasPanel } from '@modules/extras/renderer/ExtrasPanel'
@@ -446,7 +447,7 @@ function statusTone(s: InvoiceStatus): 'neutral' | 'success' | 'warning' | 'dang
   return ({ draft: 'neutral', sent: 'info', paid: 'success', partially_paid: 'warning', overdue: 'danger', cancelled: 'neutral' } as const)[s]
 }
 
-function safeWords(minor: number, currency: string, language: 'ar' | 'fr' | 'en', decimals: number): string {
+function safeWords(minor: number, currency: string, language: Language, decimals: number): string {
   try {
     return amountInWords(minor, currency, language, decimals)
   } catch {

@@ -1,0 +1,300 @@
+{
+  "app": { "name": "NOVA PDF Studio", "tagline": "Editor de PDF • Fatura Inteligente • Planilha • Documentos" },
+  "nav": { "audit": "Registro de auditoria",
+    "home": "Início", "pdf": "PDF", "invoices": "Faturas", "customers": "Clientes", "products": "Produtos e Serviços",
+    "spreadsheets": "Planilhas", "templates": "Modelos", "documents": "Documentos", "tools": "Ferramentas", "settings": "Configurações",
+    "storage": "Armazenamento", "backup": "Backup", "language": "Idioma", "theme": "Tema"
+  },
+  "common": { "total": "Total", "demo": "Demonstração",
+    "save": "Salvar", "cancel": "Cancelar", "close": "Fechar", "delete": "Excluir", "edit": "Editar", "add": "Adicionar", "search": "Buscar",
+    "open": "Abrir", "create": "Criar", "back": "Voltar", "next": "Próximo", "finish": "Concluir", "yes": "Sim", "no": "Não", "ok": "OK",
+    "loading": "Carregando…", "none": "Nenhum", "actions": "Ações", "name": "Nome", "optional": "Opcional", "required": "Obrigatório",
+    "clear": "Limpar", "confirm": "Confirmar", "retry": "Tentar novamente", "copy": "Copiar", "remove": "Remover", "all": "Todos", "today": "Hoje",
+    "unknown": "Desconhecido", "version": "Versão", "comingSoon": "Disponível em uma fase futura", "enabled": "Ativado", "disabled": "Desativado",
+    "default": "Padrão", "active": "Ativo", "inactive": "Inativo", "preview": "Visualizar", "apply": "Aplicar", "reset": "Redefinir"
+  },
+  "tabs": { "close": "Fechar aba", "closeOthers": "Fechar outras abas", "reopenClosed": "Reabrir aba fechada", "unsaved": "Alterações não salvas" },
+  "theme": { "light": "Claro", "dark": "Escuro", "system": "Sistema" },
+  "topbar": { "search": "Buscar em tudo… (Ctrl+K)", "notifications": "Notificações", "commandPalette": "Paleta de comandos" },
+  "dashboard": {
+    "title": "Início",
+    "welcome": "Bem-vindo ao NOVA",
+    "welcomeCompany": "Bem-vindo, {{name}}",
+    "subtitle": "Tudo o que você precisa para gerenciar documentos e faturas, em um só lugar.",
+    "quickActions": "Ações rápidas",
+    "recentDocuments": "Documentos recentes",
+    "noRecent": "Nenhum documento aberto recentemente",
+    "noRecentHint": "Abra um PDF ou uma planilha e ele aparecerá aqui.",
+    "tools": "Ferramentas",
+    "overview": "Visão geral",
+    "stats": {
+      "totalInvoices": "Total de faturas", "paid": "Pago", "unpaid": "Não pago", "overdue": "Vencido",
+      "revenue": "Receita total", "remaining": "Pagamentos restantes", "customers": "Clientes", "products": "Produtos"
+    },
+    "chart": { "title": "Faturado x pago, últimos 12 meses", "invoiced": "Faturado", "paid": "Pago", "empty": "Ainda sem dados" },
+    "outstanding": {
+      "title": "Pagamentos pendentes", "customer": "Cliente", "invoice": "Fatura", "dueDate": "Vencimento",
+      "remaining": "Restante", "daysOverdue": "Dias em atraso", "empty": "Nada pendente", "onTime": "Em dia"
+    },
+    "actions": {
+      "openPdf": "Abrir PDF", "newPdf": "Novo PDF", "newInvoice": "Nova fatura", "invoices": "Faturas", "customers": "Clientes",
+      "products": "Produtos e Serviços", "spreadsheets": "Planilhas", "recent": "Documentos recentes", "templates": "Modelos",
+      "scanOcr": "Digitalizar / OCR", "mergePdf": "Mesclar PDF", "splitPdf": "Dividir PDF", "convert": "Converter arquivos", "settings": "Configurações",
+      "newSpreadsheet": "Nova planilha", "scanDocument": "Digitalizar documento", "mergePdfs": "Mesclar PDFs"
+    }
+  },
+  "palette": { "customers": "Clientes", "invoices": "Faturas", "products": "Produtos", "searching": "Buscando…",
+    "placeholder": "Digite um comando ou pesquise…", "noResults": "Nenhum resultado", "commands": "Comandos", "recentFiles": "Arquivos recentes",
+    "navigation": "Navegação", "hint": "↑↓ navegar • Enter executar • Esc fechar"
+  },
+  "notifications": { "title": "Notificações", "empty": "Nenhuma notificação", "markAllRead": "Marcar todas como lidas", "clear": "Limpar tudo" },
+  "commands": { "openAudit": "Registro de auditoria",
+    "newInvoice": "Nova fatura", "openPdf": "Abrir arquivo PDF", "newSpreadsheet": "Nova planilha", "mergePdf": "Mesclar PDF",
+    "goHome": "Ir para o Início", "openSettings": "Abrir configurações", "toggleTheme": "Alternar tema", "closeTab": "Fechar aba",
+    "reopenTab": "Reabrir aba fechada", "nextTab": "Próxima aba", "prevTab": "Aba anterior", "lockApp": "Bloquear aplicativo",
+    "createBackup": "Criar backup", "openCustomers": "Abrir clientes", "openInvoices": "Abrir faturas", "openProducts": "Abrir produtos",
+    "language": "Mudar idioma para {{lang}}", "showShortcuts": "Atalhos de teclado"
+  },
+  "settings": {
+    "title": "Configurações",
+    "sections": { "fields": "Campos personalizados",
+      "general": "Geral", "company": "Perfil da empresa", "invoice": "Configurações de fatura", "tax": "Impostos", "currencies": "Moedas",
+      "numbering": "Numeração", "language": "Idioma", "appearance": "Aparência", "printing": "Impressão", "ocr": "OCR",
+      "storage": "Armazenamento", "backup": "Backup", "security": "Segurança", "about": "Sobre"
+    },
+    "general": {
+      "dateFormat": "Formato de data", "numberingSystem": "Algarismos", "latn": "Algarismos latinos (1 2 3)", "arab": "Algarismos indo-arábicos (١ ٢ ٣)",
+      "confirmDelete": "Perguntar antes de excluir", "openLastTabs": "Reabrir abas ao iniciar"
+    },
+    "company": {
+      "hint": "Inserido automaticamente em toda fatura. Você pode mostrar ou ocultar qualquer campo no cabeçalho da fatura.",
+      "name": "Nome da empresa", "firstName": "Nome", "lastName": "Sobrenome", "address": "Endereço", "city": "Cidade", "country": "País",
+      "phone": "Telefone", "email": "E-mail", "website": "Site", "rc": "Registro comercial (RC)", "nif": "NIF",
+      "nis": "NIS", "ai": "Artigo de tributação (AI)", "taxId": "CNPJ/CPF", "bankAccount": "Conta bancária", "iban": "IBAN", "swift": "SWIFT",
+      "logo": "Logotipo", "pickLogo": "Escolher logotipo", "removeLogo": "Remover logotipo", "visibleFields": "Campos exibidos nas faturas",
+      "ownerName": "Nome do proprietário"
+    },
+    "invoice": {
+      "pattern": "Padrão do número da fatura", "patternHint": "Tokens: {YYYY} ano, {YY}, {MM} mês, {DD} dia, {SEQ:5} contador com 5 dígitos",
+      "preview": "Visualizar", "defaultCurrency": "Moeda padrão", "currencyPosition": "Posição do símbolo da moeda", "before": "Antes do valor (€1.000,00)",
+      "after": "Depois do valor (1.000,00 DZD)", "defaultTax": "Imposto padrão", "dueDays": "Vencimento em (dias)", "amountInWords": "Mostrar valor por extenso",
+      "defaultNotes": "Observações padrão", "paymentTerms": "Condições de pagamento padrão", "showLogo": "Mostrar logotipo", "invalidPattern": "Padrão inválido: {SEQ} é obrigatório",
+      "quotePattern": "Padrão do orçamento", "proformaPattern": "Padrão da fatura proforma", "receiptPattern": "Padrão do recibo"
+    },
+    "taxes": {
+      "title": "Perfis de imposto", "hint": "Crie as alíquotas usadas pelo seu negócio (IVA 0%, 9%, 19% ou qualquer alíquota personalizada).",
+      "add": "Adicionar imposto", "name": "Nome", "rate": "Alíquota %", "default": "Padrão", "deleteConfirm": "Excluir este imposto?",
+      "used": "Usado por produtos; será desativado em vez de excluído"
+    },
+    "currencies": {
+      "title": "Moedas", "hint": "Adicione qualquer moeda pelo código ISO, com seu símbolo, posição e casas decimais.",
+      "add": "Adicionar moeda", "code": "Código (ISO)", "name": "Nome", "symbol": "Símbolo exibido", "decimals": "Casas decimais", "position": "Posição",
+      "deleteConfirm": "Excluir esta moeda?"
+    },
+    "appearance": { "theme": "Tema", "language": "Idioma da interface", "hint": "O idioma e a direção mudam instantaneamente, sem precisar reiniciar." },
+    "printing": {
+      "paperSize": "Tamanho do papel", "orientation": "Orientação", "portrait": "Retrato", "landscape": "Paisagem", "margins": "Margens (mm)",
+      "scale": "Escala %", "copies": "Cópias"
+    },
+    "ocr": { "languages": "Idiomas do OCR", "autoPrompt": "Sugerir OCR automaticamente ao abrir um PDF digitalizado", "ara": "Árabe", "fra": "Francês", "eng": "Inglês" },
+    "storage": {
+      "dataDir": "Pasta de dados", "dbPath": "Arquivo de banco de dados", "logs": "Arquivo de log", "openFolder": "Abrir pasta",
+      "demoData": "Dados de demonstração", "demoHint": "Dados de exemplo claramente identificados, removíveis com um clique sem afetar seus próprios dados.",
+      "loadDemo": "Carregar dados de demonstração", "clearDemo": "Limpar dados de demonstração", "demoLoaded": "Dados de demonstração carregados", "demoNotLoaded": "Nenhum dado de demonstração"
+    },
+    "backup": {
+      "title": "Backup", "hint": "Um backup contém clientes, faturas, produtos, modelos, configurações e pagamentos.",
+      "create": "Criar backup", "restore": "Restaurar de arquivo…", "export": "Exportar banco de dados", "auto": "Backup automático diário",
+      "folder": "Pasta de backup", "defaultFolder": "Pasta padrão", "chooseFolder": "Escolher pasta", "keep": "Backups a manter",
+      "last": "Último backup", "never": "Nenhum backup ainda", "list": "Backups disponíveis", "confirmRestore": "Tudo será substituído pelo backup selecionado. Uma cópia de segurança do estado atual é salva antes. Continuar?",
+      "restoreThis": "Restaurar este backup"
+    },
+    "security": {
+      "appLock": "Bloqueio do aplicativo com PIN", "hint": "Solicitado ao iniciar e após um período de inatividade. Armazenado apenas como um hash com salt.",
+      "setPin": "Definir PIN", "changePin": "Alterar PIN", "removePin": "Remover bloqueio", "currentPin": "PIN atual", "newPin": "Novo PIN (4-12 dígitos)",
+      "confirmPin": "Confirmar PIN", "autoLock": "Bloqueio automático após", "minutes": "minutos", "pinMismatch": "Os PINs não coincidem", "pinSet": "PIN definido",
+      "pinRemoved": "Bloqueio removido", "status": "Status"
+    },
+    "about": {
+      "description": "Uma plataforma de escritório integrada: leia e edite PDFs, faturas inteligentes com cálculos exatos, planilhas ao estilo Excel e OCR. Funciona totalmente offline.",
+      "localFirst": "Privacidade em primeiro lugar: seus documentos nunca saem do seu computador.", "logs": "Log do desenvolvedor", "platform": "Plataforma", "dataDir": "Pasta de dados"
+    },
+    "saved": "Configurações salvas"
+  },
+  "wizard": {
+    "welcome": "Bem-vindo ao NOVA PDF Studio",
+    "subtitle": "Algumas etapas rápidas para configurar sua empresa e você já pode começar a trabalhar.",
+    "steps": { "language": "Idioma", "company": "Empresa", "currency": "Moeda", "tax": "Imposto", "numbering": "Numeração" },
+    "languageHint": "Escolha o idioma da interface. Você pode alterá-lo a qualquer momento.",
+    "companyHint": "Exibido no cabeçalho da sua fatura. Você pode pular esta etapa e concluí-la depois em Configurações.",
+    "currencyHint": "Moeda padrão para novas faturas e posição do seu símbolo.",
+    "taxHint": "Imposto padrão aplicado a novos itens. Você pode adicionar mais alíquotas depois.",
+    "numberingHint": "Padrão do número da fatura. Exemplo: INV-{YYYY}-{SEQ:5}",
+    "start": "Começar a usar o NOVA",
+    "skip": "Pular por enquanto"
+  },
+  "lock": { "title": "Aplicativo bloqueado", "subtitle": "Digite seu PIN para continuar", "unlock": "Desbloquear", "wrongPin": "PIN incorreto", "placeholder": "PIN" },
+  "errors": {
+    "UNKNOWN": "Ocorreu um erro inesperado.", "VALIDATION": "Dados inválidos.", "NOT_FOUND": "Item não encontrado.", "CONFLICT": "Conflito com dados existentes.",
+    "DB_ERROR": "Erro no banco de dados. Os detalhes foram registrados no log.", "DB_CLOSED": "O banco de dados está fechado.", "DISK_FULL": "Disco cheio; libere espaço e tente novamente.",
+    "FILE_NOT_FOUND": "Arquivo não encontrado.", "FILE_ACCESS": "Não foi possível acessar o arquivo (pode estar aberto em outro programa).",
+    "PDF_CORRUPTED": "O arquivo PDF está corrompido ou é inválido.", "PDF_PASSWORD": "O PDF está protegido por senha.", "PDF_UNSUPPORTED": "Recurso de PDF não suportado.",
+    "EXCEL_UNSUPPORTED": "Formato de planilha não suportado.", "OCR_FAILED": "Falha no reconhecimento de texto.", "PRINTER_OFFLINE": "A impressora está offline.",
+    "LOCKED": "Operação recusada.", "CANCELLED": "Operação cancelada.", "NO_BRIDGE": "A interface não está conectada ao aplicativo.",
+    "validation": {
+      "name_required": "O nome é obrigatório.", "rate_invalid": "Alíquota de imposto inválida.", "currency_code": "O código da moeda deve ter de 3 a 5 letras latinas.",
+      "decimals": "As casas decimais devem estar entre 0 e 4.", "pin_format": "O PIN deve ter de 4 a 12 dígitos.",
+      "customer_name": "Informe o nome de um cliente ou empresa.", "email": "Endereço de e-mail inválido.", "price_invalid": "Preço inválido.",
+      "sku_duplicate": "O SKU {{sku}} já está sendo usado por outro produto.", "date": "Data inválida.", "currency_required": "Escolha uma moeda.",
+      "item_numbers": "Valores inválidos na linha {{line}}.", "discount_range": "O desconto na linha {{line}} deve estar entre 0% e 100%.", "amount_positive": "O valor deve ser maior que zero."
+    },
+    "invoice": { "number_exists": "O número de fatura {{number}} já existe.", "cancelled": "Não é possível registrar um pagamento em uma fatura cancelada." },
+    "customer": { "has_invoices": "Não é possível excluir permanentemente este cliente: {{count}} faturas o referenciam." },
+    "pdf": { "wrong_password": "Senha incorreta.", "bad_range": "Intervalo de páginas inválido: {{range}}", "no_files": "Escolha pelo menos um arquivo.", "no_pages": "Nenhuma página selecionada.", "cannot_delete_all": "Não é possível excluir todas as páginas.", "bad_order": "Ordem de páginas inválida.", "text_raster_unavailable": "Não foi possível renderizar texto não latino." },
+    "print": { "timeout": "Tempo esgotado ao preparar a impressão.", "load_failed": "Não foi possível carregar o conteúdo de impressão." },
+    "security": { "wrong_pin": "O PIN atual está incorreto." },
+    "backup": { "invalid_file": "O arquivo não é um backup válido." }
+  },
+  "toast": {
+    "saved": "Salvo", "settingsSaved": "Configurações salvas", "backupCreated": "Backup criado", "backupRestored": "Backup restaurado",
+    "demoLoaded": "Dados de demonstração carregados", "demoCleared": "Dados de demonstração limpos", "copied": "Copiado", "error": "Erro",
+    "dbExported": "Banco de dados exportado", "fileMissing": "O arquivo não foi encontrado no local original"
+  },
+  "empty": {
+    "generic": { "title": "Ainda nada aqui", "body": "Comece criando um novo item." },
+    "invoices": { "title": "Ainda sem faturas", "body": "Crie sua primeira fatura com cálculos instantâneos e exatos.", "action": "Criar sua primeira fatura" },
+    "customers": { "title": "Nenhum cliente", "body": "Adicione clientes para ver suas faturas e pagamentos aqui.", "action": "Adicionar cliente" },
+    "products": { "title": "Nenhum produto", "body": "Adicione produtos e serviços para usá-los em faturas com preenchimento automático.", "action": "Adicionar produto" },
+    "phase": { "title": "Este módulo está em construção", "body": "Entregue na fase {{phase}} do roteiro." }
+  },
+  "pdf": {
+    "loading": "Carregando documento…", "page": "Página", "of": "de", "zoomIn": "Ampliar", "zoomOut": "Reduzir", "fitWidth": "Ajustar à largura",
+    "fitPage": "Ajustar à página", "actualSize": "Tamanho real", "rotateLeft": "Girar à esquerda", "rotateRight": "Girar à direita",
+    "fullscreen": "Tela cheia", "exitFullscreen": "Sair da tela cheia", "search": "Pesquisar no documento", "searchPlaceholder": "Pesquisar texto…",
+    "results": "{{count}} resultados", "noResults": "Nenhum resultado", "nextResult": "Próximo resultado", "prevResult": "Resultado anterior",
+    "thumbnails": "Miniaturas", "bookmarks": "Favoritos", "noBookmarks": "Este arquivo não possui favoritos",
+    "copy": "Copiar texto", "copied": "Texto copiado", "selectAllText": "Copiar texto da página", "print": "Imprimir", "export": "Exportar", "saveAs": "Salvar como…",
+    "download": "Salvar uma cópia", "edit": "Editar PDF", "convertToInvoice": "Converter em Fatura Inteligente", "info": "Informações do documento",
+    "password": "Senha do documento", "passwordHint": "Este arquivo está protegido. Digite a senha para abri-lo.", "open": "Abrir",
+    "scannedNotice": "Este PDF contém páginas digitalizadas. Executar OCR?", "runOcr": "Executar OCR", "later": "Mais tarde",
+    "pages": "{{count}} páginas", "goToPage": "Ir para a página", "firstPage": "Primeira página", "lastPage": "Última página",
+    "prevPage": "Página anterior", "nextPage": "Próxima página", "renderError": "Não foi possível renderizar esta página", "exported": "Exportado: {{name}}",
+    "printSent": "Documento enviado para a impressora", "printing": "Preparando impressão…", "exportImages": "Exportar páginas como imagens", "exportText": "Exportar texto",
+    "properties": { "title": "Título", "author": "Autor", "subject": "Assunto", "creator": "Criador", "producer": "Produtor", "created": "Criado em", "modified": "Modificado em", "pages": "Páginas", "size": "Tamanho", "path": "Caminho" }
+  },
+  "inv": {
+    "title": "Faturas", "subtitle": "Todas as suas faturas e orçamentos com status e pagamentos.", "new": "Nova fatura", "newQuote": "Novo orçamento", "newProforma": "Nova fatura proforma",
+    "search": "Buscar por número, cliente, telefone ou valor…", "trash": "Lixeira", "backToList": "Voltar à lista",
+    "filters": { "all": "Todos", "unpaid": "Não pago", "status": "Status", "type": "Tipo", "from": "De", "to": "Até", "sort": "Ordenar" },
+    "sort": { "date_desc": "Mais recentes primeiro", "date_asc": "Mais antigas primeiro", "number": "Número", "amount_desc": "Valor", "customer": "Cliente" },
+    "types": { "invoice": "Fatura", "quote": "Orçamento", "proforma": "Fatura proforma", "receipt": "Recibo", "credit_note": "Nota de crédito", "purchase_order": "Pedido de compra", "delivery_note": "Guia de remessa" },
+    "cols": { "number": "Número", "customer": "Cliente", "date": "Data", "due": "Vencimento", "total": "Total", "paid": "Pago", "remaining": "Restante", "status": "Status" },
+    "count": "{{count}} faturas", "total": "{{total}} resultados",
+    "actions": { "open": "Abrir", "duplicate": "Duplicar", "trash": "Mover para a lixeira", "restore": "Restaurar", "purge": "Excluir permanentemente", "markSent": "Marcar como enviada", "markPaid": "Marcar como paga", "cancel": "Cancelar fatura", "addPayment": "Registrar pagamento", "viewPdf": "Ver PDF" },
+    "confirmTrash": "Mover a fatura {{number}} para a lixeira?", "confirmPurge": "Excluir permanentemente a fatura {{number}}? Esta ação não pode ser desfeita.",
+    "trashed": "Movida para a lixeira", "restored": "Restaurada", "purged": "Excluída permanentemente", "saved": "Fatura {{number}} salva", "duplicated": "Cópia criada",
+    "editor": {
+      "company": "Empresa", "billTo": "Faturar a", "info": "Informações da fatura", "items": "Itens", "totals": "Totais", "notes": "Observações", "payment": "Informações de pagamento", "signature": "Assinatura",
+      "selectCustomer": "Selecionar cliente existente", "newCustomer": "Novo cliente", "noCustomer": "Nenhum cliente selecionado", "customerSearch": "Buscar por nome ou telefone…", "clearCustomer": "Remover cliente",
+      "number": "Número da fatura", "autoNumber": "Automático ao salvar", "issueDate": "Data de emissão", "dueDate": "Data de vencimento", "reference": "Referência", "purchaseOrder": "Pedido de compra",
+      "currency": "Moeda", "paymentMethod": "Forma de pagamento", "status": "Status", "type": "Tipo de documento",
+      "addRow": "Adicionar linha", "removeRow": "Remover linha", "duplicateRow": "Duplicar linha", "productSearch": "Digite o nome de um produto…", "pasteHint": "Você pode colar linhas diretamente do Excel (Ctrl+V)",
+      "pasted": "{{count}} linhas adicionadas da área de transferência",
+      "grid": { "item": "Item", "description": "Descrição", "qty": "Quantidade", "unit": "Unidade", "price": "Preço unitário", "discount": "Desconto %", "tax": "Imposto %", "taxAmount": "Valor do imposto", "subtotal": "Subtotal", "total": "Total" },
+      "subtotal": "Subtotal", "discountTotal": "Total de descontos", "taxable": "Valor tributável", "taxTotal": "Total de impostos", "shipping": "Frete", "fees": "Taxas adicionais",
+      "beforeTax": "Valor antes de impostos", "grandTotal": "Total geral", "amountPaid": "Valor pago", "remaining": "Saldo restante", "amountInWords": "Valor por extenso",
+      "notesPlaceholder": "Observações exibidas no rodapé da fatura…", "terms": "Condições de pagamento", "termsPlaceholder": "ex.: Pagamento em até 30 dias",
+      "payments": "Histórico de pagamentos", "noPayments": "Ainda sem pagamentos", "payDate": "Data", "payAmount": "Valor", "payMethod": "Método", "payRef": "Referência", "payNotes": "Observações",
+      "addPayment": "Registrar pagamento", "payFull": "Valor total restante", "deletePayment": "Excluir pagamento", "saveFirst": "Salve a fatura primeiro para registrar pagamentos",
+      "unsaved": "Alterações não salvas", "saveAndClose": "Salvar e fechar", "preview": "Visualizar", "print": "Imprimir", "exportPdf": "Exportar PDF", "template": "Modelo", "more": "Mais",
+      "validation": { "noItems": "Adicione pelo menos um item", "noCustomer": "Selecione um cliente ou digite um nome" },
+      "methods": { "cash": "Dinheiro", "bank_transfer": "Transferência bancária", "card": "Cartão", "cheque": "Cheque", "other": "Outro" }
+    }
+  },
+  "cust": {
+    "title": "Clientes", "subtitle": "Sua base de clientes com faturas, pagamentos e saldos.", "new": "Novo cliente", "edit": "Editar cliente",
+    "search": "Buscar por nome, telefone ou e-mail…", "sort": { "name": "Nome", "recent": "Recentes", "invoiced_desc": "Mais faturado", "remaining_desc": "Maior saldo" },
+    "cols": { "name": "Nome", "phone": "Telefone", "email": "E-mail", "city": "Cidade", "invoices": "Faturas", "invoiced": "Total faturado", "paid": "Pago", "remaining": "Restante" },
+    "fields": { "firstName": "Nome", "lastName": "Sobrenome", "companyName": "Nome da empresa", "address": "Endereço", "city": "Cidade", "country": "País", "phone": "Telefone", "email": "E-mail", "taxId": "CNPJ/CPF", "customerNumber": "Número do cliente", "notes": "Observações" },
+    "profile": { "title": "Perfil do cliente", "info": "Dados do cliente", "invoices": "Faturas", "payments": "Pagamentos", "remaining": "Pendente", "lastActivity": "Última atividade", "notes": "Observações", "newInvoice": "Nova fatura para este cliente", "noInvoices": "Ainda não há faturas para este cliente" },
+    "saved": "Cliente salvo", "deleted": "Cliente movido para a lixeira", "confirmDelete": "Excluir o cliente {{name}}? Suas faturas serão mantidas.", "count": "{{count}} clientes"
+  },
+  "prod": {
+    "title": "Produtos e Serviços", "subtitle": "Seu catálogo para preenchimento automático em faturas.", "new": "Novo produto", "edit": "Editar produto",
+    "search": "Buscar por nome ou SKU…", "allCategories": "Todas as categorias",
+    "cols": { "name": "Nome", "sku": "SKU", "price": "Preço", "tax": "Imposto", "unit": "Unidade", "category": "Categoria", "status": "Status" },
+    "fields": { "name": "Nome", "sku": "SKU", "description": "Descrição", "price": "Preço", "currency": "Moeda", "tax": "Imposto", "unit": "Unidade", "category": "Categoria", "notes": "Observações", "active": "Ativo" },
+    "saved": "Produto salvo", "deleted": "Produto movido para a lixeira", "confirmDelete": "Excluir o produto {{name}}?", "count": "{{count}} produtos"
+  },
+  "tpl": {
+    "title": "Modelos", "subtitle": "Modelos de fatura integrados e personalizados.", "builtin": "Integrado", "default": "Padrão", "custom": "Personalizado",
+    "new": "Novo modelo", "duplicate": "Duplicar", "edit": "Editar design", "delete": "Excluir", "setDefault": "Definir como padrão", "resetBuiltin": "Redefinir modelos integrados",
+    "confirmDelete": "Excluir o modelo {{name}}? As faturas que o utilizam voltarão ao modelo padrão.", "saved": "Modelo salvo", "deleted": "Modelo excluído", "duplicated": "Modelo copiado",
+    "preview": { "title": "Visualização da fatura", "template": "Modelo", "print": "Imprimir", "exportPdf": "Exportar PDF", "openFolder": "Abrir pasta", "copyFile": "Copiar arquivo", "share": "Compartilhar / Enviar", "exported": "PDF exportado: {{name}}", "printed": "Enviado para a impressora", "regenerate": "Atualizar", "zoom": "Zoom", "saveAndPreview": "Salve a fatura primeiro para visualizá-la", "language": "Idioma do documento", "auto": "Automático", "email": "E-mail (em breve)", "whatsapp": "WhatsApp (em breve)", "cloud": "Armazenamento em nuvem (em breve)" },
+    "designer": {
+      "title": "Designer de modelos", "name": "Nome do modelo", "blocks": "Blocos", "properties": "Propriedades", "page": "Página", "theme": "Cores e fonte", "columns": "Colunas da tabela",
+      "visible": "Visível", "hidden": "Oculto", "font": "Fonte", "fontSize": "Tamanho da fonte", "color": "Cor", "background": "Fundo", "border": "Borda", "radius": "Raio do canto", "align": "Alinhamento", "padding": "Espaçamento interno",
+      "margin": "Margens da página (mm)", "size": "Tamanho", "orientation": "Orientação", "direction": "Direção do texto", "accent": "Cor de destaque", "tableHeader": "Fundo do cabeçalho da tabela", "tableHeaderText": "Texto do cabeçalho da tabela", "stripe": "Listras nas linhas",
+      "baseFont": "Tamanho base da fonte", "showLogo": "Mostrar logotipo", "showWords": "Valor por extenso", "showQr": "Código QR", "qrContent": "Conteúdo do QR", "qrNumber": "Número da fatura", "qrSummary": "Resumo (número + valor + empresa)", "qrCustom": "Texto personalizado",
+      "x": "X (mm)", "y": "Y (mm)", "width": "Largura (mm)", "height": "Altura (mm)", "text": "Texto", "reset": "Redefinir layout padrão", "dragHint": "Arraste os blocos na página para movê-los; arraste o canto para redimensionar.",
+      "sampleData": "Visualizar com dados de exemplo", "unsaved": "Alterações não salvas",
+      "kinds": { "logo": "Logotipo", "company": "Informações da empresa", "customer": "Informações do cliente", "invoiceNumber": "Número da fatura", "dates": "Datas", "meta": "Referência e pedido de compra", "title": "Título", "table": "Tabela de itens", "totals": "Totais", "amountWords": "Valor por extenso", "notes": "Observações", "terms": "Condições de pagamento", "payment": "Informações de pagamento", "signature": "Assinatura", "stamp": "Carimbo", "footer": "Rodapé", "qr": "Código QR", "text": "Texto livre" }
+    },
+    "brand": { "title": "Assinatura e carimbo", "hint": "Exibidos nas faturas onde o modelo os posiciona.", "signature": "Assinatura", "stamp": "Carimbo", "pick": "Escolher imagem", "remove": "Remover" }
+  },
+  "edit": {
+    "mode": "Modo de edição", "enter": "Editar PDF", "exit": "Concluir edição", "hint": "Clique no texto para editá-lo, ou arraste para criar um elemento. Exclua com",
+    "placeHint": "Clique ou arraste na página para posicionar a imagem", "toolDefaults": "Configurações da ferramenta", "selectHint": "Selecione um elemento na página para editar suas propriedades.",
+    "saved": "Alterações salvas", "savedAs": "Cópia editada salva: {{name}}", "confirmExit": "Há alterações não salvas. Descartá-las?",
+    "unsavedTitle": "Alterações não salvas", "discard": "Descartar", "keepEditing": "Continuar editando", "noChanges": "Nenhuma alteração a salvar",
+    "tools": { "select": "Selecionar", "text": "Texto", "highlight": "Destacar", "whiteout": "Corretivo / excluir texto", "rect": "Retângulo", "ellipse": "Elipse", "line": "Linha", "check": "Marca de seleção", "image": "Imagem", "signature": "Assinatura", "stamp": "Carimbo" },
+    "kinds": { "text": "Texto", "image": "Imagem", "rect": "Retângulo", "ellipse": "Elipse", "line": "Linha", "check": "Marca de seleção", "highlight": "Destaque", "redact": "Corretivo" },
+    "props": { "fontSize": "Tamanho da fonte", "font": "Fonte", "textColor": "Cor do texto", "background": "Fundo", "stroke": "Cor do traço", "strokeWidth": "Espessura do traço", "fill": "Preenchimento", "opacity": "Opacidade", "color": "Cor", "highlight": "Cor de destaque", "width": "Largura", "height": "Altura", "rotation": "Rotação", "direction": "Direção", "auto": "Automático", "toFront": "Trazer para frente" }
+  },
+  "tools": {
+    "title": "Ferramentas de PDF", "subtitle": "Operações de arquivo executadas inteiramente no seu computador.",
+    "pickFiles": "Escolher arquivos PDF", "pickFile": "Escolher um arquivo PDF", "addFiles": "Adicionar arquivos", "clear": "Limpar", "run": "Executar", "runAndSave": "Executar e salvar",
+    "output": "Arquivo de saída", "outputFolder": "Pasta de saída", "done": "Concluído", "saved": "Salvo: {{name}}", "savedMany": "{{count}} arquivos salvos",
+    "pagesRange": "Páginas (ex.: 1-3, 5)", "every": "A cada n páginas", "angle": "Ângulo de rotação", "position": "Posição", "text": "Texto", "opacity": "Opacidade",
+    "fontSize": "Tamanho da fonte", "format": "Formato", "paper": "Tamanho do papel", "orientation": "Orientação", "openResult": "Abrir resultado",
+    "merge": { "title": "Mesclar PDF", "desc": "Combine vários arquivos em um só, na ordem que você escolher.", "moveUp": "Subir", "moveDown": "Descer", "remove": "Remover" },
+    "split": { "title": "Dividir PDF", "desc": "Divida em arquivos menores: cada página, a cada n páginas ou intervalos específicos.", "byEvery": "A cada n páginas", "byRanges": "Intervalos", "rangesHint": "Separe os intervalos com ponto e vírgula: 1-3; 4-6; 7-" },
+    "extract": { "title": "Extrair páginas", "desc": "Extraia as páginas selecionadas para um novo arquivo." },
+    "delete": { "title": "Excluir páginas", "desc": "Remova páginas do arquivo." },
+    "rotate": { "title": "Girar páginas", "desc": "Gire todas as páginas ou as páginas selecionadas.", "allPages": "Todas as páginas" },
+    "reorder": { "title": "Reordenar páginas", "desc": "Digite a nova ordem das páginas (ex.: 3,1,2,4)." },
+    "blank": { "title": "Inserir página em branco", "desc": "Adicione uma página em branco após uma página específica.", "after": "Após a página" },
+    "insertPdf": { "title": "Inserir PDF", "desc": "Insira as páginas de outro arquivo em uma posição.", "second": "Arquivo a inserir", "at": "Após a página" },
+    "images": { "title": "Imagens → PDF", "desc": "Converta imagens JPG/PNG em um PDF.", "pickImages": "Escolher imagens", "fitPaper": "Ajustar ao tamanho do papel", "keepSize": "Manter tamanho da imagem" },
+    "watermark": { "title": "Marca d'água", "desc": "Adicione texto translúcido em todas as páginas." },
+    "numbers": { "title": "Numeração de páginas", "desc": "Adicione números de página onde desejar.", "bottomCenter": "Inferior central", "bottomRight": "Inferior direita", "bottomLeft": "Inferior esquerda", "topCenter": "Superior central" },
+    "compress": { "title": "Compactar PDF", "desc": "Regravação otimizada da estrutura (as imagens não são recodificadas).", "result": "De {{before}} para {{after}}" },
+    "pdfToImages": { "title": "PDF → Imagens", "desc": "Exporte cada página como uma imagem PNG.", "scale": "Resolução" },
+    "pdfToText": { "title": "PDF → Texto", "desc": "Extraia todo o texto para um arquivo de texto." },
+    "protect": { "title": "Proteger com senha", "desc": "A criptografia não está disponível nesta versão do motor; será incluída em uma atualização de biblioteca.", "unavailable": "Ainda não disponível" },
+    "ocr": { "title": "Digitalizar / OCR", "desc": "O reconhecimento de texto será entregue na fase 7 do roteiro." }
+  },
+  "documents": {
+    "title": "Documentos", "subtitle": "Todos os PDFs que você abriu ou criou.", "openFile": "Abrir arquivo PDF", "newPdf": "Novo documento PDF",
+    "search": "Buscar documentos…", "empty": { "title": "Ainda sem documentos", "body": "Abra um PDF ou crie um novo documento e ele aparecerá aqui.", "action": "Abrir arquivo PDF" },
+    "columns": { "title": "Título", "pages": "Páginas", "size": "Tamanho", "opened": "Modificado", "status": "Status" },
+    "scanned": "Digitalizado", "ocrDone": "OCR concluído", "text": "Texto", "missing": "Arquivo ausente", "remove": "Remover da lista",
+    "new": { "title": "Novo documento", "paper": "Tamanho do papel", "orientation": "Orientação", "pages": "Páginas", "create": "Criar", "saveWhere": "Escolha onde salvar o novo documento" }
+  },
+  "sheet": {"title":"Planilhas","studio":"Spreadsheet Studio","new":"Nova planilha","open":"Abrir arquivo Excel/CSV","import":"Importar","export":"Exportar","exportXlsx":"Exportar Excel (xlsx)","exportCsv":"Exportar CSV","exportPdf":"Exportar PDF","print":"Imprimir","save":"Salvar","saveAs":"Salvar como","untitled":"Planilha sem título","rename":"Renomear","titleLabel":"Título da planilha","formula":"Fórmula","cell":"Célula","sheet":"Planilha","addSheet":"Adicionar planilha","renameSheet":"Renomear planilha","deleteSheet":"Excluir planilha","lastSheet":"A única planilha não pode ser excluída","insertRowAbove":"Inserir linha acima","insertRowBelow":"Inserir linha abaixo","insertColStart":"Inserir coluna antes","insertColEnd":"Inserir coluna depois","deleteRow":"Excluir linha","deleteCol":"Excluir coluna","merge":"Mesclar células","unmerge":"Desfazer mesclagem","bold":"Negrito","italic":"Itálico","underline":"Sublinhado","alignStart":"Alinhar ao início","alignCenter":"Centralizar","alignEnd":"Alinhar ao fim","format":"Formato","fmtGeneral":"Geral","fmtNumber":"Número","fmtCurrency":"Moeda","fmtPercent":"Porcentagem","fmtDate":"Data","fmtText":"Texto","decimalsMore":"Mais casas decimais","decimalsLess":"Menos casas decimais","fill":"Cor de preenchimento","textColor":"Cor do texto","cut":"Recortar","copy":"Copiar","paste":"Colar","clear":"Limpar conteúdo","undo":"Desfazer","redo":"Refazer","sum":"Soma","avg":"Média","count":"Contagem","selected":"{{count}} células selecionadas","toInvoice":"Criar fatura a partir da planilha","fromInvoice":"Exportar itens da fatura para a planilha","mappingTitle":"Mapear colunas para itens da fatura","mappingHint":"Escolha qual coluna alimenta cada campo. Linhas vazias são ignoradas e os números são interpretados com segurança, sem ponto flutuante.","headerRow":"A primeira linha é um cabeçalho","colDescription":"Descrição","colQty":"Quantidade","colPrice":"Preço unitário","colDiscount":"Desconto %","colTax":"Imposto %","colRef":"Referência","colNone":"— nenhuma —","rowsFound":"{{count}} itens serão transferidos","createInvoice":"Criar fatura","needDescription":"Escolha pelo menos as colunas de descrição e preço","listCols":{"title":"Título","sheets":"Planilhas","updated":"Modificado"},"deleted":"Excluída","restore":"Restaurar","trash":"Excluir","purge":"Excluir permanentemente","confirmDelete":"Excluir “{{title}}”? Poderá ser restaurada depois.","emptyTitle":"Ainda sem planilhas","emptyDesc":"Crie uma nova planilha ou abra um arquivo Excel/CSV para trabalhar nele dentro do aplicativo.","saved":"Planilha salva","imported":"{{name}} importado","exported":"Exportado para {{name}}","importFailed":"Não foi possível ler o arquivo","unsaved":"Alterações não salvas","closeConfirm":"Esta planilha tem alterações não salvas. Fechar sem salvar?","functions":"Funções disponíveis","formulaHint":"Comece com = para escrever uma fórmula, ex.: =SUM(B2:B10)","errorCell":"Erro na fórmula","invoiceItemsTitle":"Itens da fatura {{number}}","zoom":"Zoom","freeze":"Congelar primeira linha","search":"Buscar na planilha","noMatch":"Nenhuma correspondência","gridInfo":"{{rows}} linhas × {{cols}} colunas","trashTitle":"Lixeira de planilhas","showTrash":"Mostrar excluídas","hideTrash":"Ocultar excluídas"},
+  "ocr": {"title":"Reconhecimento óptico de caracteres (OCR)","run":"Executar OCR","scope":"Escopo","scopePage":"Página atual","scopeAll":"Documento inteiro","languages":"Idiomas de reconhecimento","start":"Iniciar reconhecimento","stop":"Parar","progress":"Página {{page}} de {{total}}","status":{"loading":"Carregando mecanismo de idioma…","recognizing":"Reconhecendo texto…","done":"Concluído","idle":"Pronto"},"done":"{{pages}} página(s) reconhecida(s) · precisão de {{confidence}}%","copy":"Copiar texto","saveText":"Salvar como arquivo de texto","makeSearchable":"Tornar documento pesquisável","exportSearchable":"Exportar PDF pesquisável","noLanguages":"Faltam arquivos de idioma em resources/tessdata","missingLanguage":"Idioma de OCR não disponível: {{lang}}","failed":"Falha no OCR","searchableDone":"O texto agora é pesquisável e selecionável no visualizador e armazenado no banco de dados","exportedSearchable":"{{name}} exportado com uma camada de texto oculta","resultText":"Texto extraído","page":"Página {{page}}","confidence":"Precisão","empty":"Nenhum texto reconhecido","lowConfidence":"Baixa precisão; tente outro idioma ou uma digitalização mais nítida","scanned":"Este documento está digitalizado; o OCR será usado para extrair seu texto","hint":"O reconhecimento é executado localmente, sem internet. Documentos em árabe precisam do idioma “Árabe” ativado.","textSaved":"Texto salvo","selectLanguage":"Selecione pelo menos um idioma"},
+  "imp": {"title":"PDF → Fatura Inteligente","subtitle":"Extraia dados da fatura e itens de linha de um PDF e transforme-os em uma fatura editável","source":"Origem","open":"Escolher arquivo PDF","template":"Modelo de extração","auto":"Detecção automática (sem modelo)","matched":"Modelo “{{name}}” reconhecido automaticamente","applyTemplate":"Aplicar","saveTemplate":"Salvar como modelo de extração","updateTemplate":"Atualizar modelo","templateName":"Nome do modelo (geralmente o fornecedor)","deleteTemplate":"Excluir modelo","templateSaved":"Modelo de extração “{{name}}” salvo","noZones":"Adicione pelo menos uma zona antes de salvar","zones":"Zonas de extração","drawHint":"Arraste na página para desenhar uma zona e escolha o campo que ela representa. A zona “Itens” é dividida em colunas.","zoneField":"Campo","removeZone":"Remover zona","clearZones":"Limpar zonas","columns":"Colunas de itens","addColumn":"Adicionar coluna","headerRow":"A primeira linha é um cabeçalho","fields":"Dados da fatura","items":"Itens","addItem":"Adicionar item","removeItem":"Remover","noItems":"Nenhum item detectado; desenhe uma zona “Itens” e defina suas colunas, ou adicione itens manualmente","checks":"Verificações de cálculo","checkOk":"Os totais correspondem ao documento","createInvoice":"Criar fatura","batch":"Importação em lote","batchTitle":"Importação de PDF em lote","batchHint":"Os arquivos são processados um a um com o modelo selecionado (ou detecção automática) e salvos como faturas rascunho.","pickFiles":"Escolher arquivos PDF","processing":"Processando {{done}} de {{total}}","created":"{{count}} fatura(s) criada(s) como rascunho","failed":"Falhou","ready":"Pronto","skipped":"Ignorado","startBatch":"Iniciar importação","results":"Resultados","reextract":"Reextrair","runOcr":"Executar OCR nesta página","ocrNeeded":"Esta página não tem texto legível; execute o OCR para extrair os dados","ocrRunning":"Executando OCR…","customerMatch":"Correspondendo cliente no banco de dados: {{name}}","customerNew":"O nome do cliente será armazenado como consta no documento (pode ser vinculado depois)","totalExtracted":"Total no documento","totalComputed":"Total calculado a partir dos itens","page":"Página","of":"de","confidence":"Confiança","rawValue":"Texto original","zoom":"Zoom","field":{"number":"Número da fatura","issueDate":"Data de emissão","dueDate":"Data de vencimento","reference":"Referência","customerName":"Nome do cliente","customerPhone":"Telefone do cliente","customerAddress":"Endereço do cliente","customerTaxId":"CNPJ/CPF","subtotal":"Subtotal","discount":"Desconto","tax":"Imposto","total":"Total","notes":"Observações","items":"Itens (tabela)"},"col":{"ref":"Referência","description":"Descrição","qty":"Quantidade","unitPrice":"Preço unitário","discount":"Desconto %","tax":"Imposto %","total":"Total"},"warn":{"items_total_mismatch":"O total calculado dos itens ({{computed}}) não corresponde ao total extraído ({{extracted}})","total_mismatch":"O total não é igual ao subtotal + imposto − desconto","missing_total":"Nenhum total detectado no documento","missing_number":"Nenhum número de fatura detectado","missing_customer":"Nenhum nome de cliente detectado","no_items":"Nenhum item detectado","date_unparsed":"Não foi possível interpretar a data “{{raw}}”"}},
+  "audit": {"title":"Registro de auditoria","subtitle":"Toda operação relevante com seu registro de data e hora: faturas, pagamentos, clientes, configurações, backups, segurança","search":"Buscar no registro","allGroups":"Todos os tipos","count":"{{count}} entradas","export":"Exportar CSV","exported":"Registro exportado","emptyTitle":"Ainda sem entradas","emptyBody":"As operações aparecem aqui assim que acontecem.","cols":{"time":"Hora","action":"Ação","object":"Objeto","summary":"Detalhes"},"groups":{"invoice":"Faturas","payment":"Pagamentos","customer":"Clientes","product":"Produtos","template":"Modelos","settings":"Configurações","backup":"Backups","demo":"Dados de demonstração","security":"Segurança","spreadsheet":"Planilhas","note":"Notas","attachment":"Anexos"},"objects":{"invoice":"Fatura","customer":"Cliente","product":"Produto","spreadsheet":"Planilha","extraction_template":"Modelo de extração","custom_field":"Campo personalizado","template":"Modelo"},"actions":{"invoice.created":"Fatura criada","invoice.updated":"Fatura atualizada","invoice.deleted":"Fatura excluída","invoice.restored":"Fatura restaurada","invoice.purged":"Fatura excluída permanentemente","payment.added":"Pagamento adicionado","payment.deleted":"Pagamento excluído","customer.created":"Cliente criado","customer.updated":"Cliente atualizado","customer.deleted":"Cliente excluído","product.created":"Produto criado","product.updated":"Produto atualizado","product.deleted":"Produto excluído","template.changed":"Modelo alterado","settings.changed":"Configurações alteradas","backup.created":"Backup criado","backup.restored":"Backup restaurado","demo.loaded":"Dados de demonstração carregados","demo.cleared":"Dados de demonstração limpos","security.pin_set":"PIN definido","security.pin_removed":"PIN removido","spreadsheet.created":"Planilha criada","spreadsheet.updated":"Planilha atualizada","spreadsheet.deleted":"Planilha excluída","spreadsheet.restored":"Planilha restaurada","spreadsheet.purged":"Planilha excluída permanentemente","spreadsheet.imported":"Planilha importada","spreadsheet.exported":"Planilha exportada","note.added":"Nota adicionada","note.deleted":"Nota excluída","attachment.added":"Anexo adicionado","attachment.removed":"Anexo removido"}},
+  "notes": {"title":"Notas internas","placeholder":"Escreva uma nota que nunca aparece na fatura…","add":"Adicionar","empty":"Nenhuma nota","delete":"Excluir nota","saved":"Nota adicionada","saveFirst":"Salve o registro primeiro para adicionar notas e anexos"},
+  "att": {"title":"Anexos","add":"Adicionar arquivo","empty":"Nenhum anexo","open":"Abrir","remove":"Remover","removed":"Anexo removido","added":"{{count}} anexo(s) adicionado(s)","confirmRemove":"Remover o anexo “{{name}}”?","dropHint":"Os arquivos são copiados para a pasta de dados do aplicativo"},
+  "cf": {"title":"Campos personalizados","subtitle":"Adicione campos específicos do seu negócio (número do contrato, vendedor, região…) para faturas, clientes e produtos","entity":"Entidade","label":"Rótulo do campo","type":"Tipo","showOnInvoice":"Mostrar na fatura","add":"Adicionar campo","delete":"Excluir campo","confirmDelete":"Excluir o campo “{{label}}” e todos os seus valores?","saved":"Campo salvo","empty":"Nenhum campo personalizado para esta entidade","values":"Campos personalizados","valuesSaved":"Valores salvos","entities":{"invoice":"Faturas","customer":"Clientes","product":"Produtos","company":"Empresa"},"types":{"text":"Texto","number":"Número","date":"Data","bool":"Sim/Não"}},
+  "drafts": {"banner":"{{count}} rascunho(s) não salvo(s) de uma sessão anterior","restore":"Restaurar","discard":"Descartar","discardAll":"Descartar tudo","restored":"Rascunho restaurado","autosaved":"Rascunho salvo automaticamente","title":"Rascunhos de recuperação"},
+  "time": { "justNow": "agora mesmo", "minutesAgo": "há {{count}} min", "hoursAgo": "há {{count}} h", "daysAgo": "há {{count}} d" },
+  "status": { "draft": "Rascunho", "sent": "Enviada", "paid": "Paga", "partially_paid": "Parcialmente paga", "overdue": "Vencida", "cancelled": "Cancelada" },
+  "recent": { "open": "Abrir", "remove": "Remover da lista", "pin": "Fixar", "unpin": "Desafixar", "clear": "Limpar lista", "showInFolder": "Mostrar na pasta", "openedAt": "Aberto pela última vez" },
+  "shortcuts": {
+    "title": "Atalhos de teclado",
+    "open": "Abrir", "save": "Salvar", "saveAs": "Salvar como", "print": "Imprimir", "find": "Localizar", "undo": "Desfazer", "redo": "Refazer",
+    "palette": "Paleta de comandos", "settings": "Configurações", "closeTab": "Fechar aba", "reopenTab": "Reabrir aba", "nextTab": "Próxima aba"
+  }
+}

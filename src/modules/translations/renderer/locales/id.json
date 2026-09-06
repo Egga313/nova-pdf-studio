@@ -1,0 +1,300 @@
+{
+  "app": { "name": "NOVA PDF Studio", "tagline": "Editor PDF • Faktur Cerdas • Lembar Kerja • Dokumen" },
+  "nav": { "audit": "Log audit",
+    "home": "Beranda", "pdf": "PDF", "invoices": "Faktur", "customers": "Pelanggan", "products": "Produk & Layanan",
+    "spreadsheets": "Lembar kerja", "templates": "Templat", "documents": "Dokumen", "tools": "Alat", "settings": "Pengaturan",
+    "storage": "Penyimpanan", "backup": "Cadangan", "language": "Bahasa", "theme": "Tema"
+  },
+  "common": { "total": "Total", "demo": "Demo",
+    "save": "Simpan", "cancel": "Batal", "close": "Tutup", "delete": "Hapus", "edit": "Edit", "add": "Tambah", "search": "Cari",
+    "open": "Buka", "create": "Buat", "back": "Kembali", "next": "Lanjut", "finish": "Selesai", "yes": "Ya", "no": "Tidak", "ok": "OK",
+    "loading": "Memuat…", "none": "Tidak ada", "actions": "Tindakan", "name": "Nama", "optional": "Opsional", "required": "Wajib",
+    "clear": "Bersihkan", "confirm": "Konfirmasi", "retry": "Coba lagi", "copy": "Salin", "remove": "Hapus", "all": "Semua", "today": "Hari ini",
+    "unknown": "Tidak diketahui", "version": "Versi", "comingSoon": "Akan hadir di fase berikutnya", "enabled": "Aktif", "disabled": "Nonaktif",
+    "default": "Default", "active": "Aktif", "inactive": "Tidak aktif", "preview": "Pratinjau", "apply": "Terapkan", "reset": "Atur ulang"
+  },
+  "tabs": { "close": "Tutup tab", "closeOthers": "Tutup tab lainnya", "reopenClosed": "Buka kembali tab yang ditutup", "unsaved": "Perubahan belum disimpan" },
+  "theme": { "light": "Terang", "dark": "Gelap", "system": "Sistem" },
+  "topbar": { "search": "Cari apa saja… (Ctrl+K)", "notifications": "Notifikasi", "commandPalette": "Palet perintah" },
+  "dashboard": {
+    "title": "Beranda",
+    "welcome": "Selamat datang di NOVA",
+    "welcomeCompany": "Selamat datang, {{name}}",
+    "subtitle": "Semua yang Anda butuhkan untuk mengelola dokumen dan faktur, dalam satu tempat.",
+    "quickActions": "Aksi cepat",
+    "recentDocuments": "Dokumen terbaru",
+    "noRecent": "Belum ada dokumen yang baru dibuka",
+    "noRecentHint": "Buka PDF atau lembar kerja dan akan muncul di sini.",
+    "tools": "Alat",
+    "overview": "Ringkasan",
+    "stats": {
+      "totalInvoices": "Total faktur", "paid": "Dibayar", "unpaid": "Belum dibayar", "overdue": "Jatuh tempo",
+      "revenue": "Total pendapatan", "remaining": "Sisa pembayaran", "customers": "Pelanggan", "products": "Produk"
+    },
+    "chart": { "title": "Difakturkan vs dibayar, 12 bulan terakhir", "invoiced": "Difakturkan", "paid": "Dibayar", "empty": "Belum ada data" },
+    "outstanding": {
+      "title": "Pembayaran tertunda", "customer": "Pelanggan", "invoice": "Faktur", "dueDate": "Tanggal jatuh tempo",
+      "remaining": "Sisa", "daysOverdue": "Hari terlambat", "empty": "Tidak ada tunggakan", "onTime": "Tepat waktu"
+    },
+    "actions": {
+      "openPdf": "Buka PDF", "newPdf": "PDF baru", "newInvoice": "Faktur baru", "invoices": "Faktur", "customers": "Pelanggan",
+      "products": "Produk & Layanan", "spreadsheets": "Lembar kerja", "recent": "Dokumen terbaru", "templates": "Templat",
+      "scanOcr": "Pindai / OCR", "mergePdf": "Gabungkan PDF", "splitPdf": "Pisahkan PDF", "convert": "Konversi file", "settings": "Pengaturan",
+      "newSpreadsheet": "Lembar kerja baru", "scanDocument": "Pindai dokumen", "mergePdfs": "Gabungkan PDF"
+    }
+  },
+  "palette": { "customers": "Pelanggan", "invoices": "Faktur", "products": "Produk", "searching": "Mencari…",
+    "placeholder": "Ketik perintah atau cari…", "noResults": "Tidak ada hasil", "commands": "Perintah", "recentFiles": "File terbaru",
+    "navigation": "Navigasi", "hint": "↑↓ navigasi • Enter jalankan • Esc tutup"
+  },
+  "notifications": { "title": "Notifikasi", "empty": "Tidak ada notifikasi", "markAllRead": "Tandai semua telah dibaca", "clear": "Hapus semua" },
+  "commands": { "openAudit": "Log audit",
+    "newInvoice": "Faktur baru", "openPdf": "Buka file PDF", "newSpreadsheet": "Lembar kerja baru", "mergePdf": "Gabungkan PDF",
+    "goHome": "Ke Beranda", "openSettings": "Buka pengaturan", "toggleTheme": "Ganti tema", "closeTab": "Tutup tab",
+    "reopenTab": "Buka kembali tab yang ditutup", "nextTab": "Tab berikutnya", "prevTab": "Tab sebelumnya", "lockApp": "Kunci aplikasi",
+    "createBackup": "Buat cadangan", "openCustomers": "Buka pelanggan", "openInvoices": "Buka faktur", "openProducts": "Buka produk",
+    "language": "Ganti bahasa ke {{lang}}", "showShortcuts": "Pintasan keyboard"
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "sections": { "fields": "Bidang khusus",
+      "general": "Umum", "company": "Profil perusahaan", "invoice": "Pengaturan faktur", "tax": "Pajak", "currencies": "Mata uang",
+      "numbering": "Penomoran", "language": "Bahasa", "appearance": "Tampilan", "printing": "Pencetakan", "ocr": "OCR",
+      "storage": "Penyimpanan", "backup": "Cadangan", "security": "Keamanan", "about": "Tentang"
+    },
+    "general": {
+      "dateFormat": "Format tanggal", "numberingSystem": "Angka", "latn": "Angka Latin (1 2 3)", "arab": "Angka Arab-Indic (١ ٢ ٣)",
+      "confirmDelete": "Tanya sebelum menghapus", "openLastTabs": "Buka kembali tab saat mulai"
+    },
+    "company": {
+      "hint": "Otomatis disisipkan di setiap faktur. Anda dapat menampilkan atau menyembunyikan bidang apa pun pada header faktur.",
+      "name": "Nama perusahaan", "firstName": "Nama depan", "lastName": "Nama belakang", "address": "Alamat", "city": "Kota", "country": "Negara",
+      "phone": "Telepon", "email": "Email", "website": "Situs web", "rc": "Registrasi dagang (RC)", "nif": "NIF",
+      "nis": "NIS", "ai": "Article d'imposition (AI)", "taxId": "ID Pajak", "bankAccount": "Rekening bank", "iban": "IBAN", "swift": "SWIFT",
+      "logo": "Logo", "pickLogo": "Pilih logo", "removeLogo": "Hapus logo", "visibleFields": "Bidang yang ditampilkan pada faktur",
+      "ownerName": "Nama pemilik"
+    },
+    "invoice": {
+      "pattern": "Pola nomor faktur", "patternHint": "Token: {YYYY} tahun, {YY}, {MM} bulan, {DD} hari, {SEQ:5} penghitung dengan 5 digit",
+      "preview": "Pratinjau", "defaultCurrency": "Mata uang default", "currencyPosition": "Posisi simbol mata uang", "before": "Sebelum jumlah (€1.000,00)",
+      "after": "Setelah jumlah (1.000,00 DZD)", "defaultTax": "Pajak default", "dueDays": "Jatuh tempo dalam (hari)", "amountInWords": "Tampilkan jumlah dalam kata",
+      "defaultNotes": "Catatan default", "paymentTerms": "Syarat pembayaran default", "showLogo": "Tampilkan logo", "invalidPattern": "Pola tidak valid: {SEQ} wajib diisi",
+      "quotePattern": "Pola penawaran", "proformaPattern": "Pola faktur proforma", "receiptPattern": "Pola kuitansi"
+    },
+    "taxes": {
+      "title": "Profil pajak", "hint": "Buat tarif pajak yang digunakan bisnis Anda (PPN 0%, 9%, 19% atau tarif khusus lainnya).",
+      "add": "Tambah pajak", "name": "Nama", "rate": "Tarif %", "default": "Default", "deleteConfirm": "Hapus pajak ini?",
+      "used": "Digunakan oleh produk; akan dinonaktifkan, bukan dihapus"
+    },
+    "currencies": {
+      "title": "Mata uang", "hint": "Tambahkan mata uang apa pun berdasarkan kode ISO, beserta simbol, posisi, dan jumlah desimalnya.",
+      "add": "Tambah mata uang", "code": "Kode (ISO)", "name": "Nama", "symbol": "Simbol tampilan", "decimals": "Desimal", "position": "Posisi",
+      "deleteConfirm": "Hapus mata uang ini?"
+    },
+    "appearance": { "theme": "Tema", "language": "Bahasa antarmuka", "hint": "Bahasa dan arah teks berubah seketika, tanpa perlu memulai ulang." },
+    "printing": {
+      "paperSize": "Ukuran kertas", "orientation": "Orientasi", "portrait": "Potret", "landscape": "Lanskap", "margins": "Margin (mm)",
+      "scale": "Skala %", "copies": "Jumlah salinan"
+    },
+    "ocr": { "languages": "Bahasa OCR", "autoPrompt": "Sarankan OCR otomatis saat PDF hasil pindai dibuka", "ara": "Arab", "fra": "Prancis", "eng": "Inggris" },
+    "storage": {
+      "dataDir": "Folder data", "dbPath": "File database", "logs": "File log", "openFolder": "Buka folder",
+      "demoData": "Data demo", "demoHint": "Data contoh yang ditandai dengan jelas, dapat dihapus dalam satu klik tanpa memengaruhi data Anda sendiri.",
+      "loadDemo": "Muat data demo", "clearDemo": "Hapus data demo", "demoLoaded": "Data demo dimuat", "demoNotLoaded": "Tidak ada data demo"
+    },
+    "backup": {
+      "title": "Cadangan", "hint": "Cadangan berisi pelanggan, faktur, produk, templat, pengaturan, dan pembayaran.",
+      "create": "Buat cadangan", "restore": "Pulihkan dari file…", "export": "Ekspor database", "auto": "Cadangan otomatis harian",
+      "folder": "Folder cadangan", "defaultFolder": "Folder default", "chooseFolder": "Pilih folder", "keep": "Cadangan yang disimpan",
+      "last": "Cadangan terakhir", "never": "Belum ada cadangan", "list": "Cadangan tersedia", "confirmRestore": "Semua data akan diganti dengan cadangan yang dipilih. Salinan pengaman dari kondisi saat ini akan disimpan terlebih dahulu. Lanjutkan?",
+      "restoreThis": "Pulihkan cadangan ini"
+    },
+    "security": {
+      "appLock": "Kunci aplikasi dengan PIN", "hint": "Diminta saat memulai dan setelah periode tidak aktif. Disimpan hanya sebagai hash bergaram.",
+      "setPin": "Atur PIN", "changePin": "Ubah PIN", "removePin": "Hapus kunci", "currentPin": "PIN saat ini", "newPin": "PIN baru (4-12 digit)",
+      "confirmPin": "Konfirmasi PIN", "autoLock": "Kunci otomatis setelah", "minutes": "menit", "pinMismatch": "PIN tidak cocok", "pinSet": "PIN diatur",
+      "pinRemoved": "Kunci dihapus", "status": "Status"
+    },
+    "about": {
+      "description": "Platform kantor terpadu: baca dan edit PDF, faktur cerdas dengan perhitungan yang akurat, lembar kerja mirip Excel, dan OCR. Berjalan sepenuhnya offline.",
+      "localFirst": "Privasi diutamakan: dokumen Anda tidak pernah meninggalkan komputer Anda.", "logs": "Log pengembang", "platform": "Platform", "dataDir": "Folder data"
+    },
+    "saved": "Pengaturan disimpan"
+  },
+  "wizard": {
+    "welcome": "Selamat datang di NOVA PDF Studio",
+    "subtitle": "Beberapa langkah singkat untuk menyiapkan bisnis Anda, lalu Anda siap bekerja.",
+    "steps": { "language": "Bahasa", "company": "Perusahaan", "currency": "Mata uang", "tax": "Pajak", "numbering": "Penomoran" },
+    "languageHint": "Pilih bahasa antarmuka. Anda dapat mengubahnya kapan saja.",
+    "companyHint": "Ditampilkan pada header faktur Anda. Anda dapat melewati ini dan melengkapinya nanti di Pengaturan.",
+    "currencyHint": "Mata uang default untuk faktur baru dan posisi simbolnya.",
+    "taxHint": "Pajak default yang diterapkan pada item baris baru. Anda dapat menambahkan tarif lain nanti.",
+    "numberingHint": "Pola nomor faktur. Contoh: INV-{YYYY}-{SEQ:5}",
+    "start": "Mulai gunakan NOVA",
+    "skip": "Lewati untuk saat ini"
+  },
+  "lock": { "title": "Aplikasi terkunci", "subtitle": "Masukkan PIN Anda untuk melanjutkan", "unlock": "Buka kunci", "wrongPin": "PIN salah", "placeholder": "PIN" },
+  "errors": {
+    "UNKNOWN": "Terjadi kesalahan yang tidak terduga.", "VALIDATION": "Data tidak valid.", "NOT_FOUND": "Item tidak ditemukan.", "CONFLICT": "Bertentangan dengan data yang sudah ada.",
+    "DB_ERROR": "Kesalahan database. Detailnya telah dicatat di log.", "DB_CLOSED": "Database tertutup.", "DISK_FULL": "Disk penuh; kosongkan ruang dan coba lagi.",
+    "FILE_NOT_FOUND": "File tidak ditemukan.", "FILE_ACCESS": "Tidak dapat mengakses file (mungkin sedang dibuka di program lain).",
+    "PDF_CORRUPTED": "File PDF rusak atau tidak valid.", "PDF_PASSWORD": "PDF dilindungi kata sandi.", "PDF_UNSUPPORTED": "Fitur PDF tidak didukung.",
+    "EXCEL_UNSUPPORTED": "Format lembar kerja tidak didukung.", "OCR_FAILED": "Pengenalan teks gagal.", "PRINTER_OFFLINE": "Printer sedang offline.",
+    "LOCKED": "Operasi ditolak.", "CANCELLED": "Operasi dibatalkan.", "NO_BRIDGE": "Antarmuka tidak terhubung dengan aplikasi.",
+    "validation": {
+      "name_required": "Nama wajib diisi.", "rate_invalid": "Tarif pajak tidak valid.", "currency_code": "Kode mata uang harus terdiri dari 3 hingga 5 huruf latin.",
+      "decimals": "Desimal harus antara 0 dan 4.", "pin_format": "PIN harus terdiri dari 4 hingga 12 digit.",
+      "customer_name": "Masukkan nama pelanggan atau perusahaan.", "email": "Alamat email tidak valid.", "price_invalid": "Harga tidak valid.",
+      "sku_duplicate": "SKU {{sku}} sudah digunakan oleh produk lain.", "date": "Tanggal tidak valid.", "currency_required": "Pilih mata uang.",
+      "item_numbers": "Nilai tidak valid pada baris {{line}}.", "discount_range": "Diskon pada baris {{line}} harus antara 0% dan 100%.", "amount_positive": "Jumlah harus lebih besar dari nol."
+    },
+    "invoice": { "number_exists": "Nomor faktur {{number}} sudah ada.", "cancelled": "Tidak dapat mencatat pembayaran pada faktur yang dibatalkan." },
+    "customer": { "has_invoices": "Tidak dapat menghapus pelanggan ini secara permanen: {{count}} faktur mereferensikannya." },
+    "pdf": { "wrong_password": "Kata sandi salah.", "bad_range": "Rentang halaman tidak valid: {{range}}", "no_files": "Pilih setidaknya satu file.", "no_pages": "Tidak ada halaman yang dipilih.", "cannot_delete_all": "Tidak dapat menghapus semua halaman.", "bad_order": "Urutan halaman tidak valid.", "text_raster_unavailable": "Tidak dapat merender teks non-latin." },
+    "print": { "timeout": "Waktu persiapan cetak habis.", "load_failed": "Tidak dapat memuat konten cetak." },
+    "security": { "wrong_pin": "PIN saat ini salah." },
+    "backup": { "invalid_file": "File ini bukan cadangan yang valid." }
+  },
+  "toast": {
+    "saved": "Disimpan", "settingsSaved": "Pengaturan disimpan", "backupCreated": "Cadangan dibuat", "backupRestored": "Cadangan dipulihkan",
+    "demoLoaded": "Data demo dimuat", "demoCleared": "Data demo dihapus", "copied": "Disalin", "error": "Kesalahan",
+    "dbExported": "Database diekspor", "fileMissing": "File tidak ditemukan di lokasi aslinya"
+  },
+  "empty": {
+    "generic": { "title": "Belum ada apa pun di sini", "body": "Mulai dengan membuat item baru." },
+    "invoices": { "title": "Belum ada faktur", "body": "Buat faktur pertama Anda dengan perhitungan instan dan akurat.", "action": "Buat faktur pertama Anda" },
+    "customers": { "title": "Belum ada pelanggan", "body": "Tambahkan pelanggan untuk melihat faktur dan pembayaran mereka di sini.", "action": "Tambah pelanggan" },
+    "products": { "title": "Belum ada produk", "body": "Tambahkan produk dan layanan untuk digunakan pada faktur dengan pelengkapan otomatis.", "action": "Tambah produk" },
+    "phase": { "title": "Modul ini sedang dalam pengembangan", "body": "Akan tersedia pada fase {{phase}} dari roadmap." }
+  },
+  "pdf": {
+    "loading": "Memuat dokumen…", "page": "Halaman", "of": "dari", "zoomIn": "Perbesar", "zoomOut": "Perkecil", "fitWidth": "Sesuaikan lebar",
+    "fitPage": "Sesuaikan halaman", "actualSize": "Ukuran asli", "rotateLeft": "Putar kiri", "rotateRight": "Putar kanan",
+    "fullscreen": "Layar penuh", "exitFullscreen": "Keluar layar penuh", "search": "Cari dalam dokumen", "searchPlaceholder": "Cari teks…",
+    "results": "{{count}} hasil", "noResults": "Tidak ada hasil", "nextResult": "Hasil berikutnya", "prevResult": "Hasil sebelumnya",
+    "thumbnails": "Miniatur", "bookmarks": "Markah", "noBookmarks": "File ini tidak memiliki markah",
+    "copy": "Salin teks", "copied": "Teks disalin", "selectAllText": "Salin teks halaman", "print": "Cetak", "export": "Ekspor", "saveAs": "Simpan sebagai…",
+    "download": "Simpan salinan", "edit": "Edit PDF", "convertToInvoice": "Konversi ke Faktur Cerdas", "info": "Info dokumen",
+    "password": "Kata sandi dokumen", "passwordHint": "File ini dilindungi. Masukkan kata sandi untuk membukanya.", "open": "Buka",
+    "scannedNotice": "PDF ini berisi halaman hasil pindai. Jalankan OCR?", "runOcr": "Jalankan OCR", "later": "Nanti",
+    "pages": "{{count}} halaman", "goToPage": "Ke halaman", "firstPage": "Halaman pertama", "lastPage": "Halaman terakhir",
+    "prevPage": "Halaman sebelumnya", "nextPage": "Halaman berikutnya", "renderError": "Halaman ini tidak dapat dirender", "exported": "Diekspor: {{name}}",
+    "printSent": "Dokumen dikirim ke printer", "printing": "Menyiapkan cetak…", "exportImages": "Ekspor halaman sebagai gambar", "exportText": "Ekspor teks",
+    "properties": { "title": "Judul", "author": "Penulis", "subject": "Subjek", "creator": "Pembuat", "producer": "Produsen", "created": "Dibuat", "modified": "Diubah", "pages": "Halaman", "size": "Ukuran", "path": "Jalur" }
+  },
+  "inv": {
+    "title": "Faktur", "subtitle": "Semua faktur dan penawaran Anda beserta status dan pembayarannya.", "new": "Faktur baru", "newQuote": "Penawaran baru", "newProforma": "Faktur proforma baru",
+    "search": "Cari berdasarkan nomor, pelanggan, telepon atau jumlah…", "trash": "Sampah", "backToList": "Kembali ke daftar",
+    "filters": { "all": "Semua", "unpaid": "Belum dibayar", "status": "Status", "type": "Jenis", "from": "Dari", "to": "Sampai", "sort": "Urutkan" },
+    "sort": { "date_desc": "Terbaru dahulu", "date_asc": "Terlama dahulu", "number": "Nomor", "amount_desc": "Jumlah", "customer": "Pelanggan" },
+    "types": { "invoice": "Faktur", "quote": "Penawaran", "proforma": "Faktur proforma", "receipt": "Kuitansi", "credit_note": "Nota kredit", "purchase_order": "Pesanan pembelian", "delivery_note": "Surat jalan" },
+    "cols": { "number": "Nomor", "customer": "Pelanggan", "date": "Tanggal", "due": "Jatuh tempo", "total": "Total", "paid": "Dibayar", "remaining": "Sisa", "status": "Status" },
+    "count": "{{count}} faktur", "total": "{{total}} hasil",
+    "actions": { "open": "Buka", "duplicate": "Duplikat", "trash": "Pindahkan ke sampah", "restore": "Pulihkan", "purge": "Hapus permanen", "markSent": "Tandai terkirim", "markPaid": "Tandai lunas", "cancel": "Batalkan faktur", "addPayment": "Catat pembayaran", "viewPdf": "Lihat PDF" },
+    "confirmTrash": "Pindahkan faktur {{number}} ke sampah?", "confirmPurge": "Hapus faktur {{number}} secara permanen? Tindakan ini tidak dapat dibatalkan.",
+    "trashed": "Dipindahkan ke sampah", "restored": "Dipulihkan", "purged": "Dihapus permanen", "saved": "Faktur {{number}} disimpan", "duplicated": "Salinan dibuat",
+    "editor": {
+      "company": "Perusahaan", "billTo": "Ditagihkan kepada", "info": "Informasi faktur", "items": "Item", "totals": "Total", "notes": "Catatan", "payment": "Informasi pembayaran", "signature": "Tanda tangan",
+      "selectCustomer": "Pilih pelanggan yang sudah ada", "newCustomer": "Pelanggan baru", "noCustomer": "Belum ada pelanggan dipilih", "customerSearch": "Cari berdasarkan nama atau telepon…", "clearCustomer": "Hapus pelanggan",
+      "number": "Nomor faktur", "autoNumber": "Otomatis saat disimpan", "issueDate": "Tanggal terbit", "dueDate": "Tanggal jatuh tempo", "reference": "Referensi", "purchaseOrder": "Pesanan pembelian",
+      "currency": "Mata uang", "paymentMethod": "Metode pembayaran", "status": "Status", "type": "Jenis dokumen",
+      "addRow": "Tambah baris", "removeRow": "Hapus baris", "duplicateRow": "Duplikat baris", "productSearch": "Ketik nama produk…", "pasteHint": "Anda dapat menempelkan baris langsung dari Excel (Ctrl+V)",
+      "pasted": "{{count}} baris ditambahkan dari clipboard",
+      "grid": { "item": "Item", "description": "Deskripsi", "qty": "Jumlah", "unit": "Satuan", "price": "Harga satuan", "discount": "Diskon %", "tax": "Pajak %", "taxAmount": "Jumlah pajak", "subtotal": "Subtotal", "total": "Total" },
+      "subtotal": "Subtotal", "discountTotal": "Total diskon", "taxable": "Jumlah kena pajak", "taxTotal": "Total pajak", "shipping": "Pengiriman", "fees": "Biaya tambahan",
+      "beforeTax": "Jumlah sebelum pajak", "grandTotal": "Total keseluruhan", "amountPaid": "Jumlah dibayar", "remaining": "Sisa saldo", "amountInWords": "Jumlah dalam kata",
+      "notesPlaceholder": "Catatan yang ditampilkan di bagian bawah faktur…", "terms": "Syarat pembayaran", "termsPlaceholder": "mis. Pembayaran dalam 30 hari",
+      "payments": "Riwayat pembayaran", "noPayments": "Belum ada pembayaran", "payDate": "Tanggal", "payAmount": "Jumlah", "payMethod": "Metode", "payRef": "Referensi", "payNotes": "Catatan",
+      "addPayment": "Catat pembayaran", "payFull": "Jumlah sisa penuh", "deletePayment": "Hapus pembayaran", "saveFirst": "Simpan faktur terlebih dahulu untuk mencatat pembayaran",
+      "unsaved": "Perubahan belum disimpan", "saveAndClose": "Simpan dan tutup", "preview": "Pratinjau", "print": "Cetak", "exportPdf": "Ekspor PDF", "template": "Templat", "more": "Lainnya",
+      "validation": { "noItems": "Tambahkan setidaknya satu item", "noCustomer": "Pilih pelanggan atau masukkan nama" },
+      "methods": { "cash": "Tunai", "bank_transfer": "Transfer bank", "card": "Kartu", "cheque": "Cek", "other": "Lainnya" }
+    }
+  },
+  "cust": {
+    "title": "Pelanggan", "subtitle": "Basis pelanggan Anda beserta faktur, pembayaran, dan saldo.", "new": "Pelanggan baru", "edit": "Edit pelanggan",
+    "search": "Cari berdasarkan nama, telepon atau email…", "sort": { "name": "Nama", "recent": "Terbaru", "invoiced_desc": "Paling banyak difakturkan", "remaining_desc": "Saldo tertinggi" },
+    "cols": { "name": "Nama", "phone": "Telepon", "email": "Email", "city": "Kota", "invoices": "Faktur", "invoiced": "Total difakturkan", "paid": "Dibayar", "remaining": "Sisa" },
+    "fields": { "firstName": "Nama depan", "lastName": "Nama belakang", "companyName": "Nama perusahaan", "address": "Alamat", "city": "Kota", "country": "Negara", "phone": "Telepon", "email": "Email", "taxId": "ID Pajak", "customerNumber": "Nomor pelanggan", "notes": "Catatan" },
+    "profile": { "title": "Profil pelanggan", "info": "Detail pelanggan", "invoices": "Faktur", "payments": "Pembayaran", "remaining": "Tertunggak", "lastActivity": "Aktivitas terakhir", "notes": "Catatan", "newInvoice": "Faktur baru untuk pelanggan ini", "noInvoices": "Belum ada faktur untuk pelanggan ini" },
+    "saved": "Pelanggan disimpan", "deleted": "Pelanggan dipindahkan ke sampah", "confirmDelete": "Hapus pelanggan {{name}}? Faktur mereka akan tetap disimpan.", "count": "{{count}} pelanggan"
+  },
+  "prod": {
+    "title": "Produk & Layanan", "subtitle": "Katalog Anda untuk pelengkapan otomatis pada faktur.", "new": "Produk baru", "edit": "Edit produk",
+    "search": "Cari berdasarkan nama atau SKU…", "allCategories": "Semua kategori",
+    "cols": { "name": "Nama", "sku": "SKU", "price": "Harga", "tax": "Pajak", "unit": "Satuan", "category": "Kategori", "status": "Status" },
+    "fields": { "name": "Nama", "sku": "SKU", "description": "Deskripsi", "price": "Harga", "currency": "Mata uang", "tax": "Pajak", "unit": "Satuan", "category": "Kategori", "notes": "Catatan", "active": "Aktif" },
+    "saved": "Produk disimpan", "deleted": "Produk dipindahkan ke sampah", "confirmDelete": "Hapus produk {{name}}?", "count": "{{count}} produk"
+  },
+  "tpl": {
+    "title": "Templat", "subtitle": "Desain faktur bawaan dan khusus.", "builtin": "Bawaan", "default": "Default", "custom": "Khusus",
+    "new": "Templat baru", "duplicate": "Duplikat", "edit": "Edit desain", "delete": "Hapus", "setDefault": "Jadikan default", "resetBuiltin": "Atur ulang templat bawaan",
+    "confirmDelete": "Hapus templat {{name}}? Faktur yang menggunakannya akan kembali ke templat default.", "saved": "Templat disimpan", "deleted": "Templat dihapus", "duplicated": "Templat disalin",
+    "preview": { "title": "Pratinjau faktur", "template": "Templat", "print": "Cetak", "exportPdf": "Ekspor PDF", "openFolder": "Buka folder", "copyFile": "Salin file", "share": "Bagikan / Kirim", "exported": "PDF diekspor: {{name}}", "printed": "Terkirim ke printer", "regenerate": "Segarkan", "zoom": "Perbesar", "saveAndPreview": "Simpan faktur terlebih dahulu untuk melihat pratinjaunya", "language": "Bahasa dokumen", "auto": "Otomatis", "email": "Email (segera hadir)", "whatsapp": "WhatsApp (segera hadir)", "cloud": "Penyimpanan cloud (segera hadir)" },
+    "designer": {
+      "title": "Perancang templat", "name": "Nama templat", "blocks": "Blok", "properties": "Properti", "page": "Halaman", "theme": "Warna & font", "columns": "Kolom tabel",
+      "visible": "Terlihat", "hidden": "Tersembunyi", "font": "Font", "fontSize": "Ukuran font", "color": "Warna", "background": "Latar belakang", "border": "Batas", "radius": "Radius sudut", "align": "Perataan", "padding": "Padding",
+      "margin": "Margin halaman (mm)", "size": "Ukuran", "orientation": "Orientasi", "direction": "Arah teks", "accent": "Warna aksen", "tableHeader": "Latar belakang header tabel", "tableHeaderText": "Teks header tabel", "stripe": "Garis baris berselang",
+      "baseFont": "Ukuran font dasar", "showLogo": "Tampilkan logo", "showWords": "Jumlah dalam kata", "showQr": "Kode QR", "qrContent": "Konten QR", "qrNumber": "Nomor faktur", "qrSummary": "Ringkasan (nomor + jumlah + perusahaan)", "qrCustom": "Teks khusus",
+      "x": "X (mm)", "y": "Y (mm)", "width": "Lebar (mm)", "height": "Tinggi (mm)", "text": "Teks", "reset": "Atur ulang tata letak default", "dragHint": "Seret blok pada halaman untuk memindahkannya; seret sudut untuk mengubah ukuran.",
+      "sampleData": "Pratinjau dengan data contoh", "unsaved": "Perubahan belum disimpan",
+      "kinds": { "logo": "Logo", "company": "Informasi perusahaan", "customer": "Informasi pelanggan", "invoiceNumber": "Nomor faktur", "dates": "Tanggal", "meta": "Referensi & PO", "title": "Judul", "table": "Tabel item", "totals": "Total", "amountWords": "Jumlah dalam kata", "notes": "Catatan", "terms": "Syarat pembayaran", "payment": "Informasi pembayaran", "signature": "Tanda tangan", "stamp": "Stempel", "footer": "Footer", "qr": "Kode QR", "text": "Teks bebas" }
+    },
+    "brand": { "title": "Tanda tangan & stempel", "hint": "Ditampilkan pada faktur sesuai penempatan templat.", "signature": "Tanda tangan", "stamp": "Stempel", "pick": "Pilih gambar", "remove": "Hapus" }
+  },
+  "edit": {
+    "mode": "Mode edit", "enter": "Edit PDF", "exit": "Selesai mengedit", "hint": "Klik teks untuk mengeditnya, atau seret untuk membuat elemen. Hapus dengan",
+    "placeHint": "Klik atau seret pada halaman untuk menempatkan gambar", "toolDefaults": "Pengaturan alat", "selectHint": "Pilih elemen pada halaman untuk mengedit propertinya.",
+    "saved": "Perubahan disimpan", "savedAs": "Salinan hasil edit disimpan: {{name}}", "confirmExit": "Ada perubahan yang belum disimpan. Buang perubahan tersebut?",
+    "unsavedTitle": "Perubahan belum disimpan", "discard": "Buang", "keepEditing": "Lanjutkan mengedit", "noChanges": "Tidak ada perubahan untuk disimpan",
+    "tools": { "select": "Pilih", "text": "Teks", "highlight": "Sorot", "whiteout": "Tutup putih / hapus teks", "rect": "Persegi", "ellipse": "Elips", "line": "Garis", "check": "Tanda centang", "image": "Gambar", "signature": "Tanda tangan", "stamp": "Stempel" },
+    "kinds": { "text": "Teks", "image": "Gambar", "rect": "Persegi", "ellipse": "Elips", "line": "Garis", "check": "Tanda centang", "highlight": "Sorotan", "redact": "Tutup putih" },
+    "props": { "fontSize": "Ukuran font", "font": "Font", "textColor": "Warna teks", "background": "Latar belakang", "stroke": "Warna garis", "strokeWidth": "Ketebalan garis", "fill": "Isi", "opacity": "Opasitas", "color": "Warna", "highlight": "Warna sorotan", "width": "Lebar", "height": "Tinggi", "rotation": "Rotasi", "direction": "Arah", "auto": "Otomatis", "toFront": "Bawa ke depan" }
+  },
+  "tools": {
+    "title": "Alat PDF", "subtitle": "Operasi file yang berjalan sepenuhnya di komputer Anda.",
+    "pickFiles": "Pilih file PDF", "pickFile": "Pilih file PDF", "addFiles": "Tambah file", "clear": "Bersihkan", "run": "Jalankan", "runAndSave": "Jalankan dan simpan",
+    "output": "File keluaran", "outputFolder": "Folder keluaran", "done": "Selesai", "saved": "Disimpan: {{name}}", "savedMany": "{{count}} file disimpan",
+    "pagesRange": "Halaman (mis. 1-3, 5)", "every": "Setiap n halaman", "angle": "Sudut rotasi", "position": "Posisi", "text": "Teks", "opacity": "Opasitas",
+    "fontSize": "Ukuran font", "format": "Format", "paper": "Ukuran kertas", "orientation": "Orientasi", "openResult": "Buka hasil",
+    "merge": { "title": "Gabungkan PDF", "desc": "Gabungkan beberapa file menjadi satu, sesuai urutan yang Anda tentukan.", "moveUp": "Naik", "moveDown": "Turun", "remove": "Hapus" },
+    "split": { "title": "Pisahkan PDF", "desc": "Pisahkan menjadi file yang lebih kecil: setiap halaman, setiap n halaman, atau rentang tertentu.", "byEvery": "Setiap n halaman", "byRanges": "Rentang", "rangesHint": "Pisahkan rentang dengan titik koma: 1-3; 4-6; 7-" },
+    "extract": { "title": "Ekstrak halaman", "desc": "Ekstrak halaman yang dipilih ke file baru." },
+    "delete": { "title": "Hapus halaman", "desc": "Hapus halaman dari file." },
+    "rotate": { "title": "Putar halaman", "desc": "Putar semua halaman atau halaman yang dipilih.", "allPages": "Semua halaman" },
+    "reorder": { "title": "Urutkan ulang halaman", "desc": "Masukkan urutan halaman baru (mis. 3,1,2,4)." },
+    "blank": { "title": "Sisipkan halaman kosong", "desc": "Tambahkan halaman kosong setelah halaman tertentu.", "after": "Setelah halaman" },
+    "insertPdf": { "title": "Sisipkan PDF", "desc": "Sisipkan halaman dari file lain pada posisi tertentu.", "second": "File untuk disisipkan", "at": "Setelah halaman" },
+    "images": { "title": "Gambar → PDF", "desc": "Konversi gambar JPG/PNG menjadi PDF.", "pickImages": "Pilih gambar", "fitPaper": "Sesuaikan dengan ukuran kertas", "keepSize": "Pertahankan ukuran gambar" },
+    "watermark": { "title": "Watermark", "desc": "Tambahkan teks transparan pada setiap halaman." },
+    "numbers": { "title": "Nomor halaman", "desc": "Tambahkan nomor halaman di posisi yang Anda inginkan.", "bottomCenter": "Bawah tengah", "bottomRight": "Bawah kanan", "bottomLeft": "Bawah kiri", "topCenter": "Atas tengah" },
+    "compress": { "title": "Kompres PDF", "desc": "Simpan ulang struktur secara teroptimasi (gambar tidak dienkode ulang).", "result": "Dari {{before}} menjadi {{after}}" },
+    "pdfToImages": { "title": "PDF → Gambar", "desc": "Ekspor setiap halaman sebagai gambar PNG.", "scale": "Resolusi" },
+    "pdfToText": { "title": "PDF → Teks", "desc": "Ekstrak seluruh teks ke file teks." },
+    "protect": { "title": "Lindungi dengan kata sandi", "desc": "Enkripsi belum tersedia pada versi mesin ini; akan hadir dengan pembaruan pustaka.", "unavailable": "Belum tersedia" },
+    "ocr": { "title": "Pindai / OCR", "desc": "Pengenalan teks akan dihadirkan pada fase 7 dari roadmap." }
+  },
+  "documents": {
+    "title": "Dokumen", "subtitle": "Setiap PDF yang Anda buka atau buat.", "openFile": "Buka file PDF", "newPdf": "Dokumen PDF baru",
+    "search": "Cari dokumen…", "empty": { "title": "Belum ada dokumen", "body": "Buka PDF atau buat dokumen baru dan akan muncul di sini.", "action": "Buka file PDF" },
+    "columns": { "title": "Judul", "pages": "Halaman", "size": "Ukuran", "opened": "Diubah", "status": "Status" },
+    "scanned": "Hasil pindai", "ocrDone": "OCR selesai", "text": "Teks", "missing": "File hilang", "remove": "Hapus dari daftar",
+    "new": { "title": "Dokumen baru", "paper": "Ukuran kertas", "orientation": "Orientasi", "pages": "Halaman", "create": "Buat", "saveWhere": "Pilih lokasi penyimpanan dokumen baru" }
+  },
+  "sheet": {"title":"Lembar kerja","studio":"Studio Lembar Kerja","new":"Lembar kerja baru","open":"Buka file Excel/CSV","import":"Impor","export":"Ekspor","exportXlsx":"Ekspor Excel (xlsx)","exportCsv":"Ekspor CSV","exportPdf":"Ekspor PDF","print":"Cetak","save":"Simpan","saveAs":"Simpan sebagai","untitled":"Lembar kerja tanpa judul","rename":"Ganti nama","titleLabel":"Judul lembar kerja","formula":"Rumus","cell":"Sel","sheet":"Lembar","addSheet":"Tambah lembar","renameSheet":"Ganti nama lembar","deleteSheet":"Hapus lembar","lastSheet":"Lembar satu-satunya tidak dapat dihapus","insertRowAbove":"Sisipkan baris di atas","insertRowBelow":"Sisipkan baris di bawah","insertColStart":"Sisipkan kolom sebelum","insertColEnd":"Sisipkan kolom setelah","deleteRow":"Hapus baris","deleteCol":"Hapus kolom","merge":"Gabungkan sel","unmerge":"Pisahkan sel","bold":"Tebal","italic":"Miring","underline":"Garis bawah","alignStart":"Rata kiri","alignCenter":"Rata tengah","alignEnd":"Rata kanan","format":"Format","fmtGeneral":"Umum","fmtNumber":"Angka","fmtCurrency":"Mata uang","fmtPercent":"Persen","fmtDate":"Tanggal","fmtText":"Teks","decimalsMore":"Tambah desimal","decimalsLess":"Kurangi desimal","fill":"Warna isi","textColor":"Warna teks","cut":"Potong","copy":"Salin","paste":"Tempel","clear":"Bersihkan isi","undo":"Urungkan","redo":"Ulangi","sum":"Jumlah","avg":"Rata-rata","count":"Hitung","selected":"{{count}} sel dipilih","toInvoice":"Buat faktur dari lembar","fromInvoice":"Ekspor item faktur ke lembar","mappingTitle":"Petakan kolom ke item faktur","mappingHint":"Pilih kolom mana yang mengisi setiap bidang. Baris kosong dilewati dan angka diuraikan dengan aman tanpa masalah pembulatan.","headerRow":"Baris pertama adalah header","colDescription":"Deskripsi","colQty":"Jumlah","colPrice":"Harga satuan","colDiscount":"Diskon %","colTax":"Pajak %","colRef":"Referensi","colNone":"— tidak ada —","rowsFound":"{{count}} item akan dipindahkan","createInvoice":"Buat faktur","needDescription":"Pilih setidaknya kolom deskripsi dan harga","listCols":{"title":"Judul","sheets":"Lembar","updated":"Diubah"},"deleted":"Dihapus","restore":"Pulihkan","trash":"Hapus","purge":"Hapus permanen","confirmDelete":"Hapus “{{title}}”? Dapat dipulihkan nanti.","emptyTitle":"Belum ada lembar kerja","emptyDesc":"Buat lembar kerja baru atau buka file Excel/CSV untuk mengerjakannya di dalam aplikasi.","saved":"Lembar kerja disimpan","imported":"{{name}} diimpor","exported":"Diekspor ke {{name}}","importFailed":"File tidak dapat dibaca","unsaved":"Perubahan belum disimpan","closeConfirm":"Lembar kerja ini memiliki perubahan yang belum disimpan. Tutup tanpa menyimpan?","functions":"Fungsi tersedia","formulaHint":"Mulai dengan = untuk menulis rumus, mis. =SUM(B2:B10)","errorCell":"Kesalahan rumus","invoiceItemsTitle":"Item faktur {{number}}","zoom":"Perbesar","freeze":"Bekukan baris pertama","search":"Cari dalam lembar","noMatch":"Tidak ada kecocokan","gridInfo":"{{rows}} baris × {{cols}} kolom","trashTitle":"Sampah lembar kerja","showTrash":"Tampilkan yang dihapus","hideTrash":"Sembunyikan yang dihapus"},
+  "ocr": {"title":"Pengenalan karakter optik (OCR)","run":"Jalankan OCR","scope":"Cakupan","scopePage":"Halaman saat ini","scopeAll":"Seluruh dokumen","languages":"Bahasa pengenalan","start":"Mulai pengenalan","stop":"Berhenti","progress":"Halaman {{page}} dari {{total}}","status":{"loading":"Memuat mesin bahasa…","recognizing":"Mengenali teks…","done":"Selesai","idle":"Siap"},"done":"{{pages}} halaman dikenali · akurasi {{confidence}}%","copy":"Salin teks","saveText":"Simpan sebagai file teks","makeSearchable":"Jadikan dokumen dapat dicari","exportSearchable":"Ekspor PDF yang dapat dicari","noLanguages":"File bahasa tidak ditemukan di resources/tessdata","missingLanguage":"Bahasa OCR tidak tersedia: {{lang}}","failed":"OCR gagal","searchableDone":"Teks kini dapat dicari dan dipilih di penampil serta disimpan dalam database","exportedSearchable":"{{name}} diekspor dengan lapisan teks tersembunyi","resultText":"Teks yang diekstrak","page":"Halaman {{page}}","confidence":"Akurasi","empty":"Tidak ada teks yang dikenali","lowConfidence":"Akurasi rendah; coba bahasa lain atau hasil pindai yang lebih jelas","scanned":"Dokumen ini adalah hasil pindai; OCR akan digunakan untuk mengekstrak teksnya","hint":"Pengenalan berjalan secara lokal tanpa internet. Dokumen berbahasa Arab memerlukan bahasa “Arab” diaktifkan.","textSaved":"Teks disimpan","selectLanguage":"Pilih setidaknya satu bahasa"},
+  "imp": {"title":"PDF → Faktur cerdas","subtitle":"Ekstrak data faktur dan item baris dari PDF lalu ubah menjadi faktur yang dapat diedit","source":"Sumber","open":"Pilih file PDF","template":"Templat ekstraksi","auto":"Deteksi otomatis (tanpa templat)","matched":"Templat “{{name}}” dikenali secara otomatis","applyTemplate":"Terapkan","saveTemplate":"Simpan sebagai templat ekstraksi","updateTemplate":"Perbarui templat","templateName":"Nama templat (biasanya pemasok)","deleteTemplate":"Hapus templat","templateSaved":"Templat ekstraksi “{{name}}” disimpan","noZones":"Tambahkan setidaknya satu zona sebelum menyimpan","zones":"Zona ekstraksi","drawHint":"Seret pada halaman untuk menggambar zona, lalu pilih bidang yang diwakilinya. Zona “Item” dibagi menjadi beberapa kolom.","zoneField":"Bidang","removeZone":"Hapus zona","clearZones":"Bersihkan zona","columns":"Kolom item","addColumn":"Tambah kolom","headerRow":"Baris pertama adalah header","fields":"Data faktur","items":"Item","addItem":"Tambah item","removeItem":"Hapus","noItems":"Tidak ada item terdeteksi; gambar zona “Item” dan tentukan kolomnya, atau tambahkan item secara manual","checks":"Pemeriksaan perhitungan","checkOk":"Total sesuai dengan dokumen","createInvoice":"Buat faktur","batch":"Impor massal","batchTitle":"Impor PDF massal","batchHint":"File diproses satu per satu dengan templat yang dipilih (atau deteksi otomatis) dan disimpan sebagai faktur draf.","pickFiles":"Pilih file PDF","processing":"Memproses {{done}} dari {{total}}","created":"{{count}} faktur dibuat sebagai draf","failed":"Gagal","ready":"Siap","skipped":"Dilewati","startBatch":"Mulai impor","results":"Hasil","reextract":"Ekstrak ulang","runOcr":"Jalankan OCR pada halaman ini","ocrNeeded":"Halaman ini tidak memiliki teks yang dapat dibaca; jalankan OCR untuk mengekstrak data","ocrRunning":"Menjalankan OCR…","customerMatch":"Mencocokkan pelanggan dalam database: {{name}}","customerNew":"Nama pelanggan akan disimpan sesuai yang tertulis pada dokumen (dapat ditautkan nanti)","totalExtracted":"Total dalam dokumen","totalComputed":"Total dihitung dari item","page":"Halaman","of":"dari","confidence":"Keyakinan","rawValue":"Teks asli","zoom":"Perbesar","field":{"number":"Nomor faktur","issueDate":"Tanggal terbit","dueDate":"Tanggal jatuh tempo","reference":"Referensi","customerName":"Nama pelanggan","customerPhone":"Telepon pelanggan","customerAddress":"Alamat pelanggan","customerTaxId":"ID Pajak","subtotal":"Subtotal","discount":"Diskon","tax":"Pajak","total":"Total","notes":"Catatan","items":"Item (tabel)"},"col":{"ref":"Referensi","description":"Deskripsi","qty":"Jumlah","unitPrice":"Harga satuan","discount":"Diskon %","tax":"Pajak %","total":"Total"},"warn":{"items_total_mismatch":"Total item yang dihitung ({{computed}}) tidak sesuai dengan total yang diekstrak ({{extracted}})","total_mismatch":"Total tidak sama dengan subtotal + pajak − diskon","missing_total":"Tidak ada total terdeteksi dalam dokumen","missing_number":"Tidak ada nomor faktur terdeteksi","missing_customer":"Tidak ada nama pelanggan terdeteksi","no_items":"Tidak ada item terdeteksi","date_unparsed":"Tidak dapat membaca tanggal “{{raw}}”"}},
+  "audit": {"title":"Log audit","subtitle":"Setiap operasi penting beserta waktunya: faktur, pembayaran, pelanggan, pengaturan, cadangan, keamanan","search":"Cari log","allGroups":"Semua jenis","count":"{{count}} entri","export":"Ekspor CSV","exported":"Log diekspor","emptyTitle":"Belum ada entri","emptyBody":"Operasi akan muncul di sini segera setelah terjadi.","cols":{"time":"Waktu","action":"Tindakan","object":"Objek","summary":"Detail"},"groups":{"invoice":"Faktur","payment":"Pembayaran","customer":"Pelanggan","product":"Produk","template":"Templat","settings":"Pengaturan","backup":"Cadangan","demo":"Data demo","security":"Keamanan","spreadsheet":"Lembar kerja","note":"Catatan","attachment":"Lampiran"},"objects":{"invoice":"Faktur","customer":"Pelanggan","product":"Produk","spreadsheet":"Lembar kerja","extraction_template":"Templat ekstraksi","custom_field":"Bidang khusus","template":"Templat"},"actions":{"invoice.created":"Faktur dibuat","invoice.updated":"Faktur diperbarui","invoice.deleted":"Faktur dihapus","invoice.restored":"Faktur dipulihkan","invoice.purged":"Faktur dihapus permanen","payment.added":"Pembayaran ditambahkan","payment.deleted":"Pembayaran dihapus","customer.created":"Pelanggan dibuat","customer.updated":"Pelanggan diperbarui","customer.deleted":"Pelanggan dihapus","product.created":"Produk dibuat","product.updated":"Produk diperbarui","product.deleted":"Produk dihapus","template.changed":"Templat diubah","settings.changed":"Pengaturan diubah","backup.created":"Cadangan dibuat","backup.restored":"Cadangan dipulihkan","demo.loaded":"Data demo dimuat","demo.cleared":"Data demo dihapus","security.pin_set":"PIN diatur","security.pin_removed":"PIN dihapus","spreadsheet.created":"Lembar kerja dibuat","spreadsheet.updated":"Lembar kerja diperbarui","spreadsheet.deleted":"Lembar kerja dihapus","spreadsheet.restored":"Lembar kerja dipulihkan","spreadsheet.purged":"Lembar kerja dihapus permanen","spreadsheet.imported":"Lembar kerja diimpor","spreadsheet.exported":"Lembar kerja diekspor","note.added":"Catatan ditambahkan","note.deleted":"Catatan dihapus","attachment.added":"Lampiran ditambahkan","attachment.removed":"Lampiran dihapus"}},
+  "notes": {"title":"Catatan internal","placeholder":"Tulis catatan yang tidak akan muncul pada faktur…","add":"Tambah","empty":"Tidak ada catatan","delete":"Hapus catatan","saved":"Catatan ditambahkan","saveFirst":"Simpan data terlebih dahulu untuk menambahkan catatan dan lampiran"},
+  "att": {"title":"Lampiran","add":"Tambah file","empty":"Tidak ada lampiran","open":"Buka","remove":"Hapus","removed":"Lampiran dihapus","added":"{{count}} lampiran ditambahkan","confirmRemove":"Hapus lampiran “{{name}}”?","dropHint":"File disalin ke folder data aplikasi"},
+  "cf": {"title":"Bidang khusus","subtitle":"Tambahkan bidang khusus untuk bisnis Anda (nomor kontrak, perwakilan penjualan, wilayah…) untuk faktur, pelanggan, dan produk","entity":"Entitas","label":"Label bidang","type":"Jenis","showOnInvoice":"Tampilkan pada faktur","add":"Tambah bidang","delete":"Hapus bidang","confirmDelete":"Hapus bidang “{{label}}” beserta semua nilainya?","saved":"Bidang disimpan","empty":"Tidak ada bidang khusus untuk entitas ini","values":"Bidang khusus","valuesSaved":"Nilai disimpan","entities":{"invoice":"Faktur","customer":"Pelanggan","product":"Produk","company":"Perusahaan"},"types":{"text":"Teks","number":"Angka","date":"Tanggal","bool":"Ya/Tidak"}},
+  "drafts": {"banner":"{{count}} draf belum disimpan dari sesi sebelumnya","restore":"Pulihkan","discard":"Buang","discardAll":"Buang semua","restored":"Draf dipulihkan","autosaved":"Draf disimpan otomatis","title":"Draf pemulihan"},
+  "time": { "justNow": "baru saja", "minutesAgo": "{{count}} menit lalu", "hoursAgo": "{{count}} jam lalu", "daysAgo": "{{count}} hari lalu" },
+  "status": { "draft": "Draf", "sent": "Terkirim", "paid": "Dibayar", "partially_paid": "Dibayar sebagian", "overdue": "Jatuh tempo", "cancelled": "Dibatalkan" },
+  "recent": { "open": "Buka", "remove": "Hapus dari daftar", "pin": "Sematkan", "unpin": "Lepas sematan", "clear": "Bersihkan daftar", "showInFolder": "Tampilkan di folder", "openedAt": "Terakhir dibuka" },
+  "shortcuts": {
+    "title": "Pintasan keyboard",
+    "open": "Buka", "save": "Simpan", "saveAs": "Simpan sebagai", "print": "Cetak", "find": "Cari", "undo": "Urungkan", "redo": "Ulangi",
+    "palette": "Palet perintah", "settings": "Pengaturan", "closeTab": "Tutup tab", "reopenTab": "Buka kembali tab", "nextTab": "Tab berikutnya"
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "app": { "name": "NOVA PDF Studio", "tagline": "PDFエディタ・スマート請求書・スプレッドシート・ドキュメント" },
+  "nav": { "audit": "監査ログ",
+    "home": "ホーム", "pdf": "PDF", "invoices": "請求書", "customers": "顧客", "products": "商品・サービス",
+    "spreadsheets": "スプレッドシート", "templates": "テンプレート", "documents": "ドキュメント", "tools": "ツール", "settings": "設定",
+    "storage": "ストレージ", "backup": "バックアップ", "language": "言語", "theme": "テーマ"
+  },
+  "common": { "total": "合計", "demo": "デモ",
+    "save": "保存", "cancel": "キャンセル", "close": "閉じる", "delete": "削除", "edit": "編集", "add": "追加", "search": "検索",
+    "open": "開く", "create": "作成", "back": "戻る", "next": "次へ", "finish": "完了", "yes": "はい", "no": "いいえ", "ok": "OK",
+    "loading": "読み込み中…", "none": "なし", "actions": "操作", "name": "名前", "optional": "任意", "required": "必須",
+    "clear": "クリア", "confirm": "確認", "retry": "再試行", "copy": "コピー", "remove": "削除", "all": "すべて", "today": "今日",
+    "unknown": "不明", "version": "バージョン", "comingSoon": "後のフェーズで対応予定", "enabled": "有効", "disabled": "無効",
+    "default": "デフォルト", "active": "有効", "inactive": "無効", "preview": "プレビュー", "apply": "適用", "reset": "リセット"
+  },
+  "tabs": { "close": "タブを閉じる", "closeOthers": "他のタブを閉じる", "reopenClosed": "閉じたタブを再度開く", "unsaved": "未保存の変更" },
+  "theme": { "light": "ライト", "dark": "ダーク", "system": "システム" },
+  "topbar": { "search": "すべてを検索…(Ctrl+K)", "notifications": "通知", "commandPalette": "コマンドパレット" },
+  "dashboard": {
+    "title": "ホーム",
+    "welcome": "NOVAへようこそ",
+    "welcomeCompany": "ようこそ、{{name}}さん",
+    "subtitle": "ドキュメントと請求書の管理に必要なすべてを、ひとつの場所で。",
+    "quickActions": "クイックアクション",
+    "recentDocuments": "最近のドキュメント",
+    "noRecent": "最近開いたドキュメントはありません",
+    "noRecentHint": "PDFまたはスプレッドシートを開くと、ここに表示されます。",
+    "tools": "ツール",
+    "overview": "概要",
+    "stats": {
+      "totalInvoices": "請求書の総数", "paid": "支払済み", "unpaid": "未払い", "overdue": "期限超過",
+      "revenue": "総売上", "remaining": "未回収金額", "customers": "顧客数", "products": "商品数"
+    },
+    "chart": { "title": "請求額と支払額(過去12か月)", "invoiced": "請求額", "paid": "支払額", "empty": "まだデータがありません" },
+    "outstanding": {
+      "title": "未回収の支払い", "customer": "顧客", "invoice": "請求書", "dueDate": "支払期限",
+      "remaining": "残額", "daysOverdue": "延滞日数", "empty": "未回収はありません", "onTime": "期限内"
+    },
+    "actions": {
+      "openPdf": "PDFを開く", "newPdf": "新規PDF", "newInvoice": "新規請求書", "invoices": "請求書", "customers": "顧客",
+      "products": "商品・サービス", "spreadsheets": "スプレッドシート", "recent": "最近のドキュメント", "templates": "テンプレート",
+      "scanOcr": "スキャン / OCR", "mergePdf": "PDFを結合", "splitPdf": "PDFを分割", "convert": "ファイルを変換", "settings": "設定",
+      "newSpreadsheet": "新規スプレッドシート", "scanDocument": "ドキュメントをスキャン", "mergePdfs": "PDFを結合"
+    }
+  },
+  "palette": { "customers": "顧客", "invoices": "請求書", "products": "商品", "searching": "検索中…",
+    "placeholder": "コマンドを入力するか検索…", "noResults": "結果がありません", "commands": "コマンド", "recentFiles": "最近のファイル",
+    "navigation": "ナビゲーション", "hint": "↑↓ 移動 • Enter 実行 • Esc 閉じる"
+  },
+  "notifications": { "title": "通知", "empty": "通知はありません", "markAllRead": "すべて既読にする", "clear": "すべてクリア" },
+  "commands": { "openAudit": "監査ログ",
+    "newInvoice": "新規請求書", "openPdf": "PDFファイルを開く", "newSpreadsheet": "新規スプレッドシート", "mergePdf": "PDFを結合",
+    "goHome": "ホームへ移動", "openSettings": "設定を開く", "toggleTheme": "テーマを切り替え", "closeTab": "タブを閉じる",
+    "reopenTab": "閉じたタブを再度開く", "nextTab": "次のタブ", "prevTab": "前のタブ", "lockApp": "アプリをロック",
+    "createBackup": "バックアップを作成", "openCustomers": "顧客を開く", "openInvoices": "請求書を開く", "openProducts": "商品を開く",
+    "language": "言語を{{lang}}に切り替え", "showShortcuts": "キーボードショートカット"
+  },
+  "settings": {
+    "title": "設定",
+    "sections": { "fields": "カスタムフィールド",
+      "general": "一般", "company": "会社情報", "invoice": "請求書設定", "tax": "税金", "currencies": "通貨",
+      "numbering": "採番", "language": "言語", "appearance": "外観", "printing": "印刷", "ocr": "OCR",
+      "storage": "ストレージ", "backup": "バックアップ", "security": "セキュリティ", "about": "アプリについて"
+    },
+    "general": {
+      "dateFormat": "日付形式", "numberingSystem": "数字表記", "latn": "西洋数字 (1 2 3)", "arab": "アラビア数字 (١ ٢ ٣)",
+      "confirmDelete": "削除前に確認する", "openLastTabs": "起動時に前回のタブを開く"
+    },
+    "company": {
+      "hint": "すべての請求書に自動的に挿入されます。請求書ヘッダーの各項目は表示・非表示を切り替えられます。",
+      "name": "会社名", "firstName": "名", "lastName": "姓", "address": "住所", "city": "市区町村", "country": "国",
+      "phone": "電話番号", "email": "メールアドレス", "website": "ウェブサイト", "rc": "商業登記番号 (RC)", "nif": "NIF",
+      "nis": "NIS", "ai": "課税条項番号 (AI)", "taxId": "税務番号", "bankAccount": "銀行口座", "iban": "IBAN", "swift": "SWIFT",
+      "logo": "ロゴ", "pickLogo": "ロゴを選択", "removeLogo": "ロゴを削除", "visibleFields": "請求書に表示する項目",
+      "ownerName": "代表者名"
+    },
+    "invoice": {
+      "pattern": "請求書番号のパターン", "patternHint": "トークン: {YYYY} 年、{YY}、{MM} 月、{DD} 日、{SEQ:5} 5桁の連番",
+      "preview": "プレビュー", "defaultCurrency": "デフォルト通貨", "currencyPosition": "通貨記号の位置", "before": "金額の前 (€1,000.00)",
+      "after": "金額の後 (1,000.00 DZD)", "defaultTax": "デフォルト税率", "dueDays": "支払期限(日数)", "amountInWords": "金額を文字表記で表示",
+      "defaultNotes": "デフォルトの備考", "paymentTerms": "デフォルトの支払条件", "showLogo": "ロゴを表示", "invalidPattern": "無効なパターンです: {SEQ} が必要です",
+      "quotePattern": "見積書番号のパターン", "proformaPattern": "プロフォーマインボイス番号のパターン", "receiptPattern": "領収書番号のパターン"
+    },
+    "taxes": {
+      "title": "税率プロファイル", "hint": "事業で使用する税率を作成します(付加価値税 0%、9%、19%、または任意の税率)。",
+      "add": "税率を追加", "name": "名前", "rate": "税率 %", "default": "デフォルト", "deleteConfirm": "この税率を削除しますか?",
+      "used": "商品で使用されているため、削除ではなく無効化されます"
+    },
+    "currencies": {
+      "title": "通貨", "hint": "ISOコードで任意の通貨を追加し、記号・位置・小数桁数を設定できます。",
+      "add": "通貨を追加", "code": "コード (ISO)", "name": "名前", "symbol": "表示記号", "decimals": "小数桁数", "position": "位置",
+      "deleteConfirm": "この通貨を削除しますか?"
+    },
+    "appearance": { "theme": "テーマ", "language": "表示言語", "hint": "言語と表示方向は再起動なしで即座に切り替わります。" },
+    "printing": {
+      "paperSize": "用紙サイズ", "orientation": "印刷の向き", "portrait": "縦向き", "landscape": "横向き", "margins": "余白 (mm)",
+      "scale": "拡大縮小 %", "copies": "部数"
+    },
+    "ocr": { "languages": "OCR言語", "autoPrompt": "スキャンPDFを開いたときにOCRを自動的に提案する", "ara": "アラビア語", "fra": "フランス語", "eng": "英語" },
+    "storage": {
+      "dataDir": "データフォルダ", "dbPath": "データベースファイル", "logs": "ログファイル", "openFolder": "フォルダを開く",
+      "demoData": "デモデータ", "demoHint": "デモデータであることが明示され、自分のデータに影響を与えずワンクリックで削除できます。",
+      "loadDemo": "デモデータを読み込む", "clearDemo": "デモデータを削除", "demoLoaded": "デモデータが読み込まれています", "demoNotLoaded": "デモデータはありません"
+    },
+    "backup": {
+      "title": "バックアップ", "hint": "バックアップには顧客、請求書、商品、テンプレート、設定、支払いが含まれます。",
+      "create": "バックアップを作成", "restore": "ファイルから復元…", "export": "データベースをエクスポート", "auto": "毎日自動バックアップ",
+      "folder": "バックアップフォルダ", "defaultFolder": "デフォルトフォルダ", "chooseFolder": "フォルダを選択", "keep": "保持するバックアップ数",
+      "last": "最終バックアップ", "never": "まだバックアップがありません", "list": "利用可能なバックアップ", "confirmRestore": "選択したバックアップですべてが置き換えられます。現在の状態は事前に保存されます。続行しますか?",
+      "restoreThis": "このバックアップを復元"
+    },
+    "security": {
+      "appLock": "PINによるアプリロック", "hint": "起動時および一定時間操作がない場合に要求されます。ソルト付きハッシュとしてのみ保存されます。",
+      "setPin": "PINを設定", "changePin": "PINを変更", "removePin": "ロックを解除", "currentPin": "現在のPIN", "newPin": "新しいPIN(4~12桁)",
+      "confirmPin": "PINの確認", "autoLock": "自動ロックまでの時間", "minutes": "分", "pinMismatch": "PINが一致しません", "pinSet": "PINを設定しました",
+      "pinRemoved": "ロックを解除しました", "status": "状態"
+    },
+    "about": {
+      "description": "PDFの閲覧・編集、正確な計算によるスマート請求書、Excel風のスプレッドシート、OCRを備えた統合オフィスプラットフォーム。完全オフラインで動作します。",
+      "localFirst": "プライバシー最優先: ドキュメントがお使いのパソコンの外に出ることはありません。", "logs": "開発者ログ", "platform": "プラットフォーム", "dataDir": "データフォルダ"
+    },
+    "saved": "設定を保存しました"
+  },
+  "wizard": {
+    "welcome": "NOVA PDF Studioへようこそ",
+    "subtitle": "いくつかの簡単な手順でビジネス情報を設定すれば、すぐに使い始められます。",
+    "steps": { "language": "言語", "company": "会社情報", "currency": "通貨", "tax": "税金", "numbering": "採番" },
+    "languageHint": "表示言語を選択してください。あとからいつでも変更できます。",
+    "companyHint": "請求書のヘッダーに表示されます。今はスキップして、あとで設定画面から入力することもできます。",
+    "currencyHint": "新規請求書のデフォルト通貨と、その記号の表示位置です。",
+    "taxHint": "新しい明細行に適用されるデフォルト税率です。税率はあとから追加できます。",
+    "numberingHint": "請求書番号のパターンです。例: INV-{YYYY}-{SEQ:5}",
+    "start": "NOVAの利用を開始",
+    "skip": "今はスキップ"
+  },
+  "lock": { "title": "アプリがロックされています", "subtitle": "続けるにはPINを入力してください", "unlock": "ロック解除", "wrongPin": "PINが違います", "placeholder": "PIN" },
+  "errors": {
+    "UNKNOWN": "予期しないエラーが発生しました。", "VALIDATION": "データが無効です。", "NOT_FOUND": "項目が見つかりません。", "CONFLICT": "既存のデータと競合しています。",
+    "DB_ERROR": "データベースエラーです。詳細はログに記録されました。", "DB_CLOSED": "データベースが閉じています。", "DISK_FULL": "ディスクの空き容量がありません。空き容量を確保して再試行してください。",
+    "FILE_NOT_FOUND": "ファイルが見つかりません。", "FILE_ACCESS": "ファイルにアクセスできません(他のプログラムで開いている可能性があります)。",
+    "PDF_CORRUPTED": "PDFファイルが破損しているか、無効です。", "PDF_PASSWORD": "このPDFはパスワードで保護されています。", "PDF_UNSUPPORTED": "サポートされていないPDF機能です。",
+    "EXCEL_UNSUPPORTED": "サポートされていないスプレッドシート形式です。", "OCR_FAILED": "文字認識に失敗しました。", "PRINTER_OFFLINE": "プリンターがオフラインです。",
+    "LOCKED": "操作が拒否されました。", "CANCELLED": "操作がキャンセルされました。", "NO_BRIDGE": "インターフェースがアプリに接続されていません。",
+    "validation": {
+      "name_required": "名前は必須です。", "rate_invalid": "税率が無効です。", "currency_code": "通貨コードは3~5文字の英字である必要があります。",
+      "decimals": "小数桁数は0~4の範囲で指定してください。", "pin_format": "PINは4~12桁の数字で入力してください。",
+      "customer_name": "顧客名または会社名を入力してください。", "email": "メールアドレスが無効です。", "price_invalid": "価格が無効です。",
+      "sku_duplicate": "SKU {{sku}} は他の商品ですでに使用されています。", "date": "日付が無効です。", "currency_required": "通貨を選択してください。",
+      "item_numbers": "{{line}}行目の値が無効です。", "discount_range": "{{line}}行目の割引は0%~100%の範囲で指定してください。", "amount_positive": "金額は0より大きい値を入力してください。"
+    },
+    "invoice": { "number_exists": "請求書番号 {{number}} はすでに存在します。", "cancelled": "キャンセルされた請求書には支払いを記録できません。" },
+    "customer": { "has_invoices": "この顧客を完全に削除できません: {{count}}件の請求書で参照されています。" },
+    "pdf": { "wrong_password": "パスワードが違います。", "bad_range": "無効なページ範囲です: {{range}}", "no_files": "少なくとも1つのファイルを選択してください。", "no_pages": "ページが選択されていません。", "cannot_delete_all": "すべてのページを削除することはできません。", "bad_order": "ページの順序が無効です。", "text_raster_unavailable": "非ラテン文字のテキストを描画できませんでした。" },
+    "print": { "timeout": "印刷の準備がタイムアウトしました。", "load_failed": "印刷内容を読み込めませんでした。" },
+    "security": { "wrong_pin": "現在のPINが正しくありません。" },
+    "backup": { "invalid_file": "このファイルは有効なバックアップではありません。" }
+  },
+  "toast": {
+    "saved": "保存しました", "settingsSaved": "設定を保存しました", "backupCreated": "バックアップを作成しました", "backupRestored": "バックアップを復元しました",
+    "demoLoaded": "デモデータを読み込みました", "demoCleared": "デモデータを削除しました", "copied": "コピーしました", "error": "エラー",
+    "dbExported": "データベースをエクスポートしました", "fileMissing": "ファイルが元の場所に見つかりませんでした"
+  },
+  "empty": {
+    "generic": { "title": "まだ何もありません", "body": "新しい項目を作成して始めましょう。" },
+    "invoices": { "title": "まだ請求書がありません", "body": "正確な計算がその場で行われる、最初の請求書を作成しましょう。", "action": "最初の請求書を作成" },
+    "customers": { "title": "顧客がいません", "body": "顧客を追加すると、その請求書と支払いがここに表示されます。", "action": "顧客を追加" },
+    "products": { "title": "商品がありません", "body": "商品・サービスを追加すると、請求書作成時に入力補完で利用できます。", "action": "商品を追加" },
+    "phase": { "title": "このモジュールは開発中です", "body": "ロードマップのフェーズ{{phase}}で提供予定です。" }
+  },
+  "pdf": {
+    "loading": "ドキュメントを読み込み中…", "page": "ページ", "of": "/", "zoomIn": "拡大", "zoomOut": "縮小", "fitWidth": "幅に合わせる",
+    "fitPage": "ページに合わせる", "actualSize": "実際のサイズ", "rotateLeft": "左に回転", "rotateRight": "右に回転",
+    "fullscreen": "全画面表示", "exitFullscreen": "全画面表示を終了", "search": "ドキュメント内を検索", "searchPlaceholder": "テキストを検索…",
+    "results": "{{count}}件の結果", "noResults": "結果がありません", "nextResult": "次の結果", "prevResult": "前の結果",
+    "thumbnails": "サムネイル", "bookmarks": "しおり", "noBookmarks": "このファイルにはしおりがありません",
+    "copy": "テキストをコピー", "copied": "テキストをコピーしました", "selectAllText": "ページのテキストをコピー", "print": "印刷", "export": "エクスポート", "saveAs": "名前を付けて保存…",
+    "download": "コピーを保存", "edit": "PDFを編集", "convertToInvoice": "スマート請求書に変換", "info": "ドキュメント情報",
+    "password": "ドキュメントのパスワード", "passwordHint": "このファイルは保護されています。開くにはパスワードを入力してください。", "open": "開く",
+    "scannedNotice": "このPDFにはスキャンされたページが含まれています。OCRを実行しますか?", "runOcr": "OCRを実行", "later": "後で",
+    "pages": "{{count}}ページ", "goToPage": "指定ページへ移動", "firstPage": "最初のページ", "lastPage": "最後のページ",
+    "prevPage": "前のページ", "nextPage": "次のページ", "renderError": "このページを表示できませんでした", "exported": "エクスポートしました: {{name}}",
+    "printSent": "ドキュメントをプリンターに送信しました", "printing": "印刷を準備中…", "exportImages": "ページを画像としてエクスポート", "exportText": "テキストをエクスポート",
+    "properties": { "title": "タイトル", "author": "作成者", "subject": "件名", "creator": "作成アプリケーション", "producer": "生成アプリケーション", "created": "作成日", "modified": "更新日", "pages": "ページ数", "size": "サイズ", "path": "パス" }
+  },
+  "inv": {
+    "title": "請求書", "subtitle": "すべての請求書と見積書を、状態と支払い状況とともに一覧表示します。", "new": "新規請求書", "newQuote": "新規見積書", "newProforma": "新規プロフォーマインボイス",
+    "search": "番号・顧客・電話番号・金額で検索…", "trash": "ゴミ箱", "backToList": "一覧に戻る",
+    "filters": { "all": "すべて", "unpaid": "未払い", "status": "状態", "type": "種類", "from": "開始日", "to": "終了日", "sort": "並び替え" },
+    "sort": { "date_desc": "新しい順", "date_asc": "古い順", "number": "番号", "amount_desc": "金額", "customer": "顧客" },
+    "types": { "invoice": "請求書", "quote": "見積書", "proforma": "プロフォーマインボイス", "receipt": "領収書", "credit_note": "クレジットノート", "purchase_order": "発注書", "delivery_note": "納品書" },
+    "cols": { "number": "番号", "customer": "顧客", "date": "日付", "due": "期限", "total": "合計", "paid": "支払済み", "remaining": "残額", "status": "状態" },
+    "count": "{{count}}件の請求書", "total": "{{total}}件の結果",
+    "actions": { "open": "開く", "duplicate": "複製", "trash": "ゴミ箱に移動", "restore": "復元", "purge": "完全に削除", "markSent": "送付済みにする", "markPaid": "支払済みにする", "cancel": "請求書をキャンセル", "addPayment": "支払いを記録", "viewPdf": "PDFを表示" },
+    "confirmTrash": "請求書 {{number}} をゴミ箱に移動しますか?", "confirmPurge": "請求書 {{number}} を完全に削除しますか?この操作は元に戻せません。",
+    "trashed": "ゴミ箱に移動しました", "restored": "復元しました", "purged": "完全に削除しました", "saved": "請求書 {{number}} を保存しました", "duplicated": "コピーを作成しました",
+    "editor": {
+      "company": "会社情報", "billTo": "請求先", "info": "請求書情報", "items": "明細", "totals": "合計", "notes": "備考", "payment": "支払情報", "signature": "署名",
+      "selectCustomer": "既存の顧客を選択", "newCustomer": "新規顧客", "noCustomer": "顧客が選択されていません", "customerSearch": "名前または電話番号で検索…", "clearCustomer": "顧客を削除",
+      "number": "請求書番号", "autoNumber": "保存時に自動採番", "issueDate": "発行日", "dueDate": "支払期限", "reference": "参照番号", "purchaseOrder": "発注書番号",
+      "currency": "通貨", "paymentMethod": "支払方法", "status": "状態", "type": "書類の種類",
+      "addRow": "行を追加", "removeRow": "行を削除", "duplicateRow": "行を複製", "productSearch": "商品名を入力…", "pasteHint": "Excelから行を直接貼り付けられます(Ctrl+V)",
+      "pasted": "クリップボードから{{count}}行を追加しました",
+      "grid": { "item": "品目", "description": "説明", "qty": "数量", "unit": "単位", "price": "単価", "discount": "割引率", "tax": "税率", "taxAmount": "税額", "subtotal": "小計", "total": "合計" },
+      "subtotal": "小計", "discountTotal": "割引合計", "taxable": "課税対象額", "taxTotal": "税額合計", "shipping": "送料", "fees": "追加手数料",
+      "beforeTax": "税抜金額", "grandTotal": "総合計", "amountPaid": "支払済み金額", "remaining": "残高", "amountInWords": "金額(文字表記)",
+      "notesPlaceholder": "請求書の下部に表示される備考…", "terms": "支払条件", "termsPlaceholder": "例: 30日以内にお支払いください",
+      "payments": "支払履歴", "noPayments": "まだ支払いはありません", "payDate": "日付", "payAmount": "金額", "payMethod": "方法", "payRef": "参照番号", "payNotes": "備考",
+      "addPayment": "支払いを記録", "payFull": "残額全額", "deletePayment": "支払いを削除", "saveFirst": "支払いを記録するには、先に請求書を保存してください",
+      "unsaved": "未保存の変更", "saveAndClose": "保存して閉じる", "preview": "プレビュー", "print": "印刷", "exportPdf": "PDFをエクスポート", "template": "テンプレート", "more": "その他",
+      "validation": { "noItems": "少なくとも1つの項目を追加してください", "noCustomer": "顧客を選択するか、名前を入力してください" },
+      "methods": { "cash": "現金", "bank_transfer": "銀行振込", "card": "カード", "cheque": "小切手", "other": "その他" }
+    }
+  },
+  "cust": {
+    "title": "顧客", "subtitle": "請求書・支払い・残高を含む顧客データベースです。", "new": "新規顧客", "edit": "顧客を編集",
+    "search": "名前・電話番号・メールアドレスで検索…", "sort": { "name": "名前", "recent": "最近", "invoiced_desc": "請求額が多い順", "remaining_desc": "残高が多い順" },
+    "cols": { "name": "名前", "phone": "電話番号", "email": "メールアドレス", "city": "市区町村", "invoices": "請求書数", "invoiced": "請求総額", "paid": "支払済み", "remaining": "残額" },
+    "fields": { "firstName": "名", "lastName": "姓", "companyName": "会社名", "address": "住所", "city": "市区町村", "country": "国", "phone": "電話番号", "email": "メールアドレス", "taxId": "税務番号", "customerNumber": "顧客番号", "notes": "備考" },
+    "profile": { "title": "顧客プロフィール", "info": "顧客の詳細", "invoices": "請求書", "payments": "支払い", "remaining": "未回収額", "lastActivity": "最終活動日", "notes": "備考", "newInvoice": "この顧客の新規請求書", "noInvoices": "この顧客の請求書はまだありません" },
+    "saved": "顧客を保存しました", "deleted": "顧客をゴミ箱に移動しました", "confirmDelete": "顧客 {{name}} を削除しますか?請求書は保持されます。", "count": "{{count}}件の顧客"
+  },
+  "prod": {
+    "title": "商品・サービス", "subtitle": "請求書の入力補完に使うカタログです。", "new": "新規商品", "edit": "商品を編集",
+    "search": "名前またはSKUで検索…", "allCategories": "すべてのカテゴリ",
+    "cols": { "name": "名前", "sku": "SKU", "price": "価格", "tax": "税率", "unit": "単位", "category": "カテゴリ", "status": "状態" },
+    "fields": { "name": "名前", "sku": "SKU", "description": "説明", "price": "価格", "currency": "通貨", "tax": "税率", "unit": "単位", "category": "カテゴリ", "notes": "備考", "active": "有効" },
+    "saved": "商品を保存しました", "deleted": "商品をゴミ箱に移動しました", "confirmDelete": "商品 {{name}} を削除しますか?", "count": "{{count}}件の商品"
+  },
+  "tpl": {
+    "title": "テンプレート", "subtitle": "組み込みおよびカスタムの請求書デザインです。", "builtin": "組み込み", "default": "デフォルト", "custom": "カスタム",
+    "new": "新規テンプレート", "duplicate": "複製", "edit": "デザインを編集", "delete": "削除", "setDefault": "デフォルトに設定", "resetBuiltin": "組み込みテンプレートをリセット",
+    "confirmDelete": "テンプレート {{name}} を削除しますか?このテンプレートを使用している請求書はデフォルトテンプレートに戻ります。", "saved": "テンプレートを保存しました", "deleted": "テンプレートを削除しました", "duplicated": "テンプレートを複製しました",
+    "preview": { "title": "請求書プレビュー", "template": "テンプレート", "print": "印刷", "exportPdf": "PDFをエクスポート", "openFolder": "フォルダを開く", "copyFile": "ファイルをコピー", "share": "共有 / 送信", "exported": "PDFをエクスポートしました: {{name}}", "printed": "プリンターに送信しました", "regenerate": "再生成", "zoom": "ズーム", "saveAndPreview": "プレビューするには、先に請求書を保存してください", "language": "書類の言語", "auto": "自動", "email": "メール(近日対応)", "whatsapp": "WhatsApp(近日対応)", "cloud": "クラウドストレージ(近日対応)" },
+    "designer": {
+      "title": "テンプレートデザイナー", "name": "テンプレート名", "blocks": "ブロック", "properties": "プロパティ", "page": "ページ", "theme": "配色とフォント", "columns": "表の列",
+      "visible": "表示", "hidden": "非表示", "font": "フォント", "fontSize": "フォントサイズ", "color": "色", "background": "背景", "border": "枠線", "radius": "角丸半径", "align": "配置", "padding": "内側の余白",
+      "margin": "ページ余白 (mm)", "size": "サイズ", "orientation": "向き", "direction": "テキストの方向", "accent": "アクセントカラー", "tableHeader": "表ヘッダーの背景色", "tableHeaderText": "表ヘッダーの文字色", "stripe": "行の縞模様",
+      "baseFont": "基本フォントサイズ", "showLogo": "ロゴを表示", "showWords": "金額(文字表記)", "showQr": "QRコード", "qrContent": "QRコードの内容", "qrNumber": "請求書番号", "qrSummary": "概要(番号+金額+会社名)", "qrCustom": "カスタムテキスト",
+      "x": "X (mm)", "y": "Y (mm)", "width": "幅 (mm)", "height": "高さ (mm)", "text": "テキスト", "reset": "デフォルトレイアウトに戻す", "dragHint": "ブロックをドラッグして移動、角をドラッグしてサイズを変更できます。",
+      "sampleData": "サンプルデータでプレビュー", "unsaved": "未保存の変更",
+      "kinds": { "logo": "ロゴ", "company": "会社情報", "customer": "顧客情報", "invoiceNumber": "請求書番号", "dates": "日付", "meta": "参照番号・発注書番号", "title": "タイトル", "table": "明細表", "totals": "合計", "amountWords": "金額(文字表記)", "notes": "備考", "terms": "支払条件", "payment": "支払情報", "signature": "署名", "stamp": "印鑑", "footer": "フッター", "qr": "QRコード", "text": "自由テキスト" }
+    },
+    "brand": { "title": "署名・印鑑", "hint": "テンプレートで配置された位置に請求書上で表示されます。", "signature": "署名", "stamp": "印鑑", "pick": "画像を選択", "remove": "削除" }
+  },
+  "edit": {
+    "mode": "編集モード", "enter": "PDFを編集", "exit": "編集を終了", "hint": "テキストをクリックして編集するか、ドラッグして要素を作成します。削除するには",
+    "placeHint": "ページ上でクリックまたはドラッグして画像を配置します", "toolDefaults": "ツール設定", "selectHint": "ページ上の要素を選択すると、そのプロパティを編集できます。",
+    "saved": "変更を保存しました", "savedAs": "編集したコピーを保存しました: {{name}}", "confirmExit": "未保存の変更があります。破棄しますか?",
+    "unsavedTitle": "未保存の変更", "discard": "破棄", "keepEditing": "編集を続ける", "noChanges": "保存する変更はありません",
+    "tools": { "select": "選択", "text": "テキスト", "highlight": "ハイライト", "whiteout": "修正 / テキスト削除", "rect": "長方形", "ellipse": "楕円", "line": "線", "check": "チェックマーク", "image": "画像", "signature": "署名", "stamp": "印鑑" },
+    "kinds": { "text": "テキスト", "image": "画像", "rect": "長方形", "ellipse": "楕円", "line": "線", "check": "チェックマーク", "highlight": "ハイライト", "redact": "修正" },
+    "props": { "fontSize": "フォントサイズ", "font": "フォント", "textColor": "文字色", "background": "背景", "stroke": "線の色", "strokeWidth": "線の太さ", "fill": "塗りつぶし", "opacity": "不透明度", "color": "色", "highlight": "ハイライトの色", "width": "幅", "height": "高さ", "rotation": "回転", "direction": "方向", "auto": "自動", "toFront": "最前面へ移動" }
+  },
+  "tools": {
+    "title": "PDFツール", "subtitle": "すべてお使いのパソコン上で実行されるファイル操作です。",
+    "pickFiles": "PDFファイルを選択", "pickFile": "PDFファイルを選択", "addFiles": "ファイルを追加", "clear": "クリア", "run": "実行", "runAndSave": "実行して保存",
+    "output": "出力ファイル", "outputFolder": "出力フォルダ", "done": "完了", "saved": "保存しました: {{name}}", "savedMany": "{{count}}個のファイルを保存しました",
+    "pagesRange": "ページ(例: 1-3, 5)", "every": "nページごと", "angle": "回転角度", "position": "位置", "text": "テキスト", "opacity": "不透明度",
+    "fontSize": "フォントサイズ", "format": "形式", "paper": "用紙サイズ", "orientation": "向き", "openResult": "結果を開く",
+    "merge": { "title": "PDFを結合", "desc": "選択した順序で複数のファイルを1つに結合します。", "moveUp": "上へ", "moveDown": "下へ", "remove": "削除" },
+    "split": { "title": "PDFを分割", "desc": "ページごと、nページごと、または指定した範囲で小さなファイルに分割します。", "byEvery": "nページごと", "byRanges": "範囲指定", "rangesHint": "範囲はセミコロンで区切ります: 1-3; 4-6; 7-" },
+    "extract": { "title": "ページを抽出", "desc": "選択したページを新しいファイルに抽出します。" },
+    "delete": { "title": "ページを削除", "desc": "ファイルからページを削除します。" },
+    "rotate": { "title": "ページを回転", "desc": "すべてのページまたは選択したページを回転します。", "allPages": "すべてのページ" },
+    "reorder": { "title": "ページの順序を変更", "desc": "新しいページ順を入力してください(例: 3,1,2,4)。" },
+    "blank": { "title": "白紙ページを挿入", "desc": "指定したページの後に白紙ページを追加します。", "after": "挿入位置(このページの後)" },
+    "insertPdf": { "title": "PDFを挿入", "desc": "別のファイルのページを指定位置に挿入します。", "second": "挿入するファイル", "at": "挿入位置(このページの後)" },
+    "images": { "title": "画像 → PDF", "desc": "JPG/PNG画像をPDFに変換します。", "pickImages": "画像を選択", "fitPaper": "用紙サイズに合わせる", "keepSize": "画像サイズを維持" },
+    "watermark": { "title": "透かし", "desc": "すべてのページに半透明のテキストを追加します。" },
+    "numbers": { "title": "ページ番号", "desc": "お好みの位置にページ番号を追加します。", "bottomCenter": "下中央", "bottomRight": "右下", "bottomLeft": "左下", "topCenter": "上中央" },
+    "compress": { "title": "PDFを圧縮", "desc": "構造を最適化して再保存します(画像は再エンコードされません)。", "result": "{{before}} から {{after}} へ" },
+    "pdfToImages": { "title": "PDF → 画像", "desc": "すべてのページをPNG画像としてエクスポートします。", "scale": "解像度" },
+    "pdfToText": { "title": "PDF → テキスト", "desc": "全文をテキストファイルに抽出します。" },
+    "protect": { "title": "パスワード保護", "desc": "現在のエンジンバージョンでは暗号化は利用できません。ライブラリの更新に伴い対応予定です。", "unavailable": "まだ利用できません" },
+    "ocr": { "title": "スキャン / OCR", "desc": "文字認識機能はロードマップのフェーズ7で提供予定です。" }
+  },
+  "documents": {
+    "title": "ドキュメント", "subtitle": "開いた、または作成したすべてのPDFです。", "openFile": "PDFファイルを開く", "newPdf": "新規PDFドキュメント",
+    "search": "ドキュメントを検索…", "empty": { "title": "まだドキュメントがありません", "body": "PDFを開くか新しいドキュメントを作成すると、ここに表示されます。", "action": "PDFファイルを開く" },
+    "columns": { "title": "タイトル", "pages": "ページ数", "size": "サイズ", "opened": "更新日時", "status": "状態" },
+    "scanned": "スキャン済み", "ocrDone": "OCR完了", "text": "テキスト", "missing": "ファイルが見つかりません", "remove": "一覧から削除",
+    "new": { "title": "新規ドキュメント", "paper": "用紙サイズ", "orientation": "向き", "pages": "ページ数", "create": "作成", "saveWhere": "新しいドキュメントの保存先を選択" }
+  },
+  "sheet": {"title":"スプレッドシート","studio":"スプレッドシートスタジオ","new":"新規スプレッドシート","open":"Excel/CSVファイルを開く","import":"インポート","export":"エクスポート","exportXlsx":"Excelでエクスポート (xlsx)","exportCsv":"CSVでエクスポート","exportPdf":"PDFでエクスポート","print":"印刷","save":"保存","saveAs":"名前を付けて保存","untitled":"無題のスプレッドシート","rename":"名前を変更","titleLabel":"スプレッドシート名","formula":"数式","cell":"セル","sheet":"シート","addSheet":"シートを追加","renameSheet":"シート名を変更","deleteSheet":"シートを削除","lastSheet":"唯一のシートは削除できません","insertRowAbove":"上に行を挿入","insertRowBelow":"下に行を挿入","insertColStart":"左に列を挿入","insertColEnd":"右に列を挿入","deleteRow":"行を削除","deleteCol":"列を削除","merge":"セルを結合","unmerge":"結合解除","bold":"太字","italic":"斜体","underline":"下線","alignStart":"左揃え","alignCenter":"中央揃え","alignEnd":"右揃え","format":"書式","fmtGeneral":"標準","fmtNumber":"数値","fmtCurrency":"通貨","fmtPercent":"パーセント","fmtDate":"日付","fmtText":"文字列","decimalsMore":"小数点以下の桁数を増やす","decimalsLess":"小数点以下の桁数を減らす","fill":"塗りつぶしの色","textColor":"文字色","cut":"切り取り","copy":"コピー","paste":"貼り付け","clear":"内容をクリア","undo":"元に戻す","redo":"やり直し","sum":"合計","avg":"平均","count":"個数","selected":"{{count}}個のセルを選択中","toInvoice":"シートから請求書を作成","fromInvoice":"請求書明細をシートにエクスポート","mappingTitle":"列を請求書項目にマッピング","mappingHint":"各項目に対応する列を選択してください。空の行はスキップされ、数値は浮動小数点の誤差なく安全に解析されます。","headerRow":"1行目をヘッダーとして扱う","colDescription":"説明","colQty":"数量","colPrice":"単価","colDiscount":"割引率","colTax":"税率","colRef":"参照番号","colNone":"— なし —","rowsFound":"{{count}}件の項目が転送されます","createInvoice":"請求書を作成","needDescription":"少なくとも説明と価格の列を選択してください","listCols":{"title":"タイトル","sheets":"シート数","updated":"更新日時"},"deleted":"削除済み","restore":"復元","trash":"削除","purge":"完全に削除","confirmDelete":"「{{title}}」を削除しますか?後で復元できます。","emptyTitle":"まだスプレッドシートがありません","emptyDesc":"新しいスプレッドシートを作成するか、Excel/CSVファイルを開いてアプリ内で編集できます。","saved":"スプレッドシートを保存しました","imported":"{{name}} をインポートしました","exported":"{{name}} にエクスポートしました","importFailed":"ファイルを読み込めませんでした","unsaved":"未保存の変更","closeConfirm":"このスプレッドシートには未保存の変更があります。保存せずに閉じますか?","functions":"使用可能な関数","formulaHint":"数式を入力するには = で始めます。例: =SUM(B2:B10)","errorCell":"数式エラー","invoiceItemsTitle":"請求書 {{number}} の明細","zoom":"ズーム","freeze":"先頭行を固定","search":"シート内を検索","noMatch":"一致する項目がありません","gridInfo":"{{rows}}行 × {{cols}}列","trashTitle":"スプレッドシートのゴミ箱","showTrash":"削除済みを表示","hideTrash":"削除済みを非表示"},
+  "ocr": {"title":"光学文字認識(OCR)","run":"OCRを実行","scope":"範囲","scopePage":"現在のページ","scopeAll":"ドキュメント全体","languages":"認識言語","start":"認識を開始","stop":"停止","progress":"{{total}}ページ中{{page}}ページ目","status":{"loading":"言語エンジンを読み込み中…","recognizing":"テキストを認識中…","done":"完了","idle":"準備完了"},"done":"{{pages}}ページを認識しました・精度 {{confidence}}%","copy":"テキストをコピー","saveText":"テキストファイルとして保存","makeSearchable":"ドキュメントを検索可能にする","exportSearchable":"検索可能なPDFをエクスポート","noLanguages":"resources/tessdata に言語ファイルがありません","missingLanguage":"OCR言語が利用できません: {{lang}}","failed":"OCRに失敗しました","searchableDone":"テキストはビューアで検索・選択可能になり、データベースに保存されました","exportedSearchable":"非表示のテキストレイヤー付きで {{name}} をエクスポートしました","resultText":"抽出されたテキスト","page":"{{page}}ページ","confidence":"精度","empty":"テキストが認識されませんでした","lowConfidence":"精度が低いです。別の言語を試すか、より鮮明なスキャンをお試しください","scanned":"このドキュメントはスキャンされたものです。OCRを使用してテキストを抽出します","hint":"認識処理はインターネット接続なしでローカルに実行されます。アラビア語のドキュメントには「アラビア語」を有効にする必要があります。","textSaved":"テキストを保存しました","selectLanguage":"少なくとも1つの言語を選択してください"},
+  "imp": {"title":"PDF → スマート請求書","subtitle":"PDFから請求書データと明細を抽出し、編集可能な請求書に変換します","source":"元ファイル","open":"PDFファイルを選択","template":"抽出テンプレート","auto":"自動検出(テンプレートなし)","matched":"テンプレート「{{name}}」が自動的に認識されました","applyTemplate":"適用","saveTemplate":"抽出テンプレートとして保存","updateTemplate":"テンプレートを更新","templateName":"テンプレート名(通常は取引先名)","deleteTemplate":"テンプレートを削除","templateSaved":"抽出テンプレート「{{name}}」を保存しました","noZones":"保存する前に少なくとも1つの領域を追加してください","zones":"抽出領域","drawHint":"ページ上でドラッグして領域を描画し、対応する項目を選択してください。「明細」領域は列に分割されます。","zoneField":"項目","removeZone":"領域を削除","clearZones":"領域をクリア","columns":"明細列","addColumn":"列を追加","headerRow":"1行目をヘッダーとして扱う","fields":"請求書データ","items":"明細","addItem":"項目を追加","removeItem":"削除","noItems":"項目が検出されませんでした。「明細」領域を描画して列を定義するか、手動で項目を追加してください","checks":"計算チェック","checkOk":"合計がドキュメントと一致しています","createInvoice":"請求書を作成","batch":"一括インポート","batchTitle":"PDF一括インポート","batchHint":"ファイルは選択したテンプレート(または自動検出)を使って1つずつ処理され、下書き請求書として保存されます。","pickFiles":"PDFファイルを選択","processing":"{{total}}件中{{done}}件を処理中","created":"{{count}}件の請求書が下書きとして作成されました","failed":"失敗","ready":"準備完了","skipped":"スキップ","startBatch":"インポートを開始","results":"結果","reextract":"再抽出","runOcr":"このページにOCRを実行","ocrNeeded":"このページには読み取り可能なテキストがありません。データを抽出するにはOCRを実行してください","ocrRunning":"OCRを実行中…","customerMatch":"データベース内で一致する顧客: {{name}}","customerNew":"顧客名はドキュメントに記載されたとおりに保存されます(後でリンク可能)","totalExtracted":"ドキュメント内の合計","totalComputed":"明細から計算された合計","page":"ページ","of":"/","confidence":"信頼度","rawValue":"元のテキスト","zoom":"ズーム","field":{"number":"請求書番号","issueDate":"発行日","dueDate":"支払期限","reference":"参照番号","customerName":"顧客名","customerPhone":"顧客の電話番号","customerAddress":"顧客の住所","customerTaxId":"税務番号","subtotal":"小計","discount":"割引","tax":"税金","total":"合計","notes":"備考","items":"明細(表)"},"col":{"ref":"参照番号","description":"説明","qty":"数量","unitPrice":"単価","discount":"割引率","tax":"税率","total":"合計"},"warn":{"items_total_mismatch":"明細から計算された合計({{computed}})が抽出された合計({{extracted}})と一致しません","total_mismatch":"合計が「小計+税金−割引」と一致しません","missing_total":"ドキュメントに合計が検出されませんでした","missing_number":"請求書番号が検出されませんでした","missing_customer":"顧客名が検出されませんでした","no_items":"項目が検出されませんでした","date_unparsed":"日付「{{raw}}」を読み取れませんでした"}},
+  "audit": {"title":"監査ログ","subtitle":"請求書・支払い・顧客・設定・バックアップ・セキュリティなど、重要な操作をタイムスタンプ付きで記録します","search":"ログを検索","allGroups":"すべての種類","count":"{{count}}件","export":"CSVをエクスポート","exported":"ログをエクスポートしました","emptyTitle":"まだ記録がありません","emptyBody":"操作が行われると、ここに表示されます。","cols":{"time":"日時","action":"操作","object":"対象","summary":"詳細"},"groups":{"invoice":"請求書","payment":"支払い","customer":"顧客","product":"商品","template":"テンプレート","settings":"設定","backup":"バックアップ","demo":"デモデータ","security":"セキュリティ","spreadsheet":"スプレッドシート","note":"備考","attachment":"添付ファイル"},"objects":{"invoice":"請求書","customer":"顧客","product":"商品","spreadsheet":"スプレッドシート","extraction_template":"抽出テンプレート","custom_field":"カスタムフィールド","template":"テンプレート"},"actions":{"invoice.created":"請求書を作成","invoice.updated":"請求書を更新","invoice.deleted":"請求書を削除","invoice.restored":"請求書を復元","invoice.purged":"請求書を完全に削除","payment.added":"支払いを追加","payment.deleted":"支払いを削除","customer.created":"顧客を作成","customer.updated":"顧客を更新","customer.deleted":"顧客を削除","product.created":"商品を作成","product.updated":"商品を更新","product.deleted":"商品を削除","template.changed":"テンプレートを変更","settings.changed":"設定を変更","backup.created":"バックアップを作成","backup.restored":"バックアップを復元","demo.loaded":"デモデータを読み込み","demo.cleared":"デモデータを削除","security.pin_set":"PINを設定","security.pin_removed":"PINを削除","spreadsheet.created":"スプレッドシートを作成","spreadsheet.updated":"スプレッドシートを更新","spreadsheet.deleted":"スプレッドシートを削除","spreadsheet.restored":"スプレッドシートを復元","spreadsheet.purged":"スプレッドシートを完全に削除","spreadsheet.imported":"スプレッドシートをインポート","spreadsheet.exported":"スプレッドシートをエクスポート","note.added":"備考を追加","note.deleted":"備考を削除","attachment.added":"添付ファイルを追加","attachment.removed":"添付ファイルを削除"}},
+  "notes": {"title":"内部メモ","placeholder":"請求書には表示されないメモを入力…","add":"追加","empty":"メモはありません","delete":"メモを削除","saved":"メモを追加しました","saveFirst":"メモと添付ファイルを追加するには、先にレコードを保存してください"},
+  "att": {"title":"添付ファイル","add":"ファイルを追加","empty":"添付ファイルはありません","open":"開く","remove":"削除","removed":"添付ファイルを削除しました","added":"{{count}}件の添付ファイルを追加しました","confirmRemove":"添付ファイル「{{name}}」を削除しますか?","dropHint":"ファイルはアプリのデータフォルダにコピーされます"},
+  "cf": {"title":"カスタムフィールド","subtitle":"契約番号、担当者、地域など、事業に固有の項目を請求書・顧客・商品に追加できます","entity":"対象","label":"フィールドラベル","type":"種類","showOnInvoice":"請求書に表示","add":"フィールドを追加","delete":"フィールドを削除","confirmDelete":"フィールド「{{label}}」とそのすべての値を削除しますか?","saved":"フィールドを保存しました","empty":"この対象にはカスタムフィールドがありません","values":"カスタムフィールド","valuesSaved":"値を保存しました","entities":{"invoice":"請求書","customer":"顧客","product":"商品","company":"会社"},"types":{"text":"文字列","number":"数値","date":"日付","bool":"はい/いいえ"}},
+  "drafts": {"banner":"前回のセッションからの未保存の下書きが{{count}}件あります","restore":"復元","discard":"破棄","discardAll":"すべて破棄","restored":"下書きを復元しました","autosaved":"下書きを自動保存しました","title":"復元用の下書き"},
+  "time": { "justNow": "たった今", "minutesAgo": "{{count}}分前", "hoursAgo": "{{count}}時間前", "daysAgo": "{{count}}日前" },
+  "status": { "draft": "下書き", "sent": "送付済み", "paid": "支払済み", "partially_paid": "一部支払済み", "overdue": "期限超過", "cancelled": "キャンセル済み" },
+  "recent": { "open": "開く", "remove": "一覧から削除", "pin": "ピン留め", "unpin": "ピン留め解除", "clear": "一覧をクリア", "showInFolder": "フォルダで表示", "openedAt": "最終アクセス日時" },
+  "shortcuts": {
+    "title": "キーボードショートカット",
+    "open": "開く", "save": "保存", "saveAs": "名前を付けて保存", "print": "印刷", "find": "検索", "undo": "元に戻す", "redo": "やり直し",
+    "palette": "コマンドパレット", "settings": "設定", "closeTab": "タブを閉じる", "reopenTab": "タブを再度開く", "nextTab": "次のタブ"
+  }
+}

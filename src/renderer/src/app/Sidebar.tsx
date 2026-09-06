@@ -26,7 +26,8 @@ export function Sidebar({ collapsed }: { collapsed: boolean }) {
   const { settings, setLanguage, setTheme } = useSettings()
 
   const openKind = (kind: TabKind, key: string) => open({ kind, title: `t:${key}`, params: {} })
-  const nextLanguage = LANGUAGES[(LANGUAGES.findIndex((l) => l.code === settings.language) + 1) % LANGUAGES.length]
+  // مع 14 لغة لم يعد التبديل الدوري عمليًا: الزر يفتح قسم اللغة في الإعدادات
+  const openLanguageSettings = () => open({ kind: 'settings', title: 't:nav.settings', params: { section: 'general' } })
   const cycleTheme = () => setTheme(settings.theme === 'light' ? 'dark' : settings.theme === 'dark' ? 'system' : 'light')
   const ThemeIcon = settings.theme === 'light' ? Sun : settings.theme === 'dark' ? Moon : SunMoon
 
@@ -64,7 +65,7 @@ export function Sidebar({ collapsed }: { collapsed: boolean }) {
         {item('settings', 'nav.settings', Settings)}
         {item(null, 'nav.storage', HardDrive, () => open({ kind: 'settings', title: 't:nav.settings', params: { section: 'storage' } }))}
         {item(null, 'nav.backup', Database, () => open({ kind: 'settings', title: 't:nav.settings', params: { section: 'backup' } }))}
-        <button type="button" className={clsx('nav-item', collapsed && 'justify-center px-0')} onClick={() => void setLanguage(nextLanguage.code)} title={nextLanguage.label}>
+        <button type="button" className={clsx('nav-item', collapsed && 'justify-center px-0')} onClick={openLanguageSettings} title={t('nav.language')}>
           <Languages className="h-[17px] w-[17px] shrink-0" />
           {!collapsed && <span className="truncate">{t('nav.language')} · <span className="text-fg">{LANGUAGES.find((l) => l.code === settings.language)?.label}</span></span>}
         </button>

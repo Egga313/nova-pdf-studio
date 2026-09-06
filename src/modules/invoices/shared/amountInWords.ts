@@ -12,7 +12,10 @@ export interface CurrencyWords {
   gender?: 'm' | 'f'   // للعربية: جنس العملة (دينار مذكر، ليرة مؤنثة)
 }
 
-export const CURRENCY_WORDS: Record<Language, Record<string, CurrencyWords>> = {
+/** اللغات التي تملك صياغة رقمية-لفظية خاصة؛ البقية تعود إلى الإنجليزية. */
+export type WordsLanguage = 'ar' | 'fr' | 'en'
+
+export const CURRENCY_WORDS: Record<WordsLanguage, Record<string, CurrencyWords>> = {
   ar: {
     DZD: { major: { singular: 'دينار جزائري', dual: 'ديناران جزائريان', plural: 'دنانير جزائرية', pluralBig: 'دينارًا جزائريًا' }, minor: { singular: 'سنتيم', dual: 'سنتيمان', plural: 'سنتيمات', pluralBig: 'سنتيمًا' }, decimals: 2, gender: 'm' },
     EUR: { major: { singular: 'يورو', plural: 'يورو', pluralBig: 'يورو' }, minor: { singular: 'سنت', dual: 'سنتان', plural: 'سنتات', pluralBig: 'سنتًا' }, decimals: 2, gender: 'm' },
@@ -182,7 +185,9 @@ function frenUnit(count: number, unit: CurrencyWords['major']): string {
 
 export function amountInWords(minor: number, currencyCode: string, language: Language, decimals = 2): string {
   if (!Number.isInteger(minor)) throw new TypeError('minor must be an integer')
-  const table = CURRENCY_WORDS[language][currencyCode.toUpperCase()]
+  // اللغات التي لا تملك جداول كلمات (zh/tr/es/…) تستخدم الصياغة الإنجليزية، وهي المقبولة دوليًا في الفواتير
+  const wordsLanguage: WordsLanguage = language === 'ar' || language === 'fr' ? language : 'en'
+  const table = CURRENCY_WORDS[wordsLanguage][currencyCode.toUpperCase()]
   const dec = table?.decimals ?? decimals
   const scale = 10 ** dec
   const negative = minor < 0

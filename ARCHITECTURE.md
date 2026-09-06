@@ -9,7 +9,7 @@
 | Shell | **Electron 33** + electron-vite | No Rust/MSVC toolchain is required (Tauri needs both). Chromium gives faithful HTML→PDF rendering with correct Arabic shaping/RTL, which pdf-lib alone cannot do. |
 | UI | React 18 + TypeScript + Tailwind | Fast iteration, design tokens via CSS variables, instant RTL/LTR and theme switching. |
 | State | zustand | Small stores per concern (tabs, settings, notifications, commands). |
-| i18n | i18next | `ar` / `fr` / `en` bundled; add a language = one JSON file + one entry. |
+| i18n | i18next | 14 bundled languages (ar, fr, en, es, de, it, pt, tr, ru, zh, ja, hi, id, fa); RTL for ar/fa. Add a language = one JSON file in `translations/renderer/locales` + one `LANGUAGES` entry + one import in `i18n.ts`. Invoice print labels and amount-in-words exist for ar/fr/en and fall back to English elsewhere. |
 | Database | SQLite via **sql.js (WASM)** | Zero native compilation. Atomic file writes (tmp + rename), migrations, soft delete, audit log. The driver interface (`SqliteDatabase`) is the only thing to swap for `better-sqlite3` later. |
 | Money | integer minor units + basis points | `1050.50 DZD` is stored as `105050`; 19 % is `1900` bps; quantities in thousandths. No floats anywhere in financial math. |
 | PDF | pdf.js (render/text) + pdf-lib (edit/build) | Phases 2–3. |

@@ -1,0 +1,300 @@
+{
+  "app": { "name": "NOVA PDF Studio", "tagline": "PDF Düzenleyici • Akıllı Fatura • Hesap Tablosu • Belgeler" },
+  "nav": { "audit": "Denetim günlüğü",
+    "home": "Ana Sayfa", "pdf": "PDF", "invoices": "Faturalar", "customers": "Müşteriler", "products": "Ürün ve Hizmetler",
+    "spreadsheets": "Hesap Tabloları", "templates": "Şablonlar", "documents": "Belgeler", "tools": "Araçlar", "settings": "Ayarlar",
+    "storage": "Depolama", "backup": "Yedekleme", "language": "Dil", "theme": "Tema"
+  },
+  "common": { "total": "Toplam", "demo": "Demo",
+    "save": "Kaydet", "cancel": "İptal", "close": "Kapat", "delete": "Sil", "edit": "Düzenle", "add": "Ekle", "search": "Ara",
+    "open": "Aç", "create": "Oluştur", "back": "Geri", "next": "İleri", "finish": "Bitir", "yes": "Evet", "no": "Hayır", "ok": "Tamam",
+    "loading": "Yükleniyor…", "none": "Yok", "actions": "İşlemler", "name": "Ad", "optional": "İsteğe bağlı", "required": "Zorunlu",
+    "clear": "Temizle", "confirm": "Onayla", "retry": "Tekrar dene", "copy": "Kopyala", "remove": "Kaldır", "all": "Tümü", "today": "Bugün",
+    "unknown": "Bilinmiyor", "version": "Sürüm", "comingSoon": "Sonraki bir aşamada geliyor", "enabled": "Etkin", "disabled": "Devre dışı",
+    "default": "Varsayılan", "active": "Aktif", "inactive": "Pasif", "preview": "Önizleme", "apply": "Uygula", "reset": "Sıfırla"
+  },
+  "tabs": { "close": "Sekmeyi kapat", "closeOthers": "Diğer sekmeleri kapat", "reopenClosed": "Kapatılan sekmeyi yeniden aç", "unsaved": "Kaydedilmemiş değişiklikler" },
+  "theme": { "light": "Açık", "dark": "Koyu", "system": "Sistem" },
+  "topbar": { "search": "Her şeyde ara… (Ctrl+K)", "notifications": "Bildirimler", "commandPalette": "Komut paleti" },
+  "dashboard": {
+    "title": "Ana Sayfa",
+    "welcome": "NOVA'ya hoş geldiniz",
+    "welcomeCompany": "Hoş geldiniz, {{name}}",
+    "subtitle": "Belgeleri ve faturaları yönetmek için ihtiyacınız olan her şey, tek bir yerde.",
+    "quickActions": "Hızlı işlemler",
+    "recentDocuments": "Son belgeler",
+    "noRecent": "Son zamanlarda açılmış belge yok",
+    "noRecentHint": "Bir PDF veya hesap tablosu açtığınızda burada görünecek.",
+    "tools": "Araçlar",
+    "overview": "Genel bakış",
+    "stats": {
+      "totalInvoices": "Toplam fatura", "paid": "Ödendi", "unpaid": "Ödenmedi", "overdue": "Gecikmiş",
+      "revenue": "Toplam gelir", "remaining": "Kalan ödemeler", "customers": "Müşteriler", "products": "Ürünler"
+    },
+    "chart": { "title": "Son 12 ayda faturalanan ve ödenen", "invoiced": "Faturalanan", "paid": "Ödenen", "empty": "Henüz veri yok" },
+    "outstanding": {
+      "title": "Bekleyen ödemeler", "customer": "Müşteri", "invoice": "Fatura", "dueDate": "Vade tarihi",
+      "remaining": "Kalan", "daysOverdue": "Gecikme (gün)", "empty": "Bekleyen ödeme yok", "onTime": "Zamanında"
+    },
+    "actions": {
+      "openPdf": "PDF Aç", "newPdf": "Yeni PDF", "newInvoice": "Yeni fatura", "invoices": "Faturalar", "customers": "Müşteriler",
+      "products": "Ürün ve Hizmetler", "spreadsheets": "Hesap Tabloları", "recent": "Son belgeler", "templates": "Şablonlar",
+      "scanOcr": "Tara / OCR", "mergePdf": "PDF Birleştir", "splitPdf": "PDF Böl", "convert": "Dosyaları dönüştür", "settings": "Ayarlar",
+      "newSpreadsheet": "Yeni hesap tablosu", "scanDocument": "Belge tara", "mergePdfs": "PDF'leri birleştir"
+    }
+  },
+  "palette": { "customers": "Müşteriler", "invoices": "Faturalar", "products": "Ürünler", "searching": "Aranıyor…",
+    "placeholder": "Bir komut yazın veya arayın…", "noResults": "Sonuç yok", "commands": "Komutlar", "recentFiles": "Son dosyalar",
+    "navigation": "Gezinme", "hint": "↑↓ gezin • Enter çalıştır • Esc kapat"
+  },
+  "notifications": { "title": "Bildirimler", "empty": "Bildirim yok", "markAllRead": "Tümünü okundu işaretle", "clear": "Tümünü temizle" },
+  "commands": { "openAudit": "Denetim günlüğü",
+    "newInvoice": "Yeni fatura", "openPdf": "PDF dosyası aç", "newSpreadsheet": "Yeni hesap tablosu", "mergePdf": "PDF Birleştir",
+    "goHome": "Ana sayfaya git", "openSettings": "Ayarları aç", "toggleTheme": "Temayı değiştir", "closeTab": "Sekmeyi kapat",
+    "reopenTab": "Kapatılan sekmeyi yeniden aç", "nextTab": "Sonraki sekme", "prevTab": "Önceki sekme", "lockApp": "Uygulamayı kilitle",
+    "createBackup": "Yedek oluştur", "openCustomers": "Müşterileri aç", "openInvoices": "Faturaları aç", "openProducts": "Ürünleri aç",
+    "language": "Dili {{lang}} olarak değiştir", "showShortcuts": "Klavye kısayolları"
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "sections": { "fields": "Özel alanlar",
+      "general": "Genel", "company": "Şirket profili", "invoice": "Fatura ayarları", "tax": "Vergiler", "currencies": "Para birimleri",
+      "numbering": "Numaralandırma", "language": "Dil", "appearance": "Görünüm", "printing": "Yazdırma", "ocr": "OCR",
+      "storage": "Depolama", "backup": "Yedekleme", "security": "Güvenlik", "about": "Hakkında"
+    },
+    "general": {
+      "dateFormat": "Tarih biçimi", "numberingSystem": "Rakamlar", "latn": "Latin rakamları (1 2 3)", "arab": "Arap-Hint rakamları (١ ٢ ٣)",
+      "confirmDelete": "Silmeden önce sor", "openLastTabs": "Başlangıçta sekmeleri yeniden aç"
+    },
+    "company": {
+      "hint": "Her faturaya otomatik olarak eklenir. Fatura başlığında herhangi bir alanı gösterebilir veya gizleyebilirsiniz.",
+      "name": "Şirket adı", "firstName": "Ad", "lastName": "Soyad", "address": "Adres", "city": "Şehir", "country": "Ülke",
+      "phone": "Telefon", "email": "E-posta", "website": "Web sitesi", "rc": "Ticaret sicil no (RC)", "nif": "NIF",
+      "nis": "NIS", "ai": "Vergilendirme maddesi (AI)", "taxId": "Vergi No", "bankAccount": "Banka hesabı", "iban": "IBAN", "swift": "SWIFT",
+      "logo": "Logo", "pickLogo": "Logo seç", "removeLogo": "Logoyu kaldır", "visibleFields": "Faturalarda gösterilen alanlar",
+      "ownerName": "İşletme sahibinin adı"
+    },
+    "invoice": {
+      "pattern": "Fatura numarası deseni", "patternHint": "Belirteçler: {YYYY} yıl, {YY}, {MM} ay, {DD} gün, {SEQ:5} 5 haneli sayaç",
+      "preview": "Önizleme", "defaultCurrency": "Varsayılan para birimi", "currencyPosition": "Para birimi simgesi konumu", "before": "Tutardan önce (€1.000,00)",
+      "after": "Tutardan sonra (1.000,00 DZD)", "defaultTax": "Varsayılan vergi", "dueDays": "Vade (gün)", "amountInWords": "Tutarı yazıyla göster",
+      "defaultNotes": "Varsayılan notlar", "paymentTerms": "Varsayılan ödeme koşulları", "showLogo": "Logoyu göster", "invalidPattern": "Geçersiz desen: {SEQ} gereklidir",
+      "quotePattern": "Teklif deseni", "proformaPattern": "Proforma deseni", "receiptPattern": "Makbuz deseni"
+    },
+    "taxes": {
+      "title": "Vergi profilleri", "hint": "İşletmenizin kullandığı vergi oranlarını oluşturun (KDV %0, %9, %19 veya herhangi bir özel oran).",
+      "add": "Vergi ekle", "name": "Ad", "rate": "Oran %", "default": "Varsayılan", "deleteConfirm": "Bu vergi silinsin mi?",
+      "used": "Ürünler tarafından kullanılıyor; silinmek yerine devre dışı bırakılacak"
+    },
+    "currencies": {
+      "title": "Para birimleri", "hint": "ISO koduyla herhangi bir para birimini simgesi, konumu ve ondalık basamak sayısıyla ekleyin.",
+      "add": "Para birimi ekle", "code": "Kod (ISO)", "name": "Ad", "symbol": "Görüntülenen simge", "decimals": "Ondalık basamak", "position": "Konum",
+      "deleteConfirm": "Bu para birimi silinsin mi?"
+    },
+    "appearance": { "theme": "Tema", "language": "Arayüz dili", "hint": "Dil ve yön anında değişir, yeniden başlatmaya gerek yoktur." },
+    "printing": {
+      "paperSize": "Kağıt boyutu", "orientation": "Yönlendirme", "portrait": "Dikey", "landscape": "Yatay", "margins": "Kenar boşlukları (mm)",
+      "scale": "Ölçek %", "copies": "Kopya sayısı"
+    },
+    "ocr": { "languages": "OCR dilleri", "autoPrompt": "Taranmış bir PDF açıldığında OCR'ı otomatik olarak öner", "ara": "Arapça", "fra": "Fransızca", "eng": "İngilizce" },
+    "storage": {
+      "dataDir": "Veri klasörü", "dbPath": "Veritabanı dosyası", "logs": "Günlük dosyası", "openFolder": "Klasörü aç",
+      "demoData": "Demo veriler", "demoHint": "Açıkça işaretlenmiş örnek veriler, kendi verilerinize dokunmadan tek tıkla kaldırılabilir.",
+      "loadDemo": "Demo verileri yükle", "clearDemo": "Demo verileri temizle", "demoLoaded": "Demo veriler yüklü", "demoNotLoaded": "Demo veri yok"
+    },
+    "backup": {
+      "title": "Yedekleme", "hint": "Bir yedek; müşterileri, faturaları, ürünleri, şablonları, ayarları ve ödemeleri içerir.",
+      "create": "Yedek oluştur", "restore": "Dosyadan geri yükle…", "export": "Veritabanını dışa aktar", "auto": "Günlük otomatik yedekleme",
+      "folder": "Yedekleme klasörü", "defaultFolder": "Varsayılan klasör", "chooseFolder": "Klasör seç", "keep": "Saklanacak yedek sayısı",
+      "last": "Son yedek", "never": "Henüz yedek yok", "list": "Mevcut yedekler", "confirmRestore": "Her şey seçilen yedekle değiştirilecek. Mevcut durumun bir güvenlik kopyası önce kaydedilir. Devam edilsin mi?",
+      "restoreThis": "Bu yedeği geri yükle"
+    },
+    "security": {
+      "appLock": "PIN ile uygulama kilidi", "hint": "Başlangıçta ve bir süre işlem yapılmadığında sorulur. Yalnızca salt'lı özet (hash) olarak saklanır.",
+      "setPin": "PIN belirle", "changePin": "PIN değiştir", "removePin": "Kilidi kaldır", "currentPin": "Mevcut PIN", "newPin": "Yeni PIN (4-12 hane)",
+      "confirmPin": "PIN'i onayla", "autoLock": "Şu süre sonra otomatik kilitle", "minutes": "dakika", "pinMismatch": "PIN'ler eşleşmiyor", "pinSet": "PIN belirlendi",
+      "pinRemoved": "Kilit kaldırıldı", "status": "Durum"
+    },
+    "about": {
+      "description": "Entegre bir ofis platformu: PDF'leri okuyun ve düzenleyin, tam hesaplamalı akıllı faturalar oluşturun, Excel benzeri hesap tabloları kullanın ve OCR yapın. Tamamen çevrimdışı çalışır.",
+      "localFirst": "Önce gizlilik: belgeleriniz bilgisayarınızdan asla çıkmaz.", "logs": "Geliştirici günlüğü", "platform": "Platform", "dataDir": "Veri klasörü"
+    },
+    "saved": "Ayarlar kaydedildi"
+  },
+  "wizard": {
+    "welcome": "NOVA PDF Studio'ya hoş geldiniz",
+    "subtitle": "İşletmenizi kurmak için birkaç hızlı adım, ardından çalışmaya hazır olacaksınız.",
+    "steps": { "language": "Dil", "company": "Şirket", "currency": "Para birimi", "tax": "Vergi", "numbering": "Numaralandırma" },
+    "languageHint": "Arayüz dilini seçin. Dilediğiniz zaman değiştirebilirsiniz.",
+    "companyHint": "Fatura başlığınızda gösterilir. Bunu atlayıp daha sonra Ayarlar'dan tamamlayabilirsiniz.",
+    "currencyHint": "Yeni faturalar için varsayılan para birimi ve simgesinin yeri.",
+    "taxHint": "Yeni kalemlere uygulanan varsayılan vergi. Daha sonra başka oranlar da ekleyebilirsiniz.",
+    "numberingHint": "Fatura numarası deseni. Örnek: INV-{YYYY}-{SEQ:5}",
+    "start": "NOVA'yı kullanmaya başla",
+    "skip": "Şimdilik atla"
+  },
+  "lock": { "title": "Uygulama kilitli", "subtitle": "Devam etmek için PIN'inizi girin", "unlock": "Kilidi aç", "wrongPin": "Yanlış PIN", "placeholder": "PIN" },
+  "errors": {
+    "UNKNOWN": "Beklenmeyen bir hata oluştu.", "VALIDATION": "Geçersiz veri.", "NOT_FOUND": "Öğe bulunamadı.", "CONFLICT": "Mevcut verilerle çakışıyor.",
+    "DB_ERROR": "Veritabanı hatası. Ayrıntılar günlüğe yazıldı.", "DB_CLOSED": "Veritabanı kapalı.", "DISK_FULL": "Disk dolu; biraz yer açıp tekrar deneyin.",
+    "FILE_NOT_FOUND": "Dosya bulunamadı.", "FILE_ACCESS": "Dosyaya erişilemiyor (başka bir programda açık olabilir).",
+    "PDF_CORRUPTED": "PDF dosyası bozuk veya geçersiz.", "PDF_PASSWORD": "PDF şifre korumalı.", "PDF_UNSUPPORTED": "Desteklenmeyen PDF özelliği.",
+    "EXCEL_UNSUPPORTED": "Desteklenmeyen hesap tablosu biçimi.", "OCR_FAILED": "Metin tanıma başarısız oldu.", "PRINTER_OFFLINE": "Yazıcı çevrimdışı.",
+    "LOCKED": "İşlem reddedildi.", "CANCELLED": "İşlem iptal edildi.", "NO_BRIDGE": "Arayüz uygulamaya bağlı değil.",
+    "validation": {
+      "name_required": "Ad gereklidir.", "rate_invalid": "Geçersiz vergi oranı.", "currency_code": "Para birimi kodu 3 ila 5 Latin harfinden oluşmalıdır.",
+      "decimals": "Ondalık basamak sayısı 0 ile 4 arasında olmalıdır.", "pin_format": "PIN 4 ila 12 haneli olmalıdır.",
+      "customer_name": "Bir müşteri veya şirket adı girin.", "email": "Geçersiz e-posta adresi.", "price_invalid": "Geçersiz fiyat.",
+      "sku_duplicate": "SKU {{sku}} zaten başka bir ürün tarafından kullanılıyor.", "date": "Geçersiz tarih.", "currency_required": "Bir para birimi seçin.",
+      "item_numbers": "{{line}}. satırdaki değerler geçersiz.", "discount_range": "{{line}}. satırdaki indirim %0 ile %100 arasında olmalıdır.", "amount_positive": "Tutar sıfırdan büyük olmalıdır."
+    },
+    "invoice": { "number_exists": "{{number}} numaralı fatura zaten mevcut.", "cancelled": "İptal edilmiş bir faturaya ödeme kaydedilemez." },
+    "customer": { "has_invoices": "Bu müşteri kalıcı olarak silinemez: {{count}} fatura bu müşteriye referans veriyor." },
+    "pdf": { "wrong_password": "Yanlış şifre.", "bad_range": "Geçersiz sayfa aralığı: {{range}}", "no_files": "En az bir dosya seçin.", "no_pages": "Sayfa seçilmedi.", "cannot_delete_all": "Tüm sayfalar silinemez.", "bad_order": "Geçersiz sayfa sırası.", "text_raster_unavailable": "Latin olmayan metin oluşturulamadı." },
+    "print": { "timeout": "Yazdırma hazırlığı zaman aşımına uğradı.", "load_failed": "Yazdırma içeriği yüklenemedi." },
+    "security": { "wrong_pin": "Mevcut PIN yanlış." },
+    "backup": { "invalid_file": "Dosya geçerli bir yedek değil." }
+  },
+  "toast": {
+    "saved": "Kaydedildi", "settingsSaved": "Ayarlar kaydedildi", "backupCreated": "Yedek oluşturuldu", "backupRestored": "Yedek geri yüklendi",
+    "demoLoaded": "Demo veriler yüklendi", "demoCleared": "Demo veriler temizlendi", "copied": "Kopyalandı", "error": "Hata",
+    "dbExported": "Veritabanı dışa aktarıldı", "fileMissing": "Dosya orijinal konumunda bulunamadı"
+  },
+  "empty": {
+    "generic": { "title": "Henüz bir şey yok", "body": "Yeni bir öğe oluşturarak başlayın." },
+    "invoices": { "title": "Henüz fatura yok", "body": "Anında ve kesin hesaplamalarla ilk faturanızı oluşturun.", "action": "İlk faturanızı oluşturun" },
+    "customers": { "title": "Müşteri yok", "body": "Faturalarını ve ödemelerini burada görmek için müşteri ekleyin.", "action": "Müşteri ekle" },
+    "products": { "title": "Ürün yok", "body": "Faturalarda otomatik tamamlama ile kullanmak için ürün ve hizmet ekleyin.", "action": "Ürün ekle" },
+    "phase": { "title": "Bu modül yapım aşamasında", "body": "Yol haritasının {{phase}}. aşamasında sunulacak." }
+  },
+  "pdf": {
+    "loading": "Belge yükleniyor…", "page": "Sayfa", "of": "/", "zoomIn": "Yakınlaştır", "zoomOut": "Uzaklaştır", "fitWidth": "Genişliğe sığdır",
+    "fitPage": "Sayfaya sığdır", "actualSize": "Gerçek boyut", "rotateLeft": "Sola döndür", "rotateRight": "Sağa döndür",
+    "fullscreen": "Tam ekran", "exitFullscreen": "Tam ekrandan çık", "search": "Belgede ara", "searchPlaceholder": "Metin ara…",
+    "results": "{{count}} sonuç", "noResults": "Sonuç yok", "nextResult": "Sonraki sonuç", "prevResult": "Önceki sonuç",
+    "thumbnails": "Küçük resimler", "bookmarks": "Yer imleri", "noBookmarks": "Bu dosyada yer imi yok",
+    "copy": "Metni kopyala", "copied": "Metin kopyalandı", "selectAllText": "Sayfa metnini kopyala", "print": "Yazdır", "export": "Dışa aktar", "saveAs": "Farklı kaydet…",
+    "download": "Kopyasını kaydet", "edit": "PDF'yi düzenle", "convertToInvoice": "Akıllı Faturaya dönüştür", "info": "Belge bilgisi",
+    "password": "Belge şifresi", "passwordHint": "Bu dosya korumalıdır. Açmak için şifreyi girin.", "open": "Aç",
+    "scannedNotice": "Bu PDF taranmış sayfalar içeriyor. OCR çalıştırılsın mı?", "runOcr": "OCR çalıştır", "later": "Daha sonra",
+    "pages": "{{count}} sayfa", "goToPage": "Sayfaya git", "firstPage": "İlk sayfa", "lastPage": "Son sayfa",
+    "prevPage": "Önceki sayfa", "nextPage": "Sonraki sayfa", "renderError": "Bu sayfa görüntülenemedi", "exported": "Dışa aktarıldı: {{name}}",
+    "printSent": "Belge yazıcıya gönderildi", "printing": "Yazdırma hazırlanıyor…", "exportImages": "Sayfaları görsel olarak dışa aktar", "exportText": "Metni dışa aktar",
+    "properties": { "title": "Başlık", "author": "Yazar", "subject": "Konu", "creator": "Oluşturan", "producer": "Üretici", "created": "Oluşturulma", "modified": "Değiştirilme", "pages": "Sayfalar", "size": "Boyut", "path": "Yol" }
+  },
+  "inv": {
+    "title": "Faturalar", "subtitle": "Tüm faturalarınız ve teklifleriniz, durumları ve ödemeleriyle birlikte.", "new": "Yeni fatura", "newQuote": "Yeni teklif", "newProforma": "Yeni proforma",
+    "search": "Numara, müşteri, telefon veya tutara göre ara…", "trash": "Çöp kutusu", "backToList": "Listeye dön",
+    "filters": { "all": "Tümü", "unpaid": "Ödenmedi", "status": "Durum", "type": "Tür", "from": "Başlangıç", "to": "Bitiş", "sort": "Sırala" },
+    "sort": { "date_desc": "En yeni önce", "date_asc": "En eski önce", "number": "Numara", "amount_desc": "Tutar", "customer": "Müşteri" },
+    "types": { "invoice": "Fatura", "quote": "Teklif", "proforma": "Proforma", "receipt": "Makbuz", "credit_note": "Alacak dekontu", "purchase_order": "Sipariş formu", "delivery_note": "İrsaliye" },
+    "cols": { "number": "Numara", "customer": "Müşteri", "date": "Tarih", "due": "Vade", "total": "Toplam", "paid": "Ödenen", "remaining": "Kalan", "status": "Durum" },
+    "count": "{{count}} fatura", "total": "{{total}} sonuç",
+    "actions": { "open": "Aç", "duplicate": "Çoğalt", "trash": "Çöp kutusuna taşı", "restore": "Geri yükle", "purge": "Kalıcı olarak sil", "markSent": "Gönderildi olarak işaretle", "markPaid": "Ödendi olarak işaretle", "cancel": "Faturayı iptal et", "addPayment": "Ödeme kaydet", "viewPdf": "PDF'yi görüntüle" },
+    "confirmTrash": "{{number}} numaralı fatura çöp kutusuna taşınsın mı?", "confirmPurge": "{{number}} numaralı fatura kalıcı olarak silinsin mi? Bu işlem geri alınamaz.",
+    "trashed": "Çöp kutusuna taşındı", "restored": "Geri yüklendi", "purged": "Kalıcı olarak silindi", "saved": "Fatura {{number}} kaydedildi", "duplicated": "Kopya oluşturuldu",
+    "editor": {
+      "company": "Şirket", "billTo": "Fatura edilecek", "info": "Fatura bilgileri", "items": "Kalemler", "totals": "Toplamlar", "notes": "Notlar", "payment": "Ödeme bilgileri", "signature": "İmza",
+      "selectCustomer": "Mevcut müşteriyi seç", "newCustomer": "Yeni müşteri", "noCustomer": "Müşteri seçilmedi", "customerSearch": "Ada veya telefona göre ara…", "clearCustomer": "Müşteriyi kaldır",
+      "number": "Fatura numarası", "autoNumber": "Kaydederken otomatik", "issueDate": "Düzenleme tarihi", "dueDate": "Vade tarihi", "reference": "Referans", "purchaseOrder": "Sipariş formu",
+      "currency": "Para birimi", "paymentMethod": "Ödeme yöntemi", "status": "Durum", "type": "Belge türü",
+      "addRow": "Satır ekle", "removeRow": "Satırı kaldır", "duplicateRow": "Satırı çoğalt", "productSearch": "Bir ürün adı yazın…", "pasteHint": "Excel'den satırları doğrudan yapıştırabilirsiniz (Ctrl+V)",
+      "pasted": "Panodan {{count}} satır eklendi",
+      "grid": { "item": "Kalem", "description": "Açıklama", "qty": "Miktar", "unit": "Birim", "price": "Birim fiyat", "discount": "İndirim %", "tax": "Vergi %", "taxAmount": "Vergi tutarı", "subtotal": "Ara toplam", "total": "Toplam" },
+      "subtotal": "Ara toplam", "discountTotal": "Toplam indirim", "taxable": "Vergiye tabi tutar", "taxTotal": "Toplam vergi", "shipping": "Kargo", "fees": "Ek ücretler",
+      "beforeTax": "Vergi öncesi tutar", "grandTotal": "Genel toplam", "amountPaid": "Ödenen tutar", "remaining": "Kalan bakiye", "amountInWords": "Yazıyla tutar",
+      "notesPlaceholder": "Faturanın altında gösterilen notlar…", "terms": "Ödeme koşulları", "termsPlaceholder": "örn. 30 gün içinde ödeme",
+      "payments": "Ödeme geçmişi", "noPayments": "Henüz ödeme yok", "payDate": "Tarih", "payAmount": "Tutar", "payMethod": "Yöntem", "payRef": "Referans", "payNotes": "Notlar",
+      "addPayment": "Ödeme kaydet", "payFull": "Kalan tutarın tamamı", "deletePayment": "Ödemeyi sil", "saveFirst": "Ödeme kaydetmek için önce faturayı kaydedin",
+      "unsaved": "Kaydedilmemiş değişiklikler", "saveAndClose": "Kaydet ve kapat", "preview": "Önizleme", "print": "Yazdır", "exportPdf": "PDF Olarak Dışa Aktar", "template": "Şablon", "more": "Daha fazla",
+      "validation": { "noItems": "En az bir kalem ekleyin", "noCustomer": "Bir müşteri seçin veya ad girin" },
+      "methods": { "cash": "Nakit", "bank_transfer": "Banka havalesi", "card": "Kart", "cheque": "Çek", "other": "Diğer" }
+    }
+  },
+  "cust": {
+    "title": "Müşteriler", "subtitle": "Faturaları, ödemeleri ve bakiyeleriyle müşteri tabanınız.", "new": "Yeni müşteri", "edit": "Müşteriyi düzenle",
+    "search": "Ada, telefona veya e-postaya göre ara…", "sort": { "name": "Ad", "recent": "Son eklenen", "invoiced_desc": "En çok faturalanan", "remaining_desc": "En yüksek bakiye" },
+    "cols": { "name": "Ad", "phone": "Telefon", "email": "E-posta", "city": "Şehir", "invoices": "Faturalar", "invoiced": "Toplam fatura tutarı", "paid": "Ödenen", "remaining": "Kalan" },
+    "fields": { "firstName": "Ad", "lastName": "Soyad", "companyName": "Şirket adı", "address": "Adres", "city": "Şehir", "country": "Ülke", "phone": "Telefon", "email": "E-posta", "taxId": "Vergi No", "customerNumber": "Müşteri numarası", "notes": "Notlar" },
+    "profile": { "title": "Müşteri profili", "info": "Müşteri bilgileri", "invoices": "Faturalar", "payments": "Ödemeler", "remaining": "Bakiye", "lastActivity": "Son işlem", "notes": "Notlar", "newInvoice": "Bu müşteri için yeni fatura", "noInvoices": "Bu müşteri için henüz fatura yok" },
+    "saved": "Müşteri kaydedildi", "deleted": "Müşteri çöp kutusuna taşındı", "confirmDelete": "{{name}} müşterisi silinsin mi? Faturaları saklanacaktır.", "count": "{{count}} müşteri"
+  },
+  "prod": {
+    "title": "Ürün ve Hizmetler", "subtitle": "Faturalarda otomatik tamamlama için kataloğunuz.", "new": "Yeni ürün", "edit": "Ürünü düzenle",
+    "search": "Ada veya SKU'ya göre ara…", "allCategories": "Tüm kategoriler",
+    "cols": { "name": "Ad", "sku": "SKU", "price": "Fiyat", "tax": "Vergi", "unit": "Birim", "category": "Kategori", "status": "Durum" },
+    "fields": { "name": "Ad", "sku": "SKU", "description": "Açıklama", "price": "Fiyat", "currency": "Para birimi", "tax": "Vergi", "unit": "Birim", "category": "Kategori", "notes": "Notlar", "active": "Aktif" },
+    "saved": "Ürün kaydedildi", "deleted": "Ürün çöp kutusuna taşındı", "confirmDelete": "{{name}} ürünü silinsin mi?", "count": "{{count}} ürün"
+  },
+  "tpl": {
+    "title": "Şablonlar", "subtitle": "Hazır ve özel fatura tasarımları.", "builtin": "Hazır", "default": "Varsayılan", "custom": "Özel",
+    "new": "Yeni şablon", "duplicate": "Çoğalt", "edit": "Tasarımı düzenle", "delete": "Sil", "setDefault": "Varsayılan olarak ayarla", "resetBuiltin": "Hazır şablonları sıfırla",
+    "confirmDelete": "{{name}} şablonu silinsin mi? Bu şablonu kullanan faturalar varsayılan şablona döner.", "saved": "Şablon kaydedildi", "deleted": "Şablon silindi", "duplicated": "Şablon kopyalandı",
+    "preview": { "title": "Fatura önizlemesi", "template": "Şablon", "print": "Yazdır", "exportPdf": "PDF Olarak Dışa Aktar", "openFolder": "Klasörü aç", "copyFile": "Dosyayı kopyala", "share": "Paylaş / Gönder", "exported": "PDF dışa aktarıldı: {{name}}", "printed": "Yazıcıya gönderildi", "regenerate": "Yenile", "zoom": "Yakınlaştırma", "saveAndPreview": "Önizlemek için önce faturayı kaydedin", "language": "Belge dili", "auto": "Otomatik", "email": "E-posta (yakında)", "whatsapp": "WhatsApp (yakında)", "cloud": "Bulut depolama (yakında)" },
+    "designer": {
+      "title": "Şablon tasarımcısı", "name": "Şablon adı", "blocks": "Bloklar", "properties": "Özellikler", "page": "Sayfa", "theme": "Renkler ve yazı tipi", "columns": "Tablo sütunları",
+      "visible": "Görünür", "hidden": "Gizli", "font": "Yazı tipi", "fontSize": "Yazı tipi boyutu", "color": "Renk", "background": "Arka plan", "border": "Kenarlık", "radius": "Köşe yarıçapı", "align": "Hizalama", "padding": "İç boşluk",
+      "margin": "Sayfa kenar boşlukları (mm)", "size": "Boyut", "orientation": "Yönlendirme", "direction": "Metin yönü", "accent": "Vurgu rengi", "tableHeader": "Tablo başlığı arka planı", "tableHeaderText": "Tablo başlığı metni", "stripe": "Satır şeritleme",
+      "baseFont": "Temel yazı tipi boyutu", "showLogo": "Logoyu göster", "showWords": "Yazıyla tutar", "showQr": "QR kodu", "qrContent": "QR içeriği", "qrNumber": "Fatura numarası", "qrSummary": "Özet (numara + tutar + şirket)", "qrCustom": "Özel metin",
+      "x": "X (mm)", "y": "Y (mm)", "width": "Genişlik (mm)", "height": "Yükseklik (mm)", "text": "Metin", "reset": "Varsayılan düzeni sıfırla", "dragHint": "Blokları taşımak için sayfada sürükleyin; yeniden boyutlandırmak için köşesinden sürükleyin.",
+      "sampleData": "Örnek verilerle önizleme", "unsaved": "Kaydedilmemiş değişiklikler",
+      "kinds": { "logo": "Logo", "company": "Şirket bilgileri", "customer": "Müşteri bilgileri", "invoiceNumber": "Fatura numarası", "dates": "Tarihler", "meta": "Referans ve sipariş no", "title": "Başlık", "table": "Kalemler tablosu", "totals": "Toplamlar", "amountWords": "Yazıyla tutar", "notes": "Notlar", "terms": "Ödeme koşulları", "payment": "Ödeme bilgileri", "signature": "İmza", "stamp": "Kaşe", "footer": "Alt bilgi", "qr": "QR kodu", "text": "Serbest metin" }
+    },
+    "brand": { "title": "İmza ve kaşe", "hint": "Şablonun konumlandırdığı yerlerde faturalarda gösterilir.", "signature": "İmza", "stamp": "Kaşe", "pick": "Görsel seç", "remove": "Kaldır" }
+  },
+  "edit": {
+    "mode": "Düzenleme modu", "enter": "PDF'yi düzenle", "exit": "Düzenlemeyi bitir", "hint": "Düzenlemek için metne tıklayın veya bir öğe oluşturmak için sürükleyin. Silmek için",
+    "placeHint": "Görseli yerleştirmek için sayfaya tıklayın veya sürükleyin", "toolDefaults": "Araç ayarları", "selectHint": "Özelliklerini düzenlemek için sayfada bir öğe seçin.",
+    "saved": "Değişiklikler kaydedildi", "savedAs": "Düzenlenmiş kopya kaydedildi: {{name}}", "confirmExit": "Kaydedilmemiş değişiklikler var. Bunlar silinsin mi?",
+    "unsavedTitle": "Kaydedilmemiş değişiklikler", "discard": "Vazgeç", "keepEditing": "Düzenlemeye devam et", "noChanges": "Kaydedilecek değişiklik yok",
+    "tools": { "select": "Seç", "text": "Metin", "highlight": "Vurgula", "whiteout": "Beyazlat / metni sil", "rect": "Dikdörtgen", "ellipse": "Elips", "line": "Çizgi", "check": "Onay işareti", "image": "Görsel", "signature": "İmza", "stamp": "Kaşe" },
+    "kinds": { "text": "Metin", "image": "Görsel", "rect": "Dikdörtgen", "ellipse": "Elips", "line": "Çizgi", "check": "Onay işareti", "highlight": "Vurgu", "redact": "Beyazlatma" },
+    "props": { "fontSize": "Yazı tipi boyutu", "font": "Yazı tipi", "textColor": "Metin rengi", "background": "Arka plan", "stroke": "Çizgi rengi", "strokeWidth": "Çizgi kalınlığı", "fill": "Dolgu", "opacity": "Opaklık", "color": "Renk", "highlight": "Vurgu rengi", "width": "Genişlik", "height": "Yükseklik", "rotation": "Döndürme", "direction": "Yön", "auto": "Otomatik", "toFront": "Öne getir" }
+  },
+  "tools": {
+    "title": "PDF araçları", "subtitle": "Tamamen bilgisayarınızda çalışan dosya işlemleri.",
+    "pickFiles": "PDF dosyaları seç", "pickFile": "Bir PDF dosyası seç", "addFiles": "Dosya ekle", "clear": "Temizle", "run": "Çalıştır", "runAndSave": "Çalıştır ve kaydet",
+    "output": "Çıktı dosyası", "outputFolder": "Çıktı klasörü", "done": "Tamamlandı", "saved": "Kaydedildi: {{name}}", "savedMany": "{{count}} dosya kaydedildi",
+    "pagesRange": "Sayfalar (örn. 1-3, 5)", "every": "Her n sayfada bir", "angle": "Döndürme açısı", "position": "Konum", "text": "Metin", "opacity": "Opaklık",
+    "fontSize": "Yazı tipi boyutu", "format": "Biçim", "paper": "Kağıt boyutu", "orientation": "Yönlendirme", "openResult": "Sonucu aç",
+    "merge": { "title": "PDF Birleştir", "desc": "Birden fazla dosyayı seçtiğiniz sırayla tek bir dosyada birleştirin.", "moveUp": "Yukarı", "moveDown": "Aşağı", "remove": "Kaldır" },
+    "split": { "title": "PDF Böl", "desc": "Daha küçük dosyalara bölün: her sayfa, her n sayfada bir veya belirli aralıklar.", "byEvery": "Her n sayfada bir", "byRanges": "Aralıklar", "rangesHint": "Aralıkları noktalı virgülle ayırın: 1-3; 4-6; 7-" },
+    "extract": { "title": "Sayfaları çıkar", "desc": "Seçilen sayfaları yeni bir dosyaya çıkarın." },
+    "delete": { "title": "Sayfaları sil", "desc": "Dosyadan sayfa kaldırın." },
+    "rotate": { "title": "Sayfaları döndür", "desc": "Tüm sayfaları veya seçilen sayfaları döndürün.", "allPages": "Tüm sayfalar" },
+    "reorder": { "title": "Sayfaları yeniden sırala", "desc": "Yeni sayfa sırasını girin (örn. 3,1,2,4)." },
+    "blank": { "title": "Boş sayfa ekle", "desc": "Belirtilen sayfadan sonra boş bir sayfa ekleyin.", "after": "Şu sayfadan sonra" },
+    "insertPdf": { "title": "PDF ekle", "desc": "Başka bir dosyanın sayfalarını bir konuma ekleyin.", "second": "Eklenecek dosya", "at": "Şu sayfadan sonra" },
+    "images": { "title": "Görseller → PDF", "desc": "JPG/PNG görsellerini PDF'ye dönüştürün.", "pickImages": "Görsel seç", "fitPaper": "Kağıt boyutuna sığdır", "keepSize": "Görsel boyutunu koru" },
+    "watermark": { "title": "Filigran", "desc": "Her sayfaya yarı saydam metin ekleyin." },
+    "numbers": { "title": "Sayfa numaraları", "desc": "Sayfa numaralarını istediğiniz yere ekleyin.", "bottomCenter": "Alt orta", "bottomRight": "Alt sağ", "bottomLeft": "Alt sol", "topCenter": "Üst orta" },
+    "compress": { "title": "PDF'yi sıkıştır", "desc": "Yapının optimize edilmiş şekilde yeniden kaydedilmesi (görseller yeniden kodlanmaz).", "result": "{{before}} → {{after}}" },
+    "pdfToImages": { "title": "PDF → Görseller", "desc": "Her sayfayı PNG görseli olarak dışa aktarın.", "scale": "Çözünürlük" },
+    "pdfToText": { "title": "PDF → Metin", "desc": "Tüm metni bir metin dosyasına çıkarın." },
+    "protect": { "title": "Şifre koruması", "desc": "Şifreleme bu motor sürümünde kullanılamaz; bir kitaplık güncellemesiyle gelecektir.", "unavailable": "Henüz kullanılamıyor" },
+    "ocr": { "title": "Tara / OCR", "desc": "Metin tanıma, yol haritasının 7. aşamasında sunulacak." }
+  },
+  "documents": {
+    "title": "Belgeler", "subtitle": "Açtığınız veya oluşturduğunuz her PDF.", "openFile": "PDF dosyası aç", "newPdf": "Yeni PDF belgesi",
+    "search": "Belgelerde ara…", "empty": { "title": "Henüz belge yok", "body": "Bir PDF açın veya yeni bir belge oluşturun; burada görünecektir.", "action": "PDF dosyası aç" },
+    "columns": { "title": "Başlık", "pages": "Sayfalar", "size": "Boyut", "opened": "Değiştirilme", "status": "Durum" },
+    "scanned": "Taranmış", "ocrDone": "OCR tamamlandı", "text": "Metin", "missing": "Dosya eksik", "remove": "Listeden kaldır",
+    "new": { "title": "Yeni belge", "paper": "Kağıt boyutu", "orientation": "Yönlendirme", "pages": "Sayfalar", "create": "Oluştur", "saveWhere": "Yeni belgeyi kaydetmek için bir konum seçin" }
+  },
+  "sheet": {"title":"Hesap Tabloları","studio":"Hesap Tablosu Stüdyosu","new":"Yeni hesap tablosu","open":"Excel/CSV dosyası aç","import":"İçe aktar","export":"Dışa aktar","exportXlsx":"Excel Olarak Dışa Aktar (xlsx)","exportCsv":"CSV Olarak Dışa Aktar","exportPdf":"PDF Olarak Dışa Aktar","print":"Yazdır","save":"Kaydet","saveAs":"Farklı kaydet","untitled":"Adsız hesap tablosu","rename":"Yeniden adlandır","titleLabel":"Hesap tablosu başlığı","formula":"Formül","cell":"Hücre","sheet":"Sayfa","addSheet":"Sayfa ekle","renameSheet":"Sayfayı yeniden adlandır","deleteSheet":"Sayfayı sil","lastSheet":"Tek sayfa silinemez","insertRowAbove":"Üstüne satır ekle","insertRowBelow":"Altına satır ekle","insertColStart":"Önüne sütun ekle","insertColEnd":"Sonrasına sütun ekle","deleteRow":"Satırı sil","deleteCol":"Sütunu sil","merge":"Hücreleri birleştir","unmerge":"Birleştirmeyi kaldır","bold":"Kalın","italic":"İtalik","underline":"Altı çizili","alignStart":"Sola hizala","alignCenter":"Ortala","alignEnd":"Sağa hizala","format":"Biçim","fmtGeneral":"Genel","fmtNumber":"Sayı","fmtCurrency":"Para birimi","fmtPercent":"Yüzde","fmtDate":"Tarih","fmtText":"Metin","decimalsMore":"Ondalık basamak ekle","decimalsLess":"Ondalık basamak azalt","fill":"Dolgu rengi","textColor":"Metin rengi","cut":"Kes","copy":"Kopyala","paste":"Yapıştır","clear":"İçeriği temizle","undo":"Geri al","redo":"Yinele","sum":"Toplam","avg":"Ortalama","count":"Say","selected":"{{count}} hücre seçildi","toInvoice":"Sayfadan fatura oluştur","fromInvoice":"Fatura kalemlerini sayfaya aktar","mappingTitle":"Sütunları fatura kalemleriyle eşleştir","mappingHint":"Her alanı hangi sütunun besleyeceğini seçin. Boş satırlar atlanır ve sayılar kayan nokta hatası olmadan güvenli şekilde ayrıştırılır.","headerRow":"İlk satır başlıktır","colDescription":"Açıklama","colQty":"Miktar","colPrice":"Birim fiyat","colDiscount":"İndirim %","colTax":"Vergi %","colRef":"Referans","colNone":"— yok —","rowsFound":"{{count}} kalem aktarılacak","createInvoice":"Fatura oluştur","needDescription":"En azından açıklama ve fiyat sütunlarını seçin","listCols":{"title":"Başlık","sheets":"Sayfalar","updated":"Değiştirilme"},"deleted":"Silindi","restore":"Geri yükle","trash":"Sil","purge":"Kalıcı olarak sil","confirmDelete":"“{{title}}” silinsin mi? Daha sonra geri yüklenebilir.","emptyTitle":"Henüz hesap tablosu yok","emptyDesc":"Uygulama içinde çalışmak için yeni bir hesap tablosu oluşturun veya bir Excel/CSV dosyası açın.","saved":"Hesap tablosu kaydedildi","imported":"{{name}} içe aktarıldı","exported":"{{name}} olarak dışa aktarıldı","importFailed":"Dosya okunamadı","unsaved":"Kaydedilmemiş değişiklikler","closeConfirm":"Bu hesap tablosunda kaydedilmemiş değişiklikler var. Kaydetmeden kapatılsın mı?","functions":"Kullanılabilir işlevler","formulaHint":"Formül yazmak için = ile başlayın, örn. =SUM(B2:B10)","errorCell":"Formül hatası","invoiceItemsTitle":"{{number}} numaralı faturanın kalemleri","zoom":"Yakınlaştırma","freeze":"İlk satırı dondur","search":"Sayfada ara","noMatch":"Eşleşme yok","gridInfo":"{{rows}} satır × {{cols}} sütun","trashTitle":"Hesap tablosu çöp kutusu","showTrash":"Silinenleri göster","hideTrash":"Silinenleri gizle"},
+  "ocr": {"title":"Optik karakter tanıma (OCR)","run":"OCR çalıştır","scope":"Kapsam","scopePage":"Geçerli sayfa","scopeAll":"Tüm belge","languages":"Tanıma dilleri","start":"Tanımayı başlat","stop":"Durdur","progress":"Sayfa {{page}} / {{total}}","status":{"loading":"Dil motoru yükleniyor…","recognizing":"Metin tanınıyor…","done":"Tamamlandı","idle":"Hazır"},"done":"{{pages}} sayfa tanındı · doğruluk %{{confidence}}","copy":"Metni kopyala","saveText":"Metin dosyası olarak kaydet","makeSearchable":"Belgeyi aranabilir yap","exportSearchable":"Aranabilir PDF olarak dışa aktar","noLanguages":"Dil dosyaları resources/tessdata içinde eksik","missingLanguage":"OCR dili mevcut değil: {{lang}}","failed":"OCR başarısız oldu","searchableDone":"Metin artık görüntüleyicide aranabilir ve seçilebilir, ayrıca veritabanında saklanıyor","exportedSearchable":"{{name}} gizli metin katmanıyla dışa aktarıldı","resultText":"Çıkarılan metin","page":"Sayfa {{page}}","confidence":"Doğruluk","empty":"Metin tanınmadı","lowConfidence":"Düşük doğruluk; başka bir dil veya daha net bir tarama deneyin","scanned":"Bu belge taranmış; metnini çıkarmak için OCR kullanılacak","hint":"Tanıma, internet olmadan yerel olarak çalışır. Arapça belgeler için “Arapça” dilinin etkinleştirilmesi gerekir.","textSaved":"Metin kaydedildi","selectLanguage":"En az bir dil seçin"},
+  "imp": {"title":"PDF → Akıllı fatura","subtitle":"Bir PDF'den fatura verilerini ve kalemlerini çıkararak düzenlenebilir bir faturaya dönüştürün","source":"Kaynak","open":"PDF dosyası seç","template":"Çıkarma şablonu","auto":"Otomatik algıla (şablonsuz)","matched":"“{{name}}” şablonu otomatik olarak tanındı","applyTemplate":"Uygula","saveTemplate":"Çıkarma şablonu olarak kaydet","updateTemplate":"Şablonu güncelle","templateName":"Şablon adı (genellikle tedarikçi)","deleteTemplate":"Şablonu sil","templateSaved":"“{{name}}” çıkarma şablonu kaydedildi","noZones":"Kaydetmeden önce en az bir bölge ekleyin","zones":"Çıkarma bölgeleri","drawHint":"Bir bölge çizmek için sayfada sürükleyin, ardından temsil ettiği alanı seçin. “Kalemler” bölgesi sütunlara ayrılır.","zoneField":"Alan","removeZone":"Bölgeyi kaldır","clearZones":"Bölgeleri temizle","columns":"Kalem sütunları","addColumn":"Sütun ekle","headerRow":"İlk satır başlıktır","fields":"Fatura verileri","items":"Kalemler","addItem":"Kalem ekle","removeItem":"Kaldır","noItems":"Kalem algılanmadı; bir “Kalemler” bölgesi çizip sütunlarını tanımlayın veya kalemleri elle ekleyin","checks":"Hesaplama kontrolleri","checkOk":"Toplamlar belgeyle eşleşiyor","createInvoice":"Fatura oluştur","batch":"Toplu içe aktarma","batchTitle":"Toplu PDF içe aktarma","batchHint":"Dosyalar, seçilen şablon (veya otomatik algılama) ile tek tek işlenir ve taslak fatura olarak kaydedilir.","pickFiles":"PDF dosyaları seç","processing":"{{done}} / {{total}} işleniyor","created":"{{count}} fatura taslak olarak oluşturuldu","failed":"Başarısız","ready":"Hazır","skipped":"Atlandı","startBatch":"İçe aktarmayı başlat","results":"Sonuçlar","reextract":"Yeniden çıkar","runOcr":"Bu sayfada OCR çalıştır","ocrNeeded":"Bu sayfada okunabilir metin yok; veri çıkarmak için OCR çalıştırın","ocrRunning":"OCR çalıştırılıyor…","customerMatch":"Veritabanında eşleşen müşteri: {{name}}","customerNew":"Müşteri adı belgede yazıldığı gibi saklanacak (daha sonra bağlanabilir)","totalExtracted":"Belgedeki toplam","totalComputed":"Kalemlerden hesaplanan toplam","page":"Sayfa","of":"/","confidence":"Güven düzeyi","rawValue":"Orijinal metin","zoom":"Yakınlaştırma","field":{"number":"Fatura numarası","issueDate":"Düzenleme tarihi","dueDate":"Vade tarihi","reference":"Referans","customerName":"Müşteri adı","customerPhone":"Müşteri telefonu","customerAddress":"Müşteri adresi","customerTaxId":"Vergi No","subtotal":"Ara toplam","discount":"İndirim","tax":"Vergi","total":"Toplam","notes":"Notlar","items":"Kalemler (tablo)"},"col":{"ref":"Referans","description":"Açıklama","qty":"Miktar","unitPrice":"Birim fiyat","discount":"İndirim %","tax":"Vergi %","total":"Toplam"},"warn":{"items_total_mismatch":"Hesaplanan kalem toplamı ({{computed}}), çıkarılan toplamla ({{extracted}}) eşleşmiyor","total_mismatch":"Toplam, ara toplam + vergi − indirime eşit değil","missing_total":"Belgede toplam algılanmadı","missing_number":"Fatura numarası algılanmadı","missing_customer":"Müşteri adı algılanmadı","no_items":"Kalem algılanmadı","date_unparsed":"“{{raw}}” tarihi okunamadı"}},
+  "audit": {"title":"Denetim günlüğü","subtitle":"Zaman damgasıyla birlikte etkisi olan her işlem: faturalar, ödemeler, müşteriler, ayarlar, yedekler, güvenlik","search":"Günlükte ara","allGroups":"Tüm türler","count":"{{count}} kayıt","export":"CSV Olarak Dışa Aktar","exported":"Günlük dışa aktarıldı","emptyTitle":"Henüz kayıt yok","emptyBody":"İşlemler gerçekleştiği anda burada görünür.","cols":{"time":"Zaman","action":"İşlem","object":"Nesne","summary":"Ayrıntılar"},"groups":{"invoice":"Faturalar","payment":"Ödemeler","customer":"Müşteriler","product":"Ürünler","template":"Şablonlar","settings":"Ayarlar","backup":"Yedekler","demo":"Demo veriler","security":"Güvenlik","spreadsheet":"Hesap tabloları","note":"Notlar","attachment":"Ekler"},"objects":{"invoice":"Fatura","customer":"Müşteri","product":"Ürün","spreadsheet":"Hesap tablosu","extraction_template":"Çıkarma şablonu","custom_field":"Özel alan","template":"Şablon"},"actions":{"invoice.created":"Fatura oluşturuldu","invoice.updated":"Fatura güncellendi","invoice.deleted":"Fatura silindi","invoice.restored":"Fatura geri yüklendi","invoice.purged":"Fatura kalıcı olarak silindi","payment.added":"Ödeme eklendi","payment.deleted":"Ödeme silindi","customer.created":"Müşteri oluşturuldu","customer.updated":"Müşteri güncellendi","customer.deleted":"Müşteri silindi","product.created":"Ürün oluşturuldu","product.updated":"Ürün güncellendi","product.deleted":"Ürün silindi","template.changed":"Şablon değiştirildi","settings.changed":"Ayarlar değiştirildi","backup.created":"Yedek oluşturuldu","backup.restored":"Yedek geri yüklendi","demo.loaded":"Demo veriler yüklendi","demo.cleared":"Demo veriler temizlendi","security.pin_set":"PIN belirlendi","security.pin_removed":"PIN kaldırıldı","spreadsheet.created":"Hesap tablosu oluşturuldu","spreadsheet.updated":"Hesap tablosu güncellendi","spreadsheet.deleted":"Hesap tablosu silindi","spreadsheet.restored":"Hesap tablosu geri yüklendi","spreadsheet.purged":"Hesap tablosu kalıcı olarak silindi","spreadsheet.imported":"Hesap tablosu içe aktarıldı","spreadsheet.exported":"Hesap tablosu dışa aktarıldı","note.added":"Not eklendi","note.deleted":"Not silindi","attachment.added":"Ek eklendi","attachment.removed":"Ek kaldırıldı"}},
+  "notes": {"title":"Dahili notlar","placeholder":"Faturada asla görünmeyecek bir not yazın…","add":"Ekle","empty":"Not yok","delete":"Notu sil","saved":"Not eklendi","saveFirst":"Not ve ek eklemek için önce kaydı kaydedin"},
+  "att": {"title":"Ekler","add":"Dosya ekle","empty":"Ek yok","open":"Aç","remove":"Kaldır","removed":"Ek kaldırıldı","added":"{{count}} ek eklendi","confirmRemove":"“{{name}}” eki kaldırılsın mı?","dropHint":"Dosyalar uygulama veri klasörüne kopyalanır"},
+  "cf": {"title":"Özel alanlar","subtitle":"Faturalar, müşteriler ve ürünler için işletmenize özgü alanlar ekleyin (sözleşme numarası, satış temsilcisi, bölge…)","entity":"Varlık","label":"Alan etiketi","type":"Tür","showOnInvoice":"Faturada göster","add":"Alan ekle","delete":"Alanı sil","confirmDelete":"“{{label}}” alanı ve tüm değerleri silinsin mi?","saved":"Alan kaydedildi","empty":"Bu varlık için özel alan yok","values":"Özel alanlar","valuesSaved":"Değerler kaydedildi","entities":{"invoice":"Faturalar","customer":"Müşteriler","product":"Ürünler","company":"Şirket"},"types":{"text":"Metin","number":"Sayı","date":"Tarih","bool":"Evet/Hayır"}},
+  "drafts": {"banner":"Önceki oturumdan {{count}} kaydedilmemiş taslak","restore":"Geri yükle","discard":"Vazgeç","discardAll":"Tümünü sil","restored":"Taslak geri yüklendi","autosaved":"Taslak otomatik kaydedildi","title":"Kurtarma taslakları"},
+  "time": { "justNow": "az önce", "minutesAgo": "{{count}} dk önce", "hoursAgo": "{{count}} sa önce", "daysAgo": "{{count}} g önce" },
+  "status": { "draft": "Taslak", "sent": "Gönderildi", "paid": "Ödendi", "partially_paid": "Kısmen ödendi", "overdue": "Gecikmiş", "cancelled": "İptal edildi" },
+  "recent": { "open": "Aç", "remove": "Listeden kaldır", "pin": "Sabitle", "unpin": "Sabitlemeyi kaldır", "clear": "Listeyi temizle", "showInFolder": "Klasörde göster", "openedAt": "Son açılma" },
+  "shortcuts": {
+    "title": "Klavye kısayolları",
+    "open": "Aç", "save": "Kaydet", "saveAs": "Farklı kaydet", "print": "Yazdır", "find": "Bul", "undo": "Geri al", "redo": "Yinele",
+    "palette": "Komut paleti", "settings": "Ayarlar", "closeTab": "Sekmeyi kapat", "reopenTab": "Sekmeyi yeniden aç", "nextTab": "Sonraki sekme"
+  }
+}

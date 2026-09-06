@@ -29,7 +29,7 @@ export function GeneralSection({ mode }: { mode: 'general' | 'appearance' }) {
           </div>
         </Group>
         <Group title={t('settings.appearance.language')}>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-2 md:grid-cols-4 xl:grid-cols-5">
             {LANGUAGES.map((lang) => (
               <button key={lang.code} type="button" onClick={() => void setLanguage(lang.code)} className={clsx('rounded-lg border p-4 text-center transition-all', settings.language === lang.code ? 'border-accent bg-accent/10 text-accent' : 'border-border hover:bg-surface-2')}>
                 <div className="text-[15px] font-semibold">{lang.label}</div>

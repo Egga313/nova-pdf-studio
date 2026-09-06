@@ -1,16 +1,37 @@
 /** نموذج إعدادات التطبيق وقيمها الافتراضية. تُخزَّن في جدول settings كأزواج مفتاح/JSON. */
 
-export type Language = 'ar' | 'fr' | 'en'
+export type Language = 'ar' | 'fr' | 'en' | 'zh' | 'tr' | 'es' | 'de' | 'pt' | 'ru' | 'hi' | 'id' | 'ja' | 'it' | 'fa'
 export type ThemeMode = 'light' | 'dark' | 'system'
 export type PaperSize = 'A4' | 'A5' | 'Letter'
 export type Orientation = 'portrait' | 'landscape'
 export type CurrencyPosition = 'before' | 'after'
 
-export const LANGUAGES: { code: Language; label: string; dir: 'rtl' | 'ltr' }[] = [
-  { code: 'ar', label: 'العربية', dir: 'rtl' },
-  { code: 'fr', label: 'Français', dir: 'ltr' },
-  { code: 'en', label: 'English', dir: 'ltr' }
+/** اللغات المضمّنة. لإضافة لغة: ملف JSON في translations/locales + سطر هنا + تسجيل في i18n.ts. */
+export const LANGUAGES: { code: Language; label: string; dir: 'rtl' | 'ltr'; intl: string }[] = [
+  { code: 'ar', label: 'العربية', dir: 'rtl', intl: 'ar-DZ' },
+  { code: 'fr', label: 'Français', dir: 'ltr', intl: 'fr-FR' },
+  { code: 'en', label: 'English', dir: 'ltr', intl: 'en-GB' },
+  { code: 'es', label: 'Español', dir: 'ltr', intl: 'es-ES' },
+  { code: 'de', label: 'Deutsch', dir: 'ltr', intl: 'de-DE' },
+  { code: 'it', label: 'Italiano', dir: 'ltr', intl: 'it-IT' },
+  { code: 'pt', label: 'Português', dir: 'ltr', intl: 'pt-BR' },
+  { code: 'tr', label: 'Türkçe', dir: 'ltr', intl: 'tr-TR' },
+  { code: 'ru', label: 'Русский', dir: 'ltr', intl: 'ru-RU' },
+  { code: 'zh', label: '中文', dir: 'ltr', intl: 'zh-CN' },
+  { code: 'ja', label: '日本語', dir: 'ltr', intl: 'ja-JP' },
+  { code: 'hi', label: 'हिन्दी', dir: 'ltr', intl: 'hi-IN' },
+  { code: 'id', label: 'Bahasa Indonesia', dir: 'ltr', intl: 'id-ID' },
+  { code: 'fa', label: 'فارسی', dir: 'rtl', intl: 'fa-IR' }
 ]
+
+export function languageDirection(language: Language): 'rtl' | 'ltr' {
+  return LANGUAGES.find((l) => l.code === language)?.dir ?? 'ltr'
+}
+
+/** الإعداد المحلي لـ Intl حسب اللغة (الأرقام تُجبر لاتينية عند الحاجة في مواضع الاستخدام). */
+export function intlLocaleOf(language: Language): string {
+  return LANGUAGES.find((l) => l.code === language)?.intl ?? 'en-GB'
+}
 
 /** الحقول القابلة للإظهار/الإخفاء في ترويسة الفاتورة */
 export const COMPANY_FIELD_KEYS = [

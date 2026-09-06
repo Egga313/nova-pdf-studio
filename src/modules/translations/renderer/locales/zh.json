@@ -1,0 +1,300 @@
+{
+  "app": { "name": "NOVA PDF Studio", "tagline": "PDF 编辑 • 智能发票 • 电子表格 • 文档" },
+  "nav": { "audit": "审计日志",
+    "home": "首页", "pdf": "PDF", "invoices": "发票", "customers": "客户", "products": "产品与服务",
+    "spreadsheets": "电子表格", "templates": "模板", "documents": "文档", "tools": "工具", "settings": "设置",
+    "storage": "存储", "backup": "备份", "language": "语言", "theme": "主题"
+  },
+  "common": { "total": "合计", "demo": "演示",
+    "save": "保存", "cancel": "取消", "close": "关闭", "delete": "删除", "edit": "编辑", "add": "添加", "search": "搜索",
+    "open": "打开", "create": "新建", "back": "返回", "next": "下一步", "finish": "完成", "yes": "是", "no": "否", "ok": "确定",
+    "loading": "加载中…", "none": "无", "actions": "操作", "name": "名称", "optional": "可选", "required": "必填",
+    "clear": "清除", "confirm": "确认", "retry": "重试", "copy": "复制", "remove": "移除", "all": "全部", "today": "今天",
+    "unknown": "未知", "version": "版本", "comingSoon": "将在后续阶段推出", "enabled": "已启用", "disabled": "已禁用",
+    "default": "默认", "active": "启用", "inactive": "停用", "preview": "预览", "apply": "应用", "reset": "重置"
+  },
+  "tabs": { "close": "关闭标签页", "closeOthers": "关闭其他标签页", "reopenClosed": "重新打开已关闭的标签页", "unsaved": "未保存的更改" },
+  "theme": { "light": "浅色", "dark": "深色", "system": "跟随系统" },
+  "topbar": { "search": "搜索所有内容…(Ctrl+K)", "notifications": "通知", "commandPalette": "命令面板" },
+  "dashboard": {
+    "title": "首页",
+    "welcome": "欢迎使用 NOVA",
+    "welcomeCompany": "欢迎回来，{{name}}",
+    "subtitle": "在同一个地方管理文档和发票所需的一切。",
+    "quickActions": "快捷操作",
+    "recentDocuments": "最近的文档",
+    "noRecent": "暂无最近打开的文档",
+    "noRecentHint": "打开一个 PDF 或电子表格，它将显示在这里。",
+    "tools": "工具",
+    "overview": "概览",
+    "stats": {
+      "totalInvoices": "发票总数", "paid": "已付款", "unpaid": "未付款", "overdue": "已逾期",
+      "revenue": "总收入", "remaining": "待收金额", "customers": "客户", "products": "产品"
+    },
+    "chart": { "title": "过去 12 个月的开票与实收对比", "invoiced": "已开票", "paid": "已付款", "empty": "暂无数据" },
+    "outstanding": {
+      "title": "待收款项", "customer": "客户", "invoice": "发票", "dueDate": "到期日",
+      "remaining": "剩余金额", "daysOverdue": "逾期天数", "empty": "没有待收款项", "onTime": "按时"
+    },
+    "actions": {
+      "openPdf": "打开 PDF", "newPdf": "新建 PDF", "newInvoice": "新建发票", "invoices": "发票", "customers": "客户",
+      "products": "产品与服务", "spreadsheets": "电子表格", "recent": "最近的文档", "templates": "模板",
+      "scanOcr": "扫描 / OCR", "mergePdf": "合并 PDF", "splitPdf": "拆分 PDF", "convert": "转换文件", "settings": "设置",
+      "newSpreadsheet": "新建电子表格", "scanDocument": "扫描文档", "mergePdfs": "合并 PDF"
+    }
+  },
+  "palette": { "customers": "客户", "invoices": "发票", "products": "产品", "searching": "搜索中…",
+    "placeholder": "输入命令或搜索内容…", "noResults": "无结果", "commands": "命令", "recentFiles": "最近文件",
+    "navigation": "导航", "hint": "↑↓ 导航 • Enter 执行 • Esc 关闭"
+  },
+  "notifications": { "title": "通知", "empty": "暂无通知", "markAllRead": "全部标为已读", "clear": "清空全部" },
+  "commands": { "openAudit": "审计日志",
+    "newInvoice": "新建发票", "openPdf": "打开 PDF 文件", "newSpreadsheet": "新建电子表格", "mergePdf": "合并 PDF",
+    "goHome": "返回首页", "openSettings": "打开设置", "toggleTheme": "切换主题", "closeTab": "关闭标签页",
+    "reopenTab": "重新打开已关闭的标签页", "nextTab": "下一个标签页", "prevTab": "上一个标签页", "lockApp": "锁定应用",
+    "createBackup": "创建备份", "openCustomers": "打开客户", "openInvoices": "打开发票", "openProducts": "打开产品",
+    "language": "切换语言为 {{lang}}", "showShortcuts": "键盘快捷键"
+  },
+  "settings": {
+    "title": "设置",
+    "sections": { "fields": "自定义字段",
+      "general": "常规", "company": "公司信息", "invoice": "发票设置", "tax": "税率", "currencies": "货币",
+      "numbering": "编号", "language": "语言", "appearance": "外观", "printing": "打印", "ocr": "OCR",
+      "storage": "存储", "backup": "备份", "security": "安全", "about": "关于"
+    },
+    "general": {
+      "dateFormat": "日期格式", "numberingSystem": "数字", "latn": "拉丁数字 (1 2 3)", "arab": "阿拉伯-印度数字 (١ ٢ ٣)",
+      "confirmDelete": "删除前询问", "openLastTabs": "启动时重新打开标签页"
+    },
+    "company": {
+      "hint": "自动插入每张发票。您可以在发票页眉中显示或隐藏任意字段。",
+      "name": "公司名称", "firstName": "名", "lastName": "姓", "address": "地址", "city": "城市", "country": "国家",
+      "phone": "电话", "email": "邮箱", "website": "网站", "rc": "商业注册号 (RC)", "nif": "税务识别号 (NIF)",
+      "nis": "统计识别号 (NIS)", "ai": "征税条款 (AI)", "taxId": "税号", "bankAccount": "银行账户", "iban": "IBAN", "swift": "SWIFT",
+      "logo": "标志", "pickLogo": "选择标志", "removeLogo": "移除标志", "visibleFields": "发票中显示的字段",
+      "ownerName": "户主姓名"
+    },
+    "invoice": {
+      "pattern": "发票编号格式", "patternHint": "占位符：{YYYY} 年，{YY}，{MM} 月，{DD} 日，{SEQ:5} 5 位流水号计数器",
+      "preview": "预览", "defaultCurrency": "默认货币", "currencyPosition": "货币符号位置", "before": "金额前 (€1,000.00)",
+      "after": "金额后 (1,000.00 DZD)", "defaultTax": "默认税率", "dueDays": "到期天数（天）", "amountInWords": "显示大写金额",
+      "defaultNotes": "默认备注", "paymentTerms": "默认付款条款", "showLogo": "显示标志", "invalidPattern": "格式无效：必须包含 {SEQ}",
+      "quotePattern": "报价单编号格式", "proformaPattern": "形式发票编号格式", "receiptPattern": "收据编号格式"
+    },
+    "taxes": {
+      "title": "税率方案", "hint": "创建您业务所需的税率（增值税 0%、9%、19% 或任意自定义税率）。",
+      "add": "添加税率", "name": "名称", "rate": "税率 %", "default": "默认", "deleteConfirm": "删除此税率？",
+      "used": "已被产品使用；将停用而非删除"
+    },
+    "currencies": {
+      "title": "货币", "hint": "按 ISO 代码添加任意货币，并设置其符号、位置和小数位数。",
+      "add": "添加货币", "code": "代码 (ISO)", "name": "名称", "symbol": "显示符号", "decimals": "小数位数", "position": "位置",
+      "deleteConfirm": "删除此货币？"
+    },
+    "appearance": { "theme": "主题", "language": "界面语言", "hint": "语言和阅读方向即时生效，无需重启。" },
+    "printing": {
+      "paperSize": "纸张大小", "orientation": "方向", "portrait": "纵向", "landscape": "横向", "margins": "页边距 (mm)",
+      "scale": "缩放 %", "copies": "份数"
+    },
+    "ocr": { "languages": "OCR 识别语言", "autoPrompt": "扫描版 PDF 打开时自动建议 OCR", "ara": "阿拉伯语", "fra": "法语", "eng": "英语" },
+    "storage": {
+      "dataDir": "数据文件夹", "dbPath": "数据库文件", "logs": "日志文件", "openFolder": "打开文件夹",
+      "demoData": "演示数据", "demoHint": "明确标记的示例数据，可一键删除且不影响您自己的数据。",
+      "loadDemo": "加载演示数据", "clearDemo": "清除演示数据", "demoLoaded": "演示数据已加载", "demoNotLoaded": "无演示数据"
+    },
+    "backup": {
+      "title": "备份", "hint": "备份包含客户、发票、产品、模板、设置和付款记录。",
+      "create": "创建备份", "restore": "从文件恢复…", "export": "导出数据库", "auto": "每日自动备份",
+      "folder": "备份文件夹", "defaultFolder": "默认文件夹", "chooseFolder": "选择文件夹", "keep": "保留备份数量",
+      "last": "上次备份", "never": "尚无备份", "list": "可用备份", "confirmRestore": "所有数据将被所选备份替换。系统会先保存当前状态的安全副本。是否继续？",
+      "restoreThis": "恢复此备份"
+    },
+    "security": {
+      "appLock": "PIN 应用锁", "hint": "启动时及闲置一段时间后会要求输入。仅以加盐哈希方式存储。",
+      "setPin": "设置 PIN", "changePin": "修改 PIN", "removePin": "移除锁定", "currentPin": "当前 PIN", "newPin": "新 PIN（4-12 位数字）",
+      "confirmPin": "确认 PIN", "autoLock": "自动锁定时间", "minutes": "分钟", "pinMismatch": "两次输入的 PIN 不一致", "pinSet": "PIN 已设置",
+      "pinRemoved": "锁定已移除", "status": "状态"
+    },
+    "about": {
+      "description": "一体化办公平台：阅读和编辑 PDF、精确计算的智能发票、类 Excel 电子表格及 OCR 文字识别。完全离线运行。",
+      "localFirst": "隐私优先：您的文档永不离开您的电脑。", "logs": "开发者日志", "platform": "平台", "dataDir": "数据文件夹"
+    },
+    "saved": "设置已保存"
+  },
+  "wizard": {
+    "welcome": "欢迎使用 NOVA PDF Studio",
+    "subtitle": "只需几个简单步骤设置您的业务信息，即可开始使用。",
+    "steps": { "language": "语言", "company": "公司", "currency": "货币", "tax": "税率", "numbering": "编号" },
+    "languageHint": "选择界面语言。您可以随时更改。",
+    "companyHint": "将显示在发票页眉中。您可以跳过此步骤，稍后在设置中完成。",
+    "currencyHint": "新发票的默认货币及其符号位置。",
+    "taxHint": "应用于新明细行的默认税率。您可以稍后添加更多税率。",
+    "numberingHint": "发票编号格式。示例：INV-{YYYY}-{SEQ:5}",
+    "start": "开始使用 NOVA",
+    "skip": "暂时跳过"
+  },
+  "lock": { "title": "应用已锁定", "subtitle": "输入您的 PIN 以继续", "unlock": "解锁", "wrongPin": "PIN 错误", "placeholder": "PIN" },
+  "errors": {
+    "UNKNOWN": "发生意外错误。", "VALIDATION": "数据无效。", "NOT_FOUND": "未找到项目。", "CONFLICT": "与现有数据冲突。",
+    "DB_ERROR": "数据库错误，详细信息已写入日志。", "DB_CLOSED": "数据库已关闭。", "DISK_FULL": "磁盘空间已满，请释放空间后重试。",
+    "FILE_NOT_FOUND": "未找到文件。", "FILE_ACCESS": "无法访问该文件（可能已在其他程序中打开）。",
+    "PDF_CORRUPTED": "PDF 文件已损坏或无效。", "PDF_PASSWORD": "此 PDF 受密码保护。", "PDF_UNSUPPORTED": "不支持的 PDF 功能。",
+    "EXCEL_UNSUPPORTED": "不支持的电子表格格式。", "OCR_FAILED": "文字识别失败。", "PRINTER_OFFLINE": "打印机离线。",
+    "LOCKED": "操作被拒绝。", "CANCELLED": "操作已取消。", "NO_BRIDGE": "界面未连接到应用程序。",
+    "validation": {
+      "name_required": "名称为必填项。", "rate_invalid": "税率无效。", "currency_code": "货币代码必须为 3 到 5 个拉丁字母。",
+      "decimals": "小数位数必须介于 0 到 4 之间。", "pin_format": "PIN 必须为 4 到 12 位数字。",
+      "customer_name": "请输入客户或公司名称。", "email": "邮箱地址无效。", "price_invalid": "价格无效。",
+      "sku_duplicate": "SKU {{sku}} 已被其他产品使用。", "date": "日期无效。", "currency_required": "请选择一种货币。",
+      "item_numbers": "第 {{line}} 行的数值无效。", "discount_range": "第 {{line}} 行的折扣必须介于 0% 到 100% 之间。", "amount_positive": "金额必须大于零。"
+    },
+    "invoice": { "number_exists": "发票编号 {{number}} 已存在。", "cancelled": "无法在已取消的发票上记录付款。" },
+    "customer": { "has_invoices": "无法永久删除此客户：有 {{count}} 张发票引用了该客户。" },
+    "pdf": { "wrong_password": "密码错误。", "bad_range": "页面范围无效：{{range}}", "no_files": "请至少选择一个文件。", "no_pages": "未选择任何页面。", "cannot_delete_all": "无法删除所有页面。", "bad_order": "页面顺序无效。", "text_raster_unavailable": "无法渲染非拉丁文字。" },
+    "print": { "timeout": "打印准备超时。", "load_failed": "无法加载打印内容。" },
+    "security": { "wrong_pin": "当前 PIN 不正确。" },
+    "backup": { "invalid_file": "该文件不是有效的备份文件。" }
+  },
+  "toast": {
+    "saved": "已保存", "settingsSaved": "设置已保存", "backupCreated": "备份已创建", "backupRestored": "备份已恢复",
+    "demoLoaded": "演示数据已加载", "demoCleared": "演示数据已清除", "copied": "已复制", "error": "错误",
+    "dbExported": "数据库已导出", "fileMissing": "在原位置未找到该文件"
+  },
+  "empty": {
+    "generic": { "title": "这里还没有内容", "body": "新建一个项目开始使用。" },
+    "invoices": { "title": "暂无发票", "body": "创建您的第一张发票，即时精确计算。", "action": "创建第一张发票" },
+    "customers": { "title": "暂无客户", "body": "添加客户以在此查看其发票和付款记录。", "action": "添加客户" },
+    "products": { "title": "暂无产品", "body": "添加产品和服务，以便在发票中自动补全使用。", "action": "添加产品" },
+    "phase": { "title": "此模块正在开发中", "body": "将在路线图第 {{phase}} 阶段推出。" }
+  },
+  "pdf": {
+    "loading": "正在加载文档…", "page": "页", "of": "共", "zoomIn": "放大", "zoomOut": "缩小", "fitWidth": "适合宽度",
+    "fitPage": "适合页面", "actualSize": "实际大小", "rotateLeft": "向左旋转", "rotateRight": "向右旋转",
+    "fullscreen": "全屏", "exitFullscreen": "退出全屏", "search": "在文档中搜索", "searchPlaceholder": "搜索文本…",
+    "results": "{{count}} 个结果", "noResults": "无结果", "nextResult": "下一个结果", "prevResult": "上一个结果",
+    "thumbnails": "缩略图", "bookmarks": "书签", "noBookmarks": "此文件没有书签",
+    "copy": "复制文本", "copied": "文本已复制", "selectAllText": "复制本页文本", "print": "打印", "export": "导出", "saveAs": "另存为…",
+    "download": "保存副本", "edit": "编辑 PDF", "convertToInvoice": "转换为智能发票", "info": "文档信息",
+    "password": "文档密码", "passwordHint": "此文件受保护。请输入密码打开。", "open": "打开",
+    "scannedNotice": "此 PDF 包含扫描页面，是否运行 OCR？", "runOcr": "运行 OCR", "later": "稍后",
+    "pages": "{{count}} 页", "goToPage": "跳转到页面", "firstPage": "第一页", "lastPage": "最后一页",
+    "prevPage": "上一页", "nextPage": "下一页", "renderError": "无法渲染此页面", "exported": "已导出：{{name}}",
+    "printSent": "文档已发送到打印机", "printing": "正在准备打印…", "exportImages": "将页面导出为图片", "exportText": "导出文本",
+    "properties": { "title": "标题", "author": "作者", "subject": "主题", "creator": "创建者", "producer": "生成程序", "created": "创建时间", "modified": "修改时间", "pages": "页数", "size": "大小", "path": "路径" }
+  },
+  "inv": {
+    "title": "发票", "subtitle": "所有发票和报价单及其状态与付款情况。", "new": "新建发票", "newQuote": "新建报价单", "newProforma": "新建形式发票",
+    "search": "按编号、客户、电话或金额搜索…", "trash": "回收站", "backToList": "返回列表",
+    "filters": { "all": "全部", "unpaid": "未付款", "status": "状态", "type": "类型", "from": "从", "to": "到", "sort": "排序" },
+    "sort": { "date_desc": "最新优先", "date_asc": "最早优先", "number": "编号", "amount_desc": "金额", "customer": "客户" },
+    "types": { "invoice": "发票", "quote": "报价单", "proforma": "形式发票", "receipt": "收据", "credit_note": "贷项通知单", "purchase_order": "采购单", "delivery_note": "送货单" },
+    "cols": { "number": "编号", "customer": "客户", "date": "日期", "due": "到期日", "total": "总计", "paid": "已付款", "remaining": "剩余", "status": "状态" },
+    "count": "{{count}} 张发票", "total": "{{total}} 条结果",
+    "actions": { "open": "打开", "duplicate": "复制", "trash": "移至回收站", "restore": "恢复", "purge": "永久删除", "markSent": "标记为已发送", "markPaid": "标记为已付款", "cancel": "取消发票", "addPayment": "记录付款", "viewPdf": "查看 PDF" },
+    "confirmTrash": "将发票 {{number}} 移至回收站？", "confirmPurge": "永久删除发票 {{number}}？此操作无法撤销。",
+    "trashed": "已移至回收站", "restored": "已恢复", "purged": "已永久删除", "saved": "发票 {{number}} 已保存", "duplicated": "副本已创建",
+    "editor": {
+      "company": "公司", "billTo": "收票方", "info": "发票信息", "items": "明细项", "totals": "合计", "notes": "备注", "payment": "付款信息", "signature": "签名",
+      "selectCustomer": "选择现有客户", "newCustomer": "新建客户", "noCustomer": "未选择客户", "customerSearch": "按姓名或电话搜索…", "clearCustomer": "移除客户",
+      "number": "发票编号", "autoNumber": "保存时自动生成", "issueDate": "开票日期", "dueDate": "到期日", "reference": "参考号", "purchaseOrder": "采购单号",
+      "currency": "货币", "paymentMethod": "付款方式", "status": "状态", "type": "单据类型",
+      "addRow": "添加行", "removeRow": "删除行", "duplicateRow": "复制行", "productSearch": "输入产品名称…", "pasteHint": "您可以直接从 Excel 粘贴行（Ctrl+V）",
+      "pasted": "已从剪贴板添加 {{count}} 行",
+      "grid": { "item": "项目", "description": "描述", "qty": "数量", "unit": "单位", "price": "单价", "discount": "折扣 %", "tax": "税率 %", "taxAmount": "税额", "subtotal": "小计", "total": "总计" },
+      "subtotal": "小计", "discountTotal": "折扣总额", "taxable": "计税金额", "taxTotal": "税额合计", "shipping": "运费", "fees": "附加费用",
+      "beforeTax": "税前金额", "grandTotal": "总金额", "amountPaid": "已付金额", "remaining": "剩余余额", "amountInWords": "大写金额",
+      "notesPlaceholder": "显示在发票底部的备注…", "terms": "付款条款", "termsPlaceholder": "例如：30 天内付款",
+      "payments": "付款记录", "noPayments": "暂无付款记录", "payDate": "日期", "payAmount": "金额", "payMethod": "方式", "payRef": "参考号", "payNotes": "备注",
+      "addPayment": "记录付款", "payFull": "全部剩余金额", "deletePayment": "删除付款记录", "saveFirst": "请先保存发票以记录付款",
+      "unsaved": "未保存的更改", "saveAndClose": "保存并关闭", "preview": "预览", "print": "打印", "exportPdf": "导出 PDF", "template": "模板", "more": "更多",
+      "validation": { "noItems": "请至少添加一个项目", "noCustomer": "请选择客户或输入姓名" },
+      "methods": { "cash": "现金", "bank_transfer": "银行转账", "card": "银行卡", "cheque": "支票", "other": "其他" }
+    }
+  },
+  "cust": {
+    "title": "客户", "subtitle": "包含发票、付款记录和余额的客户资料。", "new": "新建客户", "edit": "编辑客户",
+    "search": "按姓名、电话或邮箱搜索…", "sort": { "name": "姓名", "recent": "最近", "invoiced_desc": "开票金额最高", "remaining_desc": "余额最高" },
+    "cols": { "name": "姓名", "phone": "电话", "email": "邮箱", "city": "城市", "invoices": "发票数", "invoiced": "开票总额", "paid": "已付款", "remaining": "剩余" },
+    "fields": { "firstName": "名", "lastName": "姓", "companyName": "公司名称", "address": "地址", "city": "城市", "country": "国家", "phone": "电话", "email": "邮箱", "taxId": "税号", "customerNumber": "客户编号", "notes": "备注" },
+    "profile": { "title": "客户档案", "info": "客户详情", "invoices": "发票", "payments": "付款记录", "remaining": "未结余额", "lastActivity": "最近活动", "notes": "备注", "newInvoice": "为该客户新建发票", "noInvoices": "该客户暂无发票" },
+    "saved": "客户已保存", "deleted": "客户已移至回收站", "confirmDelete": "删除客户 {{name}}？其发票记录将被保留。", "count": "{{count}} 位客户"
+  },
+  "prod": {
+    "title": "产品与服务", "subtitle": "用于发票自动补全的产品目录。", "new": "新建产品", "edit": "编辑产品",
+    "search": "按名称或 SKU 搜索…", "allCategories": "全部分类",
+    "cols": { "name": "名称", "sku": "SKU", "price": "价格", "tax": "税率", "unit": "单位", "category": "分类", "status": "状态" },
+    "fields": { "name": "名称", "sku": "SKU", "description": "描述", "price": "价格", "currency": "货币", "tax": "税率", "unit": "单位", "category": "分类", "notes": "备注", "active": "启用" },
+    "saved": "产品已保存", "deleted": "产品已移至回收站", "confirmDelete": "删除产品 {{name}}？", "count": "{{count}} 个产品"
+  },
+  "tpl": {
+    "title": "模板", "subtitle": "内置和自定义的发票设计。", "builtin": "内置", "default": "默认", "custom": "自定义",
+    "new": "新建模板", "duplicate": "复制", "edit": "编辑设计", "delete": "删除", "setDefault": "设为默认", "resetBuiltin": "重置内置模板",
+    "confirmDelete": "删除模板 {{name}}？使用该模板的发票将回退为默认模板。", "saved": "模板已保存", "deleted": "模板已删除", "duplicated": "模板已复制",
+    "preview": { "title": "发票预览", "template": "模板", "print": "打印", "exportPdf": "导出 PDF", "openFolder": "打开文件夹", "copyFile": "复制文件", "share": "分享 / 发送", "exported": "PDF 已导出：{{name}}", "printed": "已发送到打印机", "regenerate": "刷新", "zoom": "缩放", "saveAndPreview": "请先保存发票以预览", "language": "文档语言", "auto": "自动", "email": "邮件（即将推出）", "whatsapp": "WhatsApp（即将推出）", "cloud": "云存储（即将推出）" },
+    "designer": {
+      "title": "模板设计器", "name": "模板名称", "blocks": "模块", "properties": "属性", "page": "页面", "theme": "颜色和字体", "columns": "表格列",
+      "visible": "显示", "hidden": "隐藏", "font": "字体", "fontSize": "字号", "color": "颜色", "background": "背景", "border": "边框", "radius": "圆角", "align": "对齐方式", "padding": "内边距",
+      "margin": "页边距 (mm)", "size": "尺寸", "orientation": "方向", "direction": "文字方向", "accent": "强调色", "tableHeader": "表头背景", "tableHeaderText": "表头文字", "stripe": "行条纹",
+      "baseFont": "基础字号", "showLogo": "显示标志", "showWords": "大写金额", "showQr": "二维码", "qrContent": "二维码内容", "qrNumber": "发票编号", "qrSummary": "摘要（编号 + 金额 + 公司）", "qrCustom": "自定义文本",
+      "x": "X (mm)", "y": "Y (mm)", "width": "宽度 (mm)", "height": "高度 (mm)", "text": "文本", "reset": "重置为默认布局", "dragHint": "在页面上拖动模块以移动位置；拖动边角可调整大小。",
+      "sampleData": "使用示例数据预览", "unsaved": "未保存的更改",
+      "kinds": { "logo": "标志", "company": "公司信息", "customer": "客户信息", "invoiceNumber": "发票编号", "dates": "日期", "meta": "参考号与采购单号", "title": "标题", "table": "明细表格", "totals": "合计", "amountWords": "大写金额", "notes": "备注", "terms": "付款条款", "payment": "付款信息", "signature": "签名", "stamp": "印章", "footer": "页脚", "qr": "二维码", "text": "自由文本" }
+    },
+    "brand": { "title": "签名与印章", "hint": "在模板放置的位置显示在发票上。", "signature": "签名", "stamp": "印章", "pick": "选择图片", "remove": "移除" }
+  },
+  "edit": {
+    "mode": "编辑模式", "enter": "编辑 PDF", "exit": "完成编辑", "hint": "点击文本进行编辑，或拖动以创建元素。按下列键删除：",
+    "placeHint": "在页面上点击或拖动以放置图片", "toolDefaults": "工具设置", "selectHint": "在页面上选择一个元素以编辑其属性。",
+    "saved": "更改已保存", "savedAs": "已保存编辑后的副本：{{name}}", "confirmExit": "存在未保存的更改。是否放弃？",
+    "unsavedTitle": "未保存的更改", "discard": "放弃", "keepEditing": "继续编辑", "noChanges": "没有需要保存的更改",
+    "tools": { "select": "选择", "text": "文本", "highlight": "高亮", "whiteout": "涂白 / 删除文字", "rect": "矩形", "ellipse": "椭圆", "line": "直线", "check": "对勾", "image": "图片", "signature": "签名", "stamp": "印章" },
+    "kinds": { "text": "文本", "image": "图片", "rect": "矩形", "ellipse": "椭圆", "line": "直线", "check": "对勾", "highlight": "高亮", "redact": "涂白" },
+    "props": { "fontSize": "字号", "font": "字体", "textColor": "文字颜色", "background": "背景", "stroke": "描边颜色", "strokeWidth": "描边宽度", "fill": "填充", "opacity": "不透明度", "color": "颜色", "highlight": "高亮颜色", "width": "宽度", "height": "高度", "rotation": "旋转", "direction": "方向", "auto": "自动", "toFront": "置于顶层" }
+  },
+  "tools": {
+    "title": "PDF 工具", "subtitle": "完全在您的电脑上运行的文件操作。",
+    "pickFiles": "选择 PDF 文件", "pickFile": "选择一个 PDF 文件", "addFiles": "添加文件", "clear": "清除", "run": "运行", "runAndSave": "运行并保存",
+    "output": "输出文件", "outputFolder": "输出文件夹", "done": "完成", "saved": "已保存：{{name}}", "savedMany": "已保存 {{count}} 个文件",
+    "pagesRange": "页面（例如 1-3, 5）", "every": "每 n 页", "angle": "旋转角度", "position": "位置", "text": "文本", "opacity": "不透明度",
+    "fontSize": "字号", "format": "格式", "paper": "纸张大小", "orientation": "方向", "openResult": "打开结果",
+    "merge": { "title": "合并 PDF", "desc": "按您选择的顺序将多个文件合并为一个。", "moveUp": "上移", "moveDown": "下移", "remove": "移除" },
+    "split": { "title": "拆分 PDF", "desc": "拆分为更小的文件：每页、每 n 页或指定范围。", "byEvery": "每 n 页", "byRanges": "范围", "rangesHint": "用分号分隔多个范围：1-3; 4-6; 7-" },
+    "extract": { "title": "提取页面", "desc": "将所选页面提取为新文件。" },
+    "delete": { "title": "删除页面", "desc": "从文件中删除页面。" },
+    "rotate": { "title": "旋转页面", "desc": "旋转全部页面或所选页面。", "allPages": "全部页面" },
+    "reorder": { "title": "重新排序页面", "desc": "输入新的页面顺序（例如 3,1,2,4）。" },
+    "blank": { "title": "插入空白页", "desc": "在指定页面后添加空白页。", "after": "在此页之后" },
+    "insertPdf": { "title": "插入 PDF", "desc": "在指定位置插入另一个文件的页面。", "second": "要插入的文件", "at": "在此页之后" },
+    "images": { "title": "图片 → PDF", "desc": "将 JPG/PNG 图片转换为 PDF。", "pickImages": "选择图片", "fitPaper": "适应纸张大小", "keepSize": "保持图片大小" },
+    "watermark": { "title": "水印", "desc": "在每页添加半透明文字。" },
+    "numbers": { "title": "页码", "desc": "在您需要的位置添加页码。", "bottomCenter": "底部居中", "bottomRight": "右下", "bottomLeft": "左下", "topCenter": "顶部居中" },
+    "compress": { "title": "压缩 PDF", "desc": "优化重存结构（图片不会重新编码）。", "result": "从 {{before}} 压缩至 {{after}}" },
+    "pdfToImages": { "title": "PDF → 图片", "desc": "将每一页导出为 PNG 图片。", "scale": "分辨率" },
+    "pdfToText": { "title": "PDF → 文本", "desc": "将全部文字提取到文本文件。" },
+    "protect": { "title": "密码保护", "desc": "当前引擎版本不支持加密；将在库更新后提供。", "unavailable": "尚未提供" },
+    "ocr": { "title": "扫描 / OCR", "desc": "文字识别功能将在路线图第 7 阶段提供。" }
+  },
+  "documents": {
+    "title": "文档", "subtitle": "您打开或创建过的所有 PDF。", "openFile": "打开 PDF 文件", "newPdf": "新建 PDF 文档",
+    "search": "搜索文档…", "empty": { "title": "暂无文档", "body": "打开一个 PDF 或新建文档，它将显示在这里。", "action": "打开 PDF 文件" },
+    "columns": { "title": "标题", "pages": "页数", "size": "大小", "opened": "修改时间", "status": "状态" },
+    "scanned": "已扫描", "ocrDone": "OCR 已完成", "text": "文本", "missing": "文件缺失", "remove": "从列表中移除",
+    "new": { "title": "新建文档", "paper": "纸张大小", "orientation": "方向", "pages": "页数", "create": "创建", "saveWhere": "选择新文档的保存位置" }
+  },
+  "sheet": {"title":"电子表格","studio":"电子表格工作室","new":"新建电子表格","open":"打开 Excel/CSV 文件","import":"导入","export":"导出","exportXlsx":"导出 Excel (xlsx)","exportCsv":"导出 CSV","exportPdf":"导出 PDF","print":"打印","save":"保存","saveAs":"另存为","untitled":"未命名电子表格","rename":"重命名","titleLabel":"电子表格标题","formula":"公式","cell":"单元格","sheet":"工作表","addSheet":"添加工作表","renameSheet":"重命名工作表","deleteSheet":"删除工作表","lastSheet":"无法删除唯一的工作表","insertRowAbove":"在上方插入行","insertRowBelow":"在下方插入行","insertColStart":"在前面插入列","insertColEnd":"在后面插入列","deleteRow":"删除行","deleteCol":"删除列","merge":"合并单元格","unmerge":"取消合并","bold":"加粗","italic":"斜体","underline":"下划线","alignStart":"左对齐","alignCenter":"居中","alignEnd":"右对齐","format":"格式","fmtGeneral":"常规","fmtNumber":"数字","fmtCurrency":"货币","fmtPercent":"百分比","fmtDate":"日期","fmtText":"文本","decimalsMore":"增加小数位","decimalsLess":"减少小数位","fill":"填充颜色","textColor":"文字颜色","cut":"剪切","copy":"复制","paste":"粘贴","clear":"清除内容","undo":"撤销","redo":"重做","sum":"求和","avg":"平均值","count":"计数","selected":"已选择 {{count}} 个单元格","toInvoice":"根据表格创建发票","fromInvoice":"将发票明细导出到表格","mappingTitle":"将列映射到发票明细项","mappingHint":"选择每个字段对应的列。空行会被跳过，数字将安全解析，不使用浮点运算。","headerRow":"首行为表头","colDescription":"描述","colQty":"数量","colPrice":"单价","colDiscount":"折扣 %","colTax":"税率 %","colRef":"参考号","colNone":"— 无 —","rowsFound":"将转移 {{count}} 条明细","createInvoice":"创建发票","needDescription":"请至少选择描述列和单价列","listCols":{"title":"标题","sheets":"工作表","updated":"修改时间"},"deleted":"已删除","restore":"恢复","trash":"删除","purge":"永久删除","confirmDelete":"删除“{{title}}”？之后仍可恢复。","emptyTitle":"暂无电子表格","emptyDesc":"新建一个电子表格，或打开 Excel/CSV 文件在应用内编辑。","saved":"电子表格已保存","imported":"已导入 {{name}}","exported":"已导出到 {{name}}","importFailed":"无法读取该文件","unsaved":"未保存的更改","closeConfirm":"此电子表格有未保存的更改。是否不保存直接关闭？","functions":"可用函数","formulaHint":"以 = 开头输入公式，例如 =SUM(B2:B10)","errorCell":"公式错误","invoiceItemsTitle":"发票 {{number}} 的明细项","zoom":"缩放","freeze":"冻结首行","search":"在表格中搜索","noMatch":"无匹配项","gridInfo":"{{rows}} 行 × {{cols}} 列","trashTitle":"电子表格回收站","showTrash":"显示已删除","hideTrash":"隐藏已删除"},
+  "ocr": {"title":"光学字符识别 (OCR)","run":"运行 OCR","scope":"范围","scopePage":"当前页","scopeAll":"整个文档","languages":"识别语言","start":"开始识别","stop":"停止","progress":"第 {{page}} 页，共 {{total}} 页","status":{"loading":"正在加载语言引擎…","recognizing":"正在识别文字…","done":"完成","idle":"就绪"},"done":"已识别 {{pages}} 页 · 准确率 {{confidence}}%","copy":"复制文本","saveText":"另存为文本文件","makeSearchable":"使文档可搜索","exportSearchable":"导出可搜索 PDF","noLanguages":"resources/tessdata 中缺少语言文件","missingLanguage":"OCR 语言不可用：{{lang}}","failed":"OCR 失败","searchableDone":"文本现已可在查看器中搜索和选中，并已存入数据库","exportedSearchable":"已导出 {{name}}，包含隐藏文本层","resultText":"提取的文本","page":"第 {{page}} 页","confidence":"准确率","empty":"未识别到文字","lowConfidence":"准确率较低；请尝试其他语言或更清晰的扫描件","scanned":"此文档为扫描件；将使用 OCR 提取文字","hint":"识别在本地离线运行，无需联网。阿拉伯语文档需要启用“阿拉伯语”语言。","textSaved":"文本已保存","selectLanguage":"请至少选择一种语言"},
+  "imp": {"title":"PDF → 智能发票","subtitle":"从 PDF 中提取发票数据和明细项，转换为可编辑的发票","source":"来源","open":"选择 PDF 文件","template":"提取模板","auto":"自动识别（无模板）","matched":"已自动识别模板“{{name}}”","applyTemplate":"应用","saveTemplate":"保存为提取模板","updateTemplate":"更新模板","templateName":"模板名称（通常为供应商名称）","deleteTemplate":"删除模板","templateSaved":"提取模板“{{name}}”已保存","noZones":"保存前请至少添加一个区域","zones":"提取区域","drawHint":"在页面上拖动以绘制区域，然后选择其代表的字段。“明细”区域会被拆分为多列。","zoneField":"字段","removeZone":"移除区域","clearZones":"清除区域","columns":"明细列","addColumn":"添加列","headerRow":"首行为表头","fields":"发票数据","items":"明细项","addItem":"添加明细项","removeItem":"移除","noItems":"未检测到明细项；请绘制“明细”区域并定义其列，或手动添加明细项","checks":"计算校验","checkOk":"合计与文档一致","createInvoice":"创建发票","batch":"批量导入","batchTitle":"批量导入 PDF","batchHint":"文件将使用所选模板（或自动识别）逐一处理，并保存为草稿发票。","pickFiles":"选择 PDF 文件","processing":"正在处理 {{done}} / {{total}}","created":"已创建 {{count}} 张草稿发票","failed":"失败","ready":"就绪","skipped":"已跳过","startBatch":"开始导入","results":"结果","reextract":"重新提取","runOcr":"对此页运行 OCR","ocrNeeded":"此页没有可读文字；请运行 OCR 提取数据","ocrRunning":"正在运行 OCR…","customerMatch":"在数据库中匹配到客户：{{name}}","customerNew":"客户名称将按文档中所写内容存储（之后可关联）","totalExtracted":"文档中的总计","totalComputed":"根据明细项计算的总计","page":"页","of":"共","confidence":"置信度","rawValue":"原始文本","zoom":"缩放","field":{"number":"发票编号","issueDate":"开票日期","dueDate":"到期日","reference":"参考号","customerName":"客户姓名","customerPhone":"客户电话","customerAddress":"客户地址","customerTaxId":"税号","subtotal":"小计","discount":"折扣","tax":"税额","total":"总计","notes":"备注","items":"明细项（表格）"},"col":{"ref":"参考号","description":"描述","qty":"数量","unitPrice":"单价","discount":"折扣 %","tax":"税率 %","total":"总计"},"warn":{"items_total_mismatch":"计算所得的明细总计（{{computed}}）与提取的总计（{{extracted}}）不一致","total_mismatch":"总计不等于小计 + 税额 − 折扣","missing_total":"文档中未检测到总计","missing_number":"未检测到发票编号","missing_customer":"未检测到客户姓名","no_items":"未检测到明细项","date_unparsed":"无法解析日期“{{raw}}”"}},
+  "audit": {"title":"审计日志","subtitle":"所有有影响的操作及其时间戳：发票、付款、客户、设置、备份、安全","search":"搜索日志","allGroups":"全部类型","count":"{{count}} 条记录","export":"导出 CSV","exported":"日志已导出","emptyTitle":"暂无记录","emptyBody":"操作发生后会立即显示在此处。","cols":{"time":"时间","action":"操作","object":"对象","summary":"详情"},"groups":{"invoice":"发票","payment":"付款","customer":"客户","product":"产品","template":"模板","settings":"设置","backup":"备份","demo":"演示数据","security":"安全","spreadsheet":"电子表格","note":"备注","attachment":"附件"},"objects":{"invoice":"发票","customer":"客户","product":"产品","spreadsheet":"电子表格","extraction_template":"提取模板","custom_field":"自定义字段","template":"模板"},"actions":{"invoice.created":"发票已创建","invoice.updated":"发票已更新","invoice.deleted":"发票已删除","invoice.restored":"发票已恢复","invoice.purged":"发票已永久删除","payment.added":"付款已添加","payment.deleted":"付款已删除","customer.created":"客户已创建","customer.updated":"客户已更新","customer.deleted":"客户已删除","product.created":"产品已创建","product.updated":"产品已更新","product.deleted":"产品已删除","template.changed":"模板已更改","settings.changed":"设置已更改","backup.created":"备份已创建","backup.restored":"备份已恢复","demo.loaded":"演示数据已加载","demo.cleared":"演示数据已清除","security.pin_set":"PIN 已设置","security.pin_removed":"PIN 已移除","spreadsheet.created":"电子表格已创建","spreadsheet.updated":"电子表格已更新","spreadsheet.deleted":"电子表格已删除","spreadsheet.restored":"电子表格已恢复","spreadsheet.purged":"电子表格已永久删除","spreadsheet.imported":"电子表格已导入","spreadsheet.exported":"电子表格已导出","note.added":"备注已添加","note.deleted":"备注已删除","attachment.added":"附件已添加","attachment.removed":"附件已移除"}},
+  "notes": {"title":"内部备注","placeholder":"撰写一条不会显示在发票上的备注…","add":"添加","empty":"暂无备注","delete":"删除备注","saved":"备注已添加","saveFirst":"请先保存记录以添加备注和附件"},
+  "att": {"title":"附件","add":"添加文件","empty":"暂无附件","open":"打开","remove":"移除","removed":"附件已移除","added":"已添加 {{count}} 个附件","confirmRemove":"移除附件“{{name}}”？","dropHint":"文件将被复制到应用数据文件夹中"},
+  "cf": {"title":"自定义字段","subtitle":"为您的业务添加专属字段（合同编号、销售代表、地区等），用于发票、客户和产品","entity":"实体","label":"字段标签","type":"类型","showOnInvoice":"在发票上显示","add":"添加字段","delete":"删除字段","confirmDelete":"删除字段“{{label}}”及其所有值？","saved":"字段已保存","empty":"该实体暂无自定义字段","values":"自定义字段","valuesSaved":"值已保存","entities":{"invoice":"发票","customer":"客户","product":"产品","company":"公司"},"types":{"text":"文本","number":"数字","date":"日期","bool":"是/否"}},
+  "drafts": {"banner":"上次会话遗留 {{count}} 份未保存草稿","restore":"恢复","discard":"放弃","discardAll":"全部放弃","restored":"草稿已恢复","autosaved":"草稿已自动保存","title":"恢复草稿"},
+  "time": { "justNow": "刚刚", "minutesAgo": "{{count}} 分钟前", "hoursAgo": "{{count}} 小时前", "daysAgo": "{{count}} 天前" },
+  "status": { "draft": "草稿", "sent": "已发送", "paid": "已付款", "partially_paid": "部分付款", "overdue": "已逾期", "cancelled": "已取消" },
+  "recent": { "open": "打开", "remove": "从列表中移除", "pin": "置顶", "unpin": "取消置顶", "clear": "清空列表", "showInFolder": "在文件夹中显示", "openedAt": "最近打开时间" },
+  "shortcuts": {
+    "title": "键盘快捷键",
+    "open": "打开", "save": "保存", "saveAs": "另存为", "print": "打印", "find": "查找", "undo": "撤销", "redo": "重做",
+    "palette": "命令面板", "settings": "设置", "closeTab": "关闭标签页", "reopenTab": "重新打开标签页", "nextTab": "下一个标签页"
+  }
+}

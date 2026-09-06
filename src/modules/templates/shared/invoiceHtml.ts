@@ -5,7 +5,7 @@
  */
 import type { Invoice, InvoiceItem } from '@shared/invoicing'
 import { formatMoney, formatPercent, formatQuantity, type CurrencyInfo } from '@shared/money'
-import type { CompanyProfile, Language } from '@shared/settings'
+import { type CompanyProfile, intlLocaleOf, type Language, languageDirection } from '@shared/settings'
 import { type BlockStyle, pageSizeMm, type TemplateBlock, type TemplateDefinition } from '@shared/templates'
 import { amountInWords } from '@modules/invoices/shared/amountInWords'
 import { qrSvg } from './qr'
@@ -27,7 +27,11 @@ export interface RenderContext {
   dateFormatter?: (iso: string | null) => string
 }
 
-const DEFAULT_LABELS: Record<Language, Record<string, string>> = {
+/** تسميات الفاتورة المطبوعة متاحة بالعربية/الفرنسية/الإنجليزية؛ اللغات الأخرى تطبع بالإنجليزية (المقبولة دوليًا) ويمكن تعديل التسميات من مصمّم القالب. */
+type LabelsLanguage = 'ar' | 'fr' | 'en'
+const labelsLanguage = (lang: Language): LabelsLanguage => (lang === 'ar' || lang === 'fr' ? lang : 'en')
+
+const DEFAULT_LABELS: Record<LabelsLanguage, Record<string, string>> = {
   ar: {
     invoice: 'فاتورة', quote: 'عرض سعر', proforma: 'فاتورة أولية', receipt: 'وصل', credit_note: 'إشعار دائن', purchase_order: 'أمر شراء', delivery_note: 'وصل تسليم',
     number: 'رقم', issueDate: 'تاريخ الإصدار', dueDate: 'تاريخ الاستحقاق', reference: 'المرجع', purchaseOrder: 'أمر الشراء', billTo: 'الفاتورة إلى', customerNumber: 'رقم العميل',
@@ -87,7 +91,7 @@ export function resolveLanguage(ctx: RenderContext): Language {
 
 export function resolveDirection(ctx: RenderContext): 'rtl' | 'ltr' {
   if (ctx.template.direction !== 'auto') return ctx.template.direction
-  return resolveLanguage(ctx) === 'ar' ? 'rtl' : 'ltr'
+  return languageDirection(resolveLanguage(ctx))
 }
 
 export function qrPayload(ctx: RenderContext): string {
@@ -104,8 +108,8 @@ export function renderInvoiceHtml(ctx: RenderContext): string {
   const lang = resolveLanguage(ctx)
   const dir = resolveDirection(ctx)
   const overrides = Object.fromEntries(Object.entries({ ...(tpl.labels ?? {}), ...(ctx.labels ?? {}) }).filter(([, v]) => typeof v === 'string')) as Record<string, string>
-  const L: Record<string, string> = { ...DEFAULT_LABELS[lang], ...overrides }
-  const numLocale = lang === 'ar' ? 'ar-DZ' : lang === 'fr' ? 'fr-FR' : 'en-GB'
+  const L: Record<string, string> = { ...DEFAULT_LABELS[labelsLanguage(lang)], ...overrides }
+  const numLocale = intlLocaleOf(lang)
   const money = (minor: number) => formatMoney(minor, currency, { locale: numLocale, numberingSystem: 'latn' })
   const money0 = (minor: number) => formatMoney(minor, currency, { locale: numLocale, numberingSystem: 'latn', withSymbol: false })
   const date = ctx.dateFormatter ?? ((iso: string | null) => (iso ? iso.split('-').reverse().join('/') : ''))

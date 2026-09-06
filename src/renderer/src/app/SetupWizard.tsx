@@ -91,7 +91,7 @@ export function SetupWizard() {
           {step === 0 && (
             <div>
               <p className="mb-4 text-[13px] text-muted">{t('wizard.languageHint')}</p>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-3 gap-2 md:grid-cols-4">
                 {LANGUAGES.map((lang) => (
                   <button key={lang.code} type="button" onClick={() => void setLanguage(lang.code as Language)} className={clsx('rounded-lg border p-4 text-center transition-all', settings.language === lang.code ? 'border-accent bg-accent/10 text-accent shadow-soft' : 'border-border hover:bg-surface-2')}>
                     <div className="text-base font-semibold">{lang.label}</div>
