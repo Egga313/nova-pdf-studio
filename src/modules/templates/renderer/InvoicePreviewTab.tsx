@@ -96,6 +96,15 @@ export function InvoicePreviewTab({ tab }: TabComponentProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [invoice, template, html, settings.printing.copies])
 
+  // Ctrl+P / أمر الطباعة العام عندما يكون هذا التبويب نشطًا
+  useEffect(() => {
+    const onPrint = () => {
+      if (useTabs.getState().activeId === tab.id) void print()
+    }
+    window.addEventListener('nova:print', onPrint)
+    return () => window.removeEventListener('nova:print', onPrint)
+  }, [print, tab.id])
+
   // إجراء مطلوب عند الفتح (من محرّر الفاتورة)
   useEffect(() => {
     if (!action || !html || !template) return

@@ -115,6 +115,8 @@ export function EditOverlay({ store, page, scale, spans }: Props) {
     if (!enabled || e.button !== 0) return
     const target = e.target as HTMLElement
     if (target.closest('[data-edit-ui]')) return // النقر داخل محرر نص أو مقبض
+    // إلغاء الإجراء الافتراضي يمنع mousedown اللاحق من نقل التركيز إلى body، وإلا فقد محرر النص الذي نفتحه هنا تركيزه فورًا (onBlur → إغلاق)
+    e.preventDefault()
     const { x, y } = toPage(e)
     const st = store.getState()
     if (tool === 'select') {
@@ -302,9 +304,23 @@ function TextBody({ o, scale, editing, store }: { o: TextObject; scale: number; 
   const ref = useRef<HTMLTextAreaElement>(null)
   useEffect(() => {
     if (editing) {
-      ref.current?.focus()
-      if (!o.replaces) ref.current?.select()
+      const focus = () => {
+        const el = ref.current
+        if (!el || document.activeElement === el) return
+        el.focus()
+        if (!o.replaces) el.select()
+        else el.setSelectionRange(el.value.length, el.value.length)
+      }
+      focus()
+      // إعادة التركيز بعد انتهاء سلسلة أحداث المؤشر التي فتحت المحرر (mousedown/click قد تسحب التركيز)
+      const t1 = window.setTimeout(focus, 0)
+      const t2 = window.setTimeout(focus, 120)
+      return () => {
+        window.clearTimeout(t1)
+        window.clearTimeout(t2)
+      }
     }
+    return undefined
   }, [editing, o.replaces])
   const dir = resolveDirection(o)
   const common: React.CSSProperties = {

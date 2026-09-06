@@ -166,6 +166,14 @@ export function SpreadsheetTab({ tab }: TabComponentProps) {
       notify.error(e)
     }
   }
+  // Ctrl+P / أمر الطباعة العام عندما يكون هذا التبويب نشطًا
+  useEffect(() => {
+    const onPrint = () => {
+      if (useTabs.getState().activeId === tab.id) void print()
+    }
+    window.addEventListener('nova:print', onPrint)
+    return () => window.removeEventListener('nova:print', onPrint)
+  })
   const importInto = async () => {
     try {
       const paths = await invoke('dialog:open-files', { filters: [{ name: 'Spreadsheet', extensions: ['xlsx', 'xls', 'csv'] }], multiple: false })

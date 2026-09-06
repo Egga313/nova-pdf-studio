@@ -238,7 +238,6 @@ function Viewer({ store, tabId, autoOcr = false }: { store: StoreApi<ViewerState
       else if (e.ctrlKey && e.key === '-') { e.preventDefault(); store.getState().zoomBy(1 / 1.2) }
       else if (e.ctrlKey && e.key === '0') { e.preventDefault(); store.getState().setZoomMode('fit-width', scrollerRef.current?.clientWidth, scrollerRef.current?.clientHeight) }
       else if (e.ctrlKey && e.key.toLowerCase() === 'f') { e.preventDefault(); store.getState().setSidebar('search'); setTimeout(() => document.getElementById(`pdf-search-${tabId}`)?.focus(), 30) }
-      else if (e.ctrlKey && e.key.toLowerCase() === 'p') { e.preventDefault(); void doPrint() }
       else if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 's') { e.preventDefault(); void saveAs() }
       else if (!typing && (e.key === 'PageDown' || e.key === 'ArrowRight' && document.dir === 'ltr' || e.key === 'ArrowLeft' && document.dir === 'rtl')) { e.preventDefault(); goTo(store.getState().currentPage + 1) }
       else if (!typing && (e.key === 'PageUp' || e.key === 'ArrowLeft' && document.dir === 'ltr' || e.key === 'ArrowRight' && document.dir === 'rtl')) { e.preventDefault(); goTo(store.getState().currentPage - 1) }
@@ -264,6 +263,15 @@ function Viewer({ store, tabId, autoOcr = false }: { store: StoreApi<ViewerState
       setBusy(null)
     }
   }
+
+  // Ctrl+P / أمر الطباعة العام: يُنفَّذ هنا فقط عندما يكون هذا التبويب هو النشط
+  useEffect(() => {
+    const onPrint = () => {
+      if (useTabs.getState().activeId === tabId) void doPrint()
+    }
+    window.addEventListener('nova:print', onPrint)
+    return () => window.removeEventListener('nova:print', onPrint)
+  })
 
   const saveAs = async () => {
     if (!s.bytes) return

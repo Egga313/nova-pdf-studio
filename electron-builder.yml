@@ -23,13 +23,27 @@ asarUnpack:
 extraResources:
   - from: resources
     to: resources
+# يكتب اسم/وصف/أيقونة الملف التنفيذي عبر rcedit (بديل عن signAndEditExecutable)
+afterPack: build/afterPack.cjs
 win:
   target:
     - nsis
+  icon: build/icon.ico
   artifactName: NOVA-PDF-Studio-Setup-${version}.exe
   # لا توقيع رقمي؛ وتعطيل تحرير موارد exe يمنع تنزيل winCodeSign الذي يحتاج صلاحية إنشاء symlink على Windows
   signAndEditExecutable: false
   forceCodeSigning: false
+  fileAssociations:
+    - ext: pdf
+      name: PDF Document
+      description: PDF Document
+      icon: build/icon.ico
+    - ext: xlsx
+      name: Excel Workbook
+      description: Excel Workbook
+    - ext: csv
+      name: CSV File
+      description: CSV File
 nsis:
   oneClick: false
   allowToChangeInstallationDirectory: true

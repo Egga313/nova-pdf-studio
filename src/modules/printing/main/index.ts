@@ -6,7 +6,8 @@
  *   - printToPDF()   → ملف PDF ناتج (تصدير الفواتير، "حفظ كـ PDF")
  */
 import fsp from 'node:fs/promises'
-import { BrowserWindow, type WebContentsPrintOptions } from 'electron'
+import path from 'node:path'
+import { app, BrowserWindow, type WebContentsPrintOptions } from 'electron'
 import { AppError } from '@shared/errors'
 import { logger } from '@main/logger'
 
@@ -54,8 +55,18 @@ async function openHidden(html: string, timeoutMs = 30_000): Promise<BrowserWind
       reject(new AppError('UNKNOWN', 'errors.print.load_failed', undefined, `${code} ${desc}`))
     })
   })
-  await win.loadURL(`data:text/html;charset=utf-8;base64,${Buffer.from(html, 'utf8').toString('base64')}`)
-  await loaded
+  // لا نستخدم data: URL لأن Chromium يرفض العناوين الأطول من ~2MB (ERR_INVALID_URL) وصفحات PDF كصور تتجاوز ذلك بسهولة؛
+  // نكتب HTML في ملف مؤقت ونحمّله من القرص ثم نحذفه.
+  const tempPath = path.join(app.getPath('temp'), `nova-print-${process.pid}-${Date.now()}-${Math.random().toString(36).slice(2)}.html`)
+  await fsp.writeFile(tempPath, html, 'utf8')
+  win.once('closed', () => void fsp.rm(tempPath, { force: true }).catch(() => undefined))
+  try {
+    await win.loadFile(tempPath)
+    await loaded
+  } catch (e) {
+    win.destroy()
+    throw e
+  }
   // نمنح المحرك لحظة لإكمال تحميل الخطوط والصور المضمّنة
   await new Promise((r) => setTimeout(r, 150))
   return win

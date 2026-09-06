@@ -32,6 +32,8 @@ export function registerCoreCommands(hooks: { openPalette: () => void; lock: () 
     { id: 'nav.audit', titleKey: 'commands.openAudit', section: 'navigation', run: () => tabs().open({ kind: 'audit', title: 't:nav.audit', params: {} }) },
 
     { id: 'pdf.open', titleKey: 'commands.openPdf', section: 'actions', shortcut: 'Ctrl+O', run: () => pickAndOpenPdf() },
+    // الطباعة تُنفَّذ في التبويب النشط (PDF، معاينة فاتورة، جدول) عبر حدث نافذة يستمع إليه التبويب
+    { id: 'doc.print', titleKey: 'shortcuts.print', section: 'actions', shortcut: 'Ctrl+P', run: () => window.dispatchEvent(new CustomEvent('nova:print')) },
     { id: 'pdf.new', titleKey: 'dashboard.actions.newPdf', section: 'actions', run: () => tabs().open({ kind: 'documents', title: 't:nav.documents', params: { new: true } }) },
     { id: 'invoice.new', titleKey: 'commands.newInvoice', section: 'actions', shortcut: 'Ctrl+N', run: () => tabs().open({ kind: 'invoice', title: 't:commands.newInvoice', params: { id: null } }) },
     { id: 'spreadsheet.new', titleKey: 'commands.newSpreadsheet', section: 'actions', run: () => tabs().open({ kind: 'spreadsheet', title: 't:commands.newSpreadsheet', params: { path: null } }) },
