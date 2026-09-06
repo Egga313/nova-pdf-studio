@@ -115,7 +115,7 @@ export function OcrDialog({ open, onClose, store, autoStart }: Props) {
         store.setState({ documentId })
       }
       if (documentId) {
-        for (const r of results) await invoke('documents:save-page-text', { documentId, pageIndex: r.index, text: r.result.text, confidence: r.result.confidence })
+        for (const r of results) await invoke('documents:save-page-text', { documentId, pageIndex: r.index, text: r.result.text, confidence: r.result.confidence, layout: JSON.stringify(r.spans) })
         await invoke('documents:mark-ocr', { documentId })
       }
       store.getState().bumpOcr()

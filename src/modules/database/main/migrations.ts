@@ -331,6 +331,12 @@ INSERT INTO taxes (name, rate_bps, is_default) SELECT 'TVA 0%', 0, 0 WHERE NOT E
 INSERT INTO taxes (name, rate_bps, is_default) SELECT 'TVA 9%', 900, 0 WHERE (SELECT COUNT(*) FROM taxes) = 1;
 INSERT INTO taxes (name, rate_bps, is_default) SELECT 'TVA 19%', 1900, 1 WHERE (SELECT COUNT(*) FROM taxes) = 2;
 `
+  },
+  {
+    version: 2,
+    name: 'document_pages_ocr_layout',
+    // تخطيط أسطر OCR (JSON بإحداثيات النقاط) حتى تُعاد طبقة النص القابلة للبحث عند فتح المستند مجددًا
+    up: `ALTER TABLE document_pages ADD COLUMN layout TEXT;`
   }
 ]
 

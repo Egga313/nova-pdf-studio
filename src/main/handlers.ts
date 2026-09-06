@@ -7,7 +7,7 @@ import { listAudit } from '@modules/database/main/audit'
 import { clearDemoData, demoStatus, loadDemoData } from '@modules/database/main/demo-data'
 import { getDatabase } from '@modules/database/main'
 import { createBackup, listBackups, restoreBackup } from '@modules/backup/main'
-import { listDocuments, markOcrDone, registerDocument, removeDocument, savePageText } from '@modules/pdf/main/documents'
+import { getPageLayouts, listDocuments, markOcrDone, registerDocument, removeDocument, savePageText } from '@modules/pdf/main/documents'
 import { deleteCustomer, getCustomer, listCustomers, nextCustomerNumber, purgeCustomer, restoreCustomer, saveCustomer, searchCustomers } from '@modules/customers/main/repository'
 import { deleteProduct, getProduct, listCategories, listProducts, restoreProduct, saveProduct, searchProducts } from '@modules/products/main/repository'
 import {
@@ -162,7 +162,8 @@ export function registerCoreHandlers(): void {
   handle('documents:list', (req) => listDocuments(req?.limit ?? 200, req?.query))
   handle('documents:register', (req) => registerDocument(req))
   handle('documents:remove', ({ id }) => removeDocument(id))
-  handle('documents:save-page-text', ({ documentId, pageIndex, text, confidence }) => savePageText(documentId, pageIndex, text, confidence))
+  handle('documents:save-page-text', ({ documentId, pageIndex, text, confidence, layout }) => savePageText(documentId, pageIndex, text, confidence, layout))
+  handle('documents:page-layouts', ({ documentId }) => getPageLayouts(documentId))
   handle('documents:mark-ocr', ({ documentId }) => markOcrDone(documentId))
 
   // ---- العملاء ----

@@ -51,14 +51,21 @@ export function registerDocument(input: { path: string | null; title?: string; k
   return map(db.get<Row>('SELECT * FROM documents WHERE id = ?', [lastInsertRowid])!)
 }
 
-export function savePageText(documentId: number, pageIndex: number, text: string, ocrConfidence?: number): void {
+export function savePageText(documentId: number, pageIndex: number, text: string, ocrConfidence?: number, layout?: string): void {
   getDatabase().run(
-    `INSERT INTO document_pages (document_id, page_index, text_content, ocr_confidence)
-     VALUES (?, ?, ?, ?)
+    `INSERT INTO document_pages (document_id, page_index, text_content, ocr_confidence, layout)
+     VALUES (?, ?, ?, ?, ?)
      ON CONFLICT(document_id, page_index) DO UPDATE SET text_content=excluded.text_content, ocr_confidence=excluded.ocr_confidence,
-       updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now')`,
-    [documentId, pageIndex, text, ocrConfidence ?? null]
+       layout=COALESCE(excluded.layout, document_pages.layout), updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now')`,
+    [documentId, pageIndex, text, ocrConfidence ?? null, layout ?? null]
   )
+}
+
+/** تخطيط نص OCR المحفوظ (أسطر بإحداثيات النقاط) لإعادة بنائه كطبقة نص عند فتح المستند مجددًا. */
+export function getPageLayouts(documentId: number): { pageIndex: number; layout: string }[] {
+  return getDatabase()
+    .all<{ page_index: number; layout: string | null }>('SELECT page_index, layout FROM document_pages WHERE document_id = ? AND layout IS NOT NULL ORDER BY page_index', [documentId])
+    .map((r) => ({ pageIndex: r.page_index, layout: r.layout as string }))
 }
 
 export function markOcrDone(documentId: number): void {

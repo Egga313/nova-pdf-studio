@@ -71,7 +71,8 @@ export interface IpcContract {
   'documents:list': { req: { limit?: number; query?: string } | void; res: DocumentRecord[] }
   'documents:register': { req: { path: string | null; title?: string; kind?: DocumentRecord['kind']; sizeBytes?: number | null; pageCount: number; isScanned?: boolean }; res: DocumentRecord }
   'documents:remove': { req: { id: number }; res: void }
-  'documents:save-page-text': { req: { documentId: number; pageIndex: number; text: string; confidence?: number }; res: void }
+  'documents:save-page-text': { req: { documentId: number; pageIndex: number; text: string; confidence?: number; layout?: string }; res: void }
+  'documents:page-layouts': { req: { documentId: number }; res: { pageIndex: number; layout: string }[] }
   'documents:mark-ocr': { req: { documentId: number }; res: void }
 
   // ---- العملاء ----
@@ -164,7 +165,7 @@ export const IPC_CHANNELS: readonly IpcChannel[] = [
   'dashboard:stats',
   'audit:list', 'demo:load', 'demo:clear', 'demo:status',
   'security:set-pin', 'security:remove-pin', 'security:verify-pin', 'security:status',
-  'documents:list', 'documents:register', 'documents:remove', 'documents:save-page-text', 'documents:mark-ocr',
+  'documents:list', 'documents:register', 'documents:remove', 'documents:save-page-text', 'documents:page-layouts', 'documents:mark-ocr',
   'customers:list', 'customers:get', 'customers:save', 'customers:delete', 'customers:restore', 'customers:purge', 'customers:search', 'customers:next-number',
   'products:list', 'products:get', 'products:save', 'products:delete', 'products:restore', 'products:search', 'products:categories',
   'invoices:list', 'invoices:get', 'invoices:save', 'invoices:set-status', 'invoices:trash', 'invoices:restore', 'invoices:purge', 'invoices:duplicate',

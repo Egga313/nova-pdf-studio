@@ -6,7 +6,7 @@ import { createStore, type StoreApi } from 'zustand'
 import { useStore } from 'zustand'
 import { AppError } from '@shared/errors'
 import { invoke } from '@renderer/lib/ipc'
-import { type OutlineItem, type PageInfo, PdfEngine, type SearchHit } from './pdfEngine'
+import { type OutlineItem, type PageInfo, PdfEngine, type SearchHit, type TextSpan } from './pdfEngine'
 
 export type ZoomMode = 'fit-width' | 'fit-page' | 'custom'
 export type SidebarMode = 'none' | 'thumbnails' | 'bookmarks' | 'search'
@@ -119,7 +119,21 @@ export function createViewerStore(path: string | null, fileName: string): StoreA
         set({ engine, pages, outline, metadata, isScanned, status: 'ready', currentPage: 0 })
         if (filePath) {
           invoke('documents:register', { path: filePath, title: name, pageCount: pages.length, sizeBytes: bytes.byteLength, isScanned })
-            .then((doc) => set({ documentId: doc.id }))
+            .then(async (doc) => {
+              set({ documentId: doc.id })
+              // نص OCR محفوظ سابقًا: يُعاد كطبقة نص (بحث/تحديد/نسخ) بلا إعادة تعرف
+              if (doc.ocrDone && get().engine === engine) {
+                const layouts = await invoke('documents:page-layouts', { documentId: doc.id })
+                for (const l of layouts) {
+                  try {
+                    engine.setOcrSpans(l.pageIndex, JSON.parse(l.layout) as TextSpan[])
+                  } catch {
+                    /* تخطيط تالف: نتجاهله */
+                  }
+                }
+                if (layouts.length) set((s) => ({ ocrVersion: s.ocrVersion + 1, scannedNoticeDismissed: true }))
+              }
+            })
             .catch(() => undefined)
         }
       } catch (error) {
