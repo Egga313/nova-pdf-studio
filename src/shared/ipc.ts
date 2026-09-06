@@ -7,6 +7,7 @@ import type { AppSettings } from './settings'
 import type { AppInfo, AuditLog, Currency, DashboardStats, FileFilter, RecentFile, RecentFileKind, Tax } from './entities'
 import type { DocumentRecord, PdfExportRequest, PrintJobRequest } from './documents'
 import type { InvoiceTemplate, TemplateInput } from './templates'
+import type { SpreadsheetDetail, SpreadsheetExportType, SpreadsheetListFilters, SpreadsheetRecord, SpreadsheetSaveInput } from './spreadsheets'
 import type {
   Customer, CustomerInput, CustomerSummary, DocType, Invoice, InvoiceFilters, InvoiceInput, InvoiceListRow, InvoiceStatus, OutstandingItem,
   PaymentInput, Product, ProductInput
@@ -118,6 +119,16 @@ export interface IpcContract {
   'brand:pick': { req: { kind: 'logo' | 'signature' | 'stamp' }; res: string | null }
   'brand:clear': { req: { kind: 'logo' | 'signature' | 'stamp' }; res: void }
 
+  // ---- جداول البيانات ----
+  'spreadsheets:list': { req: SpreadsheetListFilters | void; res: SpreadsheetRecord[] }
+  'spreadsheets:get': { req: { id: number }; res: SpreadsheetDetail | null }
+  'spreadsheets:save': { req: SpreadsheetSaveInput; res: SpreadsheetRecord }
+  'spreadsheets:delete': { req: { id: number }; res: void }
+  'spreadsheets:restore': { req: { id: number }; res: void }
+  'spreadsheets:purge': { req: { id: number }; res: void }
+  'spreadsheets:import-file': { req: { path: string }; res: { title: string; data: string; sheetCount: number } }
+  'spreadsheets:export-file': { req: { path: string; data: string; bookType: SpreadsheetExportType }; res: { sizeBytes: number } }
+
   // ---- الطباعة والتصدير (محرك Chromium) ----
   'printers:list': { req: void; res: { name: string; displayName: string; isDefault: boolean; status: number }[] }
   'print:html': { req: PrintJobRequest; res: { success: boolean; reason?: string } }
@@ -150,6 +161,7 @@ export const IPC_CHANNELS: readonly IpcChannel[] = [
   'invoices:next-number', 'invoices:outstanding', 'invoices:set-pdf-path', 'payments:add', 'payments:delete', 'search:global',
   'templates:list', 'templates:get', 'templates:default', 'templates:save', 'templates:duplicate', 'templates:set-default', 'templates:delete', 'templates:reset-builtin',
   'brand:assets', 'brand:pick', 'brand:clear',
+  'spreadsheets:list', 'spreadsheets:get', 'spreadsheets:save', 'spreadsheets:delete', 'spreadsheets:restore', 'spreadsheets:purge', 'spreadsheets:import-file', 'spreadsheets:export-file',
   'printers:list', 'print:html', 'print:html-to-pdf',
   'backup:create', 'backup:restore', 'backup:list', 'backup:export-db'
 ]

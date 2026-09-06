@@ -3,7 +3,7 @@
  * كل الأرقام تُحسب فورًا عبر المحرّك المركزي، والحفظ يعيد الحساب في العملية الرئيسية ويعيد الفاتورة المخزّنة.
  */
 import { clsx } from 'clsx'
-import { Ban, Check, CreditCard, FileDown, Printer, Save, Search, Send, Trash2, UserPlus, X } from 'lucide-react'
+import { Ban, Check, CreditCard, FileDown, Printer, Save, Search, Send, Table2, Trash2, UserPlus, X } from 'lucide-react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { StoreApi } from 'zustand'
@@ -53,7 +53,13 @@ export function InvoiceEditor({ tab }: TabComponentProps) {
       paymentTerms: settings.invoice.defaultPaymentTerms, templateId: null, shippingMinor: 0, feesMinor: 0, amountInWords: settings.invoice.amountInWords,
       source: 'manual', sourceDocumentId: null
     }
-    storeRef.current = createDraftStore(header, [{ ...emptyLike(defaultTax), key: 'row-0' } as never])
+    // بنود مسبقة (من جدول بيانات مثلًا) تُدخل عبر المعاملات ثم تمرّ بمحرك الحساب كأي بند يدوي
+    const prefill = tab.params.prefillItems as Record<string, unknown>[] | undefined
+    if (prefill?.length) header.source = (tab.params.source as DraftHeader['source'] | undefined) ?? 'spreadsheet'
+    storeRef.current = createDraftStore(
+      header,
+      prefill?.length ? prefill.map((it, i) => ({ ...emptyLike(defaultTax), ...it, key: `row-${i}` }) as never) : [{ ...emptyLike(defaultTax), key: 'row-0' } as never]
+    )
   }
   const store = storeRef.current
   const header = useDraft(store, (s) => s.header)
@@ -159,6 +165,10 @@ export function InvoiceEditor({ tab }: TabComponentProps) {
           <Button size="sm" variant="ghost" icon={<Printer className="h-3.5 w-3.5" />} disabled={!header.id} onClick={() => header.id && openTab({ kind: 'invoice-preview', title: header.number ?? '', params: { id: header.id, action: 'print' } })}>{t('inv.editor.print')}</Button>
           <Button size="sm" variant="ghost" icon={<FileDown className="h-3.5 w-3.5" />} disabled={!header.id} onClick={() => header.id && openTab({ kind: 'invoice-preview', title: header.number ?? '', params: { id: header.id, action: 'export' } })}>{t('inv.editor.exportPdf')}</Button>
           <Button size="sm" variant="ghost" icon={<Search className="h-3.5 w-3.5" />} disabled={!header.id} onClick={() => header.id && openTab({ kind: 'invoice-preview', title: header.number ?? '', params: { id: header.id } })}>{t('inv.editor.preview')}</Button>
+          <Button size="sm" variant="ghost" icon={<Table2 className="h-3.5 w-3.5" />} title={t('sheet.fromInvoice')}
+            onClick={() => openTab({ kind: 'spreadsheet', title: t('sheet.invoiceItemsTitle', { number: header.number ?? nextNumber }), params: { fromInvoice: { number: header.number ?? nextNumber, items: store.getState().items.map(({ key: _k, ...rest }) => rest) } } })}>
+            {t('sheet.fromInvoice')}
+          </Button>
           <span className="mx-1 h-5 w-px bg-border" />
           <Button size="sm" variant="ghost" icon={<CreditCard className="h-3.5 w-3.5" />} disabled={!header.id || header.status === 'cancelled'} onClick={() => setPayDialog(true)}>{t('inv.actions.addPayment')}</Button>
           {header.status === 'draft' && <Button size="sm" variant="ghost" icon={<Send className="h-3.5 w-3.5" />} onClick={() => void setStatus('sent')}>{t('inv.actions.markSent')}</Button>}

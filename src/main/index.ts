@@ -98,13 +98,14 @@ function installDevAutomation(window: BrowserWindow): void {
   void (async () => {
     const fs = await import('node:fs/promises')
     try {
-      const plan = JSON.parse(await fs.readFile(scriptPath, 'utf8')) as { steps: Array<{ eval?: string; wait?: number; shot?: string }>; exit?: boolean }
+      const plan = JSON.parse(await fs.readFile(scriptPath, 'utf8')) as { steps: Array<{ eval?: string; wait?: number; shot?: string; openFile?: string }>; exit?: boolean }
       for (const step of plan.steps) {
         if (step.wait) await new Promise((r) => setTimeout(r, step.wait))
         if (step.eval) {
           const result = await window.webContents.executeJavaScript(step.eval, true)
           logger.info('automation eval', { code: step.eval.slice(0, 80), result })
         }
+        if (step.openFile) window.webContents.send('app:open-file-request', { path: step.openFile })
         if (step.shot) {
           const image = await window.webContents.capturePage()
           await fs.writeFile(step.shot, image.toPNG())

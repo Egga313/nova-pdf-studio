@@ -13,6 +13,8 @@ import { DocumentsTab } from '@modules/pdf/renderer/DocumentsTab'
 import { PdfViewerTab } from '@modules/pdf/renderer/PdfViewerTab'
 import { ToolsTab } from '@modules/pdf/renderer/ToolsTab'
 import { SettingsTab } from '@modules/settings/renderer/SettingsTab'
+import { SpreadsheetTab } from '@modules/spreadsheet/renderer/SpreadsheetTab'
+import { SpreadsheetsTab } from '@modules/spreadsheet/renderer/SpreadsheetsTab'
 import type { Tab, TabKind } from '@renderer/stores/tabs'
 import { PhasePlaceholder } from './PhasePlaceholder'
 
@@ -36,8 +38,8 @@ const registry: Partial<Record<TabKind, ComponentType<TabComponentProps>>> = {
   products: ProductsTab,
   templates: TemplatesTab,
   'template-designer': TemplateDesigner,
-  spreadsheets: (p) => <PhasePlaceholder tab={p.tab} phase={6} />,
-  spreadsheet: (p) => <PhasePlaceholder tab={p.tab} phase={6} />,
+  spreadsheets: SpreadsheetsTab,
+  spreadsheet: SpreadsheetTab,
   audit: (p) => <PhasePlaceholder tab={p.tab} phase={8} />
 }
 

@@ -67,6 +67,7 @@ export type AuditAction =
   | 'product.created' | 'product.updated' | 'product.deleted'
   | 'template.changed' | 'settings.changed' | 'backup.created' | 'backup.restored'
   | 'demo.loaded' | 'demo.cleared' | 'security.pin_set' | 'security.pin_removed'
+  | 'spreadsheet.created' | 'spreadsheet.updated' | 'spreadsheet.deleted' | 'spreadsheet.restored' | 'spreadsheet.purged' | 'spreadsheet.imported' | 'spreadsheet.exported'
 
 export interface AuditLog {
   id: number

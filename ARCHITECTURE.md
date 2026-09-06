@@ -14,7 +14,7 @@
 | Money | integer minor units + basis points | `1050.50 DZD` is stored as `105050`; 19 % is `1900` bps; quantities in thousandths. No floats anywhere in financial math. |
 | PDF | pdf.js (render/text) + pdf-lib (edit/build) | Phases 2–3. |
 | OCR | tesseract.js (offline language packs) | Phase 7. |
-| Spreadsheet | SheetJS import/export + in-app grid | Phase 6. |
+| Spreadsheet | SheetJS import/export + in-app virtualized grid + own formula engine (`modules/spreadsheet/shared/formula.ts`) | Workbook stored as JSON in `spreadsheet_documents`; money never leaves the integer engine — sheet → invoice goes through `parseMinor`/`parseQuantity`. |
 
 The platform layer (file dialogs, file IO, printing, paths) lives only in `src/main` and `src/preload`; the renderer never touches Node. Porting to Tauri means re-implementing `src/main/handlers.ts` behind the same `IpcContract`.
 
@@ -89,7 +89,7 @@ Dev-only automation: `NOVA_AUTOMATION=plan.json` runs eval/screenshot steps agai
 - [x] Phase 2 — PDF viewer (pdf.js, lazy pages, text layer, thumbnails, bookmarks, search, zoom/rotate/fullscreen), print & export through Chromium, PDF tools (merge/split/extract/delete/reorder/rotate/blank/insert/images/watermark/numbers/compress/to-images/to-text), documents registry
 - [x] Phase 3 — PDF edit mode: overlay objects (text, image/signature/stamp, rect/ellipse/line/check, highlight, white-out), click-to-edit original text (white-out + replacement), drag/resize/properties, undo/redo, save/save-as baked with pdf-lib (Latin text as real text, other scripts rasterized via Canvas)
 - [x] Phase 4 — invoices (draft/sent/paid/partial/overdue/cancelled, auto numbering, trash/restore), customers (profile, balances), products (autocomplete), tax profiles, central integer calculation engine (tested), payments with live remaining balance, amount in words (ar/fr/en), Excel paste into the items grid
-- [ ] Phase 5 — invoice PDF generator, templates, designer, printing
-- [ ] Phase 6 — spreadsheet studio, XLSX import/export, formulas, invoice integration
+- [x] Phase 5 — invoice HTML renderer (mm-positioned blocks, RTL/LTR, amount in words, QR, signature/stamp), 6 built-in templates + custom, gallery with live thumbnails, drag-and-drop designer with properties, preview tab, print & PDF export through Chromium (real Arabic text), share menu scaffold
+- [x] Phase 6 — spreadsheet studio: formula engine (SUM/AVERAGE/MIN/MAX/COUNT/IF/ROUND/…, A1 refs & ranges, Excel error codes, cycle detection), workbook model with dependency-aware recalc, row/column insert/delete with reference shifting, merges, styles/number formats, undo/redo, virtualized RTL-aware grid with formula bar, sheets, clipboard (incl. Excel TSV), context menu, column resize; SheetJS import/export (xlsx/csv), PDF export & print through Chromium; saved spreadsheets in SQLite (soft delete); Spreadsheet → Invoice column mapping (integer money parsing) and Invoice → Spreadsheet export
 - [ ] Phase 7 — OCR, PDF → smart invoice, zones, extraction templates
 - [ ] Phase 8 — security, audit UI, performance, testing, polish

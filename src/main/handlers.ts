@@ -19,6 +19,9 @@ import {
   deleteTemplate, duplicateTemplate, getDefaultTemplate, getTemplate, listTemplates, readBrandAssets, resetBuiltinTemplates, saveTemplate, setBrandAsset,
   setDefaultTemplate
 } from '@modules/templates/main/repository'
+import {
+  deleteSpreadsheet, exportSpreadsheetFile, getSpreadsheet, importSpreadsheetFile, listSpreadsheets, purgeSpreadsheet, restoreSpreadsheet, saveSpreadsheet
+} from '@modules/spreadsheet/main/repository'
 import { getDashboardStats } from '@modules/settings/main/dashboard'
 import { addRecent, clearRecent, listRecent, pinRecent, removeRecent } from '@modules/settings/main/recent-files'
 import { getSettings, updateSettings } from '@modules/settings/main/repository'
@@ -219,6 +222,16 @@ export function registerCoreHandlers(): void {
     if (kind === 'logo') updateSettings({ company: { ...getSettings().company, logoPath: null } })
     else await setBrandAsset(paths.dataDir, kind, null)
   })
+
+  // ---- جداول البيانات ----
+  handle('spreadsheets:list', (req) => listSpreadsheets(req ?? {}))
+  handle('spreadsheets:get', ({ id }) => getSpreadsheet(id))
+  handle('spreadsheets:save', (req) => saveSpreadsheet(req))
+  handle('spreadsheets:delete', ({ id }) => deleteSpreadsheet(id))
+  handle('spreadsheets:restore', ({ id }) => restoreSpreadsheet(id))
+  handle('spreadsheets:purge', ({ id }) => purgeSpreadsheet(id))
+  handle('spreadsheets:import-file', ({ path: p }) => importSpreadsheetFile(p))
+  handle('spreadsheets:export-file', ({ path: p, data, bookType }) => exportSpreadsheetFile(p, data, bookType))
 
   // ---- الطباعة والتصدير ----
   handle('printers:list', () => listPrinters(focused()))
