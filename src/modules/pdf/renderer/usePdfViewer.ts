@@ -32,6 +32,7 @@ export interface ViewerState {
   search: { query: string; hits: SearchHit[]; current: number; running: boolean; progress: number }
   dirty: boolean              // تعديلات غير محفوظة (المرحلة 3)
   fullscreen: boolean
+  ocrVersion: number          // يزداد بعد كل OCR حتى تعيد الصفحات جلب طبقة النص
 
   load: (password?: string) => Promise<void>
   loadBytes: (bytes: Uint8Array, name: string, path?: string | null, password?: string) => Promise<void>
@@ -46,6 +47,7 @@ export interface ViewerState {
   stepSearch: (delta: 1 | -1) => void
   clearSearch: () => void
   dismissScannedNotice: () => void
+  bumpOcr: () => void
   setFullscreen: (on: boolean) => void
   destroy: () => void
 }
@@ -89,6 +91,7 @@ export function createViewerStore(path: string | null, fileName: string): StoreA
     search: { query: '', hits: [], current: -1, running: false, progress: 0 },
     dirty: false,
     fullscreen: false,
+    ocrVersion: 0,
 
     load: async (password) => {
       const { path: filePath } = get()
@@ -183,6 +186,7 @@ export function createViewerStore(path: string | null, fileName: string): StoreA
     },
 
     dismissScannedNotice: () => set({ scannedNoticeDismissed: true }),
+    bumpOcr: () => set((s) => ({ ocrVersion: s.ocrVersion + 1 })),
     setFullscreen: (on) => set({ fullscreen: on }),
 
     destroy: () => {

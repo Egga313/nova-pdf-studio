@@ -9,6 +9,7 @@ import { ProductsTab } from '@modules/products/renderer/ProductsTab'
 import { InvoicePreviewTab } from '@modules/templates/renderer/InvoicePreviewTab'
 import { TemplateDesigner } from '@modules/templates/renderer/TemplateDesigner'
 import { TemplatesTab } from '@modules/templates/renderer/TemplatesTab'
+import { PdfImportTab } from '@modules/import/renderer/PdfImportTab'
 import { DocumentsTab } from '@modules/pdf/renderer/DocumentsTab'
 import { PdfViewerTab } from '@modules/pdf/renderer/PdfViewerTab'
 import { ToolsTab } from '@modules/pdf/renderer/ToolsTab'
@@ -40,6 +41,7 @@ const registry: Partial<Record<TabKind, ComponentType<TabComponentProps>>> = {
   'template-designer': TemplateDesigner,
   spreadsheets: SpreadsheetsTab,
   spreadsheet: SpreadsheetTab,
+  'pdf-import': PdfImportTab,
   audit: (p) => <PhasePlaceholder tab={p.tab} phase={8} />
 }
 

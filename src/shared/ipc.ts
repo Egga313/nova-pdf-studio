@@ -8,6 +8,8 @@ import type { AppInfo, AuditLog, Currency, DashboardStats, FileFilter, RecentFil
 import type { DocumentRecord, PdfExportRequest, PrintJobRequest } from './documents'
 import type { InvoiceTemplate, TemplateInput } from './templates'
 import type { SpreadsheetDetail, SpreadsheetExportType, SpreadsheetListFilters, SpreadsheetRecord, SpreadsheetSaveInput } from './spreadsheets'
+import type { OcrProgress, OcrRequest, OcrResult } from './ocr'
+import type { ExtractionTemplate, ExtractionTemplateInput } from './extraction'
 import type {
   Customer, CustomerInput, CustomerSummary, DocType, Invoice, InvoiceFilters, InvoiceInput, InvoiceListRow, InvoiceStatus, OutstandingItem,
   PaymentInput, Product, ProductInput
@@ -19,6 +21,7 @@ export interface IpcContract {
   'app:open-path': { req: { path: string }; res: void }
   'app:show-in-folder': { req: { path: string }; res: void }
   'app:log': { req: { level: 'info' | 'warn' | 'error'; message: string; details?: string }; res: void }
+  'app:read-resource': { req: { relativePath: string }; res: Uint8Array }
 
   // ---- الحوارات والملفات ----
   'dialog:open-files': { req: { filters?: FileFilter[]; multiple?: boolean; title?: string }; res: string[] }
@@ -129,6 +132,13 @@ export interface IpcContract {
   'spreadsheets:import-file': { req: { path: string }; res: { title: string; data: string; sheetCount: number } }
   'spreadsheets:export-file': { req: { path: string; data: string; bookType: SpreadsheetExportType }; res: { sizeBytes: number } }
 
+  // ---- OCR والاستخراج (PDF → فاتورة) ----
+  'ocr:recognize': { req: OcrRequest; res: OcrResult }
+  'ocr:languages': { req: void; res: string[] }
+  'extraction:list': { req: void; res: ExtractionTemplate[] }
+  'extraction:save': { req: ExtractionTemplateInput; res: ExtractionTemplate }
+  'extraction:delete': { req: { id: number }; res: void }
+
   // ---- الطباعة والتصدير (محرك Chromium) ----
   'printers:list': { req: void; res: { name: string; displayName: string; isDefault: boolean; status: number }[] }
   'print:html': { req: PrintJobRequest; res: { success: boolean; reason?: string } }
@@ -146,7 +156,7 @@ export type IpcRequest<K extends IpcChannel> = IpcContract[K]['req']
 export type IpcResponse<K extends IpcChannel> = IpcContract[K]['res']
 
 export const IPC_CHANNELS: readonly IpcChannel[] = [
-  'app:info', 'app:open-path', 'app:show-in-folder', 'app:log',
+  'app:info', 'app:open-path', 'app:show-in-folder', 'app:log', 'app:read-resource',
   'dialog:open-files', 'dialog:save-file', 'dialog:pick-folder', 'file:read', 'file:write', 'file:stat',
   'settings:get', 'settings:update', 'settings:pick-logo', 'settings:read-logo',
   'taxes:list', 'taxes:save', 'taxes:delete', 'currencies:list', 'currencies:save', 'currencies:delete',
@@ -162,6 +172,7 @@ export const IPC_CHANNELS: readonly IpcChannel[] = [
   'templates:list', 'templates:get', 'templates:default', 'templates:save', 'templates:duplicate', 'templates:set-default', 'templates:delete', 'templates:reset-builtin',
   'brand:assets', 'brand:pick', 'brand:clear',
   'spreadsheets:list', 'spreadsheets:get', 'spreadsheets:save', 'spreadsheets:delete', 'spreadsheets:restore', 'spreadsheets:purge', 'spreadsheets:import-file', 'spreadsheets:export-file',
+  'ocr:recognize', 'ocr:languages', 'extraction:list', 'extraction:save', 'extraction:delete',
   'printers:list', 'print:html', 'print:html-to-pdf',
   'backup:create', 'backup:restore', 'backup:list', 'backup:export-db'
 ]
@@ -174,5 +185,6 @@ export interface IpcEvents {
   'app:open-file-request': { path: string }
   'app:lock': void
   'backup:completed': { path: string }
+  'ocr:progress': OcrProgress
 }
 export type IpcEventName = keyof IpcEvents

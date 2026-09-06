@@ -7,7 +7,7 @@ import { useTabs, type Tab } from '@renderer/stores/tabs'
 
 const ICONS: Partial<Record<Tab['kind'], typeof Home>> = {
   dashboard: Home, settings: Settings, pdf: FileText, 'pdf-new': FileText, invoices: Receipt, invoice: Receipt,
-  customers: Users, customer: Users, spreadsheets: Table2, spreadsheet: Table2
+  customers: Users, customer: Users, spreadsheets: Table2, spreadsheet: Table2, 'pdf-import': Receipt
 }
 
 export function TabBar() {

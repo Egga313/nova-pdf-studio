@@ -20,9 +20,10 @@ interface Props {
   textLayer?: boolean
   editor?: StoreApi<EditorState>
   editing?: boolean
+  textVersion?: number
 }
 
-export const PdfPage = memo(function PdfPage({ engine, page, scale, rotation, hits, activeHit, onVisible, textLayer = true, editor, editing = false }: Props) {
+export const PdfPage = memo(function PdfPage({ engine, page, scale, rotation, hits, activeHit, onVisible, textLayer = true, editor, editing = false, textVersion = 0 }: Props) {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [near, setNear] = useState(false)
@@ -67,7 +68,7 @@ export const PdfPage = memo(function PdfPage({ engine, page, scale, rotation, hi
       cancelled = true
       cancelRender?.()
     }
-  }, [engine, page.index, scale, rotation, near, textLayer])
+  }, [engine, page.index, scale, rotation, near, textLayer, textVersion])
 
   const pageHits = hits.filter((h) => h.page === page.index)
 

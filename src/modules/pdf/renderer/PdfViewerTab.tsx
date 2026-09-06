@@ -19,6 +19,7 @@ import { notify } from '@renderer/stores/notifications'
 import { useSettings } from '@renderer/stores/settings'
 import { useTabs } from '@renderer/stores/tabs'
 import { applyEdits } from '../shared/applyEdits'
+import { OcrDialog } from '@modules/ocr/renderer/OcrDialog'
 import { EditToolbar } from './EditToolbar'
 import type { OutlineItem } from './pdfEngine'
 import { PdfPage } from './PdfPage'
@@ -49,7 +50,7 @@ export function PdfViewerTab({ tab }: TabComponentProps) {
   if (status === 'loading' || status === 'idle') return <Centered><Spinner /></Centered>
   if (status === 'password') return <PasswordGate store={store} />
   if (status === 'error') return <ErrorState store={store} />
-  return <Viewer store={store} tabId={tab.id} />
+  return <Viewer store={store} tabId={tab.id} autoOcr={!!tab.params.ocr} />
 }
 
 function Centered({ children }: { children: React.ReactNode }) {
@@ -88,7 +89,7 @@ function ErrorState({ store }: { store: StoreApi<ViewerState> }) {
 }
 
 // ------------------------------------------------------------------ العارض
-function Viewer({ store, tabId }: { store: StoreApi<ViewerState>; tabId: string }) {
+function Viewer({ store, tabId, autoOcr = false }: { store: StoreApi<ViewerState>; tabId: string; autoOcr?: boolean }) {
   const { t } = useTranslation()
   const s = useViewer(store, (st) => st)
   const settings = useSettings((st) => st.settings)
@@ -100,6 +101,10 @@ function Viewer({ store, tabId }: { store: StoreApi<ViewerState>; tabId: string 
   const programmaticScroll = useRef(false)
   const openTab = useTabs((st) => st.open)
   const setTabDirty = useTabs((st) => st.setDirty)
+  const [ocrOpen, setOcrOpen] = useState(autoOcr)
+  useEffect(() => {
+    if (autoOcr) setOcrOpen(true)
+  }, [autoOcr])
 
   // ---- وضع التعديل ----
   const editorRef = useRef<StoreApi<EditorState> | null>(null)
@@ -359,12 +364,13 @@ function Viewer({ store, tabId }: { store: StoreApi<ViewerState>; tabId: string 
         <IconBtn title={t('pdf.search')} active={s.sidebar === 'search'} onClick={() => { s.setSidebar('search'); setTimeout(() => document.getElementById(`pdf-search-${tabId}`)?.focus(), 30) }}><Search className="h-4 w-4" /></IconBtn>
         <IconBtn title={t('pdf.selectAllText')} onClick={() => void copyPageText()}><Copy className="h-4 w-4" /></IconBtn>
         <IconBtn title={t('pdf.info')} onClick={() => setInfoOpen(true)}><Info className="h-4 w-4" /></IconBtn>
+        <IconBtn title={t('ocr.run')} onClick={() => setOcrOpen(true)}><ScanText className="h-4 w-4" /></IconBtn>
 
         <div className="ms-auto flex items-center gap-1">
           {!editing && (
             <Button size="sm" variant="primary" icon={<PenLine className="h-3.5 w-3.5" />} onClick={() => { s.resetRotation(); editor.getState().setEnabled(true) }}>{t('edit.enter')}</Button>
           )}
-          <Button size="sm" variant="ghost" icon={<Receipt className="h-3.5 w-3.5" />} onClick={() => openTab({ kind: 'invoice', title: 't:pdf.convertToInvoice', params: { fromPdf: s.path, bytes: s.bytes } })}>{t('pdf.convertToInvoice')}</Button>
+          <Button size="sm" variant="ghost" icon={<Receipt className="h-3.5 w-3.5" />} onClick={() => openTab({ id: s.path ? `import:${s.path}` : undefined, kind: 'pdf-import', title: 't:imp.title', params: { path: s.path, bytes: s.path ? undefined : s.bytes, name: s.fileName } })}>{t('pdf.convertToInvoice')}</Button>
           <Button size="sm" variant="ghost" icon={<Printer className="h-3.5 w-3.5" />} loading={busy === 'print'} onClick={() => void doPrint()}>{t('pdf.print')}</Button>
           <Menu label={t('pdf.export')} icon={<Download className="h-3.5 w-3.5" />} busy={busy === 'export' || busy === 'images'} items={[
             { label: t('pdf.saveAs'), icon: <Download className="h-3.5 w-3.5" />, onClick: saveAs },
@@ -381,7 +387,7 @@ function Viewer({ store, tabId }: { store: StoreApi<ViewerState>; tabId: string 
         <div className="flex items-center gap-3 border-b border-warning/30 bg-warning/10 px-4 py-2 text-[13px]">
           <ScanText className="h-4 w-4 text-warning" />
           <span className="flex-1">{t('pdf.scannedNotice')}</span>
-          <Button size="sm" variant="primary" onClick={() => openTab({ kind: 'tools', title: 't:nav.tools', params: { tool: 'ocr', path: s.path } })}>{t('pdf.runOcr')}</Button>
+          <Button size="sm" variant="primary" onClick={() => setOcrOpen(true)}>{t('pdf.runOcr')}</Button>
           <Button size="sm" variant="ghost" onClick={() => s.dismissScannedNotice()}>{t('pdf.later')}</Button>
         </div>
       )}
@@ -411,7 +417,7 @@ function Viewer({ store, tabId }: { store: StoreApi<ViewerState>; tabId: string 
         <div ref={scrollerRef} className="min-w-0 flex-1 overflow-auto" style={{ direction: 'ltr' }}>
           <div className="flex flex-col items-center" style={{ gap: PAGE_GAP, padding: PAGE_GAP }}>
             {s.engine && s.pages.map((page) => (
-              <PdfPage key={page.index} engine={s.engine!} page={page} scale={s.scale} rotation={s.rotation} hits={s.search.hits} activeHit={activeHit} onVisible={onVisible} editor={editor} editing={editing} />
+              <PdfPage key={page.index} engine={s.engine!} page={page} scale={s.scale} rotation={s.rotation} hits={s.search.hits} activeHit={activeHit} onVisible={onVisible} editor={editor} editing={editing} textVersion={s.ocrVersion} />
             ))}
           </div>
         </div>
@@ -419,6 +425,8 @@ function Viewer({ store, tabId }: { store: StoreApi<ViewerState>; tabId: string 
         {/* لوحة الخصائص في وضع التعديل */}
         {editing && <PropertiesPanel store={editor} />}
       </div>
+
+      <OcrDialog open={ocrOpen} onClose={() => setOcrOpen(false)} store={store} autoStart={autoOcr} />
 
       {/* شريط الحالة */}
       <div className="flex h-7 items-center gap-4 border-t border-border bg-surface px-3 text-[11.5px] text-muted">

@@ -12,6 +12,7 @@ import { Button, Field, Input, Select, SectionTitle } from '@renderer/components
 import { fmtBytes } from '@renderer/lib/format'
 import { invoke } from '@renderer/lib/ipc'
 import { notify } from '@renderer/stores/notifications'
+import { useTabs } from '@renderer/stores/tabs'
 import { PdfEngine } from './pdfEngine'
 import { exportPagesAsImages, exportText } from './printPdf'
 import * as tools from '../shared/pdfTools'
@@ -214,8 +215,21 @@ function ToolForm({ tool, initialPath }: { tool: ToolId; initialPath?: string })
     }
   }
 
-  if (tool === 'protect' || tool === 'ocr') {
-    return <div className="card p-6 text-[13px] text-muted">{t(`tools.${tool}.desc`)}</div>
+  if (tool === 'ocr') {
+    const pickForOcr = async () => {
+      const paths = await invoke('dialog:open-files', { filters: [{ name: 'PDF', extensions: ['pdf'] }], multiple: false })
+      if (paths[0]) useTabs.getState().open({ id: `pdf:${paths[0]}`, kind: 'pdf', title: baseName(paths[0]), params: { path: paths[0], ocr: true }, icon: 'pdf' })
+    }
+    return (
+      <div className="card space-y-4 p-6">
+        <p className="text-[13px] text-muted">{t('tools.ocr.desc')}</p>
+        <p className="text-xs text-muted">{t('ocr.hint')}</p>
+        <Button variant="primary" icon={<ScanText className="h-4 w-4" />} onClick={() => void pickForOcr()}>{t('tools.pickFile')}</Button>
+      </div>
+    )
+  }
+  if (tool === 'protect') {
+    return <div className="card p-6 text-[13px] text-muted">{t('tools.protect.desc')}</div>
   }
 
   const canRun = tool === 'merge' ? files.length >= 2 : tool === 'images' ? images.length > 0 : !!primary && (tool !== 'insertPdf' || !!second)

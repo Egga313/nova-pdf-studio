@@ -50,6 +50,17 @@ export class PdfEngine {
 
   private pageCache = new Map<number, PDFPageProxy>()
   private textCache = new Map<number, TextSpan[]>()
+  private ocrSpans = new Map<number, TextSpan[]>()
+
+  /** نص OCR لصفحة ممسوحة: يُدمج مع طبقة النص فيصبح قابلًا للبحث والتحديد والنسخ داخل العارض. */
+  setOcrSpans(index: number, spans: TextSpan[]): void {
+    this.ocrSpans.set(index, spans)
+    this.textCache.delete(index)
+  }
+
+  hasOcr(index: number): boolean {
+    return this.ocrSpans.has(index)
+  }
 
   static async load(bytes: Uint8Array, password?: string): Promise<PdfEngine> {
     try {
@@ -135,8 +146,10 @@ export class PdfEngine {
         fontName: item.fontName
       })
     }
-    this.textCache.set(index, spans)
-    return spans
+    const ocr = this.ocrSpans.get(index)
+    const merged = ocr ? [...spans, ...ocr] : spans
+    this.textCache.set(index, merged)
+    return merged
   }
 
   async pageText(index: number): Promise<string> {

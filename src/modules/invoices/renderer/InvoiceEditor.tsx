@@ -56,6 +56,9 @@ export function InvoiceEditor({ tab }: TabComponentProps) {
     // بنود مسبقة (من جدول بيانات مثلًا) تُدخل عبر المعاملات ثم تمرّ بمحرك الحساب كأي بند يدوي
     const prefill = tab.params.prefillItems as Record<string, unknown>[] | undefined
     if (prefill?.length) header.source = (tab.params.source as DraftHeader['source'] | undefined) ?? 'spreadsheet'
+    // رأس مسبق (من استيراد PDF): مرجع، تواريخ، لقطة عميل، مستند مصدر
+    const prefillHeader = tab.params.prefillHeader as Partial<DraftHeader> | undefined
+    if (prefillHeader) Object.assign(header, Object.fromEntries(Object.entries(prefillHeader).filter(([, val]) => val !== undefined && val !== null && val !== '')))
     storeRef.current = createDraftStore(
       header,
       prefill?.length ? prefill.map((it, i) => ({ ...emptyLike(defaultTax), ...it, key: `row-${i}` }) as never) : [{ ...emptyLike(defaultTax), key: 'row-0' } as never]
@@ -280,7 +283,7 @@ function CustomerCard({ store, onNew }: { store: StoreApi<DraftState>; onNew: ()
       {snap ? (
         <div className="text-[12.5px]">
           <div className="font-semibold">{snap.displayName}</div>
-          {[snap.address, [snap.city, snap.country].filter(Boolean).join(', '), snap.phone, snap.email, snap.taxId && `${t('cust.fields.taxId')}: ${snap.taxId}`].filter(Boolean).map((l, i) => <div key={i} className="text-muted">{l}</div>)}
+          {[snap.address, [snap.city, snap.country].filter(Boolean).join(', '), snap.phone && <span dir="ltr" className="ltr-text">{snap.phone}</span>, snap.email && <span dir="ltr" className="ltr-text">{snap.email}</span>, snap.taxId && `${t('cust.fields.taxId')}: ${snap.taxId}`].filter(Boolean).map((l, i) => <div key={i} className="text-muted">{l}</div>)}
         </div>
       ) : (
         <div className="relative">

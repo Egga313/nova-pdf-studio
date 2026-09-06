@@ -145,7 +145,7 @@ export function ItemsGrid({ store, taxes, currency, defaultTax, readOnly }: Prop
   return (
     <div className="card overflow-visible">
       <div className="overflow-x-auto">
-        <table ref={gridRef} className="w-full min-w-[1120px] table-fixed text-[13px]">
+        <table ref={gridRef} className="w-full min-w-[1360px] table-fixed text-[13px]">
           <thead className="bg-surface-2/60 text-[11.5px] text-muted">
             <tr>
               <th className="w-8 px-2 py-2 font-medium">#</th>

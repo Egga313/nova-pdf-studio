@@ -47,6 +47,14 @@ function resolveSqlWasm(appPath: string): string {
   return unpacked(candidates[candidates.length - 1])
 }
 
+/** مجلد resources (ملفات لغة OCR، خطوط): بجوار التطبيق المغلَّف، أو في جذر المشروع أثناء التطوير (appPath قد يكون out/main). */
+function resolveResourcesDir(appPath: string): string {
+  const candidates = app.isPackaged
+    ? [path.join(process.resourcesPath, 'resources')]
+    : [path.join(appPath, 'resources'), path.join(appPath, '..', '..', 'resources'), path.join(process.cwd(), 'resources')]
+  return candidates.find((c) => fs.existsSync(c)) ?? candidates[0]
+}
+
 export function getPaths(): AppPaths {
   if (cached) return cached
   const dataDir = path.join(app.getPath('userData'), 'data')
@@ -60,7 +68,7 @@ export function getPaths(): AppPaths {
     attachmentsDir: path.join(dataDir, 'attachments'),
     tempDir: path.join(app.getPath('temp'), 'nova-pdf-studio'),
     sqlWasmPath: resolveSqlWasm(appPath),
-    resourcesDir: app.isPackaged ? path.join(process.resourcesPath, 'resources') : path.join(appPath, 'resources')
+    resourcesDir: resolveResourcesDir(appPath)
   }
   for (const dir of [paths.dataDir, paths.logDir, paths.backupDir, paths.documentsDir, paths.attachmentsDir, paths.tempDir]) {
     fs.mkdirSync(dir, { recursive: true })

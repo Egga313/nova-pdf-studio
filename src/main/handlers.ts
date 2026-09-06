@@ -22,6 +22,8 @@ import {
 import {
   deleteSpreadsheet, exportSpreadsheetFile, getSpreadsheet, importSpreadsheetFile, listSpreadsheets, purgeSpreadsheet, restoreSpreadsheet, saveSpreadsheet
 } from '@modules/spreadsheet/main/repository'
+import { listOcrLanguages, recognizeImage } from '@modules/ocr/main'
+import { deleteExtractionTemplate, listExtractionTemplates, saveExtractionTemplate } from '@modules/import/main/repository'
 import { getDashboardStats } from '@modules/settings/main/dashboard'
 import { addRecent, clearRecent, listRecent, pinRecent, removeRecent } from '@modules/settings/main/recent-files'
 import { getSettings, updateSettings } from '@modules/settings/main/repository'
@@ -58,6 +60,13 @@ export function registerCoreHandlers(): void {
   })
   handle('app:show-in-folder', ({ path: p }) => shell.showItemInFolder(p))
   handle('app:log', ({ level, message, details }) => logger[level](`[renderer] ${message}`, details))
+  handle('app:read-resource', async ({ relativePath }) => {
+    const base = path.resolve(paths.resourcesDir)
+    const full = path.resolve(base, relativePath)
+    if (!full.startsWith(base) || !fs.existsSync(full)) throw new AppError('FILE_NOT_FOUND', undefined, { path: relativePath })
+    const data = await fsp.readFile(full)
+    return new Uint8Array(data.buffer, data.byteOffset, data.byteLength)
+  })
 
   // ---- الحوارات والملفات ----
   handle('dialog:open-files', async ({ filters, multiple, title }) => {
@@ -232,6 +241,13 @@ export function registerCoreHandlers(): void {
   handle('spreadsheets:purge', ({ id }) => purgeSpreadsheet(id))
   handle('spreadsheets:import-file', ({ path: p }) => importSpreadsheetFile(p))
   handle('spreadsheets:export-file', ({ path: p, data, bookType }) => exportSpreadsheetFile(p, data, bookType))
+
+  // ---- OCR والاستخراج ----
+  handle('ocr:recognize', (req) => recognizeImage(req))
+  handle('ocr:languages', () => listOcrLanguages())
+  handle('extraction:list', () => listExtractionTemplates())
+  handle('extraction:save', (req) => saveExtractionTemplate(req))
+  handle('extraction:delete', ({ id }) => deleteExtractionTemplate(id))
 
   // ---- الطباعة والتصدير ----
   handle('printers:list', () => listPrinters(focused()))
