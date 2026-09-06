@@ -226,6 +226,22 @@
     "fields": { "name": "Name", "sku": "SKU", "description": "Description", "price": "Price", "currency": "Currency", "tax": "Tax", "unit": "Unit", "category": "Category", "notes": "Notes", "active": "Active" },
     "saved": "Product saved", "deleted": "Product moved to trash", "confirmDelete": "Delete product {{name}}?", "count": "{{count}} products"
   },
+  "tpl": {
+    "title": "Templates", "subtitle": "Built-in and custom invoice designs.", "builtin": "Built-in", "default": "Default", "custom": "Custom",
+    "new": "New template", "duplicate": "Duplicate", "edit": "Edit design", "delete": "Delete", "setDefault": "Set as default", "resetBuiltin": "Reset built-in templates",
+    "confirmDelete": "Delete template {{name}}? Invoices using it fall back to the default template.", "saved": "Template saved", "deleted": "Template deleted", "duplicated": "Template copied",
+    "preview": { "title": "Invoice preview", "template": "Template", "print": "Print", "exportPdf": "Export PDF", "openFolder": "Open folder", "copyFile": "Copy file", "share": "Share / Send", "exported": "PDF exported: {{name}}", "printed": "Sent to printer", "regenerate": "Refresh", "zoom": "Zoom", "saveAndPreview": "Save the invoice first to preview it", "language": "Document language", "auto": "Auto", "email": "Email (coming soon)", "whatsapp": "WhatsApp (coming soon)", "cloud": "Cloud storage (coming soon)" },
+    "designer": {
+      "title": "Template designer", "name": "Template name", "blocks": "Blocks", "properties": "Properties", "page": "Page", "theme": "Colors & font", "columns": "Table columns",
+      "visible": "Visible", "hidden": "Hidden", "font": "Font", "fontSize": "Font size", "color": "Color", "background": "Background", "border": "Border", "radius": "Corner radius", "align": "Alignment", "padding": "Padding",
+      "margin": "Page margins (mm)", "size": "Size", "orientation": "Orientation", "direction": "Text direction", "accent": "Accent color", "tableHeader": "Table header background", "tableHeaderText": "Table header text", "stripe": "Row striping",
+      "baseFont": "Base font size", "showLogo": "Show logo", "showWords": "Amount in words", "showQr": "QR code", "qrContent": "QR content", "qrNumber": "Invoice number", "qrSummary": "Summary (number + amount + company)", "qrCustom": "Custom text",
+      "x": "X (mm)", "y": "Y (mm)", "width": "Width (mm)", "height": "Height (mm)", "text": "Text", "reset": "Reset default layout", "dragHint": "Drag blocks on the page to move them; drag the corner to resize.",
+      "sampleData": "Preview with sample data", "unsaved": "Unsaved changes",
+      "kinds": { "logo": "Logo", "company": "Company information", "customer": "Customer information", "invoiceNumber": "Invoice number", "dates": "Dates", "meta": "Reference & PO", "title": "Title", "table": "Items table", "totals": "Totals", "amountWords": "Amount in words", "notes": "Notes", "terms": "Payment terms", "payment": "Payment information", "signature": "Signature", "stamp": "Stamp", "footer": "Footer", "qr": "QR code", "text": "Free text" }
+    },
+    "brand": { "title": "Signature & stamp", "hint": "Shown on invoices where the template places them.", "signature": "Signature", "stamp": "Stamp", "pick": "Choose image", "remove": "Remove" }
+  },
   "edit": {
     "mode": "Edit mode", "enter": "Edit PDF", "exit": "Finish editing", "hint": "Click text to edit it, or drag to create an element. Delete with",
     "placeHint": "Click or drag on the page to place the image", "toolDefaults": "Tool settings", "selectHint": "Select an element on the page to edit its properties.",

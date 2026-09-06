@@ -6,7 +6,7 @@ import { create } from 'zustand'
 
 export type TabKind =
   | 'dashboard' | 'settings' | 'pdf' | 'pdf-new' | 'invoices' | 'invoice' | 'invoice-preview' | 'customers' | 'customer'
-  | 'products' | 'spreadsheets' | 'spreadsheet' | 'templates' | 'documents' | 'tools' | 'audit'
+  | 'products' | 'spreadsheets' | 'spreadsheet' | 'templates' | 'template-designer' | 'documents' | 'tools' | 'audit'
 
 export interface Tab {
   id: string

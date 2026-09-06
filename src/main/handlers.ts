@@ -15,6 +15,10 @@ import {
   restoreInvoice, saveInvoice, setInvoicePdfPath, setInvoiceStatus, trashInvoice
 } from '@modules/invoices/main/repository'
 import { exportHtmlToPdf, listPrinters, printHtml } from '@modules/printing/main'
+import {
+  deleteTemplate, duplicateTemplate, getDefaultTemplate, getTemplate, listTemplates, readBrandAssets, resetBuiltinTemplates, saveTemplate, setBrandAsset,
+  setDefaultTemplate
+} from '@modules/templates/main/repository'
 import { getDashboardStats } from '@modules/settings/main/dashboard'
 import { addRecent, clearRecent, listRecent, pinRecent, removeRecent } from '@modules/settings/main/recent-files'
 import { getSettings, updateSettings } from '@modules/settings/main/repository'
@@ -189,6 +193,32 @@ export function registerCoreHandlers(): void {
   handle('payments:add', (req) => addPayment(req))
   handle('payments:delete', ({ id }) => deletePayment(id))
   handle('search:global', ({ query, limit }) => globalSearch(query, limit))
+
+  // ---- القوالب وأصول الهوية ----
+  handle('templates:list', (req) => listTemplates(req?.kind ?? 'layout'))
+  handle('templates:get', ({ id }) => getTemplate(id))
+  handle('templates:default', () => getDefaultTemplate())
+  handle('templates:save', (req) => saveTemplate(req))
+  handle('templates:duplicate', ({ id, name }) => duplicateTemplate(id, name))
+  handle('templates:set-default', ({ id }) => setDefaultTemplate(id))
+  handle('templates:delete', ({ id }) => deleteTemplate(id))
+  handle('templates:reset-builtin', () => resetBuiltinTemplates())
+  handle('brand:assets', () => readBrandAssets(getSettings().company.logoPath))
+  handle('brand:pick', async ({ kind }) => {
+    const result = await dialog.showOpenDialog(focused()!, { filters: [{ name: 'Images', extensions: ['png', 'jpg', 'jpeg', 'webp', 'svg'] }], properties: ['openFile'] })
+    if (result.canceled || !result.filePaths[0]) return null
+    if (kind === 'logo') {
+      const target = path.join(paths.dataDir, `company-logo${path.extname(result.filePaths[0]).toLowerCase()}`)
+      await fsp.copyFile(result.filePaths[0], target)
+      updateSettings({ company: { ...getSettings().company, logoPath: target } })
+      return target
+    }
+    return setBrandAsset(paths.dataDir, kind, result.filePaths[0])
+  })
+  handle('brand:clear', async ({ kind }) => {
+    if (kind === 'logo') updateSettings({ company: { ...getSettings().company, logoPath: null } })
+    else await setBrandAsset(paths.dataDir, kind, null)
+  })
 
   // ---- الطباعة والتصدير ----
   handle('printers:list', () => listPrinters(focused()))

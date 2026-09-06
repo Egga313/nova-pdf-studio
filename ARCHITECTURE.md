@@ -88,7 +88,7 @@ Dev-only automation: `NOVA_AUTOMATION=plan.json` runs eval/screenshot steps agai
 - [x] Phase 1 — shell, navigation, tabs, database, settings, translations, theme, dashboard, wizard, backup, app lock
 - [x] Phase 2 — PDF viewer (pdf.js, lazy pages, text layer, thumbnails, bookmarks, search, zoom/rotate/fullscreen), print & export through Chromium, PDF tools (merge/split/extract/delete/reorder/rotate/blank/insert/images/watermark/numbers/compress/to-images/to-text), documents registry
 - [x] Phase 3 — PDF edit mode: overlay objects (text, image/signature/stamp, rect/ellipse/line/check, highlight, white-out), click-to-edit original text (white-out + replacement), drag/resize/properties, undo/redo, save/save-as baked with pdf-lib (Latin text as real text, other scripts rasterized via Canvas)
-- [ ] Phase 4 — invoices, customers, products, taxes, calculations, payments
+- [x] Phase 4 — invoices (draft/sent/paid/partial/overdue/cancelled, auto numbering, trash/restore), customers (profile, balances), products (autocomplete), tax profiles, central integer calculation engine (tested), payments with live remaining balance, amount in words (ar/fr/en), Excel paste into the items grid
 - [ ] Phase 5 — invoice PDF generator, templates, designer, printing
 - [ ] Phase 6 — spreadsheet studio, XLSX import/export, formulas, invoice integration
 - [ ] Phase 7 — OCR, PDF → smart invoice, zones, extraction templates

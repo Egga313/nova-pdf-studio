@@ -15,6 +15,47 @@ const TEXT_FIELDS: { key: keyof CompanyProfile; ltr?: boolean; wide?: boolean }[
   { key: 'nis', ltr: true }, { key: 'ai', ltr: true }, { key: 'taxId', ltr: true }, { key: 'bankAccount', ltr: true }, { key: 'iban', ltr: true }, { key: 'swift', ltr: true }
 ]
 
+/** التوقيع والختم: يُخزَّنان في مجلد البيانات ويُدرجان في الفاتورة حسب موضعهما في القالب. */
+function BrandAssetsGroup() {
+  const { t } = useTranslation()
+  const [assets, setAssets] = useState<{ signature: string | null; stamp: string | null }>({ signature: null, stamp: null })
+  const reload = () => invoke('brand:assets').then((a) => setAssets({ signature: a.signature, stamp: a.stamp })).catch(() => undefined)
+  useEffect(() => {
+    void reload()
+  }, [])
+  const pick = async (kind: 'signature' | 'stamp') => {
+    try {
+      await invoke('brand:pick', { kind })
+      await reload()
+    } catch (e) {
+      notify.error(e)
+    }
+  }
+  const clear = async (kind: 'signature' | 'stamp') => {
+    await invoke('brand:clear', { kind })
+    await reload()
+  }
+  const slot = (kind: 'signature' | 'stamp') => (
+    <div className="flex items-center gap-4">
+      <div className="flex h-20 w-32 items-center justify-center overflow-hidden rounded-lg border border-dashed border-border bg-surface-2/50">
+        {assets[kind] ? <img src={assets[kind]!} alt={kind} className="max-h-full max-w-full object-contain" /> : <ImagePlus className="h-6 w-6 text-muted" />}
+      </div>
+      <div>
+        <div className="mb-1 text-[13px] font-medium">{t(`tpl.brand.${kind}`)}</div>
+        <div className="flex gap-2">
+          <Button size="sm" onClick={() => void pick(kind)} icon={<ImagePlus className="h-3.5 w-3.5" />}>{t('tpl.brand.pick')}</Button>
+          {assets[kind] && <Button size="sm" variant="ghost" icon={<Trash2 className="h-3.5 w-3.5" />} onClick={() => void clear(kind)}>{t('tpl.brand.remove')}</Button>}
+        </div>
+      </div>
+    </div>
+  )
+  return (
+    <Group title={t('tpl.brand.title')} hint={t('tpl.brand.hint')}>
+      <div className="grid gap-4 sm:grid-cols-2">{slot('signature')}{slot('stamp')}</div>
+    </Group>
+  )
+}
+
 export function CompanySection() {
   const { t } = useTranslation()
   const stored = useSettings((s) => s.settings.company)
@@ -66,6 +107,7 @@ export function CompanySection() {
           <Button variant="primary" disabled={!dirty} onClick={() => void save({ company: form })}>{t('common.save')}</Button>
         </div>
       </Group>
+      <BrandAssetsGroup />
       <Group title={t('settings.company.visibleFields')}>
         <div className="grid gap-x-6 sm:grid-cols-2">
           {COMPANY_FIELD_KEYS.map((key: CompanyFieldKey) => (

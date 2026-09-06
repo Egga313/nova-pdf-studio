@@ -226,6 +226,22 @@
     "fields": { "name": "Nom", "sku": "SKU", "description": "Description", "price": "Prix", "currency": "Devise", "tax": "Taxe", "unit": "Unité", "category": "Catégorie", "notes": "Notes", "active": "Actif" },
     "saved": "Produit enregistré", "deleted": "Produit mis à la corbeille", "confirmDelete": "Supprimer le produit {{name}} ?", "count": "{{count}} produits"
   },
+  "tpl": {
+    "title": "Modèles", "subtitle": "Modèles de facture intégrés et personnalisés.", "builtin": "Intégré", "default": "Par défaut", "custom": "Personnalisé",
+    "new": "Nouveau modèle", "duplicate": "Dupliquer", "edit": "Modifier le design", "delete": "Supprimer", "setDefault": "Définir par défaut", "resetBuiltin": "Réinitialiser les modèles intégrés",
+    "confirmDelete": "Supprimer le modèle {{name}} ? Les factures qui l'utilisent reviendront au modèle par défaut.", "saved": "Modèle enregistré", "deleted": "Modèle supprimé", "duplicated": "Modèle dupliqué",
+    "preview": { "title": "Aperçu de la facture", "template": "Modèle", "print": "Imprimer", "exportPdf": "Exporter en PDF", "openFolder": "Ouvrir le dossier", "copyFile": "Copier le fichier", "share": "Partager / Envoyer", "exported": "PDF exporté : {{name}}", "printed": "Envoyé à l'imprimante", "regenerate": "Actualiser", "zoom": "Zoom", "saveAndPreview": "Enregistrez la facture avant l'aperçu", "language": "Langue du document", "auto": "Auto", "email": "E-mail (bientôt)", "whatsapp": "WhatsApp (bientôt)", "cloud": "Stockage cloud (bientôt)" },
+    "designer": {
+      "title": "Concepteur de modèle", "name": "Nom du modèle", "blocks": "Blocs", "properties": "Propriétés", "page": "Page", "theme": "Couleurs et police", "columns": "Colonnes du tableau",
+      "visible": "Visible", "hidden": "Masqué", "font": "Police", "fontSize": "Taille", "color": "Couleur", "background": "Fond", "border": "Bordure", "radius": "Arrondi", "align": "Alignement", "padding": "Marge interne",
+      "margin": "Marges de page (mm)", "size": "Format", "orientation": "Orientation", "direction": "Sens du texte", "accent": "Couleur principale", "tableHeader": "Fond de l'en-tête du tableau", "tableHeaderText": "Texte de l'en-tête", "stripe": "Lignes alternées",
+      "baseFont": "Taille de base", "showLogo": "Afficher le logo", "showWords": "Montant en lettres", "showQr": "Code QR", "qrContent": "Contenu du QR", "qrNumber": "Numéro de facture", "qrSummary": "Résumé (numéro + montant + société)", "qrCustom": "Texte personnalisé",
+      "x": "X (mm)", "y": "Y (mm)", "width": "Largeur (mm)", "height": "Hauteur (mm)", "text": "Texte", "reset": "Réinitialiser la disposition", "dragHint": "Glissez les blocs pour les déplacer ; tirez le coin pour redimensionner.",
+      "sampleData": "Aperçu avec des données d'exemple", "unsaved": "Modifications non enregistrées",
+      "kinds": { "logo": "Logo", "company": "Informations société", "customer": "Informations client", "invoiceNumber": "Numéro de facture", "dates": "Dates", "meta": "Référence et BC", "title": "Titre", "table": "Tableau des lignes", "totals": "Totaux", "amountWords": "Montant en lettres", "notes": "Notes", "terms": "Conditions de paiement", "payment": "Informations de paiement", "signature": "Signature", "stamp": "Cachet", "footer": "Pied de page", "qr": "Code QR", "text": "Texte libre" }
+    },
+    "brand": { "title": "Signature et cachet", "hint": "Affichés sur les factures selon le modèle.", "signature": "Signature", "stamp": "Cachet", "pick": "Choisir une image", "remove": "Retirer" }
+  },
   "edit": {
     "mode": "Mode édition", "enter": "Modifier le PDF", "exit": "Terminer", "hint": "Cliquez un texte pour le modifier, ou glissez pour créer un élément. Supprimer avec",
     "placeHint": "Cliquez ou glissez sur la page pour placer l'image", "toolDefaults": "Réglages de l'outil", "selectHint": "Sélectionnez un élément sur la page pour modifier ses propriétés.",

@@ -6,6 +6,9 @@ import { Dashboard } from '@modules/dashboard/renderer/Dashboard'
 import { InvoiceEditor } from '@modules/invoices/renderer/InvoiceEditor'
 import { InvoicesTab } from '@modules/invoices/renderer/InvoicesTab'
 import { ProductsTab } from '@modules/products/renderer/ProductsTab'
+import { InvoicePreviewTab } from '@modules/templates/renderer/InvoicePreviewTab'
+import { TemplateDesigner } from '@modules/templates/renderer/TemplateDesigner'
+import { TemplatesTab } from '@modules/templates/renderer/TemplatesTab'
 import { DocumentsTab } from '@modules/pdf/renderer/DocumentsTab'
 import { PdfViewerTab } from '@modules/pdf/renderer/PdfViewerTab'
 import { ToolsTab } from '@modules/pdf/renderer/ToolsTab'
@@ -27,11 +30,12 @@ const registry: Partial<Record<TabKind, ComponentType<TabComponentProps>>> = {
   // المراحل اللاحقة تستبدل هذه العناصر النائبة بوحدات حقيقية
   invoices: InvoicesTab,
   invoice: InvoiceEditor,
-  'invoice-preview': (p) => <PhasePlaceholder tab={p.tab} phase={5} />,
+  'invoice-preview': InvoicePreviewTab,
   customers: CustomersTab,
   customer: CustomerProfileTab,
   products: ProductsTab,
-  templates: (p) => <PhasePlaceholder tab={p.tab} phase={5} />,
+  templates: TemplatesTab,
+  'template-designer': TemplateDesigner,
   spreadsheets: (p) => <PhasePlaceholder tab={p.tab} phase={6} />,
   spreadsheet: (p) => <PhasePlaceholder tab={p.tab} phase={6} />,
   audit: (p) => <PhasePlaceholder tab={p.tab} phase={8} />

@@ -6,6 +6,7 @@
 import type { AppSettings } from './settings'
 import type { AppInfo, AuditLog, Currency, DashboardStats, FileFilter, RecentFile, RecentFileKind, Tax } from './entities'
 import type { DocumentRecord, PdfExportRequest, PrintJobRequest } from './documents'
+import type { InvoiceTemplate, TemplateInput } from './templates'
 import type {
   Customer, CustomerInput, CustomerSummary, DocType, Invoice, InvoiceFilters, InvoiceInput, InvoiceListRow, InvoiceStatus, OutstandingItem,
   PaymentInput, Product, ProductInput
@@ -104,6 +105,19 @@ export interface IpcContract {
   'payments:delete': { req: { id: number }; res: Invoice }
   'search:global': { req: { query: string; limit?: number }; res: { customers: { id: number; label: string; sub: string }[]; invoices: { id: number; label: string; sub: string }[]; products: { id: number; label: string; sub: string }[] } }
 
+  // ---- القوالب وأصول الهوية ----
+  'templates:list': { req: { kind?: 'layout' | 'extraction' } | void; res: InvoiceTemplate[] }
+  'templates:get': { req: { id: number }; res: InvoiceTemplate | null }
+  'templates:default': { req: void; res: InvoiceTemplate }
+  'templates:save': { req: TemplateInput; res: InvoiceTemplate }
+  'templates:duplicate': { req: { id: number; name?: string }; res: InvoiceTemplate }
+  'templates:set-default': { req: { id: number }; res: void }
+  'templates:delete': { req: { id: number }; res: void }
+  'templates:reset-builtin': { req: void; res: void }
+  'brand:assets': { req: void; res: { logo: string | null; signature: string | null; stamp: string | null } }
+  'brand:pick': { req: { kind: 'logo' | 'signature' | 'stamp' }; res: string | null }
+  'brand:clear': { req: { kind: 'logo' | 'signature' | 'stamp' }; res: void }
+
   // ---- الطباعة والتصدير (محرك Chromium) ----
   'printers:list': { req: void; res: { name: string; displayName: string; isDefault: boolean; status: number }[] }
   'print:html': { req: PrintJobRequest; res: { success: boolean; reason?: string } }
@@ -134,6 +148,8 @@ export const IPC_CHANNELS: readonly IpcChannel[] = [
   'products:list', 'products:get', 'products:save', 'products:delete', 'products:restore', 'products:search', 'products:categories',
   'invoices:list', 'invoices:get', 'invoices:save', 'invoices:set-status', 'invoices:trash', 'invoices:restore', 'invoices:purge', 'invoices:duplicate',
   'invoices:next-number', 'invoices:outstanding', 'invoices:set-pdf-path', 'payments:add', 'payments:delete', 'search:global',
+  'templates:list', 'templates:get', 'templates:default', 'templates:save', 'templates:duplicate', 'templates:set-default', 'templates:delete', 'templates:reset-builtin',
+  'brand:assets', 'brand:pick', 'brand:clear',
   'printers:list', 'print:html', 'print:html-to-pdf',
   'backup:create', 'backup:restore', 'backup:list', 'backup:export-db'
 ]
