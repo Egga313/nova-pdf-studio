@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 import type { CustomerSummary, InvoiceListRow } from '@shared/invoicing'
 import { customerDisplayName } from '@shared/invoicing'
 import type { TabComponentProps } from '@renderer/app/tabRegistry'
+import { ExtrasPanel } from '@modules/extras/renderer/ExtrasPanel'
 import { Badge, Button, Card, EmptyState, Spinner } from '@renderer/components/ui'
 import { fmtDate, fmtMoney } from '@renderer/lib/format'
 import { invoke } from '@renderer/lib/ipc'
@@ -83,6 +84,7 @@ export function CustomerProfileTab({ tab }: TabComponentProps) {
               ))}
             </dl>
             {customer.notes && <div className="mt-3 border-t border-border pt-3"><div className="text-[11px] text-muted">{t('cust.profile.notes')}</div><p className="whitespace-pre-wrap text-[13px]">{customer.notes}</p></div>}
+            <ExtrasPanel ownerType="customer" ownerId={customer.id} />
           </Card>
 
           <Card title={t('cust.profile.invoices')} className="lg:col-span-2">

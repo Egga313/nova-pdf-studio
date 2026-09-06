@@ -2,13 +2,14 @@
 import { clsx } from 'clsx'
 import {
   Building2, Coins, Database, FileText, Globe2, HardDrive, Info, Palette, Percent, Printer, ScanText, Settings2, ShieldCheck
-} from 'lucide-react'
+, ListChecks } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { TabComponentProps } from '@renderer/app/tabRegistry'
 import { AboutSection } from './sections/AboutSection'
 import { BackupSection } from './sections/BackupSection'
 import { CompanySection } from './sections/CompanySection'
+import { CustomFieldsSection } from './sections/CustomFieldsSection'
 import { CurrenciesSection } from './sections/CurrenciesSection'
 import { GeneralSection } from './sections/GeneralSection'
 import { InvoiceSection } from './sections/InvoiceSection'
@@ -17,7 +18,7 @@ import { SecuritySection } from './sections/SecuritySection'
 import { StorageSection } from './sections/StorageSection'
 import { TaxesSection } from './sections/TaxesSection'
 
-export type SettingsSection = 'general' | 'company' | 'invoice' | 'tax' | 'currencies' | 'appearance' | 'printing' | 'ocr' | 'storage' | 'backup' | 'security' | 'about'
+export type SettingsSection = 'general' | 'company' | 'invoice' | 'tax' | 'currencies' | 'appearance' | 'printing' | 'ocr' | 'storage' | 'backup' | 'security' | 'fields' | 'about'
 
 const SECTIONS: { id: SettingsSection; icon: typeof Info }[] = [
   { id: 'general', icon: Settings2 },
@@ -31,6 +32,7 @@ const SECTIONS: { id: SettingsSection; icon: typeof Info }[] = [
   { id: 'storage', icon: HardDrive },
   { id: 'backup', icon: Database },
   { id: 'security', icon: ShieldCheck },
+  { id: 'fields', icon: ListChecks },
   { id: 'about', icon: Info }
 ]
 
@@ -65,6 +67,7 @@ export function SettingsTab({ tab }: TabComponentProps) {
           {section === 'storage' && <StorageSection />}
           {section === 'backup' && <BackupSection />}
           {section === 'security' && <SecuritySection />}
+          {section === 'fields' && <CustomFieldsSection />}
           {section === 'about' && <AboutSection />}
         </div>
       </div>

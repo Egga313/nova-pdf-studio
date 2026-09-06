@@ -29,6 +29,7 @@ export function registerCoreCommands(hooks: { openPalette: () => void; lock: () 
     { id: 'nav.spreadsheets', titleKey: 'nav.spreadsheets', section: 'navigation', run: () => tabs().open({ kind: 'spreadsheets', title: 't:nav.spreadsheets', params: {} }) },
     { id: 'nav.templates', titleKey: 'nav.templates', section: 'navigation', run: () => tabs().open({ kind: 'templates', title: 't:nav.templates', params: {} }) },
     { id: 'nav.tools', titleKey: 'nav.tools', section: 'navigation', run: () => tabs().open({ kind: 'tools', title: 't:nav.tools', params: {} }) },
+    { id: 'nav.audit', titleKey: 'commands.openAudit', section: 'navigation', run: () => tabs().open({ kind: 'audit', title: 't:nav.audit', params: {} }) },
 
     { id: 'pdf.open', titleKey: 'commands.openPdf', section: 'actions', shortcut: 'Ctrl+O', run: () => pickAndOpenPdf() },
     { id: 'pdf.new', titleKey: 'dashboard.actions.newPdf', section: 'actions', run: () => tabs().open({ kind: 'documents', title: 't:nav.documents', params: { new: true } }) },

@@ -1,7 +1,7 @@
 /** تبويب أدوات PDF: بطاقات أدوات على اليسار/البداية، ونموذج الأداة المختارة مع تنفيذ وحفظ فعليين عبر pdf-lib. */
 import { clsx } from 'clsx'
 import {
-  ArrowDown, ArrowUp, Copy, FileImage, FilePlus2, FileText, Hash, ImageDown, Layers, ListOrdered, Lock, Minimize2, RotateCw, ScanText,
+  ArrowDown, ArrowUp, Copy, FileImage, FilePlus2, FileText, Hash, ImageDown, Layers, ListOrdered, Minimize2, RotateCw, ScanText,
   Scissors, Stamp, Trash2, Type, X
 } from 'lucide-react'
 import { useEffect, useState } from 'react'
@@ -17,13 +17,13 @@ import { PdfEngine } from './pdfEngine'
 import { exportPagesAsImages, exportText } from './printPdf'
 import * as tools from '../shared/pdfTools'
 
-type ToolId = 'merge' | 'split' | 'extract' | 'delete' | 'rotate' | 'reorder' | 'blank' | 'insertPdf' | 'images' | 'watermark' | 'numbers' | 'compress' | 'pdfToImages' | 'pdfToText' | 'protect' | 'ocr'
+type ToolId = 'merge' | 'split' | 'extract' | 'delete' | 'rotate' | 'reorder' | 'blank' | 'insertPdf' | 'images' | 'watermark' | 'numbers' | 'compress' | 'pdfToImages' | 'pdfToText' | 'ocr'
 
 const TOOLS: { id: ToolId; icon: typeof Layers; disabled?: boolean }[] = [
   { id: 'merge', icon: Layers }, { id: 'split', icon: Scissors }, { id: 'extract', icon: Copy }, { id: 'delete', icon: Trash2 },
   { id: 'rotate', icon: RotateCw }, { id: 'reorder', icon: ListOrdered }, { id: 'blank', icon: FilePlus2 }, { id: 'insertPdf', icon: FileText },
   { id: 'images', icon: FileImage }, { id: 'watermark', icon: Stamp }, { id: 'numbers', icon: Hash }, { id: 'compress', icon: Minimize2 },
-  { id: 'pdfToImages', icon: ImageDown }, { id: 'pdfToText', icon: Type }, { id: 'protect', icon: Lock, disabled: true }, { id: 'ocr', icon: ScanText, disabled: true }
+  { id: 'pdfToImages', icon: ImageDown }, { id: 'pdfToText', icon: Type }, { id: 'ocr', icon: ScanText, disabled: true }
 ]
 
 interface Loaded { path: string; bytes: Uint8Array; pages: number }
@@ -108,7 +108,7 @@ function ToolForm({ tool, initialPath }: { tool: ToolId; initialPath?: string })
   }, [initialPath, tool])
 
   const primary = files[0]
-  const needsSingle = !['merge', 'images', 'protect', 'ocr'].includes(tool)
+  const needsSingle = !['merge', 'images', 'ocr'].includes(tool)
 
   const pick = async () => {
     try {
@@ -228,9 +228,7 @@ function ToolForm({ tool, initialPath }: { tool: ToolId; initialPath?: string })
       </div>
     )
   }
-  if (tool === 'protect') {
-    return <div className="card p-6 text-[13px] text-muted">{t('tools.protect.desc')}</div>
-  }
+
 
   const canRun = tool === 'merge' ? files.length >= 2 : tool === 'images' ? images.length > 0 : !!primary && (tool !== 'insertPdf' || !!second)
 

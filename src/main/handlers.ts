@@ -24,6 +24,10 @@ import {
 } from '@modules/spreadsheet/main/repository'
 import { listOcrLanguages, recognizeImage } from '@modules/ocr/main'
 import { deleteExtractionTemplate, listExtractionTemplates, saveExtractionTemplate } from '@modules/import/main/repository'
+import { addNote, deleteNote, listNotes, updateNote } from '@modules/notes/main/repository'
+import { addAttachments, listAttachments, openAttachment, removeAttachment } from '@modules/attachments/main/repository'
+import { deleteCustomField, getCustomFieldValues, listCustomFields, saveCustomField, setCustomFieldValues } from '@modules/customfields/main/repository'
+import { deleteDraft, listDrafts, saveDraft } from '@modules/drafts/main/repository'
 import { getDashboardStats } from '@modules/settings/main/dashboard'
 import { addRecent, clearRecent, listRecent, pinRecent, removeRecent } from '@modules/settings/main/recent-files'
 import { getSettings, updateSettings } from '@modules/settings/main/repository'
@@ -249,6 +253,24 @@ export function registerCoreHandlers(): void {
   handle('extraction:list', () => listExtractionTemplates())
   handle('extraction:save', (req) => saveExtractionTemplate(req))
   handle('extraction:delete', ({ id }) => deleteExtractionTemplate(id))
+
+  // ---- ملاحظات ومرفقات وحقول مخصصة ومسودات ----
+  handle('notes:list', ({ ownerType, ownerId }) => listNotes(ownerType, ownerId))
+  handle('notes:add', ({ ownerType, ownerId, body }) => addNote(ownerType, ownerId, body))
+  handle('notes:update', ({ id, body }) => updateNote(id, body))
+  handle('notes:delete', ({ id }) => deleteNote(id))
+  handle('attachments:list', ({ ownerType, ownerId }) => listAttachments(ownerType, ownerId))
+  handle('attachments:add', ({ ownerType, ownerId, sourcePaths }) => addAttachments(ownerType, ownerId, sourcePaths ?? null))
+  handle('attachments:remove', ({ id }) => removeAttachment(id))
+  handle('attachments:open', ({ id }) => openAttachment(id))
+  handle('custom-fields:list', (req) => listCustomFields(req?.entity))
+  handle('custom-fields:save', (req) => saveCustomField(req))
+  handle('custom-fields:delete', ({ id }) => deleteCustomField(id))
+  handle('custom-fields:values', ({ entity, entityId }) => getCustomFieldValues(entity, entityId))
+  handle('custom-fields:set-values', ({ entity, entityId, values }) => setCustomFieldValues(entity, entityId, values))
+  handle('drafts:list', (req) => listDrafts(req?.kind))
+  handle('drafts:save', (req) => saveDraft(req))
+  handle('drafts:delete', ({ id }) => deleteDraft(id))
 
   // ---- الطباعة والتصدير ----
   handle('printers:list', () => listPrinters(focused()))

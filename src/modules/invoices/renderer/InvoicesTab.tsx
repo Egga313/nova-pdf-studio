@@ -12,6 +12,7 @@ import { invoke } from '@renderer/lib/ipc'
 import { notify } from '@renderer/stores/notifications'
 import { useSettings } from '@renderer/stores/settings'
 import { useTabs } from '@renderer/stores/tabs'
+import { DraftsBanner } from './DraftsBanner'
 import { statusTone } from './InvoiceEditor'
 
 export function InvoicesTab({ tab }: TabComponentProps) {
@@ -126,6 +127,7 @@ export function InvoicesTab({ tab }: TabComponentProps) {
       </div>
 
       <div className="min-h-0 flex-1 overflow-auto p-5">
+        <DraftsBanner refreshKey={rows.length} />
         {!loading && rows.length === 0 ? (
           <div className="card">
             <EmptyState icon={<Receipt className="h-6 w-6" />} title={t('empty.invoices.title')} body={t('empty.invoices.body')} action={!trash ? <Button variant="primary" onClick={() => newDoc()}>{t('empty.invoices.action')}</Button> : undefined} />

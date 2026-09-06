@@ -20,7 +20,8 @@ import { useTabs } from '@renderer/stores/tabs'
 import { CustomerDialog } from '@modules/customers/renderer/CustomerDialog'
 import { amountInWords } from '../shared/amountInWords'
 import { ItemsGrid, emptyLike } from './ItemsGrid'
-import { createDraftStore, type DraftHeader, type DraftState, useDraft } from './useInvoiceDraft'
+import { ExtrasPanel } from '@modules/extras/renderer/ExtrasPanel'
+import { createDraftStore, type DraftHeader, type DraftItem, type DraftState, useDraft } from './useInvoiceDraft'
 
 const todayIso = () => new Date().toISOString().slice(0, 10)
 const addDays = (iso: string, days: number) => {
@@ -59,10 +60,14 @@ export function InvoiceEditor({ tab }: TabComponentProps) {
     // رأس مسبق (من استيراد PDF): مرجع، تواريخ، لقطة عميل، مستند مصدر
     const prefillHeader = tab.params.prefillHeader as Partial<DraftHeader> | undefined
     if (prefillHeader) Object.assign(header, Object.fromEntries(Object.entries(prefillHeader).filter(([, val]) => val !== undefined && val !== null && val !== '')))
-    storeRef.current = createDraftStore(
-      header,
-      prefill?.length ? prefill.map((it, i) => ({ ...emptyLike(defaultTax), ...it, key: `row-${i}` }) as never) : [{ ...emptyLike(defaultTax), key: 'row-0' } as never]
-    )
+    // استرجاع مسودة تلقائية (بعد إغلاق مفاجئ): الرأس والبنود كما كانت لحظة آخر حفظ تلقائي
+    const restore = tab.params.restore as { header: DraftHeader; items: DraftItem[] } | undefined
+    storeRef.current = restore
+      ? createDraftStore({ ...header, ...restore.header }, restore.items.map((it, i) => ({ ...emptyLike(defaultTax), ...it, key: it.key ?? `row-${i}` }) as never))
+      : createDraftStore(
+          header,
+          prefill?.length ? prefill.map((it, i) => ({ ...emptyLike(defaultTax), ...it, key: `row-${i}` }) as never) : [{ ...emptyLike(defaultTax), key: 'row-0' } as never]
+        )
   }
   const store = storeRef.current
   const header = useDraft(store, (s) => s.header)
@@ -105,6 +110,21 @@ export function InvoiceEditor({ tab }: TabComponentProps) {
 
   useEffect(() => setDirty(tab.id, dirty), [dirty, tab.id, setDirty])
 
+  // حفظ تلقائي كمسودة استرجاع بعد ثوانٍ من آخر تعديل؛ تُحذف عند الحفظ الفعلي أو إغلاق التبويب بلا تغييرات
+  const draftId = `invoice-${tab.id}`
+  useEffect(() => {
+    if (!dirty) return
+    const h = setTimeout(() => {
+      const st = store.getState()
+      void invoke('drafts:save', { id: draftId, kind: 'invoice', title: st.header.number ?? nextNumber ?? '', payload: JSON.stringify({ header: st.header, items: st.items }) }).catch(() => undefined)
+    }, 2500)
+    return () => clearTimeout(h)
+  }, [dirty, totals, header, draftId, store, nextNumber])
+  useEffect(() => () => {
+    if (!useTabs.getState().tabs.some((x) => x.id === tab.id) && !store.getState().dirty) void invoke('drafts:delete', { id: draftId }).catch(() => undefined)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   const save = useCallback(async (close = false): Promise<Invoice | null> => {
     const input = store.getState().toInput()
     if (!input.items.length) {
@@ -118,6 +138,7 @@ export function InvoiceEditor({ tab }: TabComponentProps) {
     setSaving(true)
     try {
       const saved = await invoke('invoices:save', input)
+      void invoke('drafts:delete', { id: `invoice-${tab.id}` }).catch(() => undefined)
       store.getState().loadInvoice(saved)
       setTitle(tab.id, saved.number)
       notify.success('inv.saved', { number: saved.number })
@@ -228,6 +249,7 @@ export function InvoiceEditor({ tab }: TabComponentProps) {
             <Switch label={t('inv.editor.amountInWords')} checked={header.amountInWords} onChange={(v) => store.getState().setHeader({ amountInWords: v })} />
             {words && <p className="mt-1 rounded-md bg-surface-2/60 p-2 text-[12px] leading-relaxed">{words}</p>}
           </div>
+          <ExtrasPanel ownerType="invoice" ownerId={header.id} />
         </aside>
       </div>
 

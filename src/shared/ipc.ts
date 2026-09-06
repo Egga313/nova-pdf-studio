@@ -10,6 +10,7 @@ import type { InvoiceTemplate, TemplateInput } from './templates'
 import type { SpreadsheetDetail, SpreadsheetExportType, SpreadsheetListFilters, SpreadsheetRecord, SpreadsheetSaveInput } from './spreadsheets'
 import type { OcrProgress, OcrRequest, OcrResult } from './ocr'
 import type { ExtractionTemplate, ExtractionTemplateInput } from './extraction'
+import type { Attachment, CustomField, CustomFieldEntity, CustomFieldInput, CustomFieldValue, DraftKind, DraftRecord, Note, OwnerType } from './extras'
 import type {
   Customer, CustomerInput, CustomerSummary, DocType, Invoice, InvoiceFilters, InvoiceInput, InvoiceListRow, InvoiceStatus, OutstandingItem,
   PaymentInput, Product, ProductInput
@@ -140,6 +141,24 @@ export interface IpcContract {
   'extraction:save': { req: ExtractionTemplateInput; res: ExtractionTemplate }
   'extraction:delete': { req: { id: number }; res: void }
 
+  // ---- ملاحظات ومرفقات وحقول مخصصة ومسودات ----
+  'notes:list': { req: { ownerType: OwnerType; ownerId: number }; res: Note[] }
+  'notes:add': { req: { ownerType: OwnerType; ownerId: number; body: string }; res: Note }
+  'notes:update': { req: { id: number; body: string }; res: Note }
+  'notes:delete': { req: { id: number }; res: void }
+  'attachments:list': { req: { ownerType: OwnerType; ownerId: number }; res: Attachment[] }
+  'attachments:add': { req: { ownerType: OwnerType; ownerId: number; sourcePaths?: string[] }; res: Attachment[] }
+  'attachments:remove': { req: { id: number }; res: void }
+  'attachments:open': { req: { id: number }; res: void }
+  'custom-fields:list': { req: { entity?: CustomFieldEntity } | void; res: CustomField[] }
+  'custom-fields:save': { req: CustomFieldInput; res: CustomField }
+  'custom-fields:delete': { req: { id: number }; res: void }
+  'custom-fields:values': { req: { entity: CustomFieldEntity; entityId: number }; res: CustomFieldValue[] }
+  'custom-fields:set-values': { req: { entity: CustomFieldEntity; entityId: number; values: { fieldId: number; value: string | null }[] }; res: void }
+  'drafts:list': { req: { kind?: DraftKind } | void; res: DraftRecord[] }
+  'drafts:save': { req: { id: string; kind: DraftKind; title: string; payload: string }; res: void }
+  'drafts:delete': { req: { id: string }; res: void }
+
   // ---- الطباعة والتصدير (محرك Chromium) ----
   'printers:list': { req: void; res: { name: string; displayName: string; isDefault: boolean; status: number }[] }
   'print:html': { req: PrintJobRequest; res: { success: boolean; reason?: string } }
@@ -174,6 +193,8 @@ export const IPC_CHANNELS: readonly IpcChannel[] = [
   'brand:assets', 'brand:pick', 'brand:clear',
   'spreadsheets:list', 'spreadsheets:get', 'spreadsheets:save', 'spreadsheets:delete', 'spreadsheets:restore', 'spreadsheets:purge', 'spreadsheets:import-file', 'spreadsheets:export-file',
   'ocr:recognize', 'ocr:languages', 'extraction:list', 'extraction:save', 'extraction:delete',
+  'notes:list', 'notes:add', 'notes:update', 'notes:delete', 'attachments:list', 'attachments:add', 'attachments:remove', 'attachments:open',
+  'custom-fields:list', 'custom-fields:save', 'custom-fields:delete', 'custom-fields:values', 'custom-fields:set-values', 'drafts:list', 'drafts:save', 'drafts:delete',
   'printers:list', 'print:html', 'print:html-to-pdf',
   'backup:create', 'backup:restore', 'backup:list', 'backup:export-db'
 ]
