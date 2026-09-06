@@ -27,6 +27,9 @@ win:
   target:
     - nsis
   artifactName: NOVA-PDF-Studio-Setup-${version}.exe
+  # لا توقيع رقمي؛ وتعطيل تحرير موارد exe يمنع تنزيل winCodeSign الذي يحتاج صلاحية إنشاء symlink على Windows
+  signAndEditExecutable: false
+  forceCodeSigning: false
 nsis:
   oneClick: false
   allowToChangeInstallationDirectory: true
